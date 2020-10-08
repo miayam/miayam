@@ -1,0 +1,22 @@
+{
+    "name": "miayam.io",
+    "version": "1.0.0",
+    "description": "A brutalist blog site built & designed by Muhammad D. Ramadhan.",
+    "scripts": {},
+    "keywords": [
+        "11ty",
+        "brutalism",
+        "blog",
+        "vanilla"
+    ],
+    "author": "Muhammad D. Ramadhan",
+    "license": "MIT",
+    "devDependencies": {
+        "@babel/core": "^7.11.6",
+        "@babel/preset-env": "^7.11.5",
+        "babel-loader": "^8.1.0",
+        "webpack": "^4.44.2",
+        "webpack-cli": "^3.3.12",
+        "webpack-merge": "^5.1.4"
+    }
+}
