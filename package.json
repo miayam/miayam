@@ -1,8 +1,7 @@
 {
-    "name": "miayam.io",
+    "name": "miayam",
     "version": "1.0.0",
     "description": "A brutalist blog site built & designed by Muhammad D. Ramadhan.",
-    "scripts": {},
     "keywords": [
         "11ty",
         "brutalism",
@@ -11,10 +10,40 @@
     ],
     "author": "Muhammad D. Ramadhan",
     "license": "MIT",
+    "scripts": {
+        "env:dev": "cross-env NODE_ENV=dev",
+        "env:prod": "cross-env NODE_ENV=prod",
+        "start": "run-s -l env:dev start:*",
+        "start:webpack": "webpack $npm_package_config_webpack_args --watch",
+        "start:eleventy": "eleventy --serve --port=1992",
+        "build": "run-s -l env:prod clean build:*",
+        "build:webpack": "webpack $npm_package_config_webpack_args",
+        "build:eleventy": "eleventy",
+        "analyze": "run-s build analyze:*",
+        "analyze:js": "source-map-explorer _site/**/*.js _site/**/*.js.map",
+        "clean": "rm -rf _site"
+    },
+    "config": {
+        "webpack_args": "--config webpack.config.js --display-error-details"
+    },
     "devDependencies": {
+        "@11ty/eleventy": "^0.11.0",
         "@babel/core": "^7.11.6",
         "@babel/preset-env": "^7.11.5",
         "babel-loader": "^8.1.0",
+        "core-js": "^3.6.5",
+        "cross-env": "^7.0.2",
+        "css-loader": "^5.0.0",
+        "html-minifier": "^4.0.0",
+        "html-webpack-plugin": "^4.5.0",
+        "mini-css-extract-plugin": "^1.1.1",
+        "node-sass": "^4.14.1",
+        "npm-run-all": "^4.1.5",
+        "optimize-css-assets-webpack-plugin": "^5.0.4",
+        "postcss": "^8.1.2",
+        "postcss-loader": "^4.0.4",
+        "postcss-preset-env": "^6.7.0",
+        "sass-loader": "^10.0.3",
         "webpack": "^4.44.2",
         "webpack-cli": "^3.3.12",
         "webpack-merge": "^5.1.4"
