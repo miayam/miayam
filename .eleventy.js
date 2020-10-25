@@ -1,6 +1,7 @@
-module.exports = () => {
+module.exports = (eleventyConfig) => {
+
     return {
         dir: { input: 'src', output: '_site' },
-        htmlTemplateEngine: 'pug'
+        htmlTemplateEngine: 'pug, md'
     };
 };

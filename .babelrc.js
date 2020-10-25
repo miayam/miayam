@@ -1,4 +1,5 @@
 // Copy paste from https://github.com/clenemt/eleventy-webpack
+
 module.exports = (api) =>
     api.env('production')
         ? {
