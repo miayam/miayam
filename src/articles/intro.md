@@ -1,5 +1,5 @@
 ---
-layout: templates/base/index
+layout: templates/blog/index
 description: hello
 ---
 
