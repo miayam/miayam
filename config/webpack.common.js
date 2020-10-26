@@ -1,5 +1,6 @@
 const ENTRY_POINTS = [
-    'blog'
+    'blog',
+    'home'
 ];
 const path = require('path');
 const basePath = path.resolve(__dirname, '../src'); // It is relative to `config` folder.
