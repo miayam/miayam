@@ -5,6 +5,8 @@ const commonConfig = require('./webpack.common.js');
 module.exports = merge(commonConfig, {
     mode: 'development',
     output: {
-        filename: 'assets/[name]/[name]-[contenthash].js'
+        path: path.join(__dirname, '../_site'),
+        filename: 'assets/scripts/[name]-[contenthash].js',
+        publicPath: '/'
     }
 });

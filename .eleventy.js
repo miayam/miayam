@@ -3,6 +3,9 @@ module.exports = (config) => {
     // templates since it is in our `.gitignore`
     config.setUseGitIgnore(false);
 
+    // Pass-through files
+    config.addPassthroughCopy('src/assets');
+
     return {
         dir: { input: 'src', output: '_site' },
         htmlTemplateEngine: 'pug, md'
