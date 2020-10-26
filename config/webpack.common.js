@@ -10,7 +10,9 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const multipleHtmlPlugins = ENTRY_POINTS.map(name => {
     return new HtmlWebpackPlugin({
         template: `${basePath}/_includes/templates/base/index.pug`,
-        filename: `${basePath}/_includes/templates/${name}/index.pug`
+        filename: `${basePath}/_includes/templates/${name}/index.pug`,
+        chunks: [`${name}`],
+        inject: false
     });
 });
 
@@ -27,7 +29,6 @@ module.exports = {
         }),
         ...multipleHtmlPlugins,
         new HtmlWebpackPugPlugin({
-            adjustIndent: true,
             ast: true
         })
     ],

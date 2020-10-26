@@ -7,8 +7,8 @@ module.exports = merge(commonConfig, {
     mode: 'production',
     output: {
         path: path.join(__dirname, '../_site'),
-        filename: '[name]/[name]-[contenthash].js',
-        publicPath: 'assets'
+        filename: 'assets/[name]/[name]-[contenthash].js',
+        publicPath: '/'
     },
     optimization: {
         splitChunks: { // Although there's not much JavaScript and CSS here, code-split it.
