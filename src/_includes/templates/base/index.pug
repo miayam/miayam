@@ -8,5 +8,6 @@ html(lang="en")
   body
       include ./layout
 
+      //- Inject assets. 6 spaces is necessary, so that `HtmlWebpackPugPlugin` can translate this snippet to proper pug syntax.
       <%= htmlWebpackPlugin.files.css.map((css) => `link(href=\'${css}\', rel='stylesheet')`).join('\n      ') %>
       <%= htmlWebpackPlugin.files.js.map((js) => `script(src=\'${js}\', type='text/javascript', async)`).join('\n      ') %>

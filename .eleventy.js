@@ -7,7 +7,13 @@ module.exports = (config) => {
     config.addPassthroughCopy('src/assets');
 
     return {
-        dir: { input: 'src', output: '_site' },
-        htmlTemplateEngine: 'pug, md'
+        dir: {
+            input: 'src',
+            output: '._site',
+            layouts: '_includes/templates',
+            includes: '_includes',
+        },
+        templateFormats: ["html", "md"],
+        htmlTemplateEngine: 'pug'
     };
 };
