@@ -1,5 +1,5 @@
 _site/
-src/_includes/templates/**/index.pug
+src/_includes/templates/*/*.pug
 !src/_includes/templates/base/index.pug
 node_modules/
 
