@@ -1,6 +1,6 @@
 _site/
-src/_includes/templates/home/*.pug
-src/_includes/templates/blog/*.pug
+src/_includes/templates/*/*.pug
+!src/_includes/templates/base/*.pug
 node_modules/
 
 # Local Netlify folder
