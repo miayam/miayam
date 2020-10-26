@@ -13,7 +13,7 @@ module.exports = (config) => {
             layouts: '_includes/templates',
             includes: '_includes',
         },
-        templateFormats: ["html", "md"],
+        templateFormats: ["md"],
         htmlTemplateEngine: 'pug'
     };
 };
