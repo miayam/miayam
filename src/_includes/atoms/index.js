@@ -1,3 +1,5 @@
-export default {
+import image from '@atoms/image';
 
+export default {
+    image
 };

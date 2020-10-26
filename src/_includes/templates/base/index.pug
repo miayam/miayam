@@ -6,7 +6,7 @@ html(lang="en")
     meta(http-equiv="X-UA-Compatible", content="ie=edge")
     meta(name="description", content=`${description}`)
   body
-      block content
+      include ./layout
 
       <%= htmlWebpackPlugin.files.css.map((css) => `link(href=\'${css}\', rel='stylesheet')`).join('\n      ') %>
       <%= htmlWebpackPlugin.files.js.map((js) => `script(src=\'${js}\', type='text/javascript', async)`).join('\n      ') %>
