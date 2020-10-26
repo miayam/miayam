@@ -7,7 +7,7 @@ module.exports = merge(commonConfig, {
     mode: 'production',
     output: {
         path: path.join(__dirname, '../_site'),
-        filename: 'assets/scripts/[name]-[contenthash].js',
+        filename: 'assets/scripts/[name]/[name]-[contenthash].js',
         publicPath: '/'
     },
     optimization: {
@@ -16,8 +16,7 @@ module.exports = merge(commonConfig, {
                 styles: {
                     name: 'styles',
                     test: /\.scss$/,
-                    chunks: 'all',
-                    enforce: true
+                    chunks: 'all'
                 },
                 commons: {
                     name: 'vendor',

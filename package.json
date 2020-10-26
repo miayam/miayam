@@ -12,7 +12,7 @@
     "license": "MIT",
     "scripts": {
         "webpack": "webpack $npm_package_config_webpack_args",
-        "start": "cross-env NODE_ENV=dev run-s -l webpack start:*",
+        "start": "cross-env NODE_ENV=dev run-s -l clean webpack start:*",
         "start:eleventy": "eleventy --serve --port=1992",
         "build": "cross-env NODE_ENV=prod run-s -l clean webpack build:*",
         "build:eleventy": "eleventy",

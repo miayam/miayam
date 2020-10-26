@@ -9,7 +9,7 @@ module.exports = (config) => {
     return {
         dir: {
             input: 'src',
-            output: '._site',
+            output: '_site',
             layouts: '_includes/templates',
             includes: '_includes',
         },

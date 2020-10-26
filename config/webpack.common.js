@@ -27,7 +27,7 @@ module.exports = {
     }, {}),
     plugins: [
         new MiniCssExtractPlugin({
-            filename: 'assets/[name]/[name].css'
+            filename: 'assets/styles/[name]/[name].css'
         }),
         ...multipleHtmlPlugins,
         new HtmlWebpackPugPlugin({
@@ -69,7 +69,7 @@ module.exports = {
             '@atoms': `${basePath}/_includes/atoms`,
             '@molecules': `${basePath}/_includes/molecules`,
             '@organisms': `${basePath}/_includes/organisms`,
-            '@templates': `${basePath}/src/_includes/templates`
+            '@templates': `${basePath}/_includes/templates`
         }
     }
 }

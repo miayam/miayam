@@ -6,7 +6,7 @@ module.exports = merge(commonConfig, {
     mode: 'development',
     output: {
         path: path.join(__dirname, '../_site'),
-        filename: 'assets/scripts/[name]-[contenthash].js',
+        filename: 'assets/scripts/[name]/[name].js',
         publicPath: '/'
     }
 });
