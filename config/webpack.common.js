@@ -13,6 +13,7 @@ const multipleHtmlPlugins = ENTRY_POINTS.map(name => {
         template: `${basePath}/_includes/templates/base/index.pug`,
         filename: `${basePath}/_includes/templates/${name}/index.pug`,
         chunks: [`${name}`],
+        hash: true,
         inject: false
     });
 });
@@ -21,7 +22,7 @@ module.exports = {
     entry: ENTRY_POINTS.reduce((prev, curr) => {
         return {
             ...prev,
-            [curr]: `./src/_includes/templates/${curr}/index.js` // Relative to webpack.config.js
+            [curr]: `./src/_includes/templates/${curr}/index.js` // Relative to webpack.config.js file
         }
     }, {}),
     plugins: [
@@ -65,10 +66,10 @@ module.exports = {
     },
     resolve: {
         alias: {
-            '@atoms': './src/_includes/atoms/',
-            '@molecules': './src/_includes/molecules/',
-            '@organisms': './src/_includes/organisms/',
-            '@templates': './src/_includes/templates/'
+            '@atoms': `${basePath}/_includes/atoms`,
+            '@molecules': `${basePath}/_includes/molecules`,
+            '@organisms': `${basePath}/_includes/organisms`,
+            '@templates': `${basePath}/src/_includes/templates`
         }
     }
 }
