@@ -1,6 +1,10 @@
 const { merge } = require('webpack-merge');
 const path = require('path');
-const MinifyPlugin = require("babel-minify-webpack-plugin");
+const glob = require('glob')
+const PurgecssPlugin = require('purgecss-webpack-plugin')
+const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const TerserPlugin = require('terser-webpack-plugin');
 const commonConfig = require('./webpack.common.js');
 
 module.exports = merge(commonConfig, {
@@ -11,6 +15,8 @@ module.exports = merge(commonConfig, {
         publicPath: '/'
     },
     optimization: {
+        minimize: true,
+        minimizer: [new TerserPlugin()],
         splitChunks: { // Although there's not much JavaScript and CSS here, code-split it.
             cacheGroups: {
                 styles: {
@@ -27,6 +33,23 @@ module.exports = merge(commonConfig, {
         },
     },
     plugins: [
-        new MinifyPlugin()
+        new MiniCssExtractPlugin({
+            filename: 'assets/styles/[name]/[name]-[contenthash].css'
+        }),
+        new OptimizeCSSAssetsPlugin({
+            cssProcessor: require('cssnano'),
+            cssProcessorOptions: {
+                discardComments: {
+                    removeAll: true,
+                },
+                // Run cssnano in safe mode to avoid
+                // potentially unsafe transformations.
+                safe: true,
+            },
+            canPrint: false,
+        }),
+        new PurgecssPlugin({
+            paths: glob.sync(`${path.join(__dirname, '../src')}/**/*`, { nodir: true }),
+        })
     ]
 });

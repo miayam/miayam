@@ -1,5 +1,5 @@
 // Make sure that we can use localStorage or fallback to plain old JavaScript object.
-// I borrow it from my friend Dongjin Jung.
+// I borrow it from my Korean friend Dongjin Jung.
 export default () => {
     try {
         const st = localStorage || {}

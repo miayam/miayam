@@ -11,6 +11,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const HtmlWebpackPugPlugin = require('html-webpack-pug-plugin');
 const PostCSSPresetEnv = require('postcss-preset-env');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const Dotenv = require('dotenv-webpack');
 const multipleHtmlPlugins = ENTRY_POINTS.map(name => {
     return new HtmlWebpackPlugin({
         template: `${basePath}/_includes/templates/base/index.pug`,
@@ -29,9 +30,7 @@ module.exports = {
         }
     }, {}),
     plugins: [
-        new MiniCssExtractPlugin({
-            filename: 'assets/styles/[name]/[name].css'
-        }),
+        new Dotenv(),
         ...multipleHtmlPlugins,
         new HtmlWebpackPugPlugin({
             ast: true
@@ -72,7 +71,9 @@ module.exports = {
             '@atoms': `${basePath}/_includes/atoms`,
             '@molecules': `${basePath}/_includes/molecules`,
             '@organisms': `${basePath}/_includes/organisms`,
-            '@templates': `${basePath}/_includes/templates`
+            '@templates': `${basePath}/_includes/templates`,
+            '@scripts': `${basePath}/scripts`,
+            '@styles': `${basePath}/styles`
         }
     }
 }
