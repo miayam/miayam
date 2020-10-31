@@ -1,6 +1,6 @@
 ---
 layout: home/index.pug
-description: Ini miayam
+permalink: /
 ---
 
 # Tentang Saya
