@@ -8,3 +8,7 @@ import(
 }).catch(error => {
     console.log(error);
 });
+
+if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('sw.js');
+};

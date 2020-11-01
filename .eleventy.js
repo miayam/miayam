@@ -5,6 +5,10 @@ module.exports = (config) => {
 
     // Pass-through files
     config.addPassthroughCopy('src/assets');
+    config.addPassthroughCopy({ 'src/scripts/utilities/sw.js': 'sw.js' });
+    config.addPassthroughCopy({ 'src/public/favicon.ico': 'favicon.ico' });
+    config.addPassthroughCopy({ 'src/public/manifest.webmanifest': 'manifest.webmanifest' });
+    config.addPassthroughCopy({ 'src/public/robot.txt': 'robot.txt' });
 
     return {
         dir: {

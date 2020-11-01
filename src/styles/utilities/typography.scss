@@ -1,150 +1,157 @@
 //
-// Golden Ratio Typography
+// Golden Ratio Typography Based On Greg Ricky's Gist
+// https://gist.github.com/gregrickaby/5001983
 // --------------------------------------------------
+@import "~mathsass/dist/math";
 
 
-// Golden Ratio Math
-//
-// Let's do some math so we can build beautiful typography and vertical rhythm.
-// For any magic to happen, set the $ContentWidth variable on _variables.scss
-// to match your content box width (normally this is 640px, 740px, etc...).
-//
-// Many thanks to Chris Pearson's scary math skills http://t.co/KoeUoEWrNS
-// and his Golden Ratio Calculator http://t.co/6MyXPtRrlu
-//
-// @author Greg Rickaby
+// @author Muhammad D. R.
 // @since 1.0
-// @requires $ContentWidth
+// @requires $defaultContentWidth
 // ----------------------------------
-$phi: (1 + math.sqrt(5)) / 2; // 1.61803398874989 or "The Golden Ratio"
-$xoo: 1 / (2 * $phi);
-$yoo: sqrt($ContentWidth) / $phi; // Line-height
-$zoo: $phi - $xoo * (1 - ($ContentWidth / $yoo));
+$defaultContentWidth: 740; // Change as you like
+$phi: (1 + sqrt(5)) / 2; // 1.61803398874989 or "The Golden Ratio"
 
+
+// Font Size
+//
+// Calculated font size based on $defaultContentWidth.
+//
+// @author Muhammad D. R.
+// @since 1.0
+//
+// Usage: @include grFontSize();
+//        @include grFontSize(480);
+// --------------------------------
+@function calcFontSize($contentWidth: $defaultContentWidth) {
+  $fontSize: sqrt($contentWidth) / $phi;
+  @return round($fontSize);
+}
+
+@mixin grFontSize($contentWidth: $defaultContentWidth) {
+  $lineHeight: sqrt($contentWidth) / $phi;
+
+  font-size: calcFontSize($contentWidth) + px;
+  font-size: (calcFontSize($contentWidth) / calcFontSize($contentWidth)) + rem;
+  line-height: calcFontSize($contentWidth) / $lineHeight;
+}
 
 // Title Size
 //
-// Calculated title size based on $ContentWidth.
+// Calculated title size based on $defaultContentWidth.
 //
-// @author Greg Rickaby
+// @author Muhammad D. R.
 // @since 1.0
 //
 // Usage: @include grTitleSize();
-// --------------------------------
-@function calcTitleSize() {
-  $foo: calcFontSize() * pow($phi, 2);
-  @return round($foo);
+//        @include grTitleSize(480);
+// ---------------------------------
+@function calcTitleSize($contentWidth: $defaultContentWidth) {
+  $fontSize: calcFontSize($contentWidth) * pow($phi, 2);
+  @return round($fontSize);
 }
 
-@mixin grTitleSize() {
-  font-size: calcTitleSize() + px;
-  font-size: (calcTitleSize() / calcFontSize()) + rem;
-  line-height: calcTitleSize() / $yoo;
+@mixin grTitleSize($contentWidth: $defaultContentWidth) {
+  $lineHeight: sqrt($contentWidth) / $phi;
+
+  font-size: calcTitleSize($contentWidth) + px;
+  font-size: (calcTitleSize($contentWidth) / calcFontSize($contentWidth)) + rem;
+  line-height: calcTitleSize($contentWidth) / $lineHeight;
 }
 
 
 // Headline Size
 //
-// Calculated headline size based on $ContentWidth.
+// Calculated headline size based on $defaultContentWidth.
 //
-// @author Greg Rickaby
+// @author Muhammad D. R.
 // @since 1.0
 //
-// Usage: @include grHeadlineSize
-// --------------------------------
-@function calcHeadlineSize() {
-  $foo: calcFontSize() * pow($phi, 1);
-  @return round($foo);
+// Usage: @include grHeadlineSize();
+//        @include grHeadlineSize(480);
+// ------------------------------------
+@function calcHeadlineSize($contentWidth: $defaultContentWidth) {
+  $fontSize: calcFontSize($contentWidth) * pow($phi, 1);
+  @return round($fontSize);
 }
 
-@mixin grHeadlineSize() {
-  font-size: calcHeadlineSize() + px;
-  font-size: (calcHeadlineSize() / calcFontSize()) + rem;
-  line-height: calcHeadlineSize() / $yoo;
+@mixin grHeadlineSize($contentWidth: $defaultContentWidth) {
+  $lineHeight: sqrt($contentWidth) / $phi;
+
+  font-size: calcHeadlineSize($contentWidth) + px;
+  font-size: (calcHeadlineSize($contentWidth) / calcFontSize($contentWidth)) + rem;
+  line-height: calcHeadlineSize($contentWidth) / $lineHeight;
 }
 
 
 // Sub-headline Size
 //
-// Caclulated sub-headline size based on $ContentWidth.
+// Caclulated sub-headline size based on $defaultContentWidth.
 //
-// @author Greg Rickaby
+// @author Muhammad D. R.
 // @since 1.0
 //
 // Usage: @include grSubHeadlineSize();
-// --------------------------------
-@function calcSubHeadlineSize() {
-  $foo: calcFontSize() * sqrt($phi);
-  @return round($foo);
+//        @include grSubHeadlineSize(480);
+// ---------------------------------------
+@function calcSubHeadlineSize($contentWidth: $defaultContentWidth) {
+  $fontSize: calcFontSize($contentWidth) * sqrt($phi);
+  @return round($fontSize);
 }
 
-@mixin grSubHeadlineSize() {
-  font-size: calcSubHeadlineSize() + px;
-  font-size: (calcSubHeadlineSize() / calcFontSize()) + rem;
-  line-height: calcSubHeadlineSize() / $yoo;
-}
+@mixin grSubHeadlineSize($contentWidth: $defaultContentWidth) {
+  $lineHeight: sqrt($contentWidth) / $phi;
 
-
-// Font Size
-//
-// Calculated font size based on $ContentWidth.
-//
-// @author Greg Rickaby
-// @since 1.0
-//
-// Usage: @include grFontSize();
-// --------------------------------
-@function calcFontSize() {
-  $foo: sqrt($ContentWidth) / $phi;
-  @return round($foo);
-}
-
-@mixin grFontSize() {
-  font-size: calcFontSize() + px;
-  font-size: (calcFontSize() / calcFontSize()) + rem;
-  line-height: calcFontSize() / $yoo;
+  font-size: calcSubHeadlineSize($contentWidth) + px;
+  font-size: (calcSubHeadlineSize($contentWidth) / calcFontSize($contentWidth)) + rem;
+  line-height: calcSubHeadlineSize() / $lineHeight;
 }
 
 
 // Secondary Text
 //
-// Calculated secondary text size based on $ContentWidth.
+// Calculated secondary text size based on $defaultContentWidth.
 //
-// @author Greg Rickaby
+// @author Muhammad D. R.
 // @since 1.0
 //
 // Usage: @include grSecondaryText();
-// --------------------------------
-@function calcSecondaryText() {
-  $foo: calcFontSize() * (1 / sqrt($phi));
-  @return round($foo);
+//        @include grSecondaryText(480);
+// -------------------------------------
+@function calcSecondaryText($contentWidth: $defaultContentWidth) {
+  $fontSize: calcFontSize($contentWidth) * (1 / sqrt($phi));
+  @return round($fontSize);
 }
 
-@mixin grSecondaryText() {
-  font-size: calcSecondaryText() + px;
-  font-size: (calcSecondaryText() / calcFontSize()) + rem;
-  line-height: calcSecondaryText() / $yoo;
+@mixin grSecondaryText($contentWidth: $defaultContentWidth) {
+  $lineHeight: sqrt($contentWidth) / $phi;
+
+  font-size: calcSecondaryText($contentWidth) + px;
+  font-size: (calcSecondaryText($contentWidth) / calcFontSize($contentWidth)) + rem;
+  line-height: calcSecondaryText($contentWidth) / $lineHeight;
 }
 
 
 // Default Line Height
 //
-// Calculate default line-height based on $ContentWidth.
+// Calculate default line-height based on $defaultContentWidth.
 //
-// @author Greg Rickaby
+// @author Muhammad D. R.
 // @since 1.0
 //
 // Usage: @include grBaseLineHeight();
-// --------------------------------
-@function calcBaseLineHeight() {
-  $foobar: sqrt($ContentWidth) / $phi;
-  $foo: calcFontSize() * ($phi - $xoo * (1 - ($ContentWidth / pow(calcFontSize() * $phi, 2))));
-  $fo: $foo / $foobar;
-  @return $fo;
+//        @include grBaseLineHeight(480);
+// -----------------------------------
+@function calcBaseLineHeight($contentWidth: $defaultContentWidth) {
+  $fontSize: sqrt($contentWidth) / $phi;
+  $adjustmentRatio: 1 / (2 * $phi);
+  $adjustmentSize: calcFontSize($contentWidth) * ($phi - $adjustmentRatio * (1 - ($contentWidth / pow(calcFontSize($contentWidth) * $phi, 2))));
+  $baseLineHeight: $adjustmentSize / $fontSize;
+  @return $baseLineHeight;
 }
 
-@mixin grBaseLineHeight() {
-  line-height: calcBaseLineHeight();
+@mixin grBaseLineHeight($contentWidth: $defaultContentWidth) {
+  line-height: calcBaseLineHeight($contentWidth);
 }
 
 
@@ -153,17 +160,18 @@ $zoo: $phi - $xoo * (1 - ($ContentWidth / $yoo));
 // Calculate a Golden Ratio line-height based on a custom
 // value specified by you.
 //
-// @author Greg Rickaby
+// @author Muhammad D. R.
 // @since 1.0
 //
 // Usage: @include grCustomLineHeight(26);
-// --------------------------------
-@function calcCustomLineHeight($target) {
-  $foobar: sqrt($ContentWidth) / $phi;
-  $foo: $target / $foobar;
-  @return $foo;
+//        @include grCustomLineHeight(26, 480);
+// --------------------------------------------
+@function calcCustomLineHeight($target, $contentWidth: $defaultContentWidth) {
+  $fontSize: sqrt($contentWidth) / $phi;
+  $lineHeight: $target / $fontSize;
+  @return $lineHeight;
 }
 
-@mixin grCustomLineHeight($target) {
-  line-height: calcCustomLineHeight($target);
+@mixin grCustomLineHeight($target, $contentWidth: $defaultContentWidth) {
+  line-height: calcCustomLineHeight($target, $contentWidth);
 }

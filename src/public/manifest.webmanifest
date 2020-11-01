@@ -1,0 +1,22 @@
+{
+    "short_name": "Miayam",
+    "name": "Miayam Starter Project",
+    "description": "A Brutalist 11ty Starter Project with Atomic Design Implemented",
+    "icons": [
+        {
+            "src": "/assets/images/logo-white-192.png",
+            "type": "image/png",
+            "sizes": "192x192"
+        },
+        {
+            "src": "/assets/images/logo-white-512.png",
+            "type": "image/png",
+            "sizes": "512x512"
+        }
+    ],
+    "start_url": "/",
+    "background_color": "#fff",
+    "display": "standalone",
+    "scope": "/",
+    "theme_color": "#000"
+}
