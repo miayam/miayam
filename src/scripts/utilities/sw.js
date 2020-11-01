@@ -5,9 +5,7 @@ self.addEventListener('install', function (event) {
             return cache.addAll([
                 '/index.html',
                 '/assets/images/logo-white-512.png',
-                '/assets/images/logo-white-192.png',
-                '/assets/css',
-                '/assets/js'
+                '/assets/images/logo-white-192.png'
             ]);
         })
     );

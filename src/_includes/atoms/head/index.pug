@@ -1,9 +1,15 @@
 head
+  title #{title || site.title}
   meta(charset="UTF-8")
   meta(name="viewport", content="width=device-width, initial-scale=1.0")
   meta(http-equiv="X-UA-Compatible", content="ie=edge")
   meta(name="description", content=`${description || site.description}`)
-  title #{title || site.title}
+
+  //- PWA stuff
+  link(rel="manifest", href="/manifest.webmanifest")
+  link(rel="icon", href="/favicon.ico", type="image/x-icon")
+  link(rel="apple-touch-icon", href="/assets/image/logo-white-192.png")
+  meta(name="theme-color", content="#fff")
 
   //- Open graph related
   meta(property="og:title", content=`${title || site.title}`)
