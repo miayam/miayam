@@ -21,20 +21,23 @@ module.exports = merge(commonConfig, {
             cacheGroups: {
                 styles: {
                     name: 'styles',
-                    test: /\.scss$/,
-                    chunks: 'all'
+                    test: /\.(sa|sc|c)ss$i/,
+                    chunks: 'all',
+                    enforce: true
                 },
                 commons: {
                     name: 'vendor',
                     test: /[\\/]node_modules[\\/]/,
                     chunks: 'all',
+                    enforce: true
                 },
-            },
+            }
         },
     },
     plugins: [
         new MiniCssExtractPlugin({
-            filename: 'assets/styles/[name]/[name]-[contenthash].css'
+            filename: 'assets/styles/[name]/[name].css',
+            chunkFilename: 'assets/styles/[name]/[id].css'
         }),
         new OptimizeCSSAssetsPlugin({
             cssProcessor: require('cssnano'),
@@ -46,10 +49,11 @@ module.exports = merge(commonConfig, {
                 // potentially unsafe transformations.
                 safe: true,
             },
-            canPrint: false,
+            canPrint: false
         }),
         new PurgecssPlugin({
             paths: glob.sync(`${path.join(__dirname, '../src')}/**/*`, { nodir: true }),
+            only: ['blog', '404', 'home']
         })
     ]
 });

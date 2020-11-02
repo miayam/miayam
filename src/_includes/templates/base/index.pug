@@ -3,8 +3,11 @@ html(lang="en")
   head
     include /atoms/head/index
 
+    //- See src/config/webpack.common.js. We inject parameters there.
+    <% if (analytics) { %>
     //- Shamelessly track users. Uncomment it if you are ready to abuse your readers :(
-    //- script(src='https://www.google-analytics.com/analytics.js', type='text/javascript', async)
+    script(src='https://www.google-analytics.com/analytics.js', type='text/javascript', async)
+    <% } %>
   body
       include ./layout
 

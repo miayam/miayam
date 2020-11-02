@@ -18,7 +18,10 @@ const multipleHtmlPlugins = ENTRY_POINTS.map(name => {
         filename: `${basePath}/_includes/templates/${name}/index.pug`,
         chunks: [`${name}`],
         hash: true,
-        inject: false
+        inject: false,
+        templateParameters: {
+            analytics: name !== 'home' // For now, disable analytics for starter project landing page
+        }
     });
 });
 
@@ -33,7 +36,8 @@ module.exports = {
         new Dotenv(),
         ...multipleHtmlPlugins,
         new HtmlWebpackPugPlugin({
-            ast: true
+            ast: true,
+            adjustIndent: true
         })
     ],
     module: {
