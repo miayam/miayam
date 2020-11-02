@@ -6,7 +6,8 @@ permalink: /
 # Tentang Saya
 Halo
 
-``` js/1,3-5
+``` js/2
+// This is a comment
 function myFunction() {
   return true;
 }
