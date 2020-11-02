@@ -29,8 +29,6 @@ glob.glob('_site/**/*.html', async (err, matches) => {
             concurrency: 1,
             // Minify critical-path CSS when inlining
             minify: true,
-            // Extract inlined styles from referenced stylesheets
-            extract: true,
             // Bump penthouse’s page load timeout to 2 minutes to avoid crashes
             // which could cause lingering processes as it’s possible some pages
             // can take a long time to load.

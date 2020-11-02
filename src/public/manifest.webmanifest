@@ -1,7 +1,7 @@
 {
     "short_name": "Miayam",
     "name": "Miayam Starter Project",
-    "description": "A Brutalist 11ty Starter Project with Atomic Design Implemented",
+    "description": "A brutalist 11ty starter project. Atomic Design, Webpack, ES6, SCSS and Pug",
     "icons": [
         {
             "src": "/assets/images/logo-white-192.png",

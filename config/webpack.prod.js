@@ -11,7 +11,7 @@ module.exports = merge(commonConfig, {
     mode: 'production',
     output: {
         path: path.join(__dirname, '../_site'),
-        filename: 'assets/scripts/[name]/[name]-[contenthash].js',
+        filename: 'assets/scripts/[name]-[contenthash].js',
         publicPath: '/'
     },
     optimization: {
@@ -21,9 +21,8 @@ module.exports = merge(commonConfig, {
             cacheGroups: {
                 styles: {
                     name: 'styles',
-                    test: /\.(sa|sc|c)ss$i/,
-                    chunks: 'all',
-                    enforce: true
+                    test: /\.scss$/,
+                    chunks: 'all'
                 },
                 commons: {
                     name: 'vendor',
@@ -36,8 +35,7 @@ module.exports = merge(commonConfig, {
     },
     plugins: [
         new MiniCssExtractPlugin({
-            filename: 'assets/styles/[name]/[name].css',
-            chunkFilename: 'assets/styles/[name]/[id].css'
+            filename: 'assets/styles/[name].css'
         }),
         new OptimizeCSSAssetsPlugin({
             cssProcessor: require('cssnano'),
@@ -50,10 +48,6 @@ module.exports = merge(commonConfig, {
                 safe: true,
             },
             canPrint: false
-        }),
-        new PurgecssPlugin({
-            paths: glob.sync(`${path.join(__dirname, '../src')}/**/*`, { nodir: true }),
-            only: ['blog', '404', 'home']
         })
     ]
 });

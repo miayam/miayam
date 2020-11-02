@@ -17,10 +17,11 @@ const multipleHtmlPlugins = ENTRY_POINTS.map(name => {
         template: `${basePath}/_includes/templates/base/index.pug`,
         filename: `${basePath}/_includes/templates/${name}/index.pug`,
         chunks: [`${name}`],
-        hash: true,
         inject: false,
+        hash: true,
         templateParameters: {
-            analytics: name !== 'home' // For now, disable analytics for starter project landing page
+            analytics: name !== 'home', // For now, disable analytics for starter project landing page
+            prismjs: name == 'home' // Syntax highlighting only on landing page.
         }
     });
 });
