@@ -6,7 +6,7 @@ permalink: /
 # Tentang Saya
 Halo
 
-``` js
+``` js/1,3-5
 function myFunction() {
   return true;
 }

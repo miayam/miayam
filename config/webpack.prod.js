@@ -19,8 +19,9 @@ module.exports = merge(commonConfig, {
             cacheGroups: {
                 styles: {
                     name: 'styles',
-                    test: /\.scss$/,
-                    chunks: 'all'
+                    test: /\.css$i/,
+                    chunks: 'all',
+                    enforce: true
                 },
                 commons: {
                     name: 'vendor',
