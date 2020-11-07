@@ -9,6 +9,10 @@
     margin: 0 auto;
     margin-bottom: 48px;
 
+    code {
+        @include grSecondaryText(740);
+    }
+
     h1 {
         @include grTitleSize(740);
     }
@@ -28,6 +32,10 @@
 
         &__content {
             margin: 0 16px;
+        }
+
+        code {
+            @include grSecondaryText(480);
         }
 
         h1 {
