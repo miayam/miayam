@@ -9,9 +9,9 @@ html(lang="en")
     //- Shamelessly track users. Uncomment it if you are ready to abuse your readers :(
     script(src='https://www.google-analytics.com/analytics.js', type='text/javascript', async)
     <% } %>
+    <%= htmlWebpackPlugin.files.css.map((css) => `link(href=\'${css}\', rel='stylesheet')`).join('\n      ') %>
   body
       include ./layout
 
       //- Inject assets. 6 spaces is necessary, so that `HtmlWebpackPugPlugin` can translate this snippet to proper pug syntax.
-      <%= htmlWebpackPlugin.files.css.map((css) => `link(href=\'${css}\', rel='stylesheet')`).join('\n      ') %>
       <%= htmlWebpackPlugin.files.js.map((js) => `script(src=\'${js}\', type='text/javascript', async)`).join('\n      ') %>
