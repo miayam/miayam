@@ -51,7 +51,7 @@ and configuration.
 It makes the design **modular** that can be easily **managed and updated**. Thanks to
 Daniel Tonon for
 [this great article](https://css-tricks.com/abem-useful-adaptation-bem/).
-He encourages us to combine modified BEM naming convention with atomic design
+He encourages us to combine modified [`BEM`](https://www.smashingmagazine.com/2018/06/bem-for-beginners/) naming convention with atomic design
 methodology. He also wrote pros and cons for his approach and let us decide
 and manage the trade off.
 
@@ -75,7 +75,7 @@ src
 ### As Little Assets As Possible {#as-little-assets-as-possible}
 `Webpack` is a bundle manager + task runner for this project.
 Any changes to `_includes/templates/**/*/index.js` or `_includes/templates/**/*/_index.scss` is
-watched and rebuilt by `Webpack`. `Webpack` bundle `JavaScript` and `SCSS` code in multiple entry points
+watched and rebuilt by `Webpack`. `Webpack` bundles `JavaScript` and `SCSS` code in multiple entry points
 reside in `_includes/templates` which will be injected on every template by `HtmlWebpackPlugin`.
 `Eleventy` will do the rest.
 
@@ -114,7 +114,9 @@ const multipleHtmlPlugins = ENTRY_POINTS.map(name => {
         inject: false,
         hash: true,
         templateParameters: {
-            analytics: name !== 'home' // For now, disable analytics for starter project landing page
+            // For now, disable analytics for
+            // starter project landing page
+            analytics: name !== 'home'
         }
     });
 });
