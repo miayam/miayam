@@ -4,7 +4,7 @@ permalink: /
 ---
 # Miayam
 --------
-### The Brutalist Blog Site Built & Designed By Muhammad D. R.
+## The Brutalist Blog Site Built & Designed By Muhammad D. R.
 
 A blog site to store thoughts and ideas. Built and designed solely by yours
 truly. It stays being true to itself. An entity that is an inhabitant of the

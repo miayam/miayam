@@ -9,7 +9,7 @@ module.exports = merge(commonConfig, {
     mode: 'production',
     output: {
         path: path.join(__dirname, '../_site'),
-        filename: 'assets/scripts/[name]-[contenthash].js',
+        filename: '[name]-[contenthash].js',
         publicPath: '/'
     },
     optimization: {
@@ -34,7 +34,7 @@ module.exports = merge(commonConfig, {
     },
     plugins: [
         new MiniCssExtractPlugin({
-            filename: 'assets/styles/[name].css'
+            filename: '[name].css'
         }),
         new OptimizeCSSAssetsPlugin({
             cssProcessor: require('cssnano'),
