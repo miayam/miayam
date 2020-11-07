@@ -9,19 +9,33 @@
     margin: 0 auto;
     margin-bottom: 48px;
 
-   code {
+    code {
         @include grSecondaryText(740);
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+        font-family: Arial, Helvetica, sans-serif;
     }
 
     h1 {
         @include grTitleSize(740);
     }
 
-    h2, h3 {
+    h2,
+    h3 {
         @include grHeadlineSize(740);
     }
 
-    p, a {
+    p,
+    a {
         @include grFontSize(740);
         @include grBaseLineHeight(740);
     }
@@ -42,7 +56,8 @@
             @include grTitleSize(480);
         }
 
-        h2, h3 {
+        h2,
+        h3 {
             @include grHeadlineSize(480);
         }
 
