@@ -9,11 +9,7 @@
     margin: 0 auto;
     margin-bottom: 48px;
 
-    a {
-        @include grBaseLineHeight(740);
-    }
-
-    code {
+   code {
         @include grSecondaryText(740);
     }
 
@@ -25,7 +21,7 @@
         @include grHeadlineSize(740);
     }
 
-    p {
+    p, a {
         @include grFontSize(740);
         @include grBaseLineHeight(740);
     }
@@ -53,6 +49,10 @@
         p {
             @include grFontSize(480);
             @include grBaseLineHeight(480);
+        }
+
+        li > a {
+            line-height: 3;
         }
     }
 }

@@ -34,7 +34,7 @@ module.exports = merge(commonConfig, {
     },
     plugins: [
         new MiniCssExtractPlugin({
-            filename: 'styles/[name].css'
+            filename: '[name].css'
         }),
         new OptimizeCSSAssetsPlugin({
             cssProcessor: require('cssnano'),
