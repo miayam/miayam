@@ -14,6 +14,15 @@
         margin: 0 16px;
     }
 
+    a,
+    code {
+        word-wrap: break-word;
+    }
+
+    pre {
+        white-space: pre-line;
+    }
+
     code {
         @include grSecondaryText(740);
     }
