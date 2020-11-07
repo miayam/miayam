@@ -26,7 +26,7 @@ This project also includes a starter pack to up and run with
 A starter project to rebuild [miayam.io](https://miayam.io) from the
 ground up using `Eleventy` and friends. It is a foundation on which
 new [miayam.io](https://miayam.io) will be built. Removing Jekyll
-entirely from the code base :shit:.
+entirely from the code base 💩.
 
 What I need for a brutalist blog site:
 - A simple design, component based design that's easy to change and work with.
