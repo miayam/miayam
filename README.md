@@ -21,7 +21,7 @@ This project also includes a starter pack to up and run with
 
 A starter project to rebuild [miayam.io](https://miayam.io) from the
 ground up using `Eleventy` and friends. It is a foundation on which
-new [miayam.io](https://miayam.io) is built. Removing Jekyll
+new [miayam.io](https://miayam.io) will be built. Removing Jekyll
 entirely from the code base :shit:.
 
 What I need for a brutalist blog site:
@@ -71,7 +71,7 @@ src
 ### As Little Assets As Possible
 `Webpack` is a bundle manager + task runner for this project.
 Any changes to `_includes/templates/**/*/index.js` or `_includes/templates/**/*/_index.scss` is
-watched and rebuilt by webpack. `Webpack` bundle `JavaScript` and `SCSS` code in multiple entry points
+watched and rebuilt by `Webpack`. `Webpack` bundle `JavaScript` and `SCSS` code in multiple entry points
 reside in `_includes/templates` which will be injected on every template by `HtmlWebpackPlugin`.
 `Eleventy` will do the rest.
 
@@ -168,20 +168,23 @@ You can host it on `Github Pages`, `Netlify`, or else.
 ## Special Thanks
 - Almighty God
 - https://github.com/clenemt/eleventy-webpack
-- https://pustelto.com/
+- https://pustelto.com
 
 
 ## Why Migrating From Jekyll to Eleventy?
 
-At first, [miayam.io](https://miayam.io) was a personal blog site built with `Jekyll` using a theme I picked carelessly
+At first, [miayam.io](https://miayam.io) was a personal blog site built with
+[`Jekyll`](https://jekyllrb.com/) using a theme I picked carelessly
 which I didn't quite understand how to work with. The more I tinker with it, the more befuddled I am.
 So, I decided to burn it down and rebuild it from the ground up.
 
-I was looking for an alternative to `Jekyll` written in `JavaScript` because I am a boring web developer
-you could find anywhere else. I have tried Gatsby and wound up getting bored. All those shiny new
-technologies Gatsby has to offer are not really what I need. I have tried Hexo, it had similar ambience
-with `Jekyll` but it didn't spark joy.
+I was looking for an alternative to [`Jekyll`](https://jekyllrb.com/) written in `JavaScript`
+because I am a boring web developer you could find anywhere else. I have tried
+[`Gatsby`](https://www.gatsbyjs.com/) and wound up getting bored. All those shiny new
+technologies [`Gatsby`](https://www.gatsbyjs.com/) has to offer are not really what I need.
+I have tried [`Hexo`](https://hexo.io/), it had similar ambience with
+[`Jekyll`](https://jekyllrb.com/) but it didn't spark joy.
 
-And then, there was `Eleventy`... It really is like a magical glove that just fit my brain perfectly. It
-does one thing and does it well. A simple SSG that is having no more than is really needed.
-
+And then, there was [`Eleventy`](https://www.11ty.dev/)... It really is like a magical glove that
+just fit my brain perfectly. It does one thing and does it well. A simple SSG (Static Site Generator)
+that is having no more than is really needed.
