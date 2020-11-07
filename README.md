@@ -102,6 +102,19 @@ const ENTRY_POINTS = [
     '404'
 ];
 
+const multipleHtmlPlugins = ENTRY_POINTS.map(name => {
+    return new HtmlWebpackPlugin({
+        template: `${basePath}/_includes/templates/base/index.pug`,
+        filename: `${basePath}/_includes/templates/${name}/index.pug`,
+        chunks: [`${name}`],
+        inject: false,
+        hash: true,
+        templateParameters: {
+            analytics: name !== 'home' // For now, disable analytics for starter project landing page
+        }
+    });
+});
+
 module.exports = {
     entry: ENTRY_POINTS.reduce((prev, curr) => {
         return {
@@ -109,7 +122,11 @@ module.exports = {
             [curr]: `./src/_includes/templates/${curr}/index.js`
         }
     }, {}),
-    ...
+    plugins: [
+        ...multipleHtmlPlugins
+        ... // The rest.
+    ]
+    ... // The rest
 };
 ```
 
