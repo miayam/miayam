@@ -14,8 +14,8 @@ This project also includes a starter pack to up and run with
 ## Table of Contents
 - [Introduction](#introduction)
 - [Usage](#usage)
-- [Why Migrating From Jekyll to Eleventy?](#why-migrating-from-jekyll-to-eleventy)
 - [Special Thanks](#special-thanks)
+- [Why Migrating From Jekyll to Eleventy?](#why-migrating-from-jekyll-to-eleventy)
 
 ## Introduction
 
@@ -26,12 +26,15 @@ entirely from the code base :shit:.
 
 What I need for a brutalist blog site:
 - A simple design, component based design that's easy to change and work with.
-It doesn't have to be React, Angular, Vue or Svelt.
+It doesn't have to be `React`, `Angular`, `Vue` or `Svelt`.
 - Performance. A super fast jellyfish. 100% lighthouse score.
 - SEO.
 - PWA. Well, I just want to display pictures of cute girls when offline.
 
 Therefore, this starter project must be:
+- [Boring](#boring)
+- [Atomic](#atomic)
+- [As Little Assets As Possible](#as-little-assets-as-possible)
 
 ### Boring
 I believe in boring technology. Shiny new technology will be obselete in no
