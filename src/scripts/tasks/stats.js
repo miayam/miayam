@@ -1,6 +1,6 @@
 const path = require('path');
 const fs = require('fs');
-const base = path.resolve('', '_site/assets');
+const base = path.resolve('', '_site');
 
 const getAllFiles = function (dirPath) {
     files = fs.readdirSync(dirPath);
