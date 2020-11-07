@@ -16,7 +16,7 @@
             "purpose": "any maskable"
         }
     ],
-    "start_url": "/",
+    "start_url": "https://docs.miayam.io",
     "background_color": "#fff",
     "display": "standalone",
     "scope": "/",
