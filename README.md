@@ -13,12 +13,15 @@ This project also includes a starter pack to up and run with
 
 ## Table of Contents
 - [Introduction](#introduction)
-- [Why Migrating From `Jekyll` to `Eleventy`?](#why-migrating-from-jekyll-to-eleventy)
+- [Usage](#usage)
+- [Why Migrating From Jekyll to Eleventy?](#why-migrating-from-jekyll-to-eleventy)
+- [Special Thanks](#special-thanks)
 
 ## Introduction
 
-A starter project to rebuild [miayam.io](https://miayam.io) from the ground up using `Eleventy` and
-friends. It is a foundation on which new [miayam.io](https://miayam.io) is built. Removing Jekyll
+A starter project to rebuild [miayam.io](https://miayam.io) from the
+ground up using `Eleventy` and friends. It is a foundation on which
+new [miayam.io](https://miayam.io) is built. Removing Jekyll
 entirely from the code base :shit:.
 
 What I need for a brutalist blog site:
@@ -32,14 +35,14 @@ Therefore, this starter project must be:
 
 ### Boring
 I believe in boring technology. Shiny new technology will be obselete in no
-time, but boring tech will not. It's already been an artifact. `Pug`
-for templating engine/presentational component. `SCSS` for styling.
-`Vanilla JS` for manipulating the DOM, scripting repetitive tasks and
-configuration.
+time, but boring tech will not. `Pug` for templating engine / presentational component.
+`SCSS` for styling. `Vanilla JS` for manipulating the DOM, scripting repetitive tasks
+and configuration.
 
 ### Atomic
-**Atomic Design** is a way to go. It makes the design **modular** that can be
-easily **managed and updated**. Thanks to Daniel Tonon for
+[Atomic Design](https://bradfrost.com/blog/post/atomic-web-design/) is a way to go.
+It makes the design **modular** that can be easily **managed and updated**. Thanks to
+Daniel Tonon for
 [this great article](https://css-tricks.com/abem-useful-adaptation-bem/).
 He encourages us to combine modified BEM naming convention with atomic design
 methodology. He also wrote pros and cons for his approach and let us decide
@@ -60,13 +63,14 @@ src
     └── templates
 ```
 
-`_includes` is an entry point in which `Eleventy` find the layouts.
+`_includes` is an entry point in which `Eleventy` looks for layouts.
 
 ### As Little Assets As Possible
-**Webpack** is a bundle manager + task runner for this project.
-`Eleventy` looks for layouts in `_includes/templates`. `Webpack` bundle `JavaScript`
-and `SCSS` code in multiple entry points reside in `_includes/templates` which will be
-injected on every template using `HtmlWebpackPlugin`.
+`Webpack` is a bundle manager + task runner for this project.
+Any changes to `_includes/templates/**/*/index.js` or `_includes/templates/**/*/_index.scss` is
+watched and rebuilt by webpack. `Webpack` bundle `JavaScript` and `SCSS` code in multiple entry points
+reside in `_includes/templates` which will be injected on every template by `HtmlWebpackPlugin`.
+`Eleventy` will do the rest.
 
 Here is the file structure:
 ```
@@ -106,34 +110,65 @@ module.exports = {
 };
 ```
 
+Here is how we inject assets on base template (`_includes/templates/base/index.pug`):
+```pug
+body
+    //- Inject assets. 6 spaces is necessary, so that `HtmlWebpackPugPlugin` can
+    //- translate this snippet to proper pug syntax.
+    <%= htmlWebpackPlugin.files.css.map((css) => {
+        return `link(href=\'${css}\', rel='stylesheet')`).join('\n      ');
+    }) %>
+    <%= htmlWebpackPlugin.files.js.map((js) => {
+        return `script(src=\'${js}\', type='text/javascript', async)`).join('\n      ');
+    }) %>
+```
+
 Therefore, every template will have unique minified, production ready assets that's only
 needed by pages that include it. *About* page will not load assets required by *Home* page.
 As little assets as possible.
 
-Here is the base template:
+## Usage
+- [Requirement](#requirement)
+- [Development](#development)
+- [Production](#production)
 
-```pug
-doctype html
-html(lang="en")
-  head
-    include /atoms/head/index
+### Requirement
+You must install [nvm](https://github.com/nvm-sh/nvm). You will be using Node version set in `.nvmrc`.
 
-    //- See src/config/webpack.common.js. We inject parameters there.
-
-    <% if (analytics) { %>
-    //- Shamelessly track users. Uncomment it if you are ready to abuse your readers :(
-    script(src='https://www.google-analytics.com/analytics.js', type='text/javascript', async)
-    <% } %>
-  body
-      include ./layout
-
-      //- Inject assets. 6 spaces is necessary, so that `HtmlWebpackPugPlugin` can translate this snippet to proper pug syntax.
-      <%= htmlWebpackPlugin.files.css.map((css) => `link(href=\'${css}\', rel='stylesheet')`).join('\n      ') %>
-      <%= htmlWebpackPlugin.files.js.map((js) => `script(src=\'${js}\', type='text/javascript', async)`).join('\n      ') %>
-
+After you have installed `nvm`, run this command:
+```sh
+$ nvm install
+$ nvm use
 ```
 
-## Why Migrating From `Jekyll` to `Eleventy`?
+### Development
+To set up localhost, run this command:
+
+```sh
+$ npm run start
+```
+
+`Webpack` bundles the assets, `Eleventy` will do the rest.
+
+Open `localhost:1992` to see the result.
+
+
+### Production
+To build production ready bundle, run this command:
+
+```sh
+$ npm run build
+```
+
+You can host it on `Github Pages`, `Netlify`, or else.
+
+## Special Thanks
+- Almighty God
+- https://github.com/clenemt/eleventy-webpack
+- https://pustelto.com/
+
+
+## Why Migrating From Jekyll to Eleventy?
 
 At first, [miayam.io](https://miayam.io) was a personal blog site built with `Jekyll` using a theme I picked carelessly
 which I didn't quite understand how to work with. The more I tinker with it, the more befuddled I am.
