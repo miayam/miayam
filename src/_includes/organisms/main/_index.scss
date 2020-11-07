@@ -21,7 +21,7 @@
         @include grHeadlineSize(740);
     }
 
-    p {
+    p, a {
         @include grFontSize(740);
         @include grBaseLineHeight(740);
     }
@@ -46,7 +46,7 @@
             @include grHeadlineSize(480);
         }
 
-        p {
+        p, a {
             @include grFontSize(480);
             @include grBaseLineHeight(480);
         }
