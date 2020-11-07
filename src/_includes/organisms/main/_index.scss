@@ -5,9 +5,14 @@
 @import "~@atoms/github-corner";
 
 .o-main {
-    width: 740px;
+    width: 100%;
+    max-width: 740px;
     margin: 0 auto;
     margin-bottom: 48px;
+
+    &__content {
+        margin: 0 16px;
+    }
 
     code {
         @include grSecondaryText(740);
@@ -41,13 +46,6 @@
     }
 
     @media only screen and (max-width: 480px) {
-        width: 100%;
-        margin-bottom: 32px;
-
-        &__content {
-            margin: 0 16px;
-        }
-
         code {
             @include grSecondaryText(480);
         }
