@@ -1,5 +1,5 @@
 ---
-layout: blog/index.pug
+layout: home/index.pug
 tags: scss
 ---
 # Hello World

@@ -1,8 +1,46 @@
 @import "~@styles/utilities";
 @import "~@styles/universe";
 @import "~@styles/libraries/syntax";
+@import "~@molecules/footer";
+@import "~@atoms/github-corner";
 
 .o-main {
     width: 740px;
     margin: 0 auto;
+    margin-bottom: 48px;
+
+    h1 {
+        @include grTitleSize(740);
+    }
+
+    h2, h3 {
+        @include grHeadlineSize(740);
+    }
+
+    p {
+        @include grFontSize(740);
+        @include grBaseLineHeight(740);
+    }
+
+    @media only screen and (max-width: 480px) {
+        width: 100%;
+        margin-bottom: 32px;
+
+        &__content {
+            margin: 0 16px;
+        }
+
+        h1 {
+            @include grTitleSize(480);
+        }
+
+        h2, h3 {
+            @include grHeadlineSize(480);
+        }
+
+        p {
+            @include grFontSize(480);
+            @include grBaseLineHeight(480);
+        }
+    }
 }

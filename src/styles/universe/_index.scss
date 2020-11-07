@@ -8,3 +8,34 @@
 mark {
     background-color: darkslategrey;
 }
+
+code {
+    background-color: rgba(0, 0, 0, 0.05);
+    border-radius: 1px;
+    height: 20px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}

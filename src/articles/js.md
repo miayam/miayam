@@ -1,5 +1,5 @@
 ---
-layout: about/index.pug
+layout: home/index.pug
 tags: js
 ---
 # Hello World

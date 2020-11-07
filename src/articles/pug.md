@@ -1,5 +1,5 @@
 ---
-layout: 404/index.pug
+layout: home/index.pug
 tags: pug
 ---
 # Hello World
