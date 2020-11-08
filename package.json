@@ -20,12 +20,13 @@
         "build:eleventy": "eleventy",
         "build:purge": "npx purgecss $npm_package_config_purgecss_args",
         "build:critical": "node src/scripts/tasks/critical-path.js",
+        "build:stats": "node src/scripts/tasks/stats.js",
         "analyze": "run-s build analyze:*",
         "analyze:js": "source-map-explorer _site/**/*.js _site/**/*.js.map"
     },
     "config": {
         "webpack_args": "--config webpack.config.js --display-error-details",
-        "purgecss_args": "--css _site/**/*.css --content _site/**/*.html --output _site/assets/styles"
+        "purgecss_args": "--css _site/**/*.css --content _site/**/*.html --output _site/styles"
     },
     "devDependencies": {
         "@11ty/eleventy": "^0.11.0",
