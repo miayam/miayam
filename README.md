@@ -7,7 +7,7 @@ web. HTML, CSS, JavaScript and everything in between bundled together. It's
 ugly, brutal, a dead simple site, a sore to the eyes, but having no more than
 is really needed.
 
-This project also includes a starter pack to up and run with
+This project also includes a starter pack to build a blog site with
 [`Eleventy`](https://www.11ty.dev/). Look into
 [`init`](https://github.com/miayam/miayam/tree/init) branch.
 
