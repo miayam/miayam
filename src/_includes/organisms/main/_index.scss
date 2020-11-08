@@ -49,7 +49,8 @@
     }
 
     p,
-    a {
+    a,
+    li {
         @include grFontSize(740);
         @include grBaseLineHeight(740);
     }
@@ -73,8 +74,8 @@
             @include grBaseLineHeight(480);
         }
 
-        li > a {
-            line-height: 3;
+        li {
+            line-height: 2;
         }
     }
 }
