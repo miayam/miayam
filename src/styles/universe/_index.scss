@@ -5,6 +5,8 @@
 // is not natural and considered bad practice, but Lee Min-Ho
 // (https://en.wikipedia.org/wiki/Lee_Min-ho_(actor)) sometimes
 // needs it.
+@import "~@styles/utilities";
+
 mark {
     background-color: darkslategrey;
 }
@@ -28,7 +30,12 @@ body {
 
 html {
     box-sizing: border-box;
-    font-size: 20px;
+
+    @include grBaseFontSize(1000);
+
+    @media only screen and (max-width: 480px) {
+        @include grBaseFontSize(700);
+    }
 }
 
 *, *:before, *:after {

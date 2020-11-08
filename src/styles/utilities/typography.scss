@@ -27,6 +27,10 @@ $phi: (1 + sqrt(5)) / 2; // 1.61803398874989 or "The Golden Ratio"
   @return round($fontSize);
 }
 
+@mixin grBaseFontSize($contentWidth: $defaultContentWidth) {
+  font-size: calcFontSize($contentWidth) + px;
+}
+
 @mixin grFontSize($contentWidth: $defaultContentWidth) {
   $lineHeight: sqrt($contentWidth) / $phi;
 

@@ -24,7 +24,7 @@
     }
 
     code {
-        @include grSecondaryText(740);
+        @include grSecondaryText(1000);
     }
 
     a {
@@ -40,38 +40,38 @@
     }
 
     h1 {
-        @include grTitleSize(740);
+        @include grTitleSize(1000);
     }
 
     h2,
     h3 {
-        @include grHeadlineSize(740);
+        @include grHeadlineSize(1000);
     }
 
     p,
     a,
     li {
-        @include grFontSize(740);
-        @include grBaseLineHeight(740);
+        @include grFontSize(1000);
+        @include grBaseLineHeight(1000);
     }
 
     @media only screen and (max-width: 480px) {
         code {
-            @include grSecondaryText(480);
+            @include grSecondaryText(700);
         }
 
         h1 {
-            @include grTitleSize(480);
+            @include grTitleSize(700);
         }
 
         h2,
         h3 {
-            @include grHeadlineSize(480);
+            @include grHeadlineSize(700);
         }
 
         p {
-            @include grFontSize(480);
-            @include grBaseLineHeight(480);
+            @include grFontSize(700);
+            @include grBaseLineHeight(700);
         }
 
         li {
