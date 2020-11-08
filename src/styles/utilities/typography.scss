@@ -21,6 +21,8 @@ $phi: (1 + sqrt(5)) / 2; // 1.61803398874989 or "The Golden Ratio"
 //
 // Usage: @include grFontSize();
 //        @include grFontSize(480);
+//        @include p();
+//        @include p(480);
 // --------------------------------
 @function calcFontSize($contentWidth: $defaultContentWidth) {
   $fontSize: sqrt($contentWidth) / $phi;
@@ -39,7 +41,11 @@ $phi: (1 + sqrt(5)) / 2; // 1.61803398874989 or "The Golden Ratio"
   line-height: calcFontSize($contentWidth) / $lineHeight;
 }
 
-// Title Size
+@mixin p($args...) {
+    @include grFontSize($args...);
+}
+
+// Title Size (H1)
 //
 // Calculated title size based on $defaultContentWidth.
 //
@@ -48,6 +54,8 @@ $phi: (1 + sqrt(5)) / 2; // 1.61803398874989 or "The Golden Ratio"
 //
 // Usage: @include grTitleSize();
 //        @include grTitleSize(480);
+//        @include h1();
+//        @include h1(480);
 // ---------------------------------
 @function calcTitleSize($contentWidth: $defaultContentWidth) {
   $fontSize: calcFontSize($contentWidth) * pow($phi, 2);
@@ -62,8 +70,41 @@ $phi: (1 + sqrt(5)) / 2; // 1.61803398874989 or "The Golden Ratio"
   line-height: calcTitleSize($contentWidth) / $lineHeight;
 }
 
+@mixin h1($args...) {
+    @include grTitleSize($args...);
+}
 
-// Headline Size
+// Secondary Title Size (H2)
+//
+// Calculated title size based on $defaultContentWidth.
+//
+// @author Muhammad D. R.
+// @since 1.0
+//
+// Usage: @include grSecondaryTitleSize();
+//        @include grSecondaryTitleSize(480);
+//        @include h2()
+//        @include h2(480)
+// ------------------------------------------
+@function calcSecondaryTitleSize($contentWidth: $defaultContentWidth) {
+  $fontSize: calcFontSize($contentWidth) * pow($phi, 3 / 2.0);
+  @return round($fontSize);
+}
+
+@mixin grSecondaryTitleSize($contentWidth: $defaultContentWidth) {
+  $lineHeight: sqrt($contentWidth) / $phi;
+
+  font-size: calcSecondaryTitleSize($contentWidth) + px;
+  font-size: (calcSecondaryTitleSize($contentWidth) / calcFontSize($contentWidth)) + rem;
+  line-height: calcSecondaryTitleSize($contentWidth) / $lineHeight;
+}
+
+@mixin h2($args...) {
+    @include grSecondaryTitleSize($args...);
+}
+
+
+// Headline Size (H3)
 //
 // Calculated headline size based on $defaultContentWidth.
 //
@@ -72,6 +113,8 @@ $phi: (1 + sqrt(5)) / 2; // 1.61803398874989 or "The Golden Ratio"
 //
 // Usage: @include grHeadlineSize();
 //        @include grHeadlineSize(480);
+//        @include h3();
+//        @include h3(480);
 // ------------------------------------
 @function calcHeadlineSize($contentWidth: $defaultContentWidth) {
   $fontSize: calcFontSize($contentWidth) * pow($phi, 1);
@@ -86,8 +129,12 @@ $phi: (1 + sqrt(5)) / 2; // 1.61803398874989 or "The Golden Ratio"
   line-height: calcHeadlineSize($contentWidth) / $lineHeight;
 }
 
+@mixin h3($args...) {
+    @include grHeadlineSize($args...);
+}
 
-// Sub-headline Size
+
+// Sub-headline Size (H4)
 //
 // Caclulated sub-headline size based on $defaultContentWidth.
 //
@@ -96,6 +143,8 @@ $phi: (1 + sqrt(5)) / 2; // 1.61803398874989 or "The Golden Ratio"
 //
 // Usage: @include grSubHeadlineSize();
 //        @include grSubHeadlineSize(480);
+//        @include h4();
+//        @include h4(480);
 // ---------------------------------------
 @function calcSubHeadlineSize($contentWidth: $defaultContentWidth) {
   $fontSize: calcFontSize($contentWidth) * sqrt($phi);
@@ -110,8 +159,12 @@ $phi: (1 + sqrt(5)) / 2; // 1.61803398874989 or "The Golden Ratio"
   line-height: calcSubHeadlineSize() / $lineHeight;
 }
 
+@mixin h4($args...) {
+    @include grSubHeadlineSize();
+}
 
-// Secondary Text
+
+// Secondary Text (Smaller than base font size, usually in <span/>)
 //
 // Calculated secondary text size based on $defaultContentWidth.
 //
@@ -120,6 +173,8 @@ $phi: (1 + sqrt(5)) / 2; // 1.61803398874989 or "The Golden Ratio"
 //
 // Usage: @include grSecondaryText();
 //        @include grSecondaryText(480);
+//        @include span();
+//        @include span(480);
 // -------------------------------------
 @function calcSecondaryText($contentWidth: $defaultContentWidth) {
   $fontSize: calcFontSize($contentWidth) * (1 / sqrt($phi));
@@ -132,6 +187,10 @@ $phi: (1 + sqrt(5)) / 2; // 1.61803398874989 or "The Golden Ratio"
   font-size: calcSecondaryText($contentWidth) + px;
   font-size: (calcSecondaryText($contentWidth) / calcFontSize($contentWidth)) + rem;
   line-height: calcSecondaryText($contentWidth) / $lineHeight;
+}
+
+@mixin span($args...) {
+    @include grSecondaryText($args...);
 }
 
 
