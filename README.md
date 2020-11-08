@@ -15,7 +15,7 @@ This project also includes a starter pack to up and run with
 - [Introduction](#introduction)
 - [Usage](#usage)
 - [Special Thanks](#special-thanks)
-- [Why Migrating From Jekyll to Eleventy?](#why-migrating-from-jekyll-to-eleventy)
+- [The Reason Why I Migrate From Jekyll To Eleventy](#the-reason-why-i-migrate-from-jekyll-to-eleventy)
 
 ## Introduction
 
@@ -190,7 +190,7 @@ You can host it on `Github Pages`, `Netlify`, or else.
 - https://pustelto.com
 
 
-## Why Migrating From Jekyll to Eleventy?
+## The Reason Why I Migrate From Jekyll To Eleventy
 
 At first, [miayam.io](https://miayam.io) was a personal blog site built with
 [`Jekyll`](https://jekyllrb.com/) using a theme I picked carelessly
