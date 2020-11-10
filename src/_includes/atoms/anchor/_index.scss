@@ -1,0 +1,11 @@
+@import "~@styles/variables";
+
+.a-anchor {
+    color: $link;
+
+    &:visited,
+    &:active,
+    &:hover {
+        color: $link;
+    }
+}

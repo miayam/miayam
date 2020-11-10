@@ -1,6 +1,7 @@
 .m-footer {
     border-top: 1px dotted rgba(0, 0, 0, 0.4);
-    p {
+
+    &__content {
         max-width: 740px;
         margin: 0 auto;
         text-align: center;

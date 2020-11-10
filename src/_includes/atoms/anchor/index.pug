@@ -1,0 +1,11 @@
+//- Usage:
+//-     +anchor("https://google.com")(class="m-navigation__link", data-id="1")
+//-       | Hello darling!
+//-
+//- Result:
+//-     <a href="#introduction" class="a-anchor m-navigation__link" data-id="1">
+//-         Hello darling!
+//-     </a>
+mixin anchor(href)
+  a(href!=href, class=`a-anchor ${attributes.class}`)&attributes(attributes)
+    block

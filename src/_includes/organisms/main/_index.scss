@@ -1,81 +1,21 @@
 @import "~@styles/utilities";
 @import "~@styles/universe";
+@import "~@styles/variables";
 @import "~@styles/libraries/syntax";
 @import "~@molecules/footer";
 @import "~@atoms/github-corner";
+@import "~@atoms/anchor";
 
 .o-main {
     width: 100%;
     max-width: 740px;
-    margin: 0 auto;
-    margin-bottom: 48px;
+    margin: 48px auto;
 
     &__content {
         margin: 0 16px;
     }
 
-    a,
-    code {
-        word-wrap: break-word;
-    }
-
-    pre {
-        overflow: auto;
-    }
-
-    code {
-        @include grSecondaryText(1000);
-    }
-
-    a {
-        text-decoration: none;
-    }
-
-    h1,
-    h2,
-    h3,
-    h4,
-    h5 {
-        font-family: Arial, Helvetica, sans-serif;
-    }
-
-    h1 {
-        @include grTitleSize(1000);
-    }
-
-    h2,
-    h3 {
-        @include grHeadlineSize(1000);
-    }
-
-    p,
-    a,
-    li {
-        @include grFontSize(1000);
-        @include grBaseLineHeight(1000);
-    }
-
-    @media only screen and (max-width: 480px) {
-        code {
-            @include grSecondaryText(700);
-        }
-
-        h1 {
-            @include grTitleSize(700);
-        }
-
-        h2,
-        h3 {
-            @include grHeadlineSize(700);
-        }
-
-        p {
-            @include grFontSize(700);
-            @include grBaseLineHeight(700);
-        }
-
-        li {
-            line-height: 2;
-        }
+    @media only screen and (max-width: 700px) {
+        margin: 32px auto;
     }
 }

@@ -1,15 +1,20 @@
 // Golden Ratio Typography Based On Greg Ricky's Gist
 // https://gist.github.com/gregrickaby/5001983
-// --------------------------------------------------
+
 @import "~mathsass/dist/math";
 
 
 // @author Muhammad D. R.
 // @since 1.0
 // @requires $defaultContentWidth
-// ----------------------------------
+//
 $defaultContentWidth: 740; // Change as you like
 $phi: (1 + sqrt(5)) / 2; // 1.61803398874989 or "The Golden Ratio"
+
+@function calcFontSize($contentWidth: $defaultContentWidth) {
+  $fontSize: sqrt($contentWidth) / $phi;
+  @return round($fontSize);
+}
 
 
 // Font Size
@@ -23,27 +28,33 @@ $phi: (1 + sqrt(5)) / 2; // 1.61803398874989 or "The Golden Ratio"
 //        @include grFontSize(480);
 //        @include p();
 //        @include p(480);
-// --------------------------------
-@function calcFontSize($contentWidth: $defaultContentWidth) {
-  $fontSize: sqrt($contentWidth) / $phi;
-  @return round($fontSize);
+//
+@mixin grFontSize($contentWidth: $defaultContentWidth) {
+  $lineHeightRatio: sqrt($contentWidth) / $phi;
+
+  font-size: calcFontSize($contentWidth) + px;
+  font-size: (calcFontSize($contentWidth) / calcFontSize($contentWidth)) + rem;
+  line-height: calcFontSize($contentWidth) / $lineHeightRatio;
 }
 
+@mixin p($contentWidth: $defaultContentWidth) {
+    @include grFontSize($contentWidth);
+}
+
+
+// Base Font Size On HTML Tag To Determine REM Value
+//
+// @author Muhammad D. R.
+// @since 1.0/
+// @author Muhammad D. R.
+//
+// Usage: @include grBaseFontSize();
+//        @include grBaseFontSize(480);
+//
 @mixin grBaseFontSize($contentWidth: $defaultContentWidth) {
   font-size: calcFontSize($contentWidth) + px;
 }
 
-@mixin grFontSize($contentWidth: $defaultContentWidth) {
-  $lineHeight: sqrt($contentWidth) / $phi;
-
-  font-size: calcFontSize($contentWidth) + px;
-  font-size: (calcFontSize($contentWidth) / calcFontSize($contentWidth)) + rem;
-  line-height: calcFontSize($contentWidth) / $lineHeight;
-}
-
-@mixin p($args...) {
-    @include grFontSize($args...);
-}
 
 // Title Size (H1)
 //
@@ -56,22 +67,22 @@ $phi: (1 + sqrt(5)) / 2; // 1.61803398874989 or "The Golden Ratio"
 //        @include grTitleSize(480);
 //        @include h1();
 //        @include h1(480);
-// ---------------------------------
+//
 @function calcTitleSize($contentWidth: $defaultContentWidth) {
   $fontSize: calcFontSize($contentWidth) * pow($phi, 2);
   @return round($fontSize);
 }
 
 @mixin grTitleSize($contentWidth: $defaultContentWidth) {
-  $lineHeight: sqrt($contentWidth) / $phi;
+  $lineHeightRatio: sqrt($contentWidth) / $phi;
 
   font-size: calcTitleSize($contentWidth) + px;
   font-size: (calcTitleSize($contentWidth) / calcFontSize($contentWidth)) + rem;
-  line-height: calcTitleSize($contentWidth) / $lineHeight;
+  line-height: calcTitleSize($contentWidth) / $lineHeightRatio;
 }
 
-@mixin h1($args...) {
-    @include grTitleSize($args...);
+@mixin h1($contentWidth: $defaultContentWidth) {
+    @include grTitleSize($contentWidth);
 }
 
 // Secondary Title Size (H2)
@@ -85,22 +96,22 @@ $phi: (1 + sqrt(5)) / 2; // 1.61803398874989 or "The Golden Ratio"
 //        @include grSecondaryTitleSize(480);
 //        @include h2()
 //        @include h2(480)
-// ------------------------------------------
+//
 @function calcSecondaryTitleSize($contentWidth: $defaultContentWidth) {
   $fontSize: calcFontSize($contentWidth) * pow($phi, 3 / 2.0);
   @return round($fontSize);
 }
 
 @mixin grSecondaryTitleSize($contentWidth: $defaultContentWidth) {
-  $lineHeight: sqrt($contentWidth) / $phi;
+  $lineHeightRatio: sqrt($contentWidth) / $phi;
 
   font-size: calcSecondaryTitleSize($contentWidth) + px;
   font-size: (calcSecondaryTitleSize($contentWidth) / calcFontSize($contentWidth)) + rem;
-  line-height: calcSecondaryTitleSize($contentWidth) / $lineHeight;
+  line-height: calcSecondaryTitleSize($contentWidth) / $lineHeightRatio;
 }
 
-@mixin h2($args...) {
-    @include grSecondaryTitleSize($args...);
+@mixin h2($contentWidth: $defaultContentWidth) {
+    @include grSecondaryTitleSize($contentWidth);
 }
 
 
@@ -115,22 +126,22 @@ $phi: (1 + sqrt(5)) / 2; // 1.61803398874989 or "The Golden Ratio"
 //        @include grHeadlineSize(480);
 //        @include h3();
 //        @include h3(480);
-// ------------------------------------
+//
 @function calcHeadlineSize($contentWidth: $defaultContentWidth) {
   $fontSize: calcFontSize($contentWidth) * pow($phi, 1);
   @return round($fontSize);
 }
 
 @mixin grHeadlineSize($contentWidth: $defaultContentWidth) {
-  $lineHeight: sqrt($contentWidth) / $phi;
+  $lineHeightRatio: sqrt($contentWidth) / $phi;
 
   font-size: calcHeadlineSize($contentWidth) + px;
   font-size: (calcHeadlineSize($contentWidth) / calcFontSize($contentWidth)) + rem;
-  line-height: calcHeadlineSize($contentWidth) / $lineHeight;
+  line-height: calcHeadlineSize($contentWidth) / $lineHeightRatio;
 }
 
-@mixin h3($args...) {
-    @include grHeadlineSize($args...);
+@mixin h3($contentWidth: $defaultContentWidth) {
+    @include grHeadlineSize($contentWidth);
 }
 
 
@@ -145,22 +156,22 @@ $phi: (1 + sqrt(5)) / 2; // 1.61803398874989 or "The Golden Ratio"
 //        @include grSubHeadlineSize(480);
 //        @include h4();
 //        @include h4(480);
-// ---------------------------------------
+//
 @function calcSubHeadlineSize($contentWidth: $defaultContentWidth) {
   $fontSize: calcFontSize($contentWidth) * sqrt($phi);
   @return round($fontSize);
 }
 
 @mixin grSubHeadlineSize($contentWidth: $defaultContentWidth) {
-  $lineHeight: sqrt($contentWidth) / $phi;
+  $lineHeightRatio: sqrt($contentWidth) / $phi;
 
   font-size: calcSubHeadlineSize($contentWidth) + px;
   font-size: (calcSubHeadlineSize($contentWidth) / calcFontSize($contentWidth)) + rem;
-  line-height: calcSubHeadlineSize() / $lineHeight;
+  line-height: calcSubHeadlineSize() / $lineHeightRatio;
 }
 
-@mixin h4($args...) {
-    @include grSubHeadlineSize();
+@mixin h4($contentWidth: $defaultContentWidth) {
+    @include grSubHeadlineSize($contentWidth);
 }
 
 
@@ -175,22 +186,22 @@ $phi: (1 + sqrt(5)) / 2; // 1.61803398874989 or "The Golden Ratio"
 //        @include grSecondaryText(480);
 //        @include span();
 //        @include span(480);
-// -------------------------------------
+//
 @function calcSecondaryText($contentWidth: $defaultContentWidth) {
   $fontSize: calcFontSize($contentWidth) * (1 / sqrt($phi));
   @return round($fontSize);
 }
 
 @mixin grSecondaryText($contentWidth: $defaultContentWidth) {
-  $lineHeight: sqrt($contentWidth) / $phi;
+  $lineHeightRatio: sqrt($contentWidth) / $phi;
 
   font-size: calcSecondaryText($contentWidth) + px;
   font-size: (calcSecondaryText($contentWidth) / calcFontSize($contentWidth)) + rem;
-  line-height: calcSecondaryText($contentWidth) / $lineHeight;
+  line-height: calcSecondaryText($contentWidth) / $lineHeightRatio;
 }
 
-@mixin span($args...) {
-    @include grSecondaryText($args...);
+@mixin span($contentWidth: $defaultContentWidth) {
+    @include grSecondaryText($contentWidth);
 }
 
 
@@ -203,12 +214,12 @@ $phi: (1 + sqrt(5)) / 2; // 1.61803398874989 or "The Golden Ratio"
 //
 // Usage: @include grBaseLineHeight();
 //        @include grBaseLineHeight(480);
-// -----------------------------------
+//
 @function calcBaseLineHeight($contentWidth: $defaultContentWidth) {
-  $fontSize: sqrt($contentWidth) / $phi;
+  $fontSizeRatio: sqrt($contentWidth) / $phi;
   $adjustmentRatio: 1 / (2 * $phi);
   $adjustmentSize: calcFontSize($contentWidth) * ($phi - $adjustmentRatio * (1 - ($contentWidth / pow(calcFontSize($contentWidth) * $phi, 2))));
-  $baseLineHeight: $adjustmentSize / $fontSize;
+  $baseLineHeight: $adjustmentSize / $fontSizeRatio;
   @return $baseLineHeight;
 }
 
@@ -227,10 +238,10 @@ $phi: (1 + sqrt(5)) / 2; // 1.61803398874989 or "The Golden Ratio"
 //
 // Usage: @include grCustomLineHeight(26);
 //        @include grCustomLineHeight(26, 480);
-// --------------------------------------------
+//
 @function calcCustomLineHeight($target, $contentWidth: $defaultContentWidth) {
-  $fontSize: sqrt($contentWidth) / $phi;
-  $lineHeight: $target / $fontSize;
+  $fontSizeRatio: sqrt($contentWidth) / $phi;
+  $lineHeight: $target / $fontSizeRatio;
   @return $lineHeight;
 }
 

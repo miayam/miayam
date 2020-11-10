@@ -1,48 +1,8 @@
 // These are styling for non-semantic element that breaks
-// design system such as hacks, clearfix, etc. Or any styling
-// from third party libraries that needs to be overriden.
+// design system such as hacks, clearfix, reset etc. Or any
+// styling from third party libraries that needs to be overriden.
 // These are mostly CSS cosmetic surgery. Cosmetic surgery
 // is not natural and considered bad practice, but Lee Min-Ho
-// (https://en.wikipedia.org/wiki/Lee_Min-ho_(actor)) sometimes
-// needs it.
-@import "~@styles/utilities";
+// (https://en.wikipedia.org/wiki/Lee_Min-ho_(actor)) needs it.
 
-mark {
-    background-color: darkslategrey;
-}
-
-code {
-    background-color: rgba(0, 0, 0, 0.05);
-    border-radius: 1px;
-    height: 20px;
-}
-
-h1, h2, h3, h4, h5, h6 {
-    margin: 0;
-}
-
-body {
-    font-family: 'Times New Roman', Times, serif;
-    margin: 0;
-    padding: 0;
-    font-weight: normal;
-}
-
-html {
-    box-sizing: border-box;
-
-    @include grBaseFontSize(1000);
-
-    @media only screen and (max-width: 480px) {
-        @include grBaseFontSize(700);
-    }
-}
-
-*, *:before, *:after {
-    box-sizing: inherit;
-}
-
-img {
-    max-width: 100%;
-    height: auto;
-}
+@import "./reset.scss";
