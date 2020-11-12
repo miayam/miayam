@@ -7,5 +7,5 @@
 //-         Hello darling!
 //-     </a>
 mixin anchor(href)
-  a(href!=href, class=`a-anchor ${attributes.class}`)&attributes(attributes)
+  a(href!=href, class=`${attributes.class}`)&attributes(attributes)
     block

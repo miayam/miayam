@@ -13,19 +13,19 @@ ugly, brutal, a dead simple site, a sore to the eyes, but having no more than
 is really needed.
 
 This project also includes a starter pack to build a blog site with
-[`Eleventy`](https://www.11ty.dev/){.a-anchor}. Look into
-[`init`](https://github.com/miayam/miayam/tree/init){.a-anchor} branch.
+[`Eleventy`](https://www.11ty.dev/). Look into
+[`init`](https://github.com/miayam/miayam/tree/init) branch.
 
 ### Table of Contents
-- [Introduction](#introduction){.a-anchor}
-- [Usage](#usage){.a-anchor}
-- [Special Thanks](#special-thanks){.a-anchor}
-- [The Reason Why I Migrate From Jekyll To Eleventy](#the-reason-why-i-migrate-from-jekyll){.a-anchor}
+- [Introduction](#introduction)
+- [Usage](#usage)
+- [Special Thanks](#special-thanks)
+- [The Reason Why I Migrate From Jekyll To Eleventy](#the-reason-why-i-migrate-from-jekyll)
 
 ### Introduction {id="introduction"}
-A starter project to rebuild [miayam.io](https://miayam.io){.a-anchor} from the
+A starter project to rebuild [miayam.io](https://miayam.io) from the
 ground up using `Eleventy` and friends. It is a foundation on which
-new [miayam.io](https://miayam.io){.a-anchor} will be built. Removing Jekyll
+new [miayam.io](https://miayam.io) will be built. Removing Jekyll
 entirely from the code base 💩.
 
 What I need for a brutalist blog site:
@@ -36,9 +36,9 @@ It doesn't have to be `React`, `Angular`, `Vue` or `Svelt`.
 - PWA. Well, I just want to display pictures of cute girls when offline.
 
 Therefore, this starter project must be:
-- [Boring](#boring){.a-anchor}
-- [Atomic](#atomic){.a-anchor}
-- [As Little Assets As Possible](#as-little-assets-as-possible){.a-anchor}
+- [Boring](#boring)
+- [Atomic](#atomic)
+- [As Little Assets As Possible](#as-little-assets-as-possible)
 
 ### Boring {#boring}
 I believe in boring technology. Shiny new technology will be obselete in no
@@ -47,11 +47,11 @@ time, but boring tech will not. `Pug` for templating engine / presentational com
 and configuration.
 
 ### Atomic {#atomic}
-[Atomic Design](https://bradfrost.com/blog/post/atomic-web-design/){.a-anchor} is a way to go.
+[Atomic Design](https://bradfrost.com/blog/post/atomic-web-design/) is a way to go.
 It makes the design **modular** that can be easily **managed and updated**. Thanks to
 Daniel Tonon for
-[this great article](https://css-tricks.com/abem-useful-adaptation-bem/){.a-anchor}.
-He encourages us to combine modified [`BEM`](https://www.smashingmagazine.com/2018/06/bem-for-beginners/){.a-anchor} naming convention with atomic design
+[this great article](https://css-tricks.com/abem-useful-adaptation-bem/).
+He encourages us to combine modified [`BEM`](https://www.smashingmagazine.com/2018/06/bem-for-beginners/) naming convention with atomic design
 methodology. He also wrote pros and cons for his approach and let us decide
 and manage the trade off.
 
@@ -154,12 +154,12 @@ needed by pages that include it. *About* page will not load assets required by *
 As little assets as possible.
 
 ### Usage {#usage}
-- [Requirement](#requirement){.a-anchor}
-- [Development](#development){.a-anchor}
-- [Production](#production){.a-anchor}
+- [Requirement](#requirement)
+- [Development](#development)
+- [Production](#production)
 
 ### Requirement {#requirement}
-You must install [nvm](https://github.com/nvm-sh/nvm){.a-anchor}. You will be using Node version set in `.nvmrc`.
+You must install [nvm](https://github.com/nvm-sh/nvm). You will be using Node version set in `.nvmrc`.
 
 After you have installed `nvm`, run this command:
 ```
@@ -190,25 +190,25 @@ You can host it on `Github Pages`, `Netlify`, or else.
 
 ### Special Thanks {#special-thanks}
 - Almighty God
-- [https://github.com/clenemt/eleventy-webpack](https://github.com/clenemt/eleventy-webpack){.a-anchor}
-- [https://pustelto.com](https://pustelto.com){.a-anchor}
+- [https://github.com/clenemt/eleventy-webpack](https://github.com/clenemt/eleventy-webpack)
+- [https://pustelto.com](https://pustelto.com)
 
 
 ### The Reason Why I Migrate From Jekyll to Eleventy {#the-reason-why-i-migrate-from-jekyll}
-At first, [miayam.io](https://miayam.io){.a-anchor} was a personal blog site built with
-[Jekyll](https://jekyllrb.com/){.a-anchor} using a theme I pick carelessly without thinking.
+At first, [miayam.io](https://miayam.io) was a personal blog site built with
+[Jekyll](https://jekyllrb.com/) using a theme I pick carelessly without thinking.
 2 years later since its inception, I almost forget half of the code. Ruby seems
 foreign to me. The more I tinker with it, the more befuddled I am. So, I decided to
 burn it down and rebuild it from the ground up.
 
-I was looking for an alternative to [Jekyll](https://jekyllrb.com/){.a-anchor} written in
+I was looking for an alternative to [Jekyll](https://jekyllrb.com/) written in
 `JavaScript` because I am a boring web developer you could find anywhere else. I have
-tried [Gatsby](https://www.gatsbyjs.com/){.a-anchor} and wound up getting bored. All those shiny
-new technologies [Gatsby](https://www.gatsbyjs.com/){.a-anchor} has to offer are not really what
-I need. I have tried [Hexo](https://hexo.io/){.a-anchor}, it had similar ambience with
-[Jekyll](https://jekyllrb.com/){.a-anchor} but it didn't spark joy.
+tried [Gatsby](https://www.gatsbyjs.com/) and wound up getting bored. All those shiny
+new technologies [Gatsby](https://www.gatsbyjs.com/) has to offer are not really what
+I need. I have tried [Hexo](https://hexo.io/), it had similar ambience with
+[Jekyll](https://jekyllrb.com/) but it didn't spark joy.
 
-And then, there was [Eleventy](https://www.11ty.dev/){.a-anchor}... It really is like a magical glove that
+And then, there was [Eleventy](https://www.11ty.dev/)... It really is like a magical glove that
 just fit my brain perfectly. It does one thing and does it well. A simple SSG (Static Site Generator)
-that helps provide minimum barebone for the next generation of [miayam.io](https://miayam.io){.a-anchor}.
+that helps provide minimum barebone for the next generation of [miayam.io](https://miayam.io).
 And for good reason, the batteries are not included.
