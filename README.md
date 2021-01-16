@@ -164,11 +164,15 @@ $ nvm use
 ```
 
 ### Development
-To set up localhost, run this command:
+To prevent build error, you have to rename `.env.example` to `.env`.
+After that, run this command:
 
 ```sh
 $ npm run start
 ```
+
+The `.env` file consist of constant variables like `GA_TRACKER_ID_PROD`,
+`GA_TRACKER_ID_DEV` or anything else.
 
 `Webpack` bundles the assets, `Eleventy` will do the rest.
 

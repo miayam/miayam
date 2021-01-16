@@ -1,10 +1,4 @@
-const ENTRY_POINTS = [
-    'blog',
-    'home',
-    '404',
-    'project',
-    'about'
-];
+const fs = require('fs');
 const path = require('path');
 const basePath = path.resolve(__dirname, '../src'); // It is relative to `config` folder.
 const HtmlWebpackPlugin = require('html-webpack-plugin');
@@ -12,6 +6,9 @@ const HtmlWebpackPugPlugin = require('html-webpack-pug-plugin');
 const PostCSSPresetEnv = require('postcss-preset-env');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const Dotenv = require('dotenv-webpack');
+const ENTRY_POINTS = fs.readdirSync(`${basePath}/_includes/templates`) 
+                       .filter(template => template !== 'base');
+
 const multipleHtmlPlugins = ENTRY_POINTS.map(name => {
     return new HtmlWebpackPlugin({
         template: `${basePath}/_includes/templates/base/index.pug`,
