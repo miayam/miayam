@@ -46,7 +46,7 @@
         "html-minifier": "^4.0.0",
         "html-webpack-plugin": "^4.5.0",
         "html-webpack-pug-plugin": "^2.0.0",
-        "markdown-it": "^12.0.2",
+        "markdown-it": "^9.0.0",
         "markdown-it-attrs": "^3.0.3",
         "mathsass": "^0.11.0",
         "mini-css-extract-plugin": "^1.2.0",

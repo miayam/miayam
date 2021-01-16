@@ -11,6 +11,8 @@ module.exports = (config) => {
     config.addPassthroughCopy('src/assets/files');
     config.addPassthroughCopy('src/assets/images');
     config.addPassthroughCopy('src/assets/videos');
+
+    // Enable attributes on Markdown
     config.setLibrary('md',
         require('markdown-it')('commonmark')
             .use(require('markdown-it-attrs'))
