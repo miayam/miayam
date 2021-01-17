@@ -32,7 +32,7 @@ module.exports = (config) => {
 
         // Added in 3.0, set to true to always wrap lines in `<span class="highlight-line">`
         // The default (false) only wraps when line numbers are passed in.
-        alwaysWrapLineHighlights: false,
+        alwaysWrapLineHighlights: true,
 
         // Added in 3.0.2, set to false to opt-out of pre-highlight removal of leading
         // and trailing whitespace

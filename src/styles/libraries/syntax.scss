@@ -315,3 +315,21 @@ pre > code.diff-highlight .token.inserted:not(.prefix) {
 .command-line-prompt > span:before {
     color: #8da1b9da;
 }
+
+pre {
+  counter-reset: lineNumber;
+}
+
+code .highlight-line:before {
+  -webkit-user-select: none;
+  border-right: 1px solid #404040;
+  color: #858585;
+  content: counter(lineNumber);
+  counter-increment: lineNumber;
+  display: inline-block;
+  font-variant-numeric: tabular-nums;
+  margin-right: 1.2em;
+  padding-right: 1.2em;
+  text-align: right;
+  width: 2.4em;
+}

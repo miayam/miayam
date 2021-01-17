@@ -32,10 +32,6 @@ html {
         @include grBaseLineHeight(1000);
     }
 
-    code {
-        @include grSecondaryText(1000);
-    }
-
     @media only screen and (max-width: 700px) {
         @include grBaseFontSize(700);
 
@@ -63,10 +59,6 @@ html {
         p,
         a {
             @include grBaseLineHeight(700);
-        }
-
-        code {
-            @include grSecondaryText(700);
         }
 
         li {
@@ -126,7 +118,7 @@ h6 {
 }
 
 body {
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'system', 'Times New Roman', Times, serif;
     margin: 0;
     padding: 0;
     font-weight: normal;
