@@ -26,7 +26,7 @@
     },
     "config": {
         "webpack_args": "--config webpack.config.js --display-error-details",
-        "purgecss_args": "--css _site/**/*.css --content _site/**/*.html --output _site/styles"
+        "purgecss_args": "--css _site/**/*.css --content _site/**/*.html --output _site"
     },
     "devDependencies": {
         "@11ty/eleventy": "^0.11.0",

@@ -6,6 +6,7 @@ glob.glob('_site/**/*.html', async (err, matches) => {
     const files = matches.map(function (match) {
         return path.relative('_site', match);
     });
+
     for (const filePath of files) {
         const criticalObject = await critical.generate({
             base: '_site',

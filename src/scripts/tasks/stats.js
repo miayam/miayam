@@ -1,17 +1,24 @@
 const path = require('path');
 const fs = require('fs');
+const glob = require('glob');
 const base = path.resolve('', '_site');
 
-const getAllFiles = function (dirPath) {
-    files = fs.readdirSync(dirPath);
+const logStat = function (fileExtension) {
+    glob.glob(`${base}/**/*.${fileExtension}`, async (err, matches) => {
+        const fileNames = matches.map(function (match) {
+            return path.relative('_site', match);
+        });
 
-    arrayOfFiles = [];
+        console.log(String(fileExtension).toUpperCase());
 
-    files.forEach(function (file) {
-        arrayOfFiles.push(path.join(dirPath, file))
-    })
+        fileNames.forEach(function (fileName) {
+            const filePath = `_site/${fileName}`;
+            const fileSize = convertBytes(fs.statSync(filePath).size);
+            console.log(filePath, fileSize);
+        });
 
-    return arrayOfFiles
+        console.log('\n');
+    });
 }
 
 const convertBytes = function (bytes) {
@@ -30,20 +37,5 @@ const convertBytes = function (bytes) {
     return (bytes / Math.pow(1024, i)).toFixed(1) + " " + sizes[i]
 }
 
-const logStat = function (directoryPath, label) {
-    const arrayOfFiles = getAllFiles(directoryPath)
-
-    console.log(label);
-
-    arrayOfFiles.forEach(function (filePath) {
-        console.log(
-            path.relative('_site', filePath),
-            convertBytes(fs.statSync(filePath).size)
-        );
-    })
-
-    console.log('\n');
-}
-
-logStat(base + '/styles', 'CSS');
-logStat(base + '/scripts', 'JS');
+logStat('css');
+logStat('js');
