@@ -8,57 +8,67 @@ html {
     background-color: $background;
     color: $text;
 
-    @include grBaseFontSize(1000);
+    @include grBaseFontSize(700);
 
     h1 {
-        @include h1(1000);
+        @include h1(700);
     }
 
     h2 {
-        @include h2(1000)
+        @include h2(700)
     }
     h3 {
-        @include h3(1000);
+        @include h3(700);
     }
 
     h4 {
-        @include h4(1000);
+        @include h4(700);
     }
 
     p,
     a,
     li {
-        @include grFontSize(1000);
-        @include grBaseLineHeight(1000);
+        @include grFontSize(700);
+        @include grBaseLineHeight(700);
+    }
+
+    code[class*="language-"],
+    pre[class*="language-"] {
+        @include grBaseFontSize(700);
     }
 
     @media only screen and (max-width: 700px) {
-        @include grBaseFontSize(700);
+        @include grBaseFontSize(500);
 
         h1 {
-            @include h1(700);
+            @include h1(500);
         }
 
         h2 {
-            @include h2(700)
+            @include h2(500)
         }
         h3 {
-            @include h3(700);
+            @include h3(500);
         }
 
         h4 {
-            @include h4(700);
+            @include h4(500);
         }
 
         p,
         a,
         li {
-            @include p(700);
+            @include p(500);
         }
 
         p,
         a {
-            @include grBaseLineHeight(700);
+            @include grBaseLineHeight(500);
+        }
+
+        code[class*="language-"],
+        pre[class*="language-"] {
+            @include grBaseFontSize(500);
         }
 
         li {
