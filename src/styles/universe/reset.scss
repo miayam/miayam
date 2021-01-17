@@ -38,37 +38,37 @@ html {
     }
 
     @media only screen and (max-width: 700px) {
-        @include grBaseFontSize(500);
+        @include grBaseFontSize(600);
 
         h1 {
-            @include h1(500);
+            @include h1(600);
         }
 
         h2 {
-            @include h2(500)
+            @include h2(600)
         }
         h3 {
-            @include h3(500);
+            @include h3(600);
         }
 
         h4 {
-            @include h4(500);
+            @include h4(600);
         }
 
         p,
         a,
         li {
-            @include p(500);
+            @include p(600);
         }
 
         p,
         a {
-            @include grBaseLineHeight(500);
+            @include grBaseLineHeight(600);
         }
 
         code[class*="language-"],
         pre[class*="language-"] {
-            @include grBaseFontSize(500);
+            @include grBaseFontSize(600);
         }
 
         li {
