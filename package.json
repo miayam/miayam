@@ -19,10 +19,9 @@
         "build:webpack": "webpack $npm_package_config_webpack_args",
         "build:eleventy": "eleventy",
         "build:purge": "npx purgecss $npm_package_config_purgecss_args",
-        "build:critical": "node src/scripts/tasks/critical-path.js",
-        "build:stats": "node src/scripts/tasks/stats.js",
-        "analyze": "run-s build analyze:*",
-        "analyze:js": "source-map-explorer _site/**/*.js _site/**/*.js.map"
+        "build:split-css": "node src/scripts/tasks/split_css.js",
+        "build:critical-path": "node src/scripts/tasks/critical_path.js",
+        "build:stats": "node src/scripts/tasks/stats.js"
     },
     "config": {
         "webpack_args": "--config webpack.config.js --display-error-details",
@@ -64,5 +63,6 @@
         "webpack": "^4.44.2",
         "webpack-cli": "^3.3.12",
         "webpack-merge": "^5.1.4"
-    }
+    },
+    "dependencies": {}
 }

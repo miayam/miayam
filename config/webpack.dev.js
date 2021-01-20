@@ -7,12 +7,12 @@ module.exports = merge(commonConfig, {
     mode: 'development',
     output: {
         path: path.join(__dirname, '../_site'),
-        filename: 'assets/scripts/[name]/[name].js',
+        filename: 'scripts-[name]-[contenthash].js',
         publicPath: '/'
     },
     plugins: [
         new MiniCssExtractPlugin({
-            filename: 'assets/styles/[name]/[name].css'
+            filename: 'styles-[name].css'
         })
     ]
 });
