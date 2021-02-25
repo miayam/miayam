@@ -1,5 +1,6 @@
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const chunk = require('lodash.chunk');
+const htmlmin = require('html-minifier');
 
 module.exports = (config) => {
     // Needed to prevent eleventy from ignoring changes to generated
@@ -58,6 +59,21 @@ module.exports = (config) => {
        }
 
        return tagMap;
+    });
+
+    // Minify HTML
+    config.addTransform("htmlmin", function(content, outputPath) {
+        // Eleventy 1.0+: use this.inputPath and this.outputPath instead
+        if( outputPath.endsWith(".html") ) {
+            let minified = htmlmin.minify(content, {
+                useShortDoctype: true,
+                removeComments: true,
+                collapseWhitespace: true
+            });
+            return minified;
+        }
+
+        return content;
     });
 
     // Syntax highlighting on Markdown
