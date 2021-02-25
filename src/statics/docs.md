@@ -1,6 +1,6 @@
 ---
-layout: home/index.pug
-permalink: /
+layout: docs/index.pug
+permalink: /docs/index.html
 ---
 ## Miayam
 --------

@@ -11,6 +11,8 @@ module.exports = (config) => {
     config.addPassthroughCopy('src/assets/files');
     config.addPassthroughCopy('src/assets/images');
     config.addPassthroughCopy('src/assets/videos');
+
+    // Markdown 
     config.setLibrary('md',
         require('markdown-it')('commonmark')
             .use(require('markdown-it-attrs'))
@@ -49,7 +51,7 @@ module.exports = (config) => {
             layouts: '_includes/templates',
             includes: '_includes',
         },
-        templateFormats: ["md"],
+        templateFormats: ["md", "pug"],
         htmlTemplateEngine: 'pug'
     };
 };

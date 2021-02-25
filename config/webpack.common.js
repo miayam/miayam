@@ -17,8 +17,8 @@ const multipleHtmlPlugins = ENTRY_POINTS.map(name => {
         inject: false,
         hash: true,
         templateParameters: {
-            analytics: name !== 'home', // For now, disable analytics for starter project landing page
-            prismjs: name == 'home' // Syntax highlighting only on landing page.
+            analytics: name !== 'docs', // For now, disable analytics for starter project landing page
+            prismjs: name == 'docs' // Syntax highlighting only on landing page.
         }
     });
 });

@@ -122,18 +122,45 @@ function getChunkName(html, root) {
   }
 }
 
-glob.glob('_site/articles/**/*.html', async (err, matches) => {
-    const files = matches.map(match => match.replace('_site/', ''));
+const routes = [
+  {
+    path: 'articles',
+    template: 'blog'
+  },
+  {
+    path: 'docs',
+    template: 'docs'
+  },
+  {
+    path: 'index.html',
+    template: 'home'
+  }
+];
 
-    const CONFIG = {
-        targetFolder: '_site',
-        html: files,
-        cssPath: 'styles-blog.css'
-    };
+glob.glob(`_site/**/*.html`, async (err, matches) => {
+  const groups = {};
+  const files = matches.map(match => match.replace('_site/', ''));
 
-    splitCSS(CONFIG);
-
-    if (err) {
-        console.log('CSS split is aborted...')
+  files.forEach(file => {
+    const subPath = file.split('/')[0];
+    if (Object.keys(groups).includes(subPath)) {
+      groups[subPath].push(file);
+    } else {
+      groups[subPath] = [file];
     }
+  });
+
+  Object.keys(groups).forEach(key => {
+    const route = routes.filter(route => route.path === key)[0];
+    const CONFIG = {
+      targetFolder: '_site',
+      html: groups[key],
+      cssPath: `styles-${route.template}.css`
+    };
+    splitCSS(CONFIG);
+  });
+
+  if (err) {
+    console.log('CSS split is aborted...')
+  }
 });

@@ -14,7 +14,7 @@
         "clean": "rm -rf _site",
         "start": "cross-env NODE_ENV=dev run-p -l clean start:*",
         "start:webpack": "webpack $npm_package_config_webpack_args --watch",
-        "start:eleventy": "DEBUG=Eleventy* eleventy --serve --port=1992",
+        "start:eleventy": "eleventy --serve --port=1992",
         "build": "cross-env NODE_ENV=prod run-s -l clean build:*",
         "build:webpack": "webpack $npm_package_config_webpack_args",
         "build:eleventy": "eleventy",
