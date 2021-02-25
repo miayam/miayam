@@ -29,6 +29,21 @@ module.exports = (config) => {
     // Minify any files
     config.addPlugin(eleventyPluginFilesMinifier);
 
+    // Minify HTML
+    config.addTransform("htmlmin", function(content, outputPath) {
+        // Eleventy 1.0+: use this.inputPath and this.outputPath instead
+        if( outputPath.endsWith(".html") ) {
+            let minified = htmlmin.minify(content, {
+                useShortDoctype: true,
+                removeComments: true,
+                collapseWhitespace: true
+            });
+            return minified;
+        }
+
+        return content;
+    });
+
     // Syntax highlighting on Markdown
     config.addPlugin(syntaxHighlight, {
 
