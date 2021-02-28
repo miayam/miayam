@@ -171,7 +171,7 @@ $ nvm use
 Install all dependencies:
 
 ```
-$ npm run start
+$ npm install
 ```
 
 To prevent build error, you have to rename `.env.example` to `.env`.
