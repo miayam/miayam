@@ -1,0 +1,17 @@
+---
+pagination:
+  data: collections.categories
+  size: 1
+  alias: tag
+permalink: /tags/{{ tag.tagName }}/{% if tag.pageNumber %}{{ tag.pageNumber + 1 }}/{% endif %}index.json
+---
+{
+    "posts": [
+        {% for item in tag.pageData %}
+            {
+                "url": "{{ item.url }}",
+                "content": "{{ item.templateContent | safe | stripHtml }}"
+            }{% if not loop.last %},{% endif %}
+        {% endfor %}
+    ]
+}

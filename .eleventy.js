@@ -1,4 +1,5 @@
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
+const chunk = require('./src/scripts/utilities/chunk');
 
 module.exports = (config) => {
     // Needed to prevent eleventy from ignoring changes to generated
@@ -17,6 +18,47 @@ module.exports = (config) => {
         require('markdown-it')('commonmark')
             .use(require('markdown-it-attrs'))
     );
+
+    // Strip HTML
+    config.addFilter('stripHtml', (content) => {
+        const strippedContent = content.replace(/(<([^>]+)>)/gi, "")
+                                       .replace(/\r?\n|\r/gi, " ")
+                                       .trim();
+        return strippedContent;
+    });
+
+    // Categorize contents
+    config.addCollection('categories', (collection) => {
+        // Get unique list of tags
+        let tagSet = new Set();
+        collection.getAllSorted().map(item => {
+            if ("tags" in item.data) {
+                const tags = item.data.tags;
+                // Optionally filter things out before you iterate over.
+                for (let tag of tags) {
+                    tagSet.add(tag);
+                }
+            }
+        });
+
+        const paginationSize = 5;
+        const tagMap = [];
+        const tagArray = [...tagSet];
+
+        for (let tagName of tagArray) {
+            const tagItems = collection.getFilteredByTag(tagName);
+            const pagedItems = chunk(tagItems, paginationSize);
+            pagedItems.forEach((pagedItem, index) => {
+                tagMap.push({
+                    tagName,
+                    pageNumber: index,
+                    pageData: pagedItem
+                });
+            });
+       }
+
+       return tagMap;
+    });
 
     // Syntax highlighting on Markdown
     config.addPlugin(syntaxHighlight, {
@@ -42,7 +84,7 @@ module.exports = (config) => {
 
         // Added in 3.0.4, change the separator between lines (you may want "\n")
         lineSeparator: "<br>",
-    })
+    });
 
     return {
         dir: {
@@ -51,7 +93,7 @@ module.exports = (config) => {
             layouts: '_includes/templates',
             includes: '_includes',
         },
-        templateFormats: ["md", "pug"],
+        templateFormats: ['md', 'pug', 'njk'],
         htmlTemplateEngine: 'pug'
     };
 };
