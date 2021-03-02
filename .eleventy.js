@@ -1,5 +1,5 @@
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
-const chunk = require('./src/scripts/utilities/chunk');
+const chunk = require('lodash.chunk');
 
 module.exports = (config) => {
     // Needed to prevent eleventy from ignoring changes to generated
