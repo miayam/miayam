@@ -47,7 +47,15 @@ module.exports = (config) => {
 
         for (let tagName of tagArray) {
             const tagItems = collection.getFilteredByTag(tagName);
-            const pagedItems = chunk(tagItems, paginationSize);
+            const tagItemsWithPrevAndNext = tagItems.map((tagItem, index, thisArray) => {
+                const prev = thisArray[index - 1];
+                const next = thisArray[index + 1];
+                tagItem.data["prev"] = {...tagItem.data["prev"], [tagName]: prev};
+                tagItem.data["next"] = {...tagItem.data["next"], [tagName]: next};
+                return tagItem;
+            });
+
+            const pagedItems = chunk(tagItemsWithPrevAndNext, paginationSize);
             pagedItems.forEach((pagedItem, index) => {
                 tagMap.push({
                     tagName,
