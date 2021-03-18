@@ -1,6 +1,6 @@
 include /molecules/navigation/index
 
 mixin header
-  header(class=`o-header ${attributes.class}`)
-    +navigation
-      block navigation
+  header(class=`o-header ${attributes.class || ''}`)
+    +navigation(data-id="hello")
+      block

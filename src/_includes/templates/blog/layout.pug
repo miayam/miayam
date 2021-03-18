@@ -1,4 +1,9 @@
-header
-  h1 Hey, you are using blog template
+include /organisms/header/index
+  
++header(class="hello")
+  span Articles
+  span Projects
+  span About
+  span !{page.url}
 main(role="main")
   article !{content}
