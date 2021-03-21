@@ -1,4 +1,9 @@
-header
-  h1 Hey, you are using blog template
+include /organisms/header/index
+
++header([
+  { href: '/', wording: 'Articles'},
+  { href: '/projects', wording: 'Projects'},
+  { href: '/about', wording: 'About'}
+])
 main(role="main")
   article !{content}

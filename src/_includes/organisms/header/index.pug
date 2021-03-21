@@ -1,6 +1,23 @@
 include /molecules/navigation/index
 
-mixin header
-  header(class=`o-header ${attributes.class}`)
-    +navigation
-      block navigation
+//- Usage:
+//-     +header(
+//-       [{ href: '/', wording: 'Home' }]
+//-     )(class="o-header--active", data-id="1")
+//-
+//- Result:
+//-     <header
+//-         class="o-header o-header--active"
+//-         data-id="1"
+//-     >
+//-         <nav class="m-navigation o-header__navigation">
+//-             <ul>
+//-                 <li>
+//-                     <a href="/">Home</a>
+//-                 </li>
+//-             </ul>
+//-         </nav>
+//-     </header> 
+mixin header(links)
+  header(class="o-header", role="banner")&attributes(attributes)
+    +navigation(links)(class="o-header__navigation")
