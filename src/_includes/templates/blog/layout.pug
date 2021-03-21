@@ -1,9 +1,9 @@
 include /organisms/header/index
-  
-+header(class="hello")
-  span Articles
-  span Projects
-  span About
-  span !{page.url}
+
++header([
+  { href: '/', wording: 'Articles'},
+  { href: '/projects', wording: 'Projects'},
+  { href: '/about', wording: 'About'}
+])
 main(role="main")
   article !{content}

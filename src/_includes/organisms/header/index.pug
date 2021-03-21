@@ -1,22 +1,23 @@
 include /molecules/navigation/index
 
 //- Usage:
-//-     +header(class="o-header--active", data-id="1")
-//-       span I love you
-//-       span I hate you
+//-     +header(
+//-       [{ href: '/', wording: 'Home' }]
+//-     )(class="o-header--active", data-id="1")
 //-
 //- Result:
-//-     <header class="o-header o-header--active">
-//-         <nav class="m-navigation m-navigation--active" data-id="1">
-//-             <span>
-//-                 I love you
-//-             </span>
-//-             <span>
-//-                 I hate you
-//-             </span>
+//-     <header
+//-         class="o-header o-header--active"
+//-         data-id="1"
+//-     >
+//-         <nav class="m-navigation o-header__navigation">
+//-             <ul>
+//-                 <li>
+//-                     <a href="/">Home</a>
+//-                 </li>
+//-             </ul>
 //-         </nav>
 //-     </header> 
-mixin header
-  header(class=`o-header ${attributes.class || ''}`)
-    +navigation(data-id="hello")
-      block
+mixin header(links)
+  header(class="o-header", role="banner")&attributes(attributes)
+    +navigation(links)(class="o-header__navigation")
