@@ -1,5 +1,21 @@
 include /molecules/navigation/index
 
+//- Usage:
+//-     +header(class="o-header--active", data-id="1")
+//-       span I love you
+//-       span I hate you
+//-
+//- Result:
+//-     <header class="o-header o-header--active">
+//-         <nav class="m-navigation m-navigation--active" data-id="1">
+//-             <span>
+//-                 I love you
+//-             </span>
+//-             <span>
+//-                 I hate you
+//-             </span>
+//-         </nav>
+//-     </header> 
 mixin header
   header(class=`o-header ${attributes.class || ''}`)
     +navigation(data-id="hello")
