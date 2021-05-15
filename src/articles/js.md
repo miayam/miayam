@@ -6,7 +6,7 @@ summary: sdflksdjfksldfjsdklfjsdfklsdf
 tags:
   - js
   - scss
-permalink: articles/{{ title | slug }}
+permalink: articles/{{ title | slug }}/index.html
 author: asdfksldfjlsf
 ---
 

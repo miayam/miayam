@@ -6,7 +6,7 @@ author: asdfskdfldsf
 tags:
   - js
   - scss
-permalink: articles/{{ title | slug }}
+permalink: articles/{{ title | slug }}/index.html
 summary: asdflkdsjfsd
 ---
 ![coba](/images/uploads/erika.jpg "cba")
