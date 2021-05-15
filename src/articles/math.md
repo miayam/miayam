@@ -1,5 +1,6 @@
 ---
 tags: [js, scss, math]
+layout: blog/index.pug
 title: math
 permalink: "articles/{{ title | slug }}/index.json"
 ---
