@@ -1,6 +1,6 @@
 ---
 layout: blog/index.pug
-tags: [js, scss]
+tags: [js, scss, math]
 title: Coba
 permalink: articles/{{ title | slug }}/
 ---

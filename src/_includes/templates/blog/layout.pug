@@ -1,9 +1,8 @@
 include /organisms/header/index
 
 +header([
-  { href: '/', wording: 'Articles'},
-  { href: '/projects', wording: 'Projects'},
-  { href: '/about', wording: 'About'}
+  { href: prev.js.url, wording: prev.js.url },
+  { href: prev.scss.url, wording: prev.scss.url }
 ])
 main(role="main")
   article !{content}
