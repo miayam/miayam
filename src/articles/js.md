@@ -1,8 +1,13 @@
 ---
 layout: blog/index.pug
-tags: [js, scss]
 title: js
+date: 2021-05-15T09:38:51.791Z
+summary: sdflksdjfksldfjsdklfjsdfklsdf
+tags:
+  - js
+  - scss
 permalink: articles/{{ title | slug }}
+author: asdfksldfjlsf
 ---
 
 ### Coba
