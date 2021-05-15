@@ -2,7 +2,7 @@
 tags: [js, scss, math]
 layout: blog/index.pug
 title: math
-permalink: "articles/{{ title | slug }}"
+permalink: articles/{{ title | slug }}
 ---
 {
    "date": "{{ page.date }}",
