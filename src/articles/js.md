@@ -13,4 +13,4 @@ permalink: articles/{{ title | slug }}/index.html
 
 coba coba coba
 
-![coba](/images/uploads/erika2.jpg "coba")
+![coba](/assets/images/erika2.jpg "coba")
