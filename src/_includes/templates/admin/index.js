@@ -8,22 +8,19 @@ if (window.netlifyIdentity) {
                 document.location.href = "/admin/index.html";
             });
         }
+    });
 
-        if (user) {
-            window.netlifyIdentity.on("logout", () => {
-                document.location.href = "/index.html";
-            });
-        }
+    window.netlifyIdentity.on("logout", () => {
+        document.location.href = "/index.html";
     });
 }
 
-// Register the Article component as the preview for entries in the blog collection
-CMS.registerPreviewTemplate("articles", Article);
-CMS.registerPreviewStyle("/styles-blog.css");
+window.onload = function () {
+    // Register the Article component as the preview for entries in the blog collection
+    CMS.registerPreviewTemplate("articles", Article);
+    CMS.registerPreviewStyle("/styles-blog.css");
 
-// Register any CSS file on the home page as a preview style
-var timeout;
-timeout = setTimeout(() => {
+    // Register any CSS file on the home page as a preview style
     fetch("/admin/")
         .then(response => response.text())
         .then(html => {
@@ -35,4 +32,4 @@ timeout = setTimeout(() => {
             }
             });
         });
-}, 3000);
+};
