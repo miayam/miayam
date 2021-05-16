@@ -17,7 +17,8 @@ const multipleHtmlPlugins = ENTRY_POINTS.map(name => {
         inject: false,
         hash: true,
         templateParameters: {
-            analytics: name !== 'docs' // For now, disable analytics for starter project landing page
+            analytics: name !== 'docs', // For now, disable analytics for starter project landing page
+            admin: name === 'admin'
         }
     });
 });
