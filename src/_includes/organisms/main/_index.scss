@@ -12,19 +12,19 @@
 
     &__content {
         margin: 0 16px;
+
+        img {
+            width: 100%;
+        }
+
+        article {
+            img {
+                width: 100%;
+            }
+        }
     }
 
     @media only screen and (max-width: 700px) {
         margin: 32px auto;
-    }
-
-    img {
-        width: 100%;
-    }
-
-    article {
-        img {
-            width: 100%;
-        }
     }
 }
