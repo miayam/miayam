@@ -1,5 +1,3 @@
-import './_index.scss';
-
 if (window.netlifyIdentity) {
     window.netlifyIdentity.on("init", user => {
         if (!user) {
@@ -26,5 +24,5 @@ if (window.CMS) {
     });
 
     CMS.registerPreviewTemplate("articles", ArticlePreview);
-    CMS.registerPreviewStyle("/styles-admin.css");
+    CMS.registerPreviewStyle("/styles-blog.css");
 }
