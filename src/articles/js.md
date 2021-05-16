@@ -20,6 +20,6 @@ function hello() {
 coba coba coba
 
 
-| ![coba](/assets/images/erika2.jpg "coba") | 
+![coba](/assets/images/erika2.jpg "coba")
 |:--:| 
 | *Erika Momotani* |
