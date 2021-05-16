@@ -141,7 +141,14 @@ glob.glob(`_site/**/*.html`, async (err, matches) => {
   const groups = {};
   const files = matches.map(match => match.replace('_site/', ''));
 
-  files.forEach(file => {
+  const filteredFiles = files.filter((file => {
+    const subPath = file.split('/')[0];
+    return routes
+      .map(route => route.path)
+      .includes(subPath);
+  }));
+
+  filteredFiles.forEach(file => {
     const subPath = file.split('/')[0];
     if (Object.keys(groups).includes(subPath)) {
       groups[subPath].push(file);

@@ -19,8 +19,8 @@
         "build:webpack": "webpack $npm_package_config_webpack_args",
         "build:eleventy": "eleventy",
         "build:purge": "npx purgecss $npm_package_config_purgecss_args",
-        "build:split-css": "node src/scripts/tasks/split_css.js",
-        "build:critical-path": "node src/scripts/tasks/critical_path.js",
+        "build:split-css": "node src/scripts/tasks/splitCSS.js",
+        "build:critical-path": "node src/scripts/tasks/criticalPath.js",
         "build:stats": "node src/scripts/tasks/stats.js"
     },
     "config": {
