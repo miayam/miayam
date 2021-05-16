@@ -1,9 +1,16 @@
 ---
-tags: [js, scss, math]
-layout: blog/index.pug
 title: pug
+date: 2021-05-16T10:05:21.375Z
+author: dslkfjsdlfjslf
+summary: sdflajskldfjsdlkfdjflsdf
+layout: blog/index.pug
+tags:
+  - js
+  - scss
+  - math
 permalink: articles/{{ title | slug }}/index.html
 ---
+```json
 {
    "date": "{{ page.date }}",
    "url": "{{ page.url }}",
@@ -14,3 +21,6 @@ permalink: articles/{{ title | slug }}/index.html
    "prevUrlMath": "{{ prev.math.url }}",
    "nextUrlMath": "{{ next.math.url }}"
 }
+```
+
+## Fantastic Planet!
