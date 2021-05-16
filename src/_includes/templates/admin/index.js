@@ -8,6 +8,12 @@ if (window.netlifyIdentity) {
                 document.location.href = "/admin/index.html";
             });
         }
+
+        if (user) {
+            window.netlifyIdentity.on("logout", () => {
+                document.location.href = "/index.html";
+            });
+        }
     });
 }
 
@@ -18,7 +24,7 @@ CMS.registerPreviewStyle("/styles-blog.css");
 // Register any CSS file on the home page as a preview style
 var timeout;
 timeout = setTimeout(() => {
-    fetch("/")
+    fetch("/admin/")
         .then(response => response.text())
         .then(html => {
             const f = document.createElement("html");
