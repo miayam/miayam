@@ -1,9 +1,16 @@
 ---
-tags: [js, scss, math]
-layout: blog/index.pug
 title: math
+date: 2021-05-16T09:17:37.469Z
+author: Terserah
+summary: Terserah
+layout: blog/index.pug
+tags:
+  - js
+  - scss
+  - math
 permalink: articles/{{ title | slug }}/index.html
 ---
+```json
 {
    "date": "{{ page.date }}",
    "url": "{{ page.url }}",
@@ -14,3 +21,4 @@ permalink: articles/{{ title | slug }}/index.html
    "prevUrlMath": "{{ prev.math.url }}",
    "nextUrlMath": "{{ next.math.url }}"
 }
+```
