@@ -1,3 +1,9 @@
-.gelo {
-    width: 100%;
+@import "~@organisms/main";
+
+.o-main {
+    article {
+        img {
+            width: 100%;
+        }
+    }
 }
