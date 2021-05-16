@@ -4,6 +4,7 @@ layout: blog/index.pug
 title: pug
 permalink: articles/{{ title | slug }}/index.html
 ---
+```javascript
 {
    "date": "{{ page.date }}",
    "url": "{{ page.url }}",
@@ -14,3 +15,4 @@ permalink: articles/{{ title | slug }}/index.html
    "prevUrlMath": "{{ prev.math.url }}",
    "nextUrlMath": "{{ next.math.url }}"
 }
+```
