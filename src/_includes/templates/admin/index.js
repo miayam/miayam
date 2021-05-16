@@ -8,7 +8,8 @@ if (window.netlifyIdentity) {
     });
 }
 
-if (window.CMS) {
+if (window.CMS && window.React) {
+    console.log(React.createClass, React.createElement);
     const h = React.createElement;
     var ArticlePreview = React.createClass({
         render: function() {
