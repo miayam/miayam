@@ -4,13 +4,13 @@ if (window.netlifyIdentity) {
     window.netlifyIdentity.on("init", user => {
         if (!user) {
             window.netlifyIdentity.on("login", () => {
-                document.location.href = "/admin/";
+                document.location.href = "/admin";
             });
         }
     });
 }
 
-if (window.CMS && window.React) {
+if (window.CMS) {
     const h = React.createElement;
     class ArticlePreview extends React.Component {
         render() {
