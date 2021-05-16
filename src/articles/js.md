@@ -9,6 +9,7 @@ tags:
   - scss
 permalink: articles/{{ title | slug }}/index.html
 ---
+
 ```javascript
 function hello() {
    return 'hello';
@@ -20,5 +21,6 @@ function hello() {
 coba coba coba
 
 
-![coba](/assets/images/erika2.jpg "coba")
+![coba](/assets/images/erika2.jpg "coba")
+
 *Erika Momotani*
