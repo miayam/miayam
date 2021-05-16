@@ -1,3 +1,6 @@
+import Article from "./preview/article";
+import './_index.scss';
+
 if (window.netlifyIdentity) {
     window.netlifyIdentity.on("init", user => {
         if (!user) {
@@ -8,22 +11,19 @@ if (window.netlifyIdentity) {
     });
 }
 
-if (window.CMS && window.React) {
-    console.log(React.createClass, React.createElement);
-    const h = React.createElement;
-    var ArticlePreview = React.createClass({
-        render: function() {
-            var entry = this.props.entry;
-            var image = entry.getIn(['data', 'image']);
-            var bg = this.props.getAsset(image);
-            return h('main', {"className": "o-main"}, {},
-                h('h1', {}, entry.getIn(['data', 'title'])),
-                h('img', {src: bg.toString()}),
-                h('div', {"className": "text"}, this.props.widgetFor('body'))
-            );
-        }
-    });
+// Register the Article component as the preview for entries in the blog collection
+CMS.registerPreviewTemplate("articles", Article);
+CMS.registerPreviewStyle("/styles-blog.css");
 
-    CMS.registerPreviewTemplate("articles", ArticlePreview);
-    CMS.registerPreviewStyle("/styles-blog.css");
-}
+// Register any CSS file on the home page as a preview style
+fetch("/")
+  .then(response => response.text())
+  .then(html => {
+    const f = document.createElement("html");
+    f.innerHTML = html;
+    Array.from(f.getElementsByTagName("link")).forEach(tag => {
+      if (tag.rel == "stylesheet" && !tag.media) {
+        CMS.registerPreviewStyle(tag.href);
+      }
+    });
+  });
