@@ -9,7 +9,7 @@ tags:
   - scss
 permalink: articles/{{ title | slug }}/index.html
 ---
-```js
+```javascript
 function hello() {
    return 'hello';
 }
