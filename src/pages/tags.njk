@@ -1,6 +1,6 @@
 ---
 pagination:
-  data: collections.categories
+  data: articles.tags
   size: 1
   alias: tag
 permalink: /tags/{{ tag.tagName }}/{% if tag.pageNumber %}{{ tag.pageNumber + 1 }}/{% endif %}index.json
@@ -10,7 +10,7 @@ permalink: /tags/{{ tag.tagName }}/{% if tag.pageNumber %}{{ tag.pageNumber + 1 
         {% for item in tag.pageData %}
             {
                 "url": "{{ item.url }}",
-                "content": "{{ item.templateContent | safe | stripHtml }}"
+                "content": "{{ item.content | safe | stripHtml }}"
             }{% if not loop.last %},{% endif %}
         {% endfor %}
     ]

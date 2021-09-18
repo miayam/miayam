@@ -1,0 +1,10 @@
+---
+layout: "about/index.pug"
+pagination:
+  data: articles.list
+  size: 1
+  alias: article
+permalink: | 
+  | articles/#{ article.slug }/index.html
+---
+div !{ article.content }
