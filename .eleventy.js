@@ -1,5 +1,4 @@
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
-const chunk = require('lodash.chunk');
 
 module.exports = (config) => {
     // Needed to prevent eleventy from ignoring changes to generated
@@ -25,47 +24,6 @@ module.exports = (config) => {
                                        .replace(/\r?\n|\r/gi, " ")
                                        .trim();
         return strippedContent;
-    });
-
-    // Categorize contents
-    config.addCollection('categories', (collection) => {
-        // Get unique list of tags
-        let tagSet = new Set();
-        collection.getAllSorted().forEach(item => {
-            if ("tags" in item.data) {
-                const tags = item.data.tags;
-                // Optionally filter things out before you iterate over.
-                for (let tag of tags) {
-                    tagSet.add(tag);
-                }
-            }
-        });
-
-        const paginationSize = 5;
-        const tagMap = [];
-        const tagArray = [...tagSet];
-
-        for (let tagName of tagArray) {
-            const tagItems = collection.getFilteredByTag(tagName);
-            const tagItemsWithPrevAndNext = tagItems.map((tagItem, index, thisArray) => {
-                const prev = thisArray[index - 1];
-                const next = thisArray[index + 1];
-                tagItem.data["prev"] = {...tagItem.data["prev"], [tagName]: prev};
-                tagItem.data["next"] = {...tagItem.data["next"], [tagName]: next};
-                return tagItem;
-            });
-
-            const pagedItems = chunk(tagItemsWithPrevAndNext, paginationSize);
-            pagedItems.forEach((pagedItem, index) => {
-                tagMap.push({
-                    tagName,
-                    pageNumber: index,
-                    pageData: pagedItem
-                });
-            });
-       }
-
-       return tagMap;
     });
 
     // Syntax highlighting on Markdown
