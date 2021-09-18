@@ -3,6 +3,7 @@ const POSTS_API = `${BASE_URL}/posts?orderby=date&order=desc`;
 const TAGS_API = `${BASE_URL}/tags`;
 const fetch = require('node-fetch');
 const chunk = require('lodash.chunk');
+const highlight = require('./highlight');
 
 const getTags = async () => {
 	// Get unique list of tags
@@ -77,8 +78,8 @@ const formatData = (data) => {
         slug: p.slug,
         date: new Date(p.date),
         title: p.title.rendered,
-        excerpt: p.excerpt.rendered,
-        content: p.content.rendered,
+        excerpt: highlight(p.excerpt.rendered),
+        content: highlight(p.content.rendered),
 				tags: p.tags,
       };
     });
