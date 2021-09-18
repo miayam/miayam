@@ -25,6 +25,19 @@ html {
         @include h4(700);
     }
 
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        padding-top: 1.5 * calcFontSize(700) + px;
+
+        &:first-of-type {
+            padding-top: 0;
+        }
+    }
+
     p,
     a,
     li {
@@ -37,34 +50,47 @@ html {
         @include grBaseFontSize(700);
     }
 
-    @media only screen and (min-width: 1440px) {
-        @include grBaseFontSize(1440);
+    @media only screen and (min-width: 1442px) {
+        @include grBaseFontSize(1442);
 
         h1 {
-            @include h1(1440);
+            @include h1(1442);
         }
 
         h2 {
-            @include h2(1440)
+            @include h2(1442)
         }
         h3 {
-            @include h3(1440);
+            @include h3(1442);
         }
 
         h4 {
-            @include h4(1440);
+            @include h4(1442);
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            padding-top: 1.5 * calcFontSize(1442) + px;
+
+            &:first-of-type {
+                padding-top: 0;
+            }
         }
 
         p,
         a,
         li {
-            @include grFontSize(1440);
-            @include grBaseLineHeight(1440);
+            @include grFontSize(1442);
+            @include grBaseLineHeight(1442);
         }
 
         code[class*="language-"],
         pre[class*="language-"] {
-            @include grBaseFontSize(1440);
+            @include grBaseFontSize(1442);
         }
     }
 
@@ -84,6 +110,19 @@ html {
 
         h4 {
             @include h4(600);
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            padding-top: 1.5 * calcFontSize(600) + px;
+
+            &:first-of-type {
+                padding-top: 0;
+            }
         }
 
         p,
