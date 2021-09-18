@@ -17,8 +17,8 @@ const main = async () => {
 
   // Fetch all pages of posts.
   const wpList = [];
-  for (let w = 1; w <= wpPages; w++) {
-    wpList.push(getPosts(w));
+  for (let page = 1; page <= wpPages; page++) {
+    wpList.push(getPosts(page));
   }
 
   const list = (await Promise.all(wpList)).flat();

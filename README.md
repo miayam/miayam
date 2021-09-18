@@ -1,6 +1,8 @@
 # Miayam
 ### The Brutalist Blog Site Built & Designed By Muhammad D. R.
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/a1ca195e-33ec-4a4e-862a-196b7306f16e/deploy-status)](https://app.netlify.com/sites/frosty-davinci-459755/deploys)
+
 A blog site to store thoughts and ideas. Built and designed solely by yours
 truly. It stays being true to itself. An entity that is an inhabitant of the
 web. HTML, CSS, JavaScript and everything in between bundled together. It's
