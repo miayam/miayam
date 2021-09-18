@@ -6,8 +6,10 @@
  * @homepage https://github.com/ArmandPhilippot/coldark-prism
  * @license MIT
  */
-code[class*="language-"],
-pre[class*="language-"] {
+code[class*="language-"]
+code[class*="lang-"],
+pre[class*="language-"],
+pre[class*="lang-"] {
     color: #e3eaf2;
     background: none;
     font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
@@ -29,31 +31,43 @@ pre[class*="language-"] {
 pre[class*="language-"]::-moz-selection,
 pre[class*="language-"] ::-moz-selection,
 code[class*="language-"]::-moz-selection,
-code[class*="language-"] ::-moz-selection {
+code[class*="language-"] ::-moz-selection,
+pre[class*="lang-"]::-moz-selection,
+pre[class*="lang-"] ::-moz-selection,
+code[class*="lang-"]::-moz-selection,
+code[class*="lang-"] ::-moz-selection{
     background: #3c526d;
 }
 
 pre[class*="language-"]::selection,
 pre[class*="language-"] ::selection,
 code[class*="language-"]::selection,
-code[class*="language-"] ::selection {
+code[class*="language-"] ::selection,
+pre[class*="lang-"]::selection,
+pre[class*="lang-"] ::selection,
+code[class*="lang-"]::selection,
+code[class*="lang-"] ::selection{
     background: #3c526d;
 }
 
 /* Code blocks */
-pre[class*="language-"] {
+pre[class*="language-"],
+pre[class*="lang-"] {
     padding: 1em;
     margin: 0.5em 0;
     overflow: auto;
 }
 
 :not(pre) > code[class*="language-"],
-pre[class*="language-"] {
+pre[class*="language-"],
+:not(pre) > code[class*="lang-"],
+pre[class*="lang-"] {
     background: #111b27;
 }
 
 /* Inline code */
-:not(pre) > code[class*="language-"] {
+:not(pre) > code[class*="language-"],
+:not(pre) > code[class*="lang-"] {
     padding: 0.1em 0.3em;
     border-radius: 0.3em;
     white-space: normal;

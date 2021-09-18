@@ -22,6 +22,8 @@ const highlight = (content) => {
                 let codeLanguage = "html";
                 const preClass = pre.className;
 
+								const lineHighlights = preClass.match(/highlight-line-(.*)/);
+
                 var matches = preClass.match(/language-(.*)/);
                 if (matches != null) {
                     codeLanguage = matches[1];
