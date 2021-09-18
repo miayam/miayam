@@ -7,9 +7,7 @@
  * @license MIT
  */
 code[class*="language-"]
-code[class*="lang-"],
-pre[class*="language-"],
-pre[class*="lang-"] {
+pre[class*="language-"] {
     color: #e3eaf2;
     background: none;
     font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
@@ -31,52 +29,31 @@ pre[class*="lang-"] {
 pre[class*="language-"]::-moz-selection,
 pre[class*="language-"] ::-moz-selection,
 code[class*="language-"]::-moz-selection,
-code[class*="language-"] ::-moz-selection,
-pre[class*="lang-"]::-moz-selection,
-pre[class*="lang-"] ::-moz-selection,
-code[class*="lang-"]::-moz-selection,
-code[class*="lang-"] ::-moz-selection{
+code[class*="language-"] ::-moz-selection {
     background: #3c526d;
 }
 
 pre[class*="language-"]::selection,
 pre[class*="language-"] ::selection,
 code[class*="language-"]::selection,
-code[class*="language-"] ::selection,
-pre[class*="lang-"]::selection,
-pre[class*="lang-"] ::selection,
-code[class*="lang-"]::selection,
-code[class*="lang-"] ::selection{
+code[class*="language-"] ::selection {
     background: #3c526d;
 }
 
 /* Code blocks */
-pre[class*="language-"],
-pre[class*="lang-"] {
+pre[class*="language-"] {
     padding: 1em;
     margin: 0.5em 0;
     overflow: auto;
 }
 
-pre::before {
-    content: '';
-    width: 100%;
-    height: 24px;
-    position: absolute;
-    left: 18px;
-    top: 0;
-}
-
 :not(pre) > code[class*="language-"],
-pre[class*="language-"],
-:not(pre) > code[class*="lang-"],
-pre[class*="lang-"] {
+pre[class*="language-"] {
     background: #111b27;
 }
 
 /* Inline code */
-:not(pre) > code[class*="language-"],
-:not(pre) > code[class*="lang-"] {
+:not(pre) > code[class*="language-"] {
     padding: 0.1em 0.3em;
     border-radius: 0.3em;
     white-space: normal;
