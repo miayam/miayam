@@ -4,7 +4,7 @@ const {
   getTotalPages,
   categorizeDataByTag,
   appendPrevAndNextItemByTag,
-} = require('./utils/common');
+} = require('../scripts/utilities/headless');
 
 const main = async () => {
   const posts = [];
