@@ -1,4 +1,5 @@
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
+const eleventyPluginFilesMinifier = require("@sherby/eleventy-plugin-files-minifier");
 
 module.exports = (config) => {
     // Needed to prevent eleventy from ignoring changes to generated
@@ -25,6 +26,9 @@ module.exports = (config) => {
                                        .trim();
         return strippedContent;
     });
+
+    // Minify any files
+    config.addPlugin(eleventyPluginFilesMinifier);
 
     // Syntax highlighting on Markdown
     config.addPlugin(syntaxHighlight, {

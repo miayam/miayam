@@ -54,6 +54,15 @@ const categorizeDataByTag = ({ data, tags, paginationSize })  => {
     });
   });
 
+  const allItems = chunk(data, paginationSize);
+  allItems.forEach((item, index) => {
+    tagMap.push({
+      tagName: 'all',
+      pageNumber: index,
+      pageData: item
+    });
+  });
+
   return tagMap;
 };
 
