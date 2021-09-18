@@ -37,6 +37,37 @@ html {
         @include grBaseFontSize(700);
     }
 
+    @media only screen and (min-width: 1440px) {
+        @include grBaseFontSize(1440);
+
+        h1 {
+            @include h1(1440);
+        }
+
+        h2 {
+            @include h2(1440)
+        }
+        h3 {
+            @include h3(1440);
+        }
+
+        h4 {
+            @include h4(1440);
+        }
+
+        p,
+        a,
+        li {
+            @include grFontSize(1440);
+            @include grBaseLineHeight(1440);
+        }
+
+        code[class*="language-"],
+        pre[class*="language-"] {
+            @include grBaseFontSize(1440);
+        }
+    }
+
     @media only screen and (max-width: 700px) {
         @include grBaseFontSize(600);
 
