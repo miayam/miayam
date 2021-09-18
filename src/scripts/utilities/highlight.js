@@ -22,8 +22,6 @@ const highlight = (content) => {
                 let codeLanguage = "html";
                 const preClass = pre.className;
 
-								const lineHighlights = preClass.match(/highlight-line-(.*)/);
-
                 var matches = preClass.match(/language-(.*)/);
                 if (matches != null) {
                     codeLanguage = matches[1];
@@ -47,17 +45,17 @@ const highlight = (content) => {
                     prismGrammar = Prism.languages.css;
                 }
 
-								// https://github.com/PrismJS/prism/blob/master/plugins/line-numbers/prism-line-numbers.js#L109
-								const NEW_LINE_EXP = /\n(?!$)/g;
-								let lineNumbersWrapper;
+				// https://github.com/PrismJS/prism/blob/master/plugins/line-numbers/prism-line-numbers.js#L109
+				const NEW_LINE_EXP = /\n(?!$)/g;
+				let lineNumbersWrapper;
 
-								Prism.hooks.add('after-tokenize', function (env) {
-									var match = env.code.match(NEW_LINE_EXP);
-									var linesNum = match ? match.length + 1 : 1;
-									var lines = new Array(linesNum + 1).join('<span></span>');
+				Prism.hooks.add('after-tokenize', function (env) {
+					var match = env.code.match(NEW_LINE_EXP);
+					var linesNum = match ? match.length + 1 : 1;
+					var lines = new Array(linesNum + 1).join('<span></span>');
 
-									lineNumbersWrapper = `<span aria-hidden="true" class="line-numbers-rows">${lines}</span>`;
-								});
+					lineNumbersWrapper = `<span aria-hidden="true" class="line-numbers-rows">${lines}</span>`;
+				});
 
                 // highlight code
                 code.innerHTML = Prism.highlight(
