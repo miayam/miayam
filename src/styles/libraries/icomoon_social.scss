@@ -1,117 +1,117 @@
 @font-face {
-  font-family: 'icomoon-social';
-  src:  url('~@fonts/icomoon-social.eot?4paqto');
-  src:  url('~@fonts/icomoon-social.eot?4paqto#iefix') format('embedded-opentype'),
-    url('~@fonts/icomoon-social.woff2?4paqto') format('woff2'),
-    url('~@fonts/icomoon-social.ttf?4paqto') format('truetype'),
-    url('~@fonts/icomoon-social.woff?4paqto') format('woff'),
-    url('~@fonts/icomoon-social.svg?4paqto#icomoon') format('svg');
-  font-weight: normal;
-  font-style: normal;
-  font-display: block;
+    font-family: 'icomoon-social';
+    src: url('~@fonts/icomoon-social.eot?4paqto');
+    src: url('~@fonts/icomoon-social.eot?4paqto#iefix') format('embedded-opentype'),
+         url('~@fonts/icomoon-social.woff2?4paqto') format('woff2'),
+         url('~@fonts/icomoon-social.ttf?4paqto') format('truetype'),
+         url('~@fonts/icomoon-social.woff?4paqto') format('woff'),
+         url('~@fonts/icomoon-social.svg?4paqto#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
 }
 
 [class^="icon-"], [class*=" icon-"] {
-  /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: 'icomoon-social' !important;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon-social' !important;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
 
-  /* Better Font Rendering =========== */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 .icon-angular:before {
-  content: "\e900";
-  color: #dd0031;
+    content: "\e900";
+    color: #dd0031;
 }
 .icon-css3:before {
-  content: "\e914";
-  color: #1572b6;
+    content: "\e914";
+    color: #1572b6;
 }
 .icon-digitalocean:before {
-  content: "\e915";
-  color: #0080ff;
+    content: "\e915";
+    color: #0080ff;
 }
 .icon-docker:before {
-  content: "\e90d";
-  color: #1488c6;
+    content: "\e90d";
+    color: #1488c6;
 }
 .icon-eleventy:before {
-  content: "\e901";
+    content: "\e901";
 }
 .icon-gimp:before {
-  content: "\e903";
-  color: #5c5543;
+    content: "\e903";
+    color: #5c5543;
 }
 .icon-git:before {
-  content: "\e902";
-  color: #f05032;
+    content: "\e902";
+    color: #f05032;
 }
 .icon-github:before {
-  content: "\e911";
+    content: "\e911";
 }
 .icon-html5:before {
-  content: "\e90b";
-  color: #e34f26;
+    content: "\e90b";
+    color: #e34f26;
 }
 .icon-instagram:before {
-  content: "\e90c";
-  color: #e4405f;
+    content: "\e90c";
+    color: #e4405f;
 }
 .icon-javascript:before {
-  content: "\e904";
-  color: #f7df1e;
+    content: "\e904";
+    color: #f7df1e;
 }
 .icon-linkedin:before {
-  content: "\e912";
-  color: #0077b5;
+    content: "\e912";
+    color: #0077b5;
 }
 .icon-mysql:before {
-  content: "\e905";
-  color: #4479a1;
+    content: "\e905";
+    color: #4479a1;
 }
 .icon-netlify:before {
-  content: "\e906";
-  color: #00c7b7;
+    content: "\e906";
+    color: #00c7b7;
 }
 .icon-paypal:before {
-  content: "\e907";
-  color: #00457c;
+    content: "\e907";
+    color: #00457c;
 }
 .icon-python:before {
-  content: "\e90e";
-  color: #3776ab;
+    content: "\e90e";
+    color: #3776ab;
 }
 .icon-react:before {
-  content: "\e908";
-  color: #61dafb;
+    content: "\e908";
+    color: #61dafb;
 }
 .icon-sass:before {
-  content: "\e90f";
-  color: #c69;
+    content: "\e90f";
+    color: #c69;
 }
 .icon-travisci:before {
-  content: "\e916";
-  color: #3eaaaf;
+    content: "\e916";
+    color: #3eaaaf;
 }
 .icon-ts:before {
-  content: "\e910";
-  color: #007acc;
+    content: "\e910";
+    color: #007acc;
 }
 .icon-vscode:before {
-  content: "\e909";
-  color: #007acc;
+    content: "\e909";
+    color: #007acc;
 }
 .icon-vue:before {
-  content: "\e913";
-  color: #4fc08d;
+    content: "\e913";
+    color: #4fc08d;
 }
 .icon-wp:before {
-  content: "\e90a";
-  color: #21759b;
+    content: "\e90a";
+    color: #21759b;
 }
