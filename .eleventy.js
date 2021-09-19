@@ -1,5 +1,6 @@
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const eleventyPluginFilesMinifier = require("@sherby/eleventy-plugin-files-minifier");
+const htmlmin = require('html-minifier');
 
 module.exports = (config) => {
     // Needed to prevent eleventy from ignoring changes to generated
