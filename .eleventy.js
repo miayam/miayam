@@ -11,7 +11,6 @@ module.exports = (config) => {
     config.addPassthroughCopy({ 'src/scripts/utilities/sw.js': 'sw.js' });
     config.addPassthroughCopy('src/assets/files');
     config.addPassthroughCopy('src/assets/images');
-    config.addPassthroughCopy('src/assets/videos');
 
     // Markdown 
     config.setLibrary('md',

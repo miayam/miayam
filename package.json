@@ -41,6 +41,7 @@
         "css-loader": "^5.0.0",
         "cssnano": "^4.1.10",
         "dotenv-webpack": "^4.0.0",
+        "file-loader": "^6.2.0",
         "glob": "^7.1.6",
         "html-minifier": "^4.0.0",
         "html-webpack-plugin": "^4.5.0",

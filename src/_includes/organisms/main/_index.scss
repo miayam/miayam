@@ -2,8 +2,9 @@
 @import "~@styles/universe";
 @import "~@styles/variables";
 @import "~@styles/libraries/syntax";
-@import "~@molecules/footer";
+
 @import "~@atoms/anchor";
+@import "~@molecules/footer";
 
 .o-main {
     width: 100%;
@@ -26,5 +27,9 @@
 
     @media only screen and (max-width: 700px) {
         margin: 32px auto;
+    }
+
+    @media only screen and (min-width: 1442px) {
+        max-width: 1000px;
     }
 }
