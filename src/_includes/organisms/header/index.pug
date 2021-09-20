@@ -1,4 +1,5 @@
 include /molecules/navigation/index
+include /molecules/search/index
 
 //- Usage:
 //-     +header(
@@ -21,6 +22,7 @@ include /molecules/navigation/index
 mixin header(links)
   header(class="o-header", role="banner")&attributes(attributes)
     +navigation(links)(class="o-header__navigation")
+    +search
 
 +header([
   { href: '/', wording: 'Articles' },
