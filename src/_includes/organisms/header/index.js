@@ -1,15 +1,28 @@
 import './_index.scss';
 
 class Header {
-    constructor(id="js-o-header") {
+    constructor(className="o-header", id="js-o-header") {
         this.id = id;
+        this.className = className;
+        this.header = document.getElementById(this.id);
+    }
+
+    activeLink() {
+        const currentLocation = window.location.pathname || '/';
+        const activeLink = this.header.querySelector(`[href*="${currentLocation}"]`);
+        const activeStyle = 'border-bottom: 4px solid #333; font-weight: bold;';
+        activeLink.style = activeStyle;
     }
 
     init() {
-        const header = document.getElementById(this.id);
-        const currentLocation = window.location.pathname || '/';
-        const link = header.querySelector(`[href*="${currentLocation}"]`);
-        link.style = 'border-bottom: 4px solid #333; font-weight: bold;';
+        this.activeLink();
+        const links = this.header.getElementsByTagName('a');
+
+        Array.from(links).map((link) => {
+            link.addEventListener('click', () => {
+                this.activeLink();
+            });
+        });
 
         const search = document.querySelector('.m-search');
         const loadSearchModule = () => {

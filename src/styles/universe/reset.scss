@@ -164,7 +164,6 @@ mark {
 }
 
 code {
-    background-color: $highlight-code;
     height: 20px;
     padding: 2px 4px;
     border-radius: 4px;
@@ -178,6 +177,10 @@ a {
 a,
 code {
     word-wrap: break-word;
+}
+
+code {
+    background-color: $highlight-code;
 }
 
 pre {

@@ -1,11 +1,12 @@
 // Color pallete
 $color-alpha: #FFFFFF;
-$color-beta: #333333;
+$color-beta: #1b1b1b;
 $color-gama: #324F73;
 $color-psi: #2F4F4F;
 $color-epsilon: #EBEBEB;
 $color-zeta: rgba(0, 0, 0, 0.2);
 $color-eta: #a2a9b1;
+$color-teta: #111b27;
 
 
 // Descriptive naming
@@ -15,6 +16,6 @@ $link: $color-gama;
 $code: $color-alpha;
 $mark: $color-psi;
 $highlight-code: $color-epsilon;
-$pre: $color-beta;
+$pre: $color-teta;
 $menu: $color-zeta;
 $input: $color-eta;

@@ -4,7 +4,6 @@ class Search {
     constructor(className="m-search", id="js-m-search") {
         this.id = id;
         this.className = className;
-        this.classSelector = `.${className}`;
     }
 
     init() {
@@ -18,7 +17,7 @@ class Search {
 
         input.addEventListener('blur', () => {
             close.style = 'visiblity: hidden;';
-        })
+        });
     }
 }
 
