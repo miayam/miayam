@@ -1,5 +1,9 @@
 .m-footer {
-    border-top: 1px dotted rgba(0, 0, 0, 0.4);
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+
 
     &__content {
         max-width: 740px;

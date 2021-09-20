@@ -10,6 +10,11 @@ html {
 
     @include grBaseFontSize(700);
 
+    &,
+    body {
+        height: 100%;
+    }
+
     h1 {
         @include h1(700);
     }
