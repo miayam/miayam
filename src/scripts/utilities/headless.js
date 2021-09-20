@@ -1,5 +1,6 @@
 const BASE_URL = 'https://cms.miayam.io/wp-json/wp/v2';
 const POSTS_API = `${BASE_URL}/posts?orderby=date&order=desc`;
+const SEARCH_API = `${BASE_URL}/search`;
 const TAGS_API = `${BASE_URL}/tags`;
 const fetch = require('node-fetch');
 const chunk = require('lodash.chunk');
@@ -14,6 +15,20 @@ const getTags = async () => {
 
     // Return formatted data.
     return json.map(item => ({ id: item.id, name: item.name }));
+  }
+  catch (err) {
+    console.log(`WordPress API call failed: ${err}`);
+    return null;
+  }
+}
+
+const getSearch = async () => {
+  try {
+    const
+      res = await fetch(SEARCH_API),
+      json = await res.json();
+    
+    return json;
   }
   catch (err) {
     console.log(`WordPress API call failed: ${err}`);
@@ -117,6 +132,7 @@ module.exports = {
 	appendPrevAndNextItemByTag,
 	categorizeDataByTag,
 	getTotalPages,
+  getSearch,
 	getPosts,
 	getTags
 };

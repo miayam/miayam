@@ -1,19 +1,30 @@
-import Search from '@molecules/search';
 import './_index.scss';
 
 class Header {
-    constructor(className="o-header") {
-        this.classSelector = `.${className}`;
+    constructor(id="js-o-header") {
+        this.id = id;
     }
 
     init() {
-        const search = new Search();
-        const header = document.querySelector(this.classSelector);
+        const header = document.getElementById(this.id);
         const currentLocation = window.location.pathname || '/';
         const link = header.querySelector(`[href*="${currentLocation}"]`);
-        link.style = 'border-bottom: 3px solid #333; font-weight: bold;';
+        link.style = 'border-bottom: 4px solid #333; font-weight: bold;';
 
-        search.init();
+        const search = document.querySelector('.m-search');
+        const loadSearchModule = () => {
+            import(
+                /* webpackChunkName: "search" */
+                '@molecules/search'
+            ).then(({ default: Search }) => {
+                const searchObj = new Search();
+                searchObj.init();
+
+                search.removeEventListener('mouseenter', loadSearchModule);
+            });
+        };
+
+        search.addEventListener('mouseenter', loadSearchModule);
     }
 }
 

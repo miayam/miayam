@@ -1,13 +1,24 @@
-import './_index.scss';
+// import { getSearch } from '@scripts/utilities/headless';
 
 class Search {
-    constructor(className="m-search") {
+    constructor(className="m-search", id="js-m-search") {
+        this.id = id;
+        this.className = className;
         this.classSelector = `.${className}`;
     }
 
     init() {
-        // Do something
-        console.log('hello')
+        const search = document.getElementById(this.id);
+        const input = document.getElementById(`${this.id}__input`)
+        const close = search.getElementsByClassName(`${this.className}__close`)[0];
+
+        input.addEventListener('focus', () => {
+            close.style = 'visibility: visible;';
+        });
+
+        input.addEventListener('blur', () => {
+            close.style = 'visiblity: hidden;';
+        })
     }
 }
 

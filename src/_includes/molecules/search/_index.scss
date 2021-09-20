@@ -8,7 +8,7 @@
     position: relative;
     margin-top: -60px;
 
-    @media only screen and (max-width: 700px) {
+    @media only screen and (max-width: 768px) {
         margin-top: 0;
         padding: 16px;
     }
@@ -28,11 +28,12 @@
     &__close {
         position: absolute;
         font-size: 30px;
+        visibility: hidden;
         top: 50%;
         right: 8px;
         transform: translateY(-60%);
 
-        @media only screen and (max-width: 700px) {
+        @media only screen and (max-width: 768px) {
             top: 60%;
             right: 24px;
         }
@@ -58,7 +59,7 @@
         transition: background .1s ease, border-color .1s ease,box-shadow .1s ease,-webkit-box-shadow .1s ease,-moz-box-shadow .1s ease;
         background-color: white;
         display: inline-block;
-        border: 1px solid #a2a9b1;
+        border: 1px solid $menu;
         border-radius: 2px;
         padding: .8rem;
         box-shadow: inset 0 0 0 1px white;

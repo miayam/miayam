@@ -20,7 +20,7 @@ include /molecules/search/index
 //-         </nav>
 //-     </header> 
 mixin header(links)
-  header(class="o-header", role="banner")&attributes(attributes)
+  header(class="o-header", id="js-o-header", role="banner")&attributes(attributes)
     +navigation(links)(class="o-header__navigation")
     +search
 
