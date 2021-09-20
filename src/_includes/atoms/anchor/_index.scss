@@ -10,14 +10,4 @@
     &:hover {
         color: $text;
     }
-
-    &--highlight {
-        &:visited,
-        &:active,
-        &:hover {
-            color: $text;
-        }
-
-        border-bottom: 3px solid #333;
-    }
 }

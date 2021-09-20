@@ -7,9 +7,9 @@ class Header {
 
     init() {
         const header = document.querySelector(this.className);
-        const currentLocation = window.location.pathname;
+        const currentLocation = window.location.pathname || '/';
         const link = header.querySelector(`[href*="${currentLocation}"]`);
-        link.classList.add('a-anchor--highlight');
+        link.style = 'border-bottom: 3px solid #333;';
     }
 }
 
