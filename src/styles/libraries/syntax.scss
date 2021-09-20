@@ -361,7 +361,6 @@ pre {
 }
 
 code .highlight-line:before {
-    -webkit-user-select: none;
     border-right: 1px solid #404040;
     color: #858585;
     content: counter(lineNumber);

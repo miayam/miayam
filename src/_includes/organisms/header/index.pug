@@ -21,3 +21,8 @@ include /molecules/navigation/index
 mixin header(links)
   header(class="o-header", role="banner")&attributes(attributes)
     +navigation(links)(class="o-header__navigation")
+
++header([
+  { href: '/', wording: 'Articles' },
+  { href: '/about/', wording: 'About' }
+])

@@ -1,5 +1,24 @@
 .m-navigation {
-    &__link {
+    margin: 0 auto;
+    max-width: 1024px;
+    height: 60px;
+
+    &__list {
+        height: 100%;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    &__list li {
         display: inline-block;
+        height: 100%;
+    }
+
+    &__link {
+        vertical-align: middle;
+        display: table-cell;
+        height: 60px;
+        padding: 3px 12px;
     }
 }

@@ -1,11 +1,23 @@
 @import "~@styles/variables";
 
 .a-anchor {
-    color: $link;
+    color: $text;
+    text-decoration: none;
+    border: 3px solid transparent;
 
     &:visited,
     &:active,
     &:hover {
-        color: $link;
+        color: $text;
+    }
+
+    &--highlight {
+        &:visited,
+        &:active,
+        &:hover {
+            color: $text;
+        }
+
+        border-bottom: 3px solid #333;
     }
 }

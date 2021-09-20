@@ -1,1 +1,6 @@
-.o-header {}
+@import '~@molecules/navigation';
+
+.o-header {
+    height: 60px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}

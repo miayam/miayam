@@ -1,4 +1,5 @@
 include /atoms/anchor/index
+
 //- Usage:
 //-     +navigation(
 //-       [{ href: '/', wording: 'Home'}] 
@@ -14,9 +15,9 @@ include /atoms/anchor/index
 //-     </nav>
 mixin navigation(links)
   nav(class="m-navigation", role="navigation")&attributes(attributes)
-    ul
+    ul(class="m-navigation__list")
       each link in links
         li 
-          +anchor(href=link.href)
+          +anchor(href=link.href, class="m-navigation__link")
             | #{link.wording}
 
