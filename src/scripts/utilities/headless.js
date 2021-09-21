@@ -1,7 +1,7 @@
 const BASE_URL = 'https://cms.miayam.io/wp-json/wp/v2';
 const POSTS_API = `${BASE_URL}/posts?orderby=date&order=desc`;
-const SEARCH_API = `${BASE_URL}/search`;
 const TAGS_API = `${BASE_URL}/tags`;
+const Cache = require('@11ty/eleventy-cache-assets');
 const fetch = require('node-fetch');
 const chunk = require('lodash.chunk');
 const highlight = require('./highlight');
@@ -9,9 +9,10 @@ const highlight = require('./highlight');
 const getTags = async () => {
 	// Get unique list of tags
   try {
-    const
-      res = await fetch(TAGS_API),
-      json = await res.json();
+    const json = await Cache(TAGS_API,{
+      duration: '30m',
+      type: 'json'
+    });
 
     // Return formatted data.
     return json.map(item => ({ id: item.id, name: item.name }));
@@ -22,19 +23,34 @@ const getTags = async () => {
   }
 }
 
-const getSearch = async () => {
+// Fetch number of WordPress post pages.
+const getTotalPages = async () => {
   try {
-    const
-      res = await fetch(SEARCH_API),
-      json = await res.json();
-    
-    return json;
+    const res = await fetch(`${POSTS_API}&_fields=id&page=1`);
+    return res.headers.get('x-wp-totalpages') || 0;
+  }
+  catch(err) {
+    console.log(`WordPress API call failed: ${err}`);
+    return 0;
+  }
+};
+
+// Fetch list of WordPress posts.
+const getPosts = async (page = 1) => {
+  try {
+    const posts = await Cache(`${POSTS_API}&page=${page}`, {
+      duration: '30m',
+      type: 'json'
+    });
+
+    // Return formatted data.
+    return formatData(posts);
   }
   catch (err) {
     console.log(`WordPress API call failed: ${err}`);
     return null;
   }
-}
+};
 
 const appendPrevAndNextItemByTag = ({ data, tags }) => {
 	const normalizedData = [...data];
@@ -100,39 +116,10 @@ const formatData = (data) => {
     });
 };
 
-// Fetch number of WordPress post pages.
-const getTotalPages = async () => {
-  try {
-    const res = await fetch(`${POSTS_API}&_fields=id&page=1`);
-    return res.headers.get('x-wp-totalpages') || 0;
-  }
-  catch(err) {
-    console.log(`WordPress API call failed: ${err}`);
-    return 0;
-  }
-};
-
-// Fetch list of WordPress posts.
-const getPosts = async (page = 1) => {
-  try {
-    const
-      postsData = await fetch(`${POSTS_API}&page=${page}`),
-      posts = await postsData.json();
-
-    // Return formatted data.
-    return formatData(posts);
-  }
-  catch (err) {
-    console.log(`WordPress API call failed: ${err}`);
-    return null;
-  }
-};
-
 module.exports = {
 	appendPrevAndNextItemByTag,
 	categorizeDataByTag,
 	getTotalPages,
-  getSearch,
 	getPosts,
 	getTags
 };
