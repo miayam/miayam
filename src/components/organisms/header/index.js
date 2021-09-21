@@ -24,7 +24,7 @@ class Header {
             });
         });
 
-        const search = document.querySelector('.m-search');
+        const body = document.body;
         const loadSearchModule = () => {
             import(
                 /* webpackChunkName: "search" */
@@ -33,12 +33,12 @@ class Header {
                 const searchObj = new Search();
                 searchObj.init();
 
-                search.removeEventListener('mouseenter', loadSearchModule);
+                body.removeEventListener('mouseenter', loadSearchModule);
             });
         };
 
-        // When users hover over search form, load chunk and initiate search module.
-        search.addEventListener('mouseenter', loadSearchModule);
+        // When users hover over body, load chunk and initiate search module.
+        body.addEventListener('mouseenter', loadSearchModule);
     }
 }
 
