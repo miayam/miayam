@@ -21,7 +21,7 @@ This project also includes a starter pack to build a blog site with
 
 ## Introduction
 
-A starter project to rebuild [miayam.io](https://miayam.io) from the
+A starter project to rebuild [miayam.github.io](https://miayam.github.io) from the
 ground up using `Eleventy` and friends. It is a foundation on which
 new [miayam.io](https://miayam.io) will be built. Removing Jekyll
 entirely from the code base :shit:.

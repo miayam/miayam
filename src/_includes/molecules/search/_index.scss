@@ -48,6 +48,10 @@
         color: transparent;
     }
 
+    &__input:-moz-focusring {
+        outline: 1px solid $text;
+    }
+
     &__input {
         -webkit-appearance: none;
         width: 100%;

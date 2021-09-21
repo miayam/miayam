@@ -37,6 +37,7 @@ class Header {
             });
         };
 
+        // When users hover over search form, load chunk and initiate search module.
         search.addEventListener('mouseenter', loadSearchModule);
     }
 }

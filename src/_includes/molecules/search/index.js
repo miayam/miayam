@@ -7,6 +7,7 @@ class Search {
     }
 
     init() {
+        console.log('YOLO!');
         const search = document.getElementById(this.id);
         const input = document.getElementById(`${this.id}__input`)
         const close = search.getElementsByClassName(`${this.className}__close`)[0];
