@@ -6,13 +6,13 @@ const HtmlWebpackPugPlugin = require('html-webpack-pug-plugin');
 const PostCSSPresetEnv = require('postcss-preset-env');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const Dotenv = require('dotenv-webpack');
-const ENTRY_POINTS = fs.readdirSync(`${basePath}/_includes/templates`) 
+const ENTRY_POINTS = fs.readdirSync(`${basePath}/components/templates`) 
                        .filter(template => template !== 'base');
 
 const multipleHtmlPlugins = ENTRY_POINTS.map(name => {
     return new HtmlWebpackPlugin({
-        template: `${basePath}/_includes/templates/base/index.pug`,
-        filename: `${basePath}/_includes/templates/${name}/index.pug`,
+        template: `${basePath}/components/templates/base/index.pug`,
+        filename: `${basePath}/components/templates/${name}/index.pug`,
         chunks: [`${name}`],
         inject: false,
         hash: true,
@@ -26,7 +26,7 @@ module.exports = {
     entry: ENTRY_POINTS.reduce((prev, curr) => {
         return {
             ...prev,
-            [curr]: `./src/_includes/templates/${curr}/index.js` // Relative to webpack.config.js file
+            [curr]: `./src/components/templates/${curr}/index.js` // Relative to webpack.config.js file
         }
     }, {}),
     plugins: [
@@ -81,10 +81,10 @@ module.exports = {
     },
     resolve: {
         alias: {
-            '@atoms': `${basePath}/_includes/atoms`,
-            '@molecules': `${basePath}/_includes/molecules`,
-            '@organisms': `${basePath}/_includes/organisms`,
-            '@templates': `${basePath}/_includes/templates`,
+            '@atoms': `${basePath}/components/atoms`,
+            '@molecules': `${basePath}/components/molecules`,
+            '@organisms': `${basePath}/components/organisms`,
+            '@templates': `${basePath}/components/templates`,
             '@scripts': `${basePath}/scripts`,
             '@styles': `${basePath}/styles`,
             '@fonts': `${basePath}/assets/fonts`

@@ -1,0 +1,17 @@
+doctype html
+html(lang="en")
+  head
+    include /atoms/head/index
+
+    //- See src/config/webpack.common.js. We inject parameters there.
+
+    
+    //- Shamelessly track users. Uncomment it if you are ready to abuse your readers :(
+    script(src='https://www.google-analytics.com/analytics.js', type='text/javascript', async)
+    
+    link(href='/styles-home.css?00ad960adcda81a24836', rel='stylesheet')
+  body
+      include ./layout
+
+      //- Inject assets. 6 spaces is necessary, so that `HtmlWebpackPugPlugin` can translate this snippet to proper pug syntax.
+      script(src='/scripts-home-60795cfa2c18b9c3cdaa.js?00ad960adcda81a24836', type='text/javascript', async)

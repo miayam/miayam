@@ -59,8 +59,8 @@ module.exports = (config) => {
         dir: {
             input: 'src',
             output: '_site',
-            layouts: '_includes/templates',
-            includes: '_includes',
+            layouts: 'components/templates',
+            includes: 'components',
         },
         templateFormats: ['md', 'pug', 'njk'],
         htmlTemplateEngine: 'pug'
