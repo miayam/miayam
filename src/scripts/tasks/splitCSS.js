@@ -134,6 +134,10 @@ const routes = [
   {
     path: 'index.html',
     template: 'home'
+  },
+  {
+    path: 'about',
+    template: 'about'
   }
 ];
 
