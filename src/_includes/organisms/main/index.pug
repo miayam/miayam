@@ -1,6 +1,4 @@
-main(class="o-main", role="main")
-    article
-      h1 !{title}
-      div !{content}
+include /molecules/article/index
 
-include /molecules/footer/index
+main(class="o-main", role="main")
+  +article(title, content)

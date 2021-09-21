@@ -3,28 +3,13 @@
 @import "~@styles/variables";
 @import "~@styles/libraries/syntax";
 
-@import "~@atoms/anchor";
-@import "~@molecules/footer";
+@import "~@molecules/article";
 
 .o-main {
     width: 100%;
     min-height: 66%;
     max-width: 700px;
     margin: 48px auto;
-
-    &__content {
-        margin: 0 16px;
-
-        img {
-            width: 100%;
-        }
-
-        article {
-            img {
-                width: 100%;
-            }
-        }
-    }
 
     @media only screen and (max-width: 700px) {
         margin: 32px auto;

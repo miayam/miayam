@@ -1,0 +1,13 @@
+@import "~@styles/variables";
+@import "~@styles/utilities";
+
+.m-article {
+  h1,
+  h2 {
+    @include h2(700)
+  }
+
+  a {
+    color: $link;
+  }
+}

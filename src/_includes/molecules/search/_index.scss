@@ -15,7 +15,7 @@
 
     &__label {
         display: block;
-        position: absolute !important;
+        position: absolute;
         clip: rect(1px,1px,1px,1px);
         width: 1px;
         height: 1px;
@@ -52,12 +52,14 @@
         outline: 1px solid $text;
     }
 
+    &__input:focus {
+        border: 1px solid $text;
+    }
+
     &__input {
         -webkit-appearance: none;
         width: 100%;
         height: 40px;
-        border-width: 1px 0 1px 1px;
-        border-radius: 2px 0 0 2px;
         padding: .8rem 9.6rem .8rem 1.2rem;
         line-height: 1.6;
         transition: background .1s ease, border-color .1s ease,box-shadow .1s ease,-webkit-box-shadow .1s ease,-moz-box-shadow .1s ease;

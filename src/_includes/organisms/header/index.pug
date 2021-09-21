@@ -2,9 +2,7 @@ include /molecules/navigation/index
 include /molecules/search/index
 
 //- Usage:
-//-     +header(
-//-       [{ href: '/', wording: 'Home' }]
-//-     )(class="o-header--active", data-id="1")
+//-     include /organisms/header/index
 //-
 //- Result:
 //-     <header
@@ -19,12 +17,9 @@ include /molecules/search/index
 //-             </ul>
 //-         </nav>
 //-     </header> 
-mixin header(links)
-  header(class="o-header", id="js-o-header", role="banner")&attributes(attributes)
-    +navigation(links)(class="o-header__navigation")
-    +search
-
-+header([
-  { href: '/', wording: 'Articles' },
-  { href: '/about/', wording: 'About' }
-])
+header(class="o-header", id="js-o-header", role="banner")
+  +navigation([
+    { href: '/', wording: 'Articles' },
+    { href: '/about/', wording: 'About' }
+  ])(class="o-header__navigation")
+  +search

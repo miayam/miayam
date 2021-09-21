@@ -1,5 +1,3 @@
-// import { getSearch } from '@scripts/utilities/headless';
-
 class Search {
     constructor(className="m-search", id="js-m-search") {
         this.id = id;
@@ -7,7 +5,6 @@ class Search {
     }
 
     init() {
-        console.log('YOLO!');
         const search = document.getElementById(this.id);
         const input = document.getElementById(`${this.id}__input`)
         const close = search.getElementsByClassName(`${this.className}__close`)[0];
@@ -17,7 +14,7 @@ class Search {
         });
 
         input.addEventListener('blur', () => {
-            close.style = 'visiblity: hidden;';
+            close.style = 'visibility: hidden;';
         });
     }
 }
