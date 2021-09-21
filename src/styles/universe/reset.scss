@@ -55,50 +55,6 @@ html {
         @include grBaseFontSize(700);
     }
 
-    @media only screen and (min-width: 1442px) {
-        @include grBaseFontSize(1442);
-
-        h1 {
-            @include h1(1442);
-        }
-
-        h2 {
-            @include h2(1442)
-        }
-        h3 {
-            @include h3(1442);
-        }
-
-        h4 {
-            @include h4(1442);
-        }
-
-        h1,
-        h2,
-        h3,
-        h4,
-        h5,
-        h6 {
-            padding-top: 1.5 * calcFontSize(1442) + px;
-
-            &:first-of-type {
-                padding-top: 0;
-            }
-        }
-
-        p,
-        a,
-        li {
-            @include grFontSize(1442);
-            @include grBaseLineHeight(1442);
-        }
-
-        code[class*="language-"],
-        pre[class*="language-"] {
-            @include grBaseFontSize(1442);
-        }
-    }
-
     @media only screen and (max-width: 700px) {
         @include grBaseFontSize(600);
 
