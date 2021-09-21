@@ -5,7 +5,6 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const HtmlWebpackPugPlugin = require('html-webpack-pug-plugin');
 const PostCSSPresetEnv = require('postcss-preset-env');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const Dotenv = require('dotenv-webpack');
 const ENTRY_POINTS = fs.readdirSync(`${basePath}/components/templates`) 
                        .filter(template => template !== 'base');
 
@@ -30,7 +29,6 @@ module.exports = {
         }
     }, {}),
     plugins: [
-        new Dotenv(),
         ...multipleHtmlPlugins,
         new HtmlWebpackPugPlugin({
             ast: true,
