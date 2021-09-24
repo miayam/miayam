@@ -11,7 +11,8 @@ class Header {
         const currentLocation = window.location.pathname || '/';
         const activeLink = this.header.querySelector(`[href*="${currentLocation}"]`);
         const activeStyle = 'border-bottom: 4px solid #333; font-weight: bold;';
-        activeLink.style = activeStyle;
+
+        if (activeLink) activeLink.style = activeStyle;
     }
 
     init() {

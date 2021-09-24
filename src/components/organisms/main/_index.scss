@@ -11,8 +11,10 @@
     max-width: 700px;
     margin: 48px auto;
     padding-bottom: 90px;
+    padding-top: 60px;
 
     @media only screen and (max-width: 700px) {
+        padding-top: 100px;
         margin: 32px auto;
     }
 }

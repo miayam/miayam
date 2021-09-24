@@ -8,6 +8,7 @@
     padding: 16px;
   }
 
+
   h1 {
     @include h2(700);
   }
@@ -17,12 +18,21 @@
   }
 
   figure {
-    margin: 0;
+    margin: calcFontSize(700) + px 0;
   }
 
-  figcaption {
+  figcaption,
+  date {
     color: $caption;
     font-size: calcFontSize(700) * 0.9 + px;
+    line-height: 1.5;
+  }
+
+  hr {
+    margin: 0;
+    border: unset;
+    border-top: 1px solid $menu;
+    margin-bottom: calcFontSize(700) + px;
   }
 
   blockquote {
@@ -33,5 +43,33 @@
 
   a {
     color: $link;
+  }
+
+  &__header {
+    border-bottom: 1px solid $menu;
+    h1 {
+      display: inline-block;
+      width: calc(100% - 90px);
+      line-height: 1.2;
+      margin-bottom: calcFontSize(700) + px;
+    }
+    date {
+      display: inline-block;
+      width: 90px;
+      text-align: right;
+    }
+
+    @media only screen and (max-width: 700px) {
+      h1,
+      date {
+        width: 100%;
+        display: block;
+        text-align: left;
+      }
+
+      date {
+        margin-bottom: calcFontSize(700) + px;
+      }
+    }
   }
 }

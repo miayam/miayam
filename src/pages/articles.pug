@@ -7,4 +7,7 @@ pagination:
 permalink: | 
   | articles/#{ article.slug }/index.html
 ---
-div !{ article.content }
+div(class="m-article__header")
+  h1 !{article.title}
+  date 20 May 2021
+div !{article.content}

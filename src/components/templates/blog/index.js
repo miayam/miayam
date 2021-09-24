@@ -1,8 +1,5 @@
+import Header from '@organisms/header';
 import './_index.scss';
 
-import(
-    /* webpackChunkName: "analytics" */
-    '@scripts/utilities/analytics'
-).then(({ default: module }) => {
-    module();
-});
+const headerObj = new Header();
+headerObj.init();

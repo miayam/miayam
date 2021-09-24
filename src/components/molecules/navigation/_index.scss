@@ -17,12 +17,38 @@
         height: 100%;
     }
 
-    &__link {
+    &__link,
+    &__back {
         vertical-align: middle;
         display: table-cell;
         height: 60px;
         text-align: center;
         width: 100px;
         padding: 3px 12px;
+    }
+
+    &__chevron {
+        position: relative;
+        display: inline-block;
+        vertical-align: middle;
+        width: 22px;
+        height: 22px;
+        margin-right: 8px;
+        border: 2px solid transparent;
+        border-radius: 100px
+    }
+
+    &__chevron::after {
+        content: "";
+        display: block;
+        box-sizing: border-box;
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        border-bottom: 2px solid;
+        border-left: 2px solid;
+        transform: rotate(45deg);
+        left: 6px;
+        top: 4px
     }
 }

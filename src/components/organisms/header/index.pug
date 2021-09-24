@@ -1,25 +1,7 @@
 include /molecules/navigation/index
 include /molecules/search/index
 
-//- Usage:
-//-     include /organisms/header/index
-//-
-//- Result:
-//-     <header
-//-         class="o-header o-header--active"
-//-         data-id="1"
-//-     >
-//-         <nav class="m-navigation o-header__navigation">
-//-             <ul>
-//-                 <li>
-//-                     <a href="/">Home</a>
-//-                 </li>
-//-             </ul>
-//-         </nav>
-//-     </header> 
-header(class="o-header", id="js-o-header", role="banner")
-  +navigation([
-    { href: '/', wording: 'Articles' },
-    { href: '/about/', wording: 'About' }
-  ])(class="o-header__navigation")
-  +search
+mixin header(links)
+  header(class="o-header", id="js-o-header", role="banner")
+    +navigation(links)
+    +search()

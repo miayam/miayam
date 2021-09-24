@@ -1,39 +1,53 @@
-import { stripTags } from '@scripts/utilities/string';
+// import { stripTags } from '@scripts/utilities/string';
+import { SEARCH_API } from '@constants/api';
+import debounce from '@scripts/utilities/debounce';
 
 class Search {
     constructor(className="m-search", id="js-m-search") {
+        const search = document.getElementById(id);
+        const input = document.getElementById(`${id}__input`);
+
         this.id = id;
         this.className = className;
+        this.search = search;
+        this.input = input;
+    }
+
+    buildSuggestion(data = []) {
+        // API gives results
+        if (Array.isArray(data) && data.length > 0) {
+            console.log(data, 'berhasil')
+        } else {
+            console.log('babu');
+        }
+    }
+
+    getSearchResult(keyword = "") {
+        console.log(keyword);
+        const url = `${SEARCH_API}?keyword=${keyword}&type=post`;
+        fetch(url)
+            .then(response => response.json())
+            .then(this.buildSuggestion)
+            .catch(err => {
+                console.log(err);
+                this.buildSuggestion([]);
+            });
     }
 
     init() {
-        const search = document.getElementById(this.id);
-        const input = document.getElementById(`${this.id}__input`)
-        const close = search.getElementsByClassName(`${this.className}__close`)[0];
-        const BASE_URL = 'https://cms.miayam.io/wp-json';
-        const SEARCH_API = `${BASE_URL}/relevanssi/v1/search?keyword=thomas`;
+        const close = this.search.getElementsByClassName(`${this.className}__close`)[0];
 
-        fetch(SEARCH_API).then(
-            response => response.json()
-        ).then(data => {
-            console.log(data) // Prints result from `response.json()` in getRequest
-            const normalizedData = data.map(datum => {
-                return {
-                    id: datum.id,
-                    content: stripTags(datum.content.rendered),
-                    excerpt: stripTags(datum.excerpt.rendered)
-                };
-            });
-            console.log(normalizedData);
-        });
-
-        input.addEventListener('focus', () => {
+        this.input.addEventListener('focus', () => {
             close.style = 'visibility: visible;';
         });
 
-        input.addEventListener('blur', () => {
+        this.input.addEventListener('blur', () => {
             close.style = 'visibility: hidden;';
         });
+
+        this.input.addEventListener('keyup', debounce((e) => {
+            this.getSearchResult(e.target.value);
+        }, 100));
     }
 }
 

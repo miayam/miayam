@@ -4,7 +4,16 @@
 @import '~@molecules/search';
 
 .o-header {
-    height: 60px;
+    height: auto;
     margin-bottom: 60px;
     border-bottom: 1px solid $menu;
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: $background;
+
+    @media only screen and (max-width: 700px) {
+        height: 132px;
+    }
 }
