@@ -83,6 +83,7 @@ module.exports = {
             '@molecules': `${basePath}/components/molecules`,
             '@organisms': `${basePath}/components/organisms`,
             '@templates': `${basePath}/components/templates`,
+            '@constants': `${basePath}/constants`,
             '@scripts': `${basePath}/scripts`,
             '@styles': `${basePath}/styles`,
             '@fonts': `${basePath}/assets/fonts`

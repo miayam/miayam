@@ -1,21 +1,23 @@
 // Color pallete
-$color-alpha: #FFFFFF;
-$color-beta: #1b1b1b;
-$color-gama: #324F73;
-$color-psi: #2F4F4F;
-$color-epsilon: #EBEBEB;
-$color-zeta: rgba(0, 0, 0, 0.2);
-$color-eta: #a2a9b1;
-$color-teta: #111b27;
+$alpha: #FFFFFF;
+$beta: #1b1b1b;
+$gama: #324F73;
+$psi: #2F4F4F;
+$epsilon: #EBEBEB;
+$zeta: rgba(0, 0, 0, 0.2);
+$eta: #a2a9b1;
+$teta: #111b27;
+$iota: rgba(55, 53, 47, 0.6);
 
 
 // Descriptive naming
-$background: $color-alpha;
-$text: $color-beta;
-$link: $color-gama;
-$code: $color-alpha;
-$mark: $color-psi;
-$highlight-code: $color-epsilon;
-$pre: $color-teta;
-$menu: $color-zeta;
-$input: $color-eta;
+$background: $alpha;
+$text: $beta;
+$link: $gama;
+$code: $alpha;
+$mark: $psi;
+$highlight-code: $epsilon;
+$pre: $teta;
+$menu: $zeta;
+$input: $eta;
+$caption: $iota;

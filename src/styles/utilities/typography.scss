@@ -236,8 +236,8 @@ $phi: (1 + sqrt(5)) / 2; // 1.61803398874989 or "The Golden Ratio"
 // @author Muhammad D. R.
 // @since 1.0
 //
-// Usage: @include grCustomLineHeight(26);
-//        @include grCustomLineHeight(26, 480);
+// Usage: @include calcCustomLineHeight(26);
+//        @include calcCustomLineHeight(26, 480);
 //
 @function calcCustomLineHeight($target, $contentWidth: $defaultContentWidth) {
   $fontSizeRatio: sqrt($contentWidth) / $phi;

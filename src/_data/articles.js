@@ -23,7 +23,7 @@ const main = async () => {
 
   const list = (await Promise.all(wpList)).flat();
   const normalizedList = appendPrevAndNextItemByTag({ data: list, tags });
-  const tagMap = categorizeDataByTag({ data: normalizedList, paginationSize: 5, tags });
+  const tagMap = categorizeDataByTag({ data: normalizedList, paginationSize: 9, tags });
 
   const data = {
     list: normalizedList,

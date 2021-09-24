@@ -2,13 +2,33 @@
 @import "~@styles/utilities";
 
 .m-article {
+  padding: 0 20px;
+
   @media only screen and (max-width: 700px) {
     padding: 16px;
   }
 
-  h1,
+  h1 {
+    @include h2(700);
+  }
+
   h2 {
-    @include h2(700)
+    @include h3(700);
+  }
+
+  figure {
+    margin: 0;
+  }
+
+  figcaption {
+    color: $caption;
+    font-size: calcFontSize(700) * 0.9 + px;
+  }
+
+  blockquote {
+    margin: 20px 0;
+    padding-left: 16px;
+    border-left: 3px solid $text;
   }
 
   a {
