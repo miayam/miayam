@@ -1,7 +1,6 @@
 // import { stripTags } from '@scripts/utilities/string';
 import { SEARCH_API } from '@constants/api';
 import debounce from '@scripts/utilities/debounce';
-import bring from '@scripts/utilities/bring';
 
 class Search {
     constructor(className="m-search", id="js-m-search") {
