@@ -6,8 +6,11 @@ pagination:
   alias: article
 permalink: | 
   | articles/#{ article.slug }/index.html
+eleventyComputed:
+  title: |
+    | #{article.title}
 ---
 div(class="m-article__header")
   h1 !{article.title}
   date 20 May 2021
-div !{article.content}
+div(class="m-article__content") !{article.content}

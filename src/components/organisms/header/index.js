@@ -5,6 +5,7 @@ class Header {
         this.id = id;
         this.className = className;
         this.header = document.getElementById(this.id);
+        this.hasBeenCalled = false;
     }
 
     activeLink() {
@@ -24,22 +25,27 @@ class Header {
                 this.activeLink();
             });
         });
-
         const body = document.body;
-        const loadSearchModule = () => {
+        const input = document.getElementById('js-m-search__input');
+
+        const loadSearchModule = (initiator) => () => {
             import(
                 /* webpackChunkName: "search" */
                 '@molecules/search'
             ).then(({ default: Search }) => {
-                const searchObj = new Search();
-                searchObj.init();
-
-                body.removeEventListener('mouseenter', loadSearchModule);
+                if (!this.hasBeenCalled) {
+                    const searchObj = new Search();
+                    searchObj.init();
+                    this.hasBeenCalled = true;
+                    initiator.removeEventListener('mouseenter', loadSearchModule);
+                }
             });
         };
 
         // When users hover over body, load chunk and initiate search module.
-        body.addEventListener('mouseenter', loadSearchModule);
+        body.addEventListener('mouseenter', loadSearchModule(body));
+        // When users input characters on mobile, load chunk and initiate search module.
+        input.addEventListener('focus', loadSearchModule(input));
     }
 }
 
