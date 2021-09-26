@@ -38,6 +38,11 @@ export default function bring(url) {
     return response;
   }
 
+  const json = async (options) => {
+    const response = await getResponse(options);
+    return JSON.parse(response);
+  }
+
   const _readBody = async (response) => {
     const reader = response.body.getReader();
     const length = +response.headers.get('content-length');
@@ -92,5 +97,5 @@ export default function bring(url) {
     controller.abort();
   };
 
-  return { text, cancel }
+  return { json, text, cancel };
 }

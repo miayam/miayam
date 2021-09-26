@@ -3,7 +3,7 @@ html(lang="en")
   head
     include /atoms/head/index
     <%= htmlWebpackPlugin.files.css.map((css) => `link(href=\'${css}\', rel='stylesheet')`).join('\n      ') %>
-  body
+  body(data-router-wrapper)
       include ./layout
 
       //- Inject assets. 6 spaces is necessary, so that `HtmlWebpackPugPlugin` can translate this snippet to proper pug syntax.

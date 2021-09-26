@@ -1,8 +1,9 @@
 include /organisms/header/index
 include /organisms/main/index
 
-+header([
-  { href: '/', wording: 'Articles' },
-  { href: href, wording: 'About' }
-])
-+main()
+div(data-router-view="about")
+  +header([
+    { href: '/', wording: 'Articles' },
+    { href: href, wording: 'About' }
+  ])
+  +main()

@@ -39,6 +39,10 @@ module.exports = {
         rules: [
             {
                 test: /.js$/, // Enable modern JavaScript (ES6).
+                include: [
+                    // Workaround for Highway.
+                    path.resolve(__dirname, 'node_modules', '@dogstudio', 'highway')
+                ],
                 exclude: /node_modules/,
                 loader: 'babel-loader'
             },

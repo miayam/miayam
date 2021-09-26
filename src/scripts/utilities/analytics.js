@@ -1,5 +1,5 @@
 /**
- * traciking setup based on this article:
+ * Tracking setup based on this article:
  * https://philipwalton.com/articles/the-google-analytics-setup-i-use-on-every-site-i-build/#tracking-custom-data
  */
 export default () => {

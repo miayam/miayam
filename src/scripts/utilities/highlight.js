@@ -11,14 +11,14 @@ const highlight = (content) => {
 
     let preElements = dom.window.document.querySelectorAll("pre");
 
-    // WordPress delivers a `code`-tag that is wrapped in a `pre`
-    // the used language is specified by a CSS class
+    // WordPress delivers a `code`-tag that is wrapped in a `pre`.
+    // The used language is specified by a CSS class
     if (preElements.length) {
         preElements.forEach((pre) => {
             let code = pre.querySelector("code");
 
             if (code) {
-                // get specified language from css-classname
+                // Get specified language from css-classname
                 let codeLanguage = "html";
                 const preClass = pre.className;
 
@@ -27,10 +27,10 @@ const highlight = (content) => {
                     codeLanguage = matches[1];
                 }
 
-                // save the language for later use in CSS
+                // Save the language for later use in CSS
                 pre.dataset.language = codeLanguage;
 
-                // set grammar that prism should use for highlighting
+                // Set grammar that prism should use for highlighting
                 let prismGrammar = Prism.languages.html;
 
                 if (

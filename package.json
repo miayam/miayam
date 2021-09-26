@@ -70,6 +70,7 @@
         "webpack-merge": "^5.1.4"
     },
     "dependencies": {
-        "@11ty/eleventy-cache-assets": "^2.3.0"
+        "@11ty/eleventy-cache-assets": "^2.3.0",
+        "@dogstudio/highway": "^2.2.1"
     }
 }
