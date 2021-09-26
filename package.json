@@ -62,6 +62,7 @@
         "pug": "^2.0.4",
         "pug-loader": "^2.4.0",
         "purgecss": "^4.0.3",
+        "regenerator-runtime": "^0.13.9",
         "sass-loader": "^7.3.1",
         "terser-webpack-plugin": "^4.2.3",
         "webpack": "^4.44.2",

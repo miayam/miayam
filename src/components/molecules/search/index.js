@@ -1,6 +1,7 @@
 // import { stripTags } from '@scripts/utilities/string';
 import { SEARCH_API } from '@constants/api';
 import debounce from '@scripts/utilities/debounce';
+import bring from '@scripts/utilities/bring';
 
 class Search {
     constructor(className="m-search", id="js-m-search") {
@@ -23,31 +24,20 @@ class Search {
     }
 
     getSearchResult(keyword = "") {
-        console.log(keyword);
-        const url = `${SEARCH_API}?keyword=${keyword}&type=post`;
-        fetch(url)
-            .then(response => response.json())
-            .then(this.buildSuggestion)
-            .catch(err => {
-                console.log(err);
-                this.buildSuggestion([]);
-            });
     }
 
     init() {
-        const close = this.search.getElementsByClassName(`${this.className}__close`)[0];
-
-        this.input.addEventListener('focus', () => {
-            close.style = 'visibility: visible;';
-        });
-
-        this.input.addEventListener('blur', () => {
-            close.style = 'visibility: hidden;';
-        });
-
         this.input.addEventListener('keyup', debounce((e) => {
             this.getSearchResult(e.target.value);
         }, 100));
+
+        window.addEventListener('fetch-progress', (data) => {
+            console.log(data.detail);
+        });
+
+        window.addEventListener('fetch-finished', (data) => {
+            console.log('selesai', data.detail);
+        })
     }
 }
 
