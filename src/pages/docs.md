@@ -168,6 +168,14 @@ $ nvm use
 ```
 
 ### Development {#development}
+Install all the dependencies:
+
+```
+$ npm run install
+```
+
+After that, run this command:
+
 ```
 $ npm run start
 ```
