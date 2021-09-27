@@ -6,13 +6,14 @@ import Highway from '@dogstudio/highway';
 class Nope extends Highway.Transition {
   in({ from, to,  done }) {
     window.scrollTo(0, 0);
-    from.remove();
+    from.style = "display: none;";
 
     window.setTimeout(() => {
-      to.style = 'display: none';
+      to.style = "display: none;";
       done();
-      to.style = '';
-    }, 300);
+      from.remove();
+      to.style = "display: block;";
+    }, 1000);
   }
 
   out({ done }) {
