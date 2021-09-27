@@ -17,13 +17,13 @@ class Main {
 
     // Listen the `NAVIGATE_END` event
     // This event is sent everytime the `done()` method is called in the `in()` method of a transition
-    H.on('NAVIGATE_END', () => {
-      console.log('end');
+    H.on('NAVIGATE_END', ({ to }) => {
+      to.style = '';
     });
 
     H.on('NAVIGATE_IN', ({ to }) => {
       const navigation = new Navigation();
-      console.log('Masuk pak eko');
+      to.style = 'display: none';
       manageScripts(to);
       manageStyles(to);
 
