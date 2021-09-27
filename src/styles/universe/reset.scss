@@ -5,14 +5,18 @@
 
 html {
     box-sizing: border-box;
+    background-color: $background;
     color: $text;
 
     @include grBaseFontSize(700);
 
     &,
     body {
-        background-color: $base;
         height: 100%;
+    }
+
+    body {
+        background-color: $base;
     }
 
     h1 {
