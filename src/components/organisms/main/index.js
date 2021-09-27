@@ -1,4 +1,5 @@
 import Highway from '@dogstudio/highway';
+import Navigation from '@molecules/navigation';
 import Nope from './nope';
 import { manageScripts, manageStyles } from './utils';
 
@@ -8,6 +9,7 @@ class Main {
   }
 
   init() {
+    const navigation = new Navigation();
     const H = new Highway.Core({
       transitions: {
         default: Nope
@@ -19,6 +21,9 @@ class Main {
     H.on('NAVIGATE_END', ({ to, from }) => {
       manageScripts(to, from);
       manageStyles(to, from);
+
+      navigation.buildActiveLink();
+      navigation.onChangeState({ url: window.location.pathname });
     });
   }
 }
