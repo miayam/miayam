@@ -3,6 +3,8 @@ import Navigation from '@molecules/navigation';
 import Nope from './nope';
 import { manageScripts, manageStyles } from './utils';
 
+import './_index.scss';
+
 class Main {
   constructor(className="o-main") {
     this.className = className;
