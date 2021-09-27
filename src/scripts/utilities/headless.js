@@ -108,7 +108,7 @@ const formatData = (data) => {
 				url: `/articles/${p.slug}`,
         slug: p.slug,
         date: p.date,
-        formattedDate: (new Date(p.date)).toLocaleString('en-GB', { year: 'numeric', month: 'short', day: 'numeric'}),
+        formattedDate: (new Date(p.date)).toLocaleString('en-US', { year: 'numeric', month: 'short', day: 'numeric'}),
         title: p.title.rendered,
         excerpt: highlight(p.excerpt.rendered),
         content: highlight(p.content.rendered),

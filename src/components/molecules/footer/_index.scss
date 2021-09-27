@@ -1,1 +1,6 @@
 @import '~@atoms/copyright';
+@import '~@styles/variables';
+
+.m-footer {
+  background: $base;
+}

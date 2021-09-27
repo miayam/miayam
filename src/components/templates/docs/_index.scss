@@ -1,15 +1,19 @@
 @import "~@styles/utilities";
+@import "~@styles/variables";
 @import "~@atoms/github-corner";
 @import "~@organisms/main";
 @import "~@molecules/footer";
 
-.o-main {
-  padding-top: 0;
-  padding-bottom: 0;
+.t-docs {
+  background: $background;
+  .o-main {
+    padding-top: 0;
+    padding-bottom: 0;
 
-  .m-article {
-    h2 {
-      @include h2(700);
+    .m-article {
+      h2 {
+        @include h2(700);
+      }
     }
   }
 }

@@ -1,2 +1,8 @@
 @import "~@organisms/header";
 @import "~@organisms/main";
+@import "~@molecules/footer";
+@import "~@styles/variables";
+
+.t-home {
+  background: $background;
+}

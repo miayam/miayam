@@ -49,25 +49,25 @@
     border-bottom: 1px solid $menu;
     h1 {
       display: inline-block;
-      width: calc(100% - 90px);
+      width: 87%;
       line-height: 1.2;
       margin-bottom: calcFontSize(700) + px;
     }
-    date {
+    time {
       display: inline-block;
-      width: 90px;
+      width: 13%;
       text-align: right;
     }
 
     @media only screen and (max-width: 700px) {
       h1,
-      date {
+      time {
         width: 100%;
         display: block;
         text-align: left;
       }
 
-      date {
+      time {
         margin-bottom: calcFontSize(700) + px;
       }
     }

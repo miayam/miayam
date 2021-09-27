@@ -1,8 +1,10 @@
 include /organisms/header/index
 include /organisms/main/index
+include /molecules/footer/index
 
-+header([
-  { href: '#', wording: 'Back' },
-])
-div(data-router-view="blog")
+div(data-router-view="blog", class="t-blog")
+  +header([
+    { href: '#', wording: 'Back' },
+  ])
   +main()
+  +footer()
