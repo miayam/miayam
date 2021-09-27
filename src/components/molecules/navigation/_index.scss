@@ -4,6 +4,7 @@
     margin: 0 auto;
     max-width: 1024px;
     height: 60px;
+    $self: &;
 
     &__list {
         height: 100%;
@@ -12,7 +13,7 @@
         padding: 0;
     }
 
-    &__list li {
+    &__linkWrapper {
         display: inline-block;
         height: 100%;
     }
@@ -25,6 +26,10 @@
         text-align: center;
         width: 100px;
         padding: 3px 12px;
+    }
+
+    &__backWrapper {
+        display: none;
     }
 
     &__chevron {

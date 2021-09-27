@@ -23,6 +23,8 @@ class Search {
     }
 
     getSearchResult(keyword = "") {
+        console.log(keyword);
+        console.log('woi');
     }
 
     init() {

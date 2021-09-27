@@ -1,3 +1,4 @@
+import Navigation from '@molecules/navigation';
 import './_index.scss';
 
 class Header {
@@ -11,6 +12,8 @@ class Header {
     init() {
         const body = document.body;
         const input = document.getElementById('js-m-search__input');
+        const navigation = new Navigation();
+        navigation.init();
 
         const loadSearchModule = (initiator, eventName) => () => {
             import(
