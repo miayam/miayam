@@ -8,13 +8,13 @@ class Nope extends Highway.Transition {
     window.scrollTo(0, 0);
     from.remove();
 
-    done();
-  }
-
-  out({ done }) {
     window.setTimeout(() => {
       done();
     }, 100);
+  }
+
+  out({ done }) {
+    done();
   }
 }
 
