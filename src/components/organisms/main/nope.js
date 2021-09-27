@@ -12,7 +12,9 @@ class Nope extends Highway.Transition {
   }
 
   out({ done }) {
-    done();
+    window.setTimeout(() => {
+      done();
+    }, 100);
   }
 }
 
