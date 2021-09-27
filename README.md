@@ -40,7 +40,7 @@ Therefore, this starter project must be:
 
 ### Boring
 I believe in boring technology. Shiny new technology will be obselete in no
-time, but boring tech will not. `Pug` for templating engine / presentational component.
+time, but boring tech will not. `Pug` for building presentational component.
 `SCSS` for styling. `Vanilla JS` for manipulating the DOM, scripting repetitive tasks
 and configuration.
 
@@ -57,7 +57,7 @@ Here is the file structure:
 
 ```
 src
-└── _includes
+└── components 
     ├── atoms
     |    └── button
     |       ├── index.pug
@@ -68,19 +68,19 @@ src
     └── templates
 ```
 
-`_includes` is an entry point in which `Eleventy` looks for layouts.
+`components` is an entry point in which `Eleventy` looks for layouts.
 
 ### As Little Assets As Possible
 `Webpack` is a bundle manager + task runner for this project.
-Any changes to `_includes/templates/**/*/index.js` or `_includes/templates/**/*/_index.scss` is
+Any changes to `components/templates/**/*/index.js` or `components/templates/**/*/_index.scss` is
 watched and rebuilt by `Webpack`. `Webpack` bundles `JavaScript` and `SCSS` code in multiple entry points
-reside in `_includes/templates` which will be injected on every template by `HtmlWebpackPlugin`.
+reside in `components/templates` which will be injected on every template by `HtmlWebpackPlugin`.
 `Eleventy` will do the rest.
 
 Here is the file structure:
 ```
 src
-└── _includes
+└── components 
     ├── atoms
     ├── molecules
     ├── organisms
@@ -106,8 +106,8 @@ const ENTRY_POINTS = [
 
 const multipleHtmlPlugins = ENTRY_POINTS.map(name => {
     return new HtmlWebpackPlugin({
-        template: `${basePath}/_includes/templates/base/index.pug`,
-        filename: `${basePath}/_includes/templates/${name}/index.pug`,
+        template: `${basePath}/components/templates/base/index.pug`,
+        filename: `${basePath}/components/templates/${name}/index.pug`,
         chunks: [`${name}`],
         inject: false,
         hash: true,
@@ -123,7 +123,7 @@ module.exports = {
     entry: ENTRY_POINTS.reduce((prev, curr) => {
         return {
             ...prev,
-            [curr]: `./src/_includes/templates/${curr}/index.js`
+            [curr]: `./src/components/templates/${curr}/index.js`
         }
     }, {}),
     plugins: [
@@ -134,7 +134,7 @@ module.exports = {
 };
 ```
 
-Here is how we inject assets on base template (`_includes/templates/base/index.pug`):
+Here is how we inject assets on base template (`components/templates/base/index.pug`):
 ```pug
 body
     //- Inject assets. 6 spaces is necessary, so that `HtmlWebpackPugPlugin` can
