@@ -170,7 +170,7 @@ $ nvm use
 ### Development {#development}
 Install all dependencies:
 
-```sh
+```
 $ npm run install
 ```
 
