@@ -10,10 +10,9 @@ class Nope extends Highway.Transition {
 
     window.setTimeout(() => {
       to.style = "display: none;";
-      done();
       from.remove();
-      to.style = "display: block;";
-    }, 1000);
+      done();
+    }, 3000);
   }
 
   out({ done }) {
