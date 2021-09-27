@@ -22,10 +22,10 @@
   }
 
   figcaption,
-  date {
+  time {
     color: $caption;
-    font-size: calcFontSize(700) * 0.9 + px;
-    line-height: 1.5;
+    font-size: calcFontSize(700) * 0.87 + px;
+    line-height: 1.25;
   }
 
   hr {

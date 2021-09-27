@@ -27,6 +27,7 @@
     },
     "devDependencies": {
         "@11ty/eleventy": "^0.12.1",
+        "@11ty/eleventy-cache-assets": "^2.3.0",
         "@11ty/eleventy-plugin-syntaxhighlight": "^3.0.4",
         "@babel/cli": "^7.12.1",
         "@babel/core": "^7.11.6",
@@ -69,8 +70,5 @@
         "webpack-cli": "^3.3.12",
         "webpack-merge": "^5.1.4"
     },
-    "dependencies": {
-        "@11ty/eleventy-cache-assets": "^2.3.0",
-        "@dogstudio/highway": "^2.2.1"
-    }
+    "dependencies": {}
 }

@@ -12,5 +12,5 @@ eleventyComputed:
 ---
 div(class="m-article__header")
   h1 !{article.title}
-  date 20 May 2021
+  time(datetime=`${article.date}`) !{article.formattedDate || article.date}
 div(class="m-article__content") !{article.content}
