@@ -18,15 +18,17 @@ class Main {
     // Listen the `NAVIGATE_END` event
     // This event is sent everytime the `done()` method is called in the `in()` method of a transition
     H.on('NAVIGATE_END', () => {
-      const navigation = new Navigation();
-
-      navigation.buildActiveLink();
-      navigation.onChangeState({ url: window.location.pathname });
+      console.log('end');
     });
 
     H.on('NAVIGATE_IN', ({ to }) => {
+      const navigation = new Navigation();
+      console.log('Masuk pak eko');
       manageScripts(to);
       manageStyles(to);
+
+      navigation.buildActiveLink();
+      navigation.onChangeState({ url: window.location.pathname });
     });
   }
 }

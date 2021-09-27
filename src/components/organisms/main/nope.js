@@ -4,13 +4,15 @@ import Highway from '@dogstudio/highway';
 
 // No fancy transition.
 class Nope extends Highway.Transition {
-  in({ from, done }) {
+  in({ from, to,  done }) {
     window.scrollTo(0, 0);
     from.remove();
 
     window.setTimeout(() => {
+      to.style = 'display: none';
       done();
-    }, 100);
+      to.style = '';
+    }, 300);
   }
 
   out({ done }) {
