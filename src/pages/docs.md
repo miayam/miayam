@@ -82,7 +82,7 @@ reside in `components/templates` which will be injected on every template by `Ht
 Here is the file structure:
 ```
 src
-└── _includes
+└── components 
     ├── atoms
     ├── molecules
     ├── organisms
