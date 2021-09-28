@@ -1,0 +1,34 @@
+include /atoms/anchor/index
+
+//- Usage
+//-     +menu(
+//-       [{ href: '/tags/story', wording: 'Story', name: 'story' }] 
+//-     )
+//-
+//- Result:
+//-     <nav role="menu" class="m-menu">
+//-         <ul class="menu__tabs">
+//-             <li class="m-menu__tab">
+//-                 <a href="/tags/story" class="m-menu__moreLabel">
+//-                     <span class="icon-story"></span>
+//-                     Story
+//-                 </a>
+//-             </li>
+//-             <li class="m-menu__moreTab">
+//-                 <span class="m-menu__moreIcon"></span>
+//-                 <ul class="m-menu__hiddenTabs"></ul>
+//-             </li>
+//-         </ul>
+//-     </nav>
+mixin menu(tabs)
+  nav(class="m-menu", role="menu")
+    ul(class="m-menu__tabs")
+      each tab in tabs
+        li(class="m-menu__tab") 
+          +anchor(href=tab.href, class="m-menu__label")(class='js-m-menu__label')
+            span(class=`icon-${tab.name}`)
+            | #{tab.wording}
+      li(class="m-menu__moreTab", data-width="80")
+        +anchor(href="#", class="m-menu__moreLabel")
+          span(class="m-menu__moreIcon")
+        ul(class="m-menu__hiddenTabs")

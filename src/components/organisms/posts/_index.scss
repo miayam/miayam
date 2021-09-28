@@ -1,0 +1,8 @@
+@import '~@molecules/menu';
+@import '~@organisms/main';
+@import '~@styles/libraries/icomoon_tags';
+
+.o-posts {
+  @extend .o-main;
+  max-width: 500px;
+}

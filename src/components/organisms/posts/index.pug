@@ -1,0 +1,34 @@
+include /molecules/menu/index
+
+mixin posts
+  main(class="o-posts", role="main")
+    +menu([
+      {
+        name: 'story',
+        href: '/tags/story',
+        wording: 'Story'
+      },
+      {
+        name: 'slant',
+        href: '/tags/slant',
+        wording: 'Slant'
+      },
+      {
+        name: 'web',
+        href: '/tags/web',
+        wording: 'Web'
+      },
+      {
+        name: 'love',
+        href: '/tags/love',
+        wording: 'Love'
+      },
+      {
+        name: 'analysis',
+        href: '/tags/analysis',
+        wording: 'Analysis'
+      }
+    ])
+    div(class="o-posts__cards")
+      p This is for cards
+    
