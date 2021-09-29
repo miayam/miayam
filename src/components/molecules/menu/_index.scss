@@ -30,9 +30,14 @@
     white-space: nowrap;
     overflow: hidden;
     margin-bottom: -17px;
+
+    @media only screen and (max-width: 425px) {
+      width: 80%;
+    }
   }
 
   &__hiddenTabs {
+    z-index: 1;
     position: absolute;
     right: 0;
     margin-right: 0;
@@ -46,12 +51,12 @@
 
     #{$self}__label {
       text-align: left;
+      padding-left: 16px;
       pointer-events: none;
     }
 
     #{$self}__tab {
       margin-top: 1px; // Adjustment
-      padding-left: 16px;
       display: block;
 
       span {
@@ -83,6 +88,10 @@
     background-color: $background;
     cursor: pointer;
     display: none;
+
+    @media only screen and (max-width: 425px) {
+      width: 20%;
+    }
   }
 
   &__label,
@@ -103,38 +112,4 @@
   &__moreLabel {
     pointer-events: none;
   }
-
-  &__arrowBox {
-    position: absolute;
-    background: $background;
-    right: 21px;
-
-    &::after, &::before {
-      bottom: 100%;
-      left: 50%;
-      border: solid transparent;
-      content: "";
-      height: 0;
-      width: 0;
-      position: absolute;
-      pointer-events: none;
-    }
-
-    &::before {
-      border-color: rgba(87, 87, 87, 0);
-      border-bottom-color: $menu;
-      border-width: 10px;
-      margin-left: -10px;
-    }
-
-    &::after {
-      border-color: rgba(255, 255, 255, 0);
-      border-bottom-color: #ffffff;
-      border-width: 8px;
-      margin-left: -8px;
-    }
-
-  }
-
-
 }
