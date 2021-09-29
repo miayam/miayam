@@ -12,7 +12,8 @@ class Menu {
     const calcWidth = () => {
       let tabsWidth = 0; // Total tabs width.
       const menuWidth = this.menu.offsetWidth;
-      const availableSpace = menuWidth - 45;
+      const moreTabWidth = this.moreTab.offsetWidth;
+      const availableSpace = menuWidth - moreTabWidth;
 
       Array.from(this.visibleTabs.childNodes).forEach(tab => {
         tabsWidth += tab.offsetWidth;
