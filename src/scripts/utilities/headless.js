@@ -14,13 +14,25 @@ const getTags = async () => {
       type: 'json'
     });
 
-    // Return formatted data.
-    return json.map(item => ({
+    const tagsFromAPI = json.map(item => ({
       id: item.id,
       name: item.slug,
       wording: item.name,
       href: `/tags/${item.slug}`
     }));
+
+    const customTag = {
+      id: 0,
+      name: 'all',
+      wording: 'All',
+      href: '/tags/all'
+    };
+
+    // Return formatted data.
+    return [
+      customTag,
+      ...tagsFromAPI
+    ];
   }
   catch (err) {
     console.log(`WordPress API call failed: ${err}`);

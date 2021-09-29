@@ -2,33 +2,7 @@ include /molecules/menu/index
 
 mixin posts
   main(class="o-posts", role="main")
-    +menu([
-      {
-        name: 'all',
-        href: '/tags/all',
-        wording: 'All'
-      },
-      {
-        name: 'web',
-        href: '/tags/web',
-        wording: 'Web'
-      },
-      {
-        name: 'love',
-        href: '/tags/love',
-        wording: 'Love'
-      },
-      {
-        name: 'story',
-        href: '/tags/story',
-        wording: 'Story'
-      },
-      {
-        name: 'art',
-        href: '/tags/art',
-        wording: 'Art'
-      }
-    ])
+    +menu(articles.labels)
     div(class="o-posts__cards")
       p This is for cards
     
