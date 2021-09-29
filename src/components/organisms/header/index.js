@@ -1,9 +1,7 @@
 import Navigation from '@molecules/navigation';
-import './_index.scss';
 
 class Header {
-    constructor(className="o-header", id="js-o-header") {
-        this.id = id;
+    constructor(className="o-header") {
         this.className = className;
         this.header = document.getElementById(this.id);
         this.hasBeenCalled = false;

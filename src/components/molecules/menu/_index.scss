@@ -4,15 +4,16 @@
 @import "~@atoms/more";
 
 .m-menu {
+  $self: &;
   margin-bottom: 20px;
-  height: 45px;
   border-bottom: 1px solid $menu;
   background-color: $background;
   white-space: nowrap;
   display: inline-block;
-  overflow: hidden;
+  position:relative;
   white-space: nowrap;
   width: 100%;
+  height: 46px;
 
   &__tabs,
   &__hiddenTabs {
@@ -27,17 +28,35 @@
     display: inline-block;
     width: 90%;
     white-space: nowrap;
+    overflow: hidden;
+    margin-bottom: -17px;
   }
 
   &__hiddenTabs {
-    display: none;
     position: absolute;
-    top: 100%;
     right: 0;
     margin-right: 0;
+    background: $background;
+    color: $text;
+    border: 1px solid $menu;
+    height: auto;
+    display: none;
+    min-width: 150px;
+    top: 45px;
 
-    li {
+    #{$self}__label {
+      text-align: left;
+      pointer-events: none;
+    }
+
+    #{$self}__tab {
       margin-top: 1px; // Adjustment
+      padding-left: 16px;
+      display: block;
+
+      span {
+        color: $text;
+      }
     }
   }
 
@@ -56,27 +75,66 @@
 
   &__tab {
     min-width: 15%;
-    &:first-child a {
-      border-bottom: 1px solid $text;
-    }
+    cursor: pointer;
   }
 
   &__moreTab {
     width: 10%;
     background-color: $background;
+    cursor: pointer;
+    display: none;
   }
 
   &__label,
   &__moreLabel {
     font-size: calcFontSize(700) * 0.95 + px;
+    pointer-events: none;
     text-align: center;
     display: inline-block;
     padding-top: 8px;
-    height: 44px;
+    height: 45px;
     width: 100%;
   }
 
   &__label {
     min-width: 80px;
   }
+
+  &__moreLabel {
+    pointer-events: none;
+  }
+
+  &__arrowBox {
+    position: absolute;
+    background: $background;
+    right: 21px;
+
+    &::after, &::before {
+      bottom: 100%;
+      left: 50%;
+      border: solid transparent;
+      content: "";
+      height: 0;
+      width: 0;
+      position: absolute;
+      pointer-events: none;
+    }
+
+    &::before {
+      border-color: rgba(87, 87, 87, 0);
+      border-bottom-color: $menu;
+      border-width: 10px;
+      margin-left: -10px;
+    }
+
+    &::after {
+      border-color: rgba(255, 255, 255, 0);
+      border-bottom-color: #ffffff;
+      border-width: 8px;
+      margin-left: -8px;
+    }
+
+  }
+
+
 }
