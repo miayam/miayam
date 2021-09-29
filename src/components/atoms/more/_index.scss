@@ -1,0 +1,18 @@
+@import '~@styles/variables';
+@import '~@styles/utilities';
+
+.a-more {
+  display: inline-block;
+
+  span {
+    border: 1px solid #aaa;
+    border-radius: 50%;
+    display: inline-block;
+    height: 8px;
+    width: 8px;
+  }
+
+  span + span {
+    margin-left: 5px;
+  }
+}

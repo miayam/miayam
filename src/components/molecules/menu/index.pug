@@ -1,4 +1,5 @@
 include /atoms/anchor/index
+include /atoms/more/index
 
 //- Usage
 //-     +menu(
@@ -15,7 +16,11 @@ include /atoms/anchor/index
 //-                 </a>
 //-             </li>
 //-             <li class="m-menu__moreTab">
-//-                 <span class="m-menu__moreIcon"></span>
+//-                 <div role="button" class="a-more m-menu__moreIcon">
+//-                     <span></span>
+//-                     <span></span>
+//-                     <span></span>
+//-                 </div>
 //-                 <ul class="m-menu__hiddenTabs"></ul>
 //-             </li>
 //-         </ul>
@@ -28,7 +33,7 @@ mixin menu(tabs)
           +anchor(href=tab.href, class="m-menu__label")(class='js-m-menu__label')
             span(class=`icon-${tab.name}`)
             | #{tab.wording}
-      li(class="m-menu__moreTab", data-width="80")
-        +anchor(href="#", class="m-menu__moreLabel")
-          span(class="m-menu__moreIcon")
-        ul(class="m-menu__hiddenTabs")
+    div(class="m-menu__moreTab", data-width="80")
+      +anchor(href="#", class="m-menu__moreLabel")
+        +more(class="m-menu__moreIcon")
+      ul(class="m-menu__hiddenTabs")

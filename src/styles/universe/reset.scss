@@ -59,7 +59,7 @@ html {
         @include grBaseFontSize(700);
     }
 
-    @media only screen and (max-width: 700px) {
+    @media only screen and (max-width: 768px) {
         @include grBaseFontSize(600);
 
         h1 {

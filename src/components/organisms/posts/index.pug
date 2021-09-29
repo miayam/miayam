@@ -4,14 +4,14 @@ mixin posts
   main(class="o-posts", role="main")
     +menu([
       {
+        name: 'all',
+        href: '/tags/all',
+        wording: 'All'
+      },
+      {
         name: 'story',
         href: '/tags/story',
         wording: 'Story'
-      },
-      {
-        name: 'slant',
-        href: '/tags/slant',
-        wording: 'Slant'
       },
       {
         name: 'web',
@@ -24,9 +24,9 @@ mixin posts
         wording: 'Love'
       },
       {
-        name: 'analysis',
-        href: '/tags/analysis',
-        wording: 'Analysis'
+        name: 'slant',
+        href: '/tags/slant',
+        wording: 'Slant'
       }
     ])
     div(class="o-posts__cards")

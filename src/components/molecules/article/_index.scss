@@ -4,7 +4,7 @@
 .m-article {
   padding: 0 20px;
 
-  @media only screen and (max-width: 700px) {
+  @media only screen and (max-width: 768px) {
     padding: 16px;
   }
 
@@ -59,7 +59,7 @@
       text-align: right;
     }
 
-    @media only screen and (max-width: 700px) {
+    @media only screen and (max-width: 768px) {
       h1,
       time {
         width: 100%;
