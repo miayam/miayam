@@ -25,7 +25,7 @@
 
   &__tabs {
     display: inline-block;
-    width: 87%;
+    width: 90%;
     white-space: nowrap;
   }
 
@@ -46,42 +46,37 @@
     position: relative;
     display: inline-block;
     margin: 0 auto;
-
-    &:first-child a {
-      border-bottom: 1px solid $text;
-    }
+    height: 45px;
 
     span {
-      padding-right: 4px;
-      font-size: calcFontSize(700) * 0.9;
+      padding-right: 5px;
+      font-size: calcFontSize(700) * 0.85 + px;
     }
   }
 
   &__tab {
-    min-width: 80px;
+    min-width: 15%;
+    &:first-child a {
+      border-bottom: 1px solid $text;
+    }
   }
 
   &__moreTab {
-    width: 13%;
-    max-width: 13%;
-    background: $background;
+    width: 10%;
+    max-width: 10%;
   }
 
   &__label,
   &__moreLabel {
+    font-size: calcFontSize(700) * 0.95 + px;
     text-align: center;
-    display: table-cell;
-    vertical-align: middle;
-    height: 45px;
+    display: inline-block;
+    padding-top: 8px;
+    height: 44px;
+    width: 100%;
   }
 
   &__label {
     min-width: 80px;
-  }
-
-  &__moreLabel {
-    min-width: unset;
-    padding-left: 18px;
-    padding-right: 3px;
   }
 }

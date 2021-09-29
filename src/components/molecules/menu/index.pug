@@ -33,7 +33,7 @@ mixin menu(tabs)
           +anchor(href=tab.href, class="m-menu__label")(class='js-m-menu__label')
             span(class=`icon-${tab.name}`)
             | #{tab.wording}
-    div(class="m-menu__moreTab", data-width="80")
+    div(class="m-menu__moreTab", data-width="45")
       +anchor(href="#", class="m-menu__moreLabel")
         +more(class="m-menu__moreIcon")
       ul(class="m-menu__hiddenTabs")
