@@ -15,7 +15,12 @@ const getTags = async () => {
     });
 
     // Return formatted data.
-    return json.map(item => ({ id: item.id, name: item.name }));
+    return json.map(item => ({
+      id: item.id,
+      name: item.slug,
+      wording: item.name,
+      href: `/tags/${item.slug}`
+    }));
   }
   catch (err) {
     console.log(`WordPress API call failed: ${err}`);
@@ -80,6 +85,7 @@ const categorizeDataByTag = ({ data, tags, paginationSize })  => {
     pagedItems.forEach((pagedItem, index) => {
       tagMap.push({
         tagName: tag.name,
+        tagWording: tag.wording,
         pageNumber: index,
         pageData: pagedItem
       });

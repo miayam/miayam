@@ -29,11 +29,17 @@
         position: absolute;
         left: 12px;
         top: 22px;
+
+        @media only screen and (max-width: 768px) {
+            top: 45%;
+            left: 7%;
+        }
     }
 
     &__close {
         position: absolute;
         font-size: 30px;
+        cursor: pointer;
         visibility: hidden;
         top: 50%;
         right: 8px;

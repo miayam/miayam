@@ -19,7 +19,7 @@ mixin navigation(links)
       each link in links
         - var styledLink = link.href === '#' ? 'm-navigation__back' : 'm-navigation__link';
         li(class=`${styledLink}Wrapper`) 
-          +anchor(href=link.href, class=styledLink)(class='js-a-anchor')
+          +anchor(href=link.href, class=`${styledLink} js-a-anchor`)
             if link.href === '#'
               span.m-navigation__chevron
             | #{link.wording}

@@ -27,7 +27,8 @@ const main = async () => {
 
   const data = {
     list: normalizedList,
-    tags: tagMap
+    tags: tagMap,
+    labels: tags.sort((a, b) => a.id - b.id),
   };
 
   return data;

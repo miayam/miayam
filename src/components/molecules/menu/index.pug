@@ -15,22 +15,24 @@ include /atoms/more/index
 //-                     Story
 //-                 </a>
 //-             </li>
-//-             <li class="m-menu__moreTab">
+//-         </ul>
+//-         <div class="m-menu__moreTab">
+//-            <a href="#" class="m-menu__moreLabel">
 //-                 <div role="button" class="a-more m-menu__moreIcon">
 //-                     <span></span>
 //-                     <span></span>
 //-                     <span></span>
 //-                 </div>
-//-                 <ul class="m-menu__hiddenTabs"></ul>
-//-             </li>
-//-         </ul>
+//-             </a>
+//-             <ul class="m-menu__hiddenTabs"></ul>
+//-         </div>
 //-     </nav>
 mixin menu(tabs)
   nav(class="m-menu", role="menu")
     ul(class="m-menu__tabs")
       each tab in tabs
         li(class="m-menu__tab") 
-          +anchor(href=tab.href, class="m-menu__label")(class='js-m-menu__label')
+          +anchor(href=tab.href, class="m-menu__label js-m-menu__label")
             span(class=`icon-${tab.name}`)
             | #{tab.wording}
     div(class="m-menu__moreTab", data-width="45")
