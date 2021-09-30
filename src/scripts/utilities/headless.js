@@ -99,17 +99,27 @@ const categorizeDataByTag = ({ data, tags, paginationSize })  => {
         tagName: tag.name,
         tagWording: tag.wording,
         pageNumber: index,
-        pageData: pagedItem
+        pageData: pagedItem,
+        pagination: {
+          total: taggedItems.length,
+          currentIndex: index,
+          articlesCount: pagedItem.length 
+        }
       });
     });
   });
 
   const allItems = chunk(data, paginationSize);
-  allItems.forEach((item, index) => {
+  allItems.forEach((pagedItem, index) => {
     tagMap.push({
       tagName: 'all',
       pageNumber: index,
-      pageData: item
+      pageData: pagedItem,
+      pagination: {
+        total: allItems.length,
+        currentIndex: index,
+        articlesCount: pagedItem.length 
+      }
     });
   });
 
