@@ -5,8 +5,7 @@ pagination:
   alias: tag
 permalink: /tags/{{ tag.tagName }}/{% if tag.pageNumber %}{{ tag.pageNumber + 1 }}/{% endif %}index.json
 eleventyComputed:
-  paginatedArticlesPerTag: tag.pageData
-  tagName: tag.tagName
+  pagination: tag.pagination
 ---
 {
     "posts": [
