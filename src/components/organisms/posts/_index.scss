@@ -1,6 +1,7 @@
 @import '~@molecules/menu';
-@import '~@organisms/main';
+@import '~@molecules/masthead';
 @import '~@styles/libraries/icomoon_tags';
+@import '~@organisms/main';
 
 .o-posts {
   @extend .o-main;

@@ -25,8 +25,6 @@ const main = async () => {
   const normalizedList = appendPrevAndNextItemByTag({ data: list, tags });
   const tagMap = categorizeDataByTag({ data: normalizedList, paginationSize: 9, tags });
 
-  console.log(tagMap);
-
   const data = {
     list: normalizedList,
     tags: tagMap,

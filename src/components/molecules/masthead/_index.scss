@@ -1,0 +1,28 @@
+@import '~@styles/variables';
+@import '~@styles/utilities';
+
+.m-masthead {
+  margin: 0 auto;
+  max-width: 300px;
+  margin-top: 30px;
+  background-color: $background;
+  color: $text;
+
+  &__logo {
+    width: 130px;
+    height: 130px;
+    display: block;
+    margin: 0 auto;
+
+    @media only screen and (max-width: 768px) {
+      width: 100px;
+      height: 100px;
+    }
+  }
+
+  &__wording {
+    text-align: center;
+    font-weight: bold;
+    @include h4(700);
+  }
+}

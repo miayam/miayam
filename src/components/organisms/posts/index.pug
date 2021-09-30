@@ -1,7 +1,9 @@
 include /molecules/menu/index
+include /molecules/masthead/index
 
 mixin posts
   main(class="o-posts", role="main")
+    +masthead()
     +menu(articles.labels)
     div(class="o-posts__cards")
       p This is for cards
