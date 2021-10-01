@@ -3,6 +3,17 @@ class Navigation {
     this.className = className;
   }
 
+  buildBackButton() {
+    const backButtons = Array.from(document.getElementsByClassName(`${this.className}__back`));
+
+    backButtons.forEach((back) => {
+      const searchParams = new URLSearchParams(location.search);
+      const tag = searchParams.get('tag');
+      const backLink = tag ? `/tags/${tag}/` : '/';
+      back.setAttribute('href', backLink);
+    });
+  }
+
   buildActiveLink() {
     const currentLocation = window.location.pathname;
     const navigationLinks = Array.from(document.getElementsByClassName(`${this.className}__link`));
@@ -11,7 +22,7 @@ class Navigation {
       let href = link.getAttribute('href');
 
       if (currentLocation === '/about/' && href !== '/about/') {
-        href = document.referrer;
+        href = document.referrer.indexOf('/tags/') > -1 ? document.referrer : '/';
         link.setAttribute('href', href);
       }
 
@@ -25,6 +36,7 @@ class Navigation {
 
   init() {
     this.buildActiveLink();
+    this.buildBackButton();
   }
 }
 

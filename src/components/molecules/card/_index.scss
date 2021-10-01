@@ -10,6 +10,11 @@
   border-radius: 8px;
   cursor: pointer;
 
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
   &__header {
     width: 100%;
     h2 {

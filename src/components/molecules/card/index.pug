@@ -1,9 +1,11 @@
 mixin card(item)
   section(class="m-card")
-    div(class="m-card__header")
-      h2 !{item.title}
-      time(datetime=`${item.date}`) !{'— ' + item.formattedDate || item.date}
-    p !{item.excerpt}
-    div(class="m-card__tagList")
-      each tag in item.labels
-        span(class=`icon-${tag}`)
+    a(href=`/articles/${item.slug}/`) 
+      div(class="m-card__header")
+        h2 !{item.title}
+        time(datetime=`${item.date}`) !{'— ' + item.formattedDate || item.date}
+      p !{item.excerpt}
+      div(class="m-card__tagList")
+        if item && item.labels
+          each tag in item.labels
+            span(class=`icon-${tag}`)

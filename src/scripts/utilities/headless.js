@@ -25,7 +25,7 @@ const getTags = async () => {
       id: 0,
       name: 'all',
       wording: 'All',
-      href: '/tags/all'
+      href: '/'
     };
 
     // Return formatted data.
