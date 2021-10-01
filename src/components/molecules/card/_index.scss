@@ -1,0 +1,62 @@
+@import "~@styles/variables";
+@import "~@styles/utilities";
+@import "~@styles/libraries/icomoon_tags";
+@import "~@molecules/article";
+
+
+.m-card {
+  padding: 20px;
+  border: 1px solid $menu;
+  border-radius: 8px;
+  cursor: pointer;
+
+  &__header {
+    width: 100%;
+    h2 {
+      @include h4(700);
+
+      display: inline-block;
+      width: 75%;
+      line-height: 1.2;
+    }
+
+    time {
+      display: inline-block;
+      width: 25%;
+      text-align: right;
+      color: $caption;
+      font-size: calcFontSize(700) * 0.87 + px;
+      line-height: 1.25;
+    }
+
+    @media only screen and (max-width: 768px) {
+      h2
+      time {
+        width: 100%;
+        display: block;
+        text-align: left;
+      }
+
+      h2 {
+        margin-bottom: calcFontSize(600) * 0.3 + px;
+      }
+
+      time {
+        margin-bottom: calcFontSize(600) * 0.4 + px;
+      }
+    }
+  }
+
+  &__tagList {
+    span {
+      display: inline-block;
+      border-radius: 4px;
+      padding: 8px;
+      background-color: $menu;
+    }
+
+    span + span {
+      margin-left: 8px;
+    }
+  }
+}

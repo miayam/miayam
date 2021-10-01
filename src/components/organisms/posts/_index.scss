@@ -1,9 +1,31 @@
 @import '~@molecules/menu';
 @import '~@molecules/masthead';
+@import '~@molecules/card';
 @import '~@styles/libraries/icomoon_tags';
 @import '~@organisms/main';
 
 .o-posts {
   @extend .o-main;
   max-width: 450px;
+
+  &__cards {
+    @media only screen and (max-width: 425px) {
+      padding: 0 16px;
+    }
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    &:first-of-type {
+      padding-top: unset;
+    }
+  }
+
+  .m-card + .m-card {
+    margin-top: 20px;
+  }
 }

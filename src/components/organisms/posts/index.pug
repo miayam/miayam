@@ -1,10 +1,15 @@
 include /molecules/menu/index
 include /molecules/masthead/index
+include /molecules/card/index
 
 mixin posts
   main(class="o-posts", role="main")
     +masthead()
     +menu(articles.labels)
     div(class="o-posts__cards")
-      p This is for cards
+      if list && list.pageData
+        each item in list.pageData
+          +card(item)
+
+
     

@@ -11,6 +11,8 @@
   &__logo {
     width: 130px;
     height: 130px;
+    border: 1px solid $logo;
+    border-radius: 50%;
     display: block;
     margin: 0 auto;
 
@@ -23,6 +25,6 @@
   &__wording {
     text-align: center;
     font-weight: bold;
-    @include h4(700);
+    @include h4(70);
   }
 }

@@ -26,6 +26,7 @@ const main = async () => {
   const tagMap = categorizeDataByTag({ data: normalizedList, paginationSize: 9, tags });
 
   const data = {
+    home: tagMap.filter(tag => tag.tagName === 'all'),
     list: normalizedList,
     tags: tagMap,
     labels: tags.sort((a, b) => a.id - b.id),

@@ -1,0 +1,10 @@
+mixin card(item)
+  section(class="m-card")
+    div(class="m-card__header")
+      h2 !{item.title}
+      time(datetime=`${item.date}`) !{'— ' + item.formattedDate || item.date}
+    p !{item.excerpt}
+    div(class="m-card__tagList")
+      - var tags = item.tags.map(tagId => articles.labels.find(label => label.id === tagId).name);
+      each tag in tags
+        span(class=`icon-${tag}`)

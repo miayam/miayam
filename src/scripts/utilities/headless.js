@@ -126,6 +126,17 @@ const categorizeDataByTag = ({ data, tags, paginationSize })  => {
   return tagMap;
 };
 
+// Strip HTML tags
+const formatExcerpt = (str) => {
+  const excerptContent = str
+            .replace(/(<(br[^>]*)>)/ig, '\n')
+            .replace(/(<([^>]+)>)/ig,'')
+            .split(' ')
+            .slice(0, 20)
+            .join(' ');
+  return `${excerptContent} [&hellip;]`; 
+};
+
 // Format data
 const formatData = (data) => {
   return data
@@ -138,8 +149,8 @@ const formatData = (data) => {
         date: p.date,
         formattedDate: (new Date(p.date)).toLocaleString('en-US', { year: 'numeric', month: 'short', day: 'numeric'}),
         title: p.title.rendered,
-        excerpt: highlight(p.excerpt.rendered),
         content: highlight(p.content.rendered),
+        excerpt: formatExcerpt(highlight(p.excerpt.rendered)),
 				tags: p.tags,
       };
     });
