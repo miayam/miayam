@@ -4,11 +4,17 @@ class Navigation {
   }
 
   buildActiveLink() {
-    const currentLocation = window.location.pathname || '/';
+    const currentLocation = window.location.pathname;
     const navigationLinks = Array.from(document.getElementsByClassName(`${this.className}__link`));
 
     navigationLinks.forEach((link) => {
-      const href = link.getAttribute('href');
+      let href = link.getAttribute('href');
+
+      if (currentLocation === '/about/' && href !== '/about/') {
+        href = document.referrer;
+        link.setAttribute('href', href);
+      }
+
       if (currentLocation === href) {
         link.style = 'border-bottom: 3px solid #333; font-weight: bold;';
       } else {

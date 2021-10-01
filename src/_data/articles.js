@@ -2,6 +2,7 @@ const {
   getTags,
   getPosts,
   getTotalPages,
+  createHomeData,
   categorizeDataByTag,
   appendPrevAndNextItemByTag,
 } = require('../scripts/utilities/headless');
@@ -26,10 +27,10 @@ const main = async () => {
   const tagMap = categorizeDataByTag({ data: normalizedList, paginationSize: 9, tags });
 
   const data = {
-    home: tagMap.filter(tag => tag.tagName === 'all'),
+    home: createHomeData(tagMap),
     list: normalizedList,
-    tags: tagMap,
-    labels: tags.sort((a, b) => a.id - b.id),
+    tagMap: tagMap,
+    tags: tags.sort((a, b) => a.id - b.id),
   };
 
   return data;

@@ -77,8 +77,10 @@ const appendPrevAndNextItemByTag = ({ data, tags }) => {
     taggedItems.forEach((taggedItem, index, thisArray) => {
       const prev = thisArray[index - 1];
       const next = thisArray[index + 1];
+      const labels = taggedItem.tags.map(tagId => tags.find(tag => tag.id === tagId).name);
       taggedItem["prev"] = {...taggedItem["prev"], [tag.name]: prev};
       taggedItem["next"] = {...taggedItem["next"], [tag.name]: next};
+      taggedItem["labels"] = labels;
 
 			const position = normalizedData.findIndex((item) => item.id === taggedItem.id);
 			normalizedData[position] = taggedItem;
@@ -100,6 +102,7 @@ const categorizeDataByTag = ({ data, tags, paginationSize })  => {
         tagWording: tag.wording,
         pageNumber: index,
         pageData: pagedItem,
+        href: `/tags/${tag.name}${index ? `/${index + 1}/` : '/'}`,
         pagination: {
           total: taggedItems.length,
           currentIndex: index,
@@ -115,6 +118,7 @@ const categorizeDataByTag = ({ data, tags, paginationSize })  => {
       tagName: 'all',
       pageNumber: index,
       pageData: pagedItem,
+      href: `/tags/all${index ? `/${index + 1}/` : '/'}`,
       pagination: {
         total: allItems.length,
         currentIndex: index,
@@ -124,6 +128,16 @@ const categorizeDataByTag = ({ data, tags, paginationSize })  => {
   });
 
   return tagMap;
+};
+
+const createHomeData = (tagMap) => {
+  const homeData = tagMap
+                        .filter(tag => tag.tagName === 'all')
+                        .map(tag => ({
+                          ...tag,
+                          href: '/'
+                        }));
+  return homeData;
 };
 
 // Strip HTML tags
@@ -159,6 +173,7 @@ const formatData = (data) => {
 module.exports = {
 	appendPrevAndNextItemByTag,
 	categorizeDataByTag,
+  createHomeData,
 	getTotalPages,
 	getPosts,
 	getTags

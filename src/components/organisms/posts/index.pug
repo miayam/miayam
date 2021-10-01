@@ -5,7 +5,7 @@ include /molecules/card/index
 mixin posts
   main(class="o-posts", role="main")
     +masthead()
-    +menu(articles.labels)
+    +menu(articles.tags)
     div(class="o-posts__cards")
       if list && list.pageData
         each item in list.pageData

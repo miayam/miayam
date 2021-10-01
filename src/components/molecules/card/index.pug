@@ -5,6 +5,5 @@ mixin card(item)
       time(datetime=`${item.date}`) !{'— ' + item.formattedDate || item.date}
     p !{item.excerpt}
     div(class="m-card__tagList")
-      - var tags = item.tags.map(tagId => articles.labels.find(label => label.id === tagId).name);
-      each tag in tags
+      each tag in item.labels
         span(class=`icon-${tag}`)

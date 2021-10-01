@@ -4,7 +4,7 @@ include /molecules/footer/index
 
 div(data-router-view="home", class="t-home")
   +header([
-    { href: '/', wording: 'Articles' },
+    { href: list.href, wording: 'Articles' },
     { href: '/about/', wording: 'About' }
   ])
   +posts()
