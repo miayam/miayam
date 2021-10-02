@@ -28,4 +28,15 @@
   .m-card + .m-card {
     margin-top: 20px;
   }
+
+  &__description {
+    margin: 0;
+    margin-bottom: 16px;
+    line-height: 1.3;
+    padding-left: 10px;
+    
+    strong {
+      padding-right: 5px;
+    }
+  }
 }

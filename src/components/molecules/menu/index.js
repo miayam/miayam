@@ -9,10 +9,11 @@ class Menu {
   }
 
   priorityPlus() {
-    const calcWidth = () => {
+    const calcWidth = (e) => {
       let tabsWidth = 0; // Total tabs width.
+      const adjustment = e && e.type === 'load' ? 0 : 50;
       const menuWidth = this.menu.offsetWidth;
-      const moreTabWidth = this.moreTab.offsetWidth;
+      const moreTabWidth = this.moreTab.offsetWidth + adjustment;
       const availableSpace = menuWidth - moreTabWidth;
 
       Array.from(this.visibleTabs.childNodes).forEach(tab => {
@@ -71,9 +72,24 @@ class Menu {
     document.addEventListener('click', clickOutside);
   }
 
+  activeLink() {
+    const currentLocation = window.location.pathname;
+    Array.from(this.tabs).forEach(tab => {
+      const link = tab.getElementsByClassName(`${this.className}__label`)[0];
+      let href = link.getAttribute('href');
+
+      if (currentLocation === href) {
+        link.style = 'border-bottom: 2px solid #333; font-weight: bold;';
+      } else {
+        link.style = '';
+      }
+    });
+  }
+
   init() {
     this.toggle();
     this.priorityPlus();
+    this.activeLink();
   }
 }
 

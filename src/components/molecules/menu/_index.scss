@@ -80,6 +80,12 @@
   &__tab {
     min-width: 15%;
     cursor: pointer;
+    span {
+      margin-right: 5px;
+      height: calcFontSize(700) * 0.85 + px;
+      width: calcFontSize(700) * 0.85 + px;
+      display: inline-block;
+    }
   }
 
   &__moreTab {
@@ -106,7 +112,11 @@
 
   &__label {
     min-width: 80px;
+    @media only screen and (max-width: 425px) {
+      min-width: 85px;
+    }
   }
+
 
   &__moreLabel {
     pointer-events: none;

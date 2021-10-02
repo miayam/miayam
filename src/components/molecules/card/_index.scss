@@ -5,13 +5,14 @@
 
 
 .m-card {
-  padding: 20px;
   border: 1px solid $menu;
   border-radius: 8px;
   cursor: pointer;
 
   a {
     color: inherit;
+    padding: 20px;
+    display: block;
     text-decoration: none;
   }
 

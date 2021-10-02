@@ -1,6 +1,7 @@
-mixin card(item)
+mixin card(item, tagName)
   section(class="m-card")
-    a(href=`/articles/${item.slug}/`) 
+    - const querySearch = `${tagName === 'all' ? '' : `?tag=${tagName}`}`;
+    a(href=`/articles/${item.slug}/${querySearch}`) 
       div(class="m-card__header")
         h2 !{item.title}
         time(datetime=`${item.date}`) !{'— ' + item.formattedDate || item.date}

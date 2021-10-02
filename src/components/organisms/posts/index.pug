@@ -7,9 +7,16 @@ mixin posts
     +masthead()
     +menu(articles.tags)
     div(class="o-posts__cards")
+      - const currentTag = articles.tags.find(tag => tag.name === list.tagName);
+      - const description = currentTag.description;
+      - const tagWording = currentTag.wording; 
+      if (list.tagName !== 'all')
+        p(class="o-posts__description")
+          strong !{tagWording + ': '} 
+          span !{description}
       if list && list.pageData
         each item in list.pageData
-          +card(item)
+          +card(item, list.tagName)
 
 
     

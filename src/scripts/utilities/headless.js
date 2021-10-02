@@ -18,7 +18,8 @@ const getTags = async () => {
       id: item.id,
       name: item.slug,
       wording: item.name,
-      href: `/tags/${item.slug}`
+      description: item.description,
+      href: `/tags/${item.slug}/`
     }));
 
     const customTag = {
@@ -132,22 +133,24 @@ const categorizeDataByTag = ({ data, tags, paginationSize })  => {
 
 const createHomeData = (tagMap) => {
   const homeData = tagMap
-                        .filter(tag => tag.tagName === 'all')
-                        .map(tag => ({
-                          ...tag,
-                          href: '/'
-                        }));
+    .filter(tag => tag.tagName === 'all')
+    .map(tag => ({
+      ...tag,
+      href: '/'
+    }));
+
   return homeData;
 };
 
 // Strip HTML tags
 const formatExcerpt = (str) => {
   const excerptContent = str
-            .replace(/(<(br[^>]*)>)/ig, '\n')
-            .replace(/(<([^>]+)>)/ig,'')
-            .split(' ')
-            .slice(0, 20)
-            .join(' ');
+    .replace(/(<(br[^>]*)>)/ig, '\n')
+    .replace(/(<([^>]+)>)/ig,'')
+    .split(' ')
+    .slice(0, 20)
+    .join(' ');
+
   return `${excerptContent} [&hellip;]`; 
 };
 
