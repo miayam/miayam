@@ -15,6 +15,7 @@ module.exports = (config) => {
     // Markdown 
     config.setLibrary('md',
         require('markdown-it')('commonmark')
+            .use(require('markdown-it-strikethrough-alt'))
             .use(require('markdown-it-attrs'))
     );
 

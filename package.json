@@ -50,6 +50,7 @@
         "lodash.chunk": "^4.2.0",
         "markdown-it": "^12.0.2",
         "markdown-it-attrs": "^4.0.0",
+        "markdown-it-strikethrough-alt": "^1.0.0",
         "mathsass": "^0.11.0",
         "mini-css-extract-plugin": "^1.2.0",
         "node-fetch": "^2.6.4",
@@ -70,5 +71,7 @@
         "webpack-cli": "^3.3.12",
         "webpack-merge": "^5.1.4"
     },
-    "dependencies": {}
+    "dependencies": {
+        "lozad": "^1.16.0"
+    }
 }

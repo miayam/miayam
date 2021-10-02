@@ -1,7 +1,9 @@
+include /atoms/head/index
+
 doctype html
 html(lang="en")
   head
-    include /atoms/head/index
+    +head()
     <%= htmlWebpackPlugin.files.css.map((css) => `link(href=\'${css}\', class='main-style' rel='stylesheet')`).join('\n      ') %>
   body
       include ./layout

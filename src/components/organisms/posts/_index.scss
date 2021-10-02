@@ -38,5 +38,11 @@
     strong {
       padding-right: 5px;
     }
+
+    [class^="icon-"],
+    [class*=" icon-"] {
+      padding-right: 5px;
+      font-size: calcFontSize(700) * 0.85 + px;
+    }
   }
 }

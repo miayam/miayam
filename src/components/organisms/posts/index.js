@@ -1,4 +1,5 @@
 import Menu from '@molecules/menu';
+import lozad from 'lozad';
 
 class Posts {
   constructor(className='o-posts') {
@@ -7,7 +8,10 @@ class Posts {
 
   init() {
     const menu = new Menu();
+    const observer = lozad();
+
     menu.init();
+    observer.observe();
   }
 }
 
