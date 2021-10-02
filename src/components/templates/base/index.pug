@@ -5,8 +5,5 @@ html(lang="en")
     <%= htmlWebpackPlugin.files.css.map((css) => `link(href=\'${css}\', class='main-style' rel='stylesheet')`).join('\n      ') %>
   body
       include ./layout
-      //- Polyfill on demand
-      script(src="https://polyfill.io/v3/polyfill.min.js?features=fetch%2CPromise", async, defer)
-
       //- Inject assets. 6 spaces is necessary, so that `HtmlWebpackPugPlugin` can translate this snippet to proper pug syntax.
       <%= htmlWebpackPlugin.files.js.map((js) => `script(src=\'${js}\', class='main-script' type='text/javascript', async)`).join('\n      ') %>
