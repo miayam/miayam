@@ -5,7 +5,7 @@ pagination:
   size: 1
   alias: list
 permalink: |
-  | #{list.pageNumber ? `/home/${list.pageNumber + 1}/` : '/'}
+  | #{"/"}
 eleventyComputed:
   pagination: list.pagination
   title: |

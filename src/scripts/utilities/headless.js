@@ -132,14 +132,14 @@ const categorizeDataByTag = ({ data, tags, paginationSize })  => {
 };
 
 const createHomeData = (tagMap) => {
-  const homeData = tagMap
+  const firstPage = tagMap
     .filter(tag => tag.tagName === 'all')
     .map(tag => ({
       ...tag,
       href: '/'
-    }));
+    }))[0];
 
-  return homeData;
+  return [firstPage];
 };
 
 // Strip HTML tags
