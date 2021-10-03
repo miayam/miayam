@@ -100,17 +100,18 @@ class Menu {
       const postsSkeletonCards = document.getElementsByClassName('o-posts__skeletonCards')[0];
 
       tab.addEventListener('click', () => {
+        const url = tag === 'all' ? '/' : `/tags/${tag}`;
         postsCards.style = 'display: none;';  
         postsSkeletonCards.style = 'display: block;';
 
-        fetch(`/tags/${tag}`)
+        fetch(url)
           .then(response => response.text())
           .then(html => {
             const result = html.match(/<section class="o-posts__cards"[^>]*>([\s\S.]*)<\/section>/i)[1];
 
             if (result) {
               self.resetTabs();
-              history.pushState({ tag }, `/tags/${tag}/`, `/tags/${tag}`);
+              history.pushState({ tag }, url, url);
               postsCards.innerHTML = result;
             }
 
