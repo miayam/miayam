@@ -1,18 +1,14 @@
 @import '~@molecules/menu';
 @import '~@molecules/masthead';
 @import '~@molecules/card';
+@import '~@molecules/skeleton/card';
 @import '~@styles/libraries/icomoon_tags';
 @import '~@organisms/main';
 
 .o-posts {
   @extend .o-main;
-  max-width: 450px;
 
-  &__cards {
-    @media only screen and (max-width: 425px) {
-      padding: 0 16px;
-    }
-  }
+  max-width: 450px;
 
   h1,
   h2,
@@ -25,7 +21,8 @@
     }
   }
 
-  .m-card + .m-card {
+  .m-card + .m-card,
+  .m-skeletonCard + .m-skeletonCard {
     margin-top: 20px;
   }
 
@@ -44,5 +41,16 @@
       padding-right: 5px;
       font-size: calcFontSize(700) * 0.85 + px;
     }
+  }
+
+  &__cards,
+  &__skeletonCards {
+    @media only screen and (max-width: 425px) {
+      padding: 0 16px;
+    }
+  }
+
+  &__skeletonCards {
+    display: none;
   }
 }

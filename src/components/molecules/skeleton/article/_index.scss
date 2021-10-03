@@ -1,0 +1,50 @@
+@import "~@styles/variables";
+
+.m-skeletonArticle {
+  margin-top: 30px;
+
+  &:first-child {
+    margin-top: 0;
+  }
+
+  width: 0px;
+  padding: 0 20px;
+  animation: fullView 0.5s forwards cubic-bezier(0.250, 0.460, 0.450, 0.940);
+
+  &__bar {
+    height: calcFontSize(700) + px;
+    background: $menu;
+    margin-top: 18px;
+    animation : shimmer 2s infinite linear;
+    background: linear-gradient(to right, #eff1f3 4%, #e2e2e2 25%, #eff1f3 36%);
+    background-size: 700px 100%;
+
+    &--w80 {
+      width: 80%;
+    }
+
+    &--hCard {
+      height: 206px;
+    }
+
+    &--wCard {
+      width: 450px;
+    }
+  }
+}
+
+@keyframes fullView {
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -700px 0;
+  }
+  100% {
+    background-position: 700px 0;
+  }
+}
+
