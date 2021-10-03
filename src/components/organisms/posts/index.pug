@@ -18,7 +18,7 @@ mixin posts
       - const tagWording = currentTag.wording; 
       if (list.tagName !== 'all')
         p(class="o-posts__description")
-          span(class=`icon-${list.tagName}`)
+          span(class=`icon-${list.tagName}`, style="padding-right: 5px;")
           strong !{tagWording + ': '} 
           span !{description}
       if list && list.pageData
