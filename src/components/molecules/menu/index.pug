@@ -32,7 +32,7 @@ mixin menu(tabs)
     ul(class="m-menu__tabs")
       each tab in tabs
         li(class="m-menu__tab") 
-          +anchor(href=tab.href, class="m-menu__label js-m-menu__label")
+          +anchor(href=tab.href, class="m-menu__label js-m-menu__label", data-tag=`${tab.name}`)
             span(class=`icon-${tab.name}`)
             | #{tab.wording}
     div(class="m-menu__moreTab", data-width="45")

@@ -24,7 +24,7 @@ This is what Google think about my blog.
 Mom, Dad! Look, I build a website "AS IS". No bullshit. Just HTML, CSS, JavaScript, and everything in between bundled together. Boring, huh? What is SSR?
 
 ## The Author
-I am a man behind this blog. This is how I portray myself:
+I am a man behind this blog.
 
 I currently live in Bandung, Indonesia, and build user-facing features for [Stockbit](https://stockbit.com). This blog site is all about anything that interest me and most of my writings here are dedicated to the web in general.
 

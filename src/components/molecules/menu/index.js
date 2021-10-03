@@ -58,9 +58,7 @@ class Menu {
       }
     };
 
-    const clickInside = (e) => {
-      e.preventDefault();
-
+    const clickInside = () => {
       if (this.hiddenTabs.style.display === 'none') {
         this.hiddenTabs.style.display = 'block';
       } else {
@@ -86,10 +84,57 @@ class Menu {
     });
   }
 
+  resetTabs() {
+    Array.from(this.tabs).forEach(tab => {
+      const link = tab.getElementsByClassName(`${this.className}__label`)[0];
+      link.style = '';
+    });
+  }
+
+  changeTags() {
+    const self = this;
+    Array.from(this.tabs).forEach(tab => {
+      const link = tab.getElementsByClassName(`${this.className}__label`)[0];
+      const tag = link.getAttribute('data-tag');
+      const postsCards = document.getElementsByClassName('o-posts__cards')[0];
+      const postsSkeletonCards = document.getElementsByClassName('o-posts__skeletonCards')[0];
+
+      tab.addEventListener('click', () => {
+        postsCards.style = 'display: none;';  
+        postsSkeletonCards.style = 'display: block;';
+
+        fetch(`/tags/${tag}`)
+          .then(response => response.text())
+          .then(html => {
+            const result = html.match(/<div class="o-posts__cards"[^>]*>([\s\S.]*)<\/div>/i)[1];
+
+            if (result) {
+              self.resetTabs();
+              history.pushState({ tag }, `/tags/${tag}/`, `/tags/${tag}`);
+              postsCards.innerHTML = result;
+            }
+
+            postsSkeletonCards.style = '';
+            postsCards.style = '';  
+            link.style = 'border-bottom: 2px solid #333; font-weight: bold;';
+          })
+          .catch(() =>  {
+            postsSkeletonCards.style = '';
+            postsCards.style = '';  
+          });
+      });
+
+      window.onpopstate = function() {
+        location.reload();
+      };
+    });
+  }
+
   init() {
     this.toggle();
     this.priorityPlus();
     this.activeLink();
+    this.changeTags();
   }
 }
 
