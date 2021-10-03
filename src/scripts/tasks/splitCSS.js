@@ -136,6 +136,14 @@ const routes = [
     template: 'home'
   },
   {
+    path: 'home',
+    template: 'home'
+  },
+  {
+    path: 'tags',
+    template: 'home'
+  },
+  {
     path: 'about',
     template: 'about'
   }
