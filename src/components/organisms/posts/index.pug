@@ -16,11 +16,15 @@ mixin posts
       - const currentTag = articles.tags.find(tag => tag.name === list.tagName);
       - const description = currentTag.description;
       - const tagWording = currentTag.wording; 
-      if (list.tagName !== 'all')
-        p(class="o-posts__description")
-          span(class=`icon-${list.tagName}`, style="padding-right: 5px;")
+      p(class="o-posts__description", style=`${list.tagName === 'all' ? 'display: none;' : ''}`)
+        if (list.tagName !== 'all')
+          span(class=`icon-${list.tagName}`)
           strong !{tagWording + ': '} 
           span !{description}
+        else
+          span(class="icon-all")
+          strong All
+          span All
       if list && list.pageData
         each item in list.pageData
           +card(item, list.tagName)
