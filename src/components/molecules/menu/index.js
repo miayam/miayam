@@ -106,7 +106,7 @@ class Menu {
         fetch(`/tags/${tag}`)
           .then(response => response.text())
           .then(html => {
-            const result = html.match(/<div class="o-posts__cards"[^>]*>([\s\S.]*)<\/div>/i)[1];
+            const result = html.match(/<section class="o-posts__cards"[^>]*>([\s\S.]*)<\/section>/i)[1];
 
             if (result) {
               self.resetTabs();

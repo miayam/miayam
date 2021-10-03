@@ -7,12 +7,12 @@ mixin posts
   main(class="o-posts", role="main")
     +masthead()
     +menu(articles.tags)
-    div(class="o-posts__skeletonCards")
+    section(class="o-posts__skeletonCards")
       - const iteration = Array.from(new Array(9));
       each item in iteration
         +skeleton-card()
 
-    div(class="o-posts__cards")
+    section(class="o-posts__cards")
       - const currentTag = articles.tags.find(tag => tag.name === list.tagName);
       - const description = currentTag.description;
       - const tagWording = currentTag.wording; 
