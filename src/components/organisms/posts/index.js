@@ -8,7 +8,7 @@ class Posts {
 
   init() {
     const menu = new Menu();
-    const observer = lozad();
+    const observer = lozad(document.querySelectorAll('img, iframe'));
 
     menu.init();
     observer.observe();
