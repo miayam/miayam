@@ -1,4 +1,5 @@
 include /atoms/anchor/index
+include /atoms/arrow/index
 
 //- Usage:
 //-     +navigation(
@@ -21,6 +22,6 @@ mixin navigation(links)
         li(class=`${styledLink}Wrapper`) 
           +anchor(href=link.href, class=`${styledLink} js-a-anchor`)
             if link.href === '#'
-              span.m-navigation__chevron
+              +arrow("left")
             | #{link.wording}
 

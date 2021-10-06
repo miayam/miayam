@@ -1,0 +1,47 @@
+.a-arrow {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  width: 22px;
+  height: 22px;
+  margin-right: 8px;
+  border: 2px solid transparent;
+  border-radius: 100px;
+
+  &::after {
+    content: "";
+    display: block;
+    box-sizing: border-box;
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-bottom: 2px solid;
+    border-left: 2px solid;
+    left: 6px;
+    top: 4px;
+  }
+
+  &--left {
+    &::after {
+      transform: rotate(45deg);
+    }
+  }
+
+  &--up {
+    &::after {
+      transform: rotate(135deg);
+    }
+  }
+
+  &--right {
+    &::after {
+      transform: rotate(225deg);
+    }
+  }
+
+  &--down {
+    &::after {
+      transform: rotate(315deg);
+    }
+  }
+}
