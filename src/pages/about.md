@@ -9,7 +9,7 @@ href: /about/
 -------
 
 ## The Blog
-The alternative version of this page written in [🇮🇩 Bahasa.](/about/id)
+The alternative version of this page written in [🇮🇩 Bahasa.](/about/id){.a-langSwitcher}
 
 The best thing I've ever done with my life. A place where I can be myself. I can't be no one else. No company in the world will allow me to do so. This is the work I can brag about. To me, this is the best design ever. Some eccentric German philosophers once said, "The best design is as little design as possible."
 

@@ -1,6 +1,7 @@
 ---
 layout: about/index.pug
 permalink: /about/id/index.html
+title: Perihal
 href: /about/id/
 ---
 
@@ -8,7 +9,7 @@ href: /about/id/
 --------
 
 ## Tentang Blog Ini
-Versi yang lebih profesional ditulis menggunakan [🇬🇧 bahasa Inggris.](/about)
+Versi yang lebih profesional ditulis menggunakan [🇬🇧 bahasa Inggris.](/about){.a-langSwitcher}
 
 Karya digital saya. Tempat mencurahkan ego yang tidak mungkin bisa dilampiaskan di tempat kerja manapun. Bisa dibilang sesuatu yang bisa saya banggakan kepada calon mertua kelak. Bagi saya, ini adalah desain terbaik. Seorang filsuf Jerman pernah berkata, "Desain terbaik adalah desain yang sesedikit mungkin."
 

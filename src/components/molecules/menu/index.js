@@ -114,7 +114,6 @@ class Menu {
               self.resetTabs();
               history.pushState({ tag }, url, url);
               postsCards.innerHTML = result;
-              document.title = '';
               document.title = title;
             }
 

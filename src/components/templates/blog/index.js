@@ -1,10 +1,13 @@
 import Header from '@organisms/header';
 import Main from '@organisms/main';
+import Iterator from '@molecules/iterator';
 
 import './_index.scss';
 
-const headerObj = new Header();
-const mainObj = new Main();
+const header = new Header();
+const main = new Main();
+const iterator = new Iterator();
 
-headerObj.init();
-mainObj.init();
+header.init();
+main.init();
+iterator.init();

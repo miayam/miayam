@@ -1,9 +1,12 @@
 import Header from '@organisms/header';
 import Main from '@organisms/main';
+import Article from '@molecules/article';
 import './_index.scss';
 
-const headerObj = new Header();
-const mainObj = new Main();
+const header = new Header();
+const main = new Main();
+const article = new Article();
 
-headerObj.init();
-mainObj.init();
+header.init();
+main.init();
+article.init();
