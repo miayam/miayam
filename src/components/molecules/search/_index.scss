@@ -134,6 +134,12 @@
         max-height: 200px;
         height: auto;
         padding: 16px;
+
+        a {
+            display: inline-block;
+            text-decoration: none;
+            color: $text;
+        }
     }
 
     &__resultItemContent {

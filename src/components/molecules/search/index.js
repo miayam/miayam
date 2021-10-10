@@ -36,6 +36,7 @@ class Search {
     if (Array.isArray(data) && data.length > 0) {
       const lists = data.map(datum => {
         const title = stripTags(datum.title.rendered);
+        const href = `/articles/${datum.slug}`;
         const content = stripTags(datum.content.rendered);
         const words = content.split(' ');
         const firstAppearanceIndex = words.findIndex(word => {
@@ -60,12 +61,14 @@ class Search {
         
         return `
           <li class="m-search__resultItem">
-            <div class="m-search__resultItemHeader">
-              <h2>${title}</h2>
-            </div>
-            <p class="m-search__resultItemContent">
-              .${'...' + normalizedContent + '...'}
-            </p>
+            <a href="${href}">
+              <div class="m-search__resultItemHeader">
+                <h2>${title}</h2>
+              </div>
+              <p class="m-search__resultItemContent">
+                .${'...' + normalizedContent + '...'}
+              </p>
+            </a>
           </li>
         `;
       });
@@ -100,8 +103,11 @@ class Search {
     });
 
     this.input.addEventListener('blur', () => {
-      this.results.style = '';
-      this.close.style = 'color: white;';
+      const self = this;
+      setTimeout(() => {
+        self.results.style = '';
+        self.close.style = 'color: white;';
+      }, 300);
     });
 
     this.close.addEventListener('click', () => {
