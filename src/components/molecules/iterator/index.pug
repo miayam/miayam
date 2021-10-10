@@ -1,0 +1,20 @@
+include /atoms/arrow/index
+include /atoms/anchor/index
+
+mixin iterator(data, tagName)
+  - const { prev, next } = data;
+  ul(class="m-iterator")
+    each val, key in prev
+      li(class="m-iterator__prev", data-tag=key)
+        if (prev[key])
+          - const queryParam = key === 'all' ? '' : `?tag=${key}`;
+          +anchor(href=`${prev[key].url}${queryParam}`, class="m-iterator__link")
+            +arrow("left")
+            span #{prev[key].title}
+      li(class="m-iterator__next", data-tag=key)
+        if (next[key])
+          - const queryParam = key === 'all' ? '' : `?tag=${key}`;
+          +anchor(href=`${next[key].url}${queryParam}`, class="m-iterator__link")
+            span #{next[key].title}
+            +arrow("right")
+  

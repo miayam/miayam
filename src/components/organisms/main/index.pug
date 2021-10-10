@@ -1,7 +1,10 @@
 include /molecules/article/index
 include /molecules/skeleton/article/index
+include /molecules/iterator/index
 
-mixin main
+mixin main(data)
   main(class="o-main", role="main")
     +skeleton-article()
     +article()
+    if data && data.prev && data.next
+      +iterator(data)

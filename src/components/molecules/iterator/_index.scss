@@ -1,0 +1,53 @@
+.m-iterator {
+  display: block;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  padding: 16px;
+  width: 100%;
+  margin-top: 60px;
+
+  &__prev,
+  &__next {
+    display: inline-block;
+    position: absolute;
+    width: 50%;
+    height: 60px;
+  }
+
+  &__prev {
+    text-align: left;
+    left: 0;
+    padding-left: 16px;
+
+    @media only screen and (max-width: 425px) {
+      padding-left: 14px;
+    }
+  }
+
+  &__next {
+    text-align: right;
+    right: 0;
+    padding-right: 16px;
+
+    @media only screen and (max-width: 425px) {
+      padding-right: 14px;
+    }
+  }
+
+  .a-anchor,
+  .a-arrow {
+    display: inline-block;
+  }
+
+  .a-anchor {
+    height: 60px;
+    vertical-align: middle;
+    min-width: 100px;
+  }
+
+  .a-arrow {
+    margin-top: -2px;
+    margin-right: 4px;
+  }
+}

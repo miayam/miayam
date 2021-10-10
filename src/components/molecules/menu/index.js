@@ -108,11 +108,14 @@ class Menu {
           .then(response => response.text())
           .then(html => {
             const result = html.match(/<section class="o-posts__cards"[^>]*>([\s\S.]*)<\/section>/i)[1];
+            const title = html.match(/<title[^>]*>([\s\S.]*)<\/title>/i)[1];
 
             if (result) {
               self.resetTabs();
               history.pushState({ tag }, url, url);
               postsCards.innerHTML = result;
+              document.title = '';
+              document.title = title;
             }
 
             postsSkeletonCards.style = '';

@@ -71,10 +71,11 @@ const getPosts = async (page = 1) => {
 };
 
 const appendPrevAndNextItemByTag = ({ data, tags }) => {
-	const normalizedData = [...data];
+	const normalizedData = data;
+  const normalizedTags = tags;
 
-  tags.forEach((tag) => {
-    const taggedItems = data.filter(item => item.tags.includes(tag.id));
+  normalizedTags.forEach((tag) => {
+    const taggedItems = tag.id === 0 ? data : data.filter(item => item.tags.includes(tag.id));
     taggedItems.forEach((taggedItem, index, thisArray) => {
       const prev = thisArray[index - 1];
       const next = thisArray[index + 1];
