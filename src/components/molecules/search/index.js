@@ -37,28 +37,15 @@ class Search {
       const lists = data.map(datum => {
         const title = stripTags(datum.title.rendered);
         const href = `/articles/${datum.slug}`;
+        const regex = new RegExp(keyword, 'gi');
         const content = stripTags(datum.content.rendered);
-        const words = content.split(' ');
-        const firstAppearanceIndex = words.findIndex(word => {
-          const regex = new RegExp(keyword, 'gi');
-          return word.match(regex);
-        });
-        const normalizedContent = words
-          .slice(firstAppearanceIndex, firstAppearanceIndex + 20)
-          .map(word => {
-            const regex = new RegExp(keyword, 'gi');
-            if (word.match(regex)) {
-              return `<mark>${word}</mark>`
-            }
-
-            return word;
-          })
-          .join(' ');
-        
+        const firstOccuranceIndex = content.indexOf(keyword);
+        const normalizedContent = content.slice(firstOccuranceIndex, firstOccuranceIndex + 200).replaceAll(regex, `<mark>${keyword}</mark>`);
+       
         if (normalizedContent.length === 0) {
           return '';
         }
-        
+
         return `
           <li class="m-search__resultItem">
             <a href="${href}">
@@ -66,7 +53,7 @@ class Search {
                 <h2>${title}</h2>
               </div>
               <p class="m-search__resultItemContent">
-                .${'...' + normalizedContent + '...'}
+                ${'[...] ' + normalizedContent + ' [...]'}
               </p>
             </a>
           </li>
