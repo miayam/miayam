@@ -19,12 +19,15 @@ Here's the deal. WordPress gives out data through its API endpoint. Eleventy gen
 
 Boring as it might be, I still follow the best practice. I take whatever Ady Osmani have to say to my heart. Critical path CSS, lazy loading, PWA, prefetching, caching, etc.
 
-This is what Google think about my blog.
-
 Mom, Dad! Look, I build a website "AS IS". No bullshit. Just HTML, CSS, JavaScript, and everything in between bundled together. Boring, huh? What is SSR?
 
 ## The Author
 I am a man behind this blog.
+
+![Tolol](data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==){ data-src="/assets/images/yozo-oba.jpg" }
+
+> The world, after all, was still a place of bottomless horror. It was by no means a place of childlike simplicity where everything could be settled by a simple then-and-there decision. — Yozo Oba
+>
 
 I currently live in Bandung, Indonesia, and build user-facing features for [Stockbit](https://stockbit.com). This blog site is all about anything that interest me and most of my writings here are dedicated to the web in general.
 

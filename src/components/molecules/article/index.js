@@ -1,3 +1,5 @@
+import lozad from 'lozad';
+
 class Article {
   constructor(className="m-article") {
     this.className = className;
@@ -31,6 +33,9 @@ class Article {
               this.skeletonArticle.style = '';
               self.init();
             }
+
+            const observer = lozad(document.querySelectorAll('img, iframe'));
+            observer.observe();
           });
       });
     });
