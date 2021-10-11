@@ -107,13 +107,13 @@ class Menu {
         fetch(url)
           .then(response => response.text())
           .then(html => {
-            const result = html.match(/<section class="o-posts__cards"[^>]*>([\s\S.]*)<\/section>/i)[1];
+            const posts = html.match(/<section class="o-posts__cards"[^>]*>([\s\S.]*)<\/section>/i)[1];
             const title = html.match(/<title[^>]*>([\s\S.]*)<\/title>/i)[1];
 
-            if (result) {
+            if (posts) {
               self.resetTabs();
               history.pushState({ tag }, url, url);
-              postsCards.innerHTML = result;
+              postsCards.innerHTML = posts;
               document.title = title;
             }
 
@@ -127,7 +127,7 @@ class Menu {
           });
       });
 
-      window.onpopstate = function() {
+      window.onpopstate = function () {
         location.reload();
       };
     });
