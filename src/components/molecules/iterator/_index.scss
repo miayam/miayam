@@ -1,5 +1,6 @@
 .m-iterator {
   display: block;
+  $self: &;
   position: relative;
   margin: 0;
   padding: 0;
@@ -22,6 +23,18 @@
 
     @media only screen and (max-width: 425px) {
       padding-left: 14px;
+
+      #{$self}__wording {
+        display: none;
+      }
+
+      .a-anchor::after {
+        content: 'Previous';
+        display: inline-block;
+        text-align: left;
+        position: absolute;
+        left: 48px;
+      }
     }
   }
 
@@ -32,6 +45,18 @@
 
     @media only screen and (max-width: 425px) {
       padding-right: 14px;
+
+      #{$self}__wording {
+        display: none;
+      }
+
+      .a-anchor::before {
+        content: 'Next';
+        display: inline-block;
+        text-align: right;
+        position: absolute;
+        right: 48px;
+      }
     }
   }
 

@@ -10,11 +10,11 @@ mixin iterator(data, tagName)
           - const queryParam = key === 'all' ? '' : `?tag=${key}`;
           +anchor(href=`${prev[key].url}${queryParam}`, class="m-iterator__link")
             +arrow("left")
-            span #{prev[key].title}
+            span(class="m-iterator__wording") #{prev[key].title}
       li(class="m-iterator__next", data-tag=key)
         if (next[key])
           - const queryParam = key === 'all' ? '' : `?tag=${key}`;
           +anchor(href=`${next[key].url}${queryParam}`, class="m-iterator__link")
-            span #{next[key].title}
+            span(class="m-iterator__wording") #{next[key].title}
             +arrow("right")
   
