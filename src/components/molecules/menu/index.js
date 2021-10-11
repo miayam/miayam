@@ -1,3 +1,5 @@
+import Pagination from '@molecules/pagination';
+
 class Menu {
   constructor(className="m-menu") {
     this.className = className;
@@ -98,9 +100,10 @@ class Menu {
       const tag = link.getAttribute('data-tag');
       const postsCards = document.getElementsByClassName('o-posts__cards')[0];
       const postsSkeletonCards = document.getElementsByClassName('o-posts__skeletonCards')[0];
+      const paginationContainer = document.getElementsByClassName('m-pagination')[0];
 
       tab.addEventListener('click', () => {
-        const url = tag === 'all' ? '/' : `/tags/${tag}`;
+        const url = tag === 'all' ? '/' : `/tags/${tag}/`;
         postsCards.style = 'display: none;';  
         postsSkeletonCards.style = 'display: block;';
 
@@ -108,13 +111,17 @@ class Menu {
           .then(response => response.text())
           .then(html => {
             const posts = html.match(/<section class="o-posts__cards"[^>]*>([\s\S.]*)<\/section>/i)[1];
+            const pagination = html.match(/<nav class="m-pagination"[^>]*>([\s\S.]*)<\/nav>/i)[1];
             const title = html.match(/<title[^>]*>([\s\S.]*)<\/title>/i)[1];
 
             if (posts) {
               self.resetTabs();
               history.pushState({ tag }, url, url);
               postsCards.innerHTML = posts;
+              paginationContainer.innerHTML = pagination;
               document.title = title;
+              const paginationObj = new Pagination();
+              paginationObj.init();
             }
 
             postsSkeletonCards.style = '';

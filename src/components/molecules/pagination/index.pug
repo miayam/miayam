@@ -6,19 +6,17 @@ mixin pagination(pagination)
     - const iterators = [...Array(pagination.total).keys()];
     ul(class="m-pagination__container")
       li(class="m-pagination__item --first")
-        +anchor(href=`${pagination.baseLink}/`)
-          +arrow("double-left")
+        +arrow("double-left")
       li(class="m-pagination__item --prev")
         +arrow("left")
-      li(class="m-pagination__navigator")
+      li(class="m-pagination__navigator", data-total=pagination.total, data-baseLink=pagination.baseLink)
         label(for="pagination")
         select(id="pagination")
           each index in iterators
-            - const pageNumber = `${pagination.baseLink}${index === 0 ? '' : `${index + 1}/`}`;
+            - const pageNumber = `${pagination.baseLink}/${index === 0 ? '' : `${index + 1}/`}`;
             option(value=`${pageNumber}`) #{index + 1}
         | #{` of ${pagination.total}`}
       li(class="m-pagination__item --next")
         +arrow("right")
       li(class="m-pagination__item --last")
-        +anchor(href=`${pagination.baseLink}/${iterators[iterators.length - 1] + 1}`)
-          +arrow("double-right")
+        +arrow("double-right")
