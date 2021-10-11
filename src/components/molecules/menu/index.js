@@ -96,8 +96,8 @@ class Menu {
   changeTags() {
     const self = this;
     Array.from(this.tabs).forEach(tab => {
-      const link = tab.getElementsByClassName(`${this.className}__label`)[0];
-      const tag = link.getAttribute('data-tag');
+      const label = tab.getElementsByClassName(`${this.className}__label`)[0];
+      const tag = label.getAttribute('data-tag');
       const postsCards = document.getElementsByClassName('o-posts__cards')[0];
       const postsSkeletonCards = document.getElementsByClassName('o-posts__skeletonCards')[0];
       const paginationContainer = document.getElementsByClassName('m-pagination')[0];
@@ -126,7 +126,7 @@ class Menu {
 
             postsSkeletonCards.style = '';
             postsCards.style = '';  
-            link.style = 'border-bottom: 2px solid #333; font-weight: bold;';
+            label.style = 'border-bottom: 2px solid #333; font-weight: bold;';
           })
           .catch(() =>  {
             postsSkeletonCards.style = '';

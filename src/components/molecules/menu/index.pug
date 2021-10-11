@@ -28,14 +28,14 @@ include /atoms/more/index
 //-         </div>
 //-     </nav>
 mixin menu(tabs)
-  nav(class="m-menu", role="menu")
-    ul(class="m-menu__tabs")
+  nav(class="m-menu", role="navigation")
+    ul(class="m-menu__tabs", role="menu")
       each tab in tabs
         li(class="m-menu__tab", role="menuitem") 
-          +anchor(href=tab.href, class="m-menu__label js-m-menu__label", data-tag=`${tab.name}`)
-            span(class=`icon-${tab.name}`, role="button")
+          div(class="m-menu__label js-m-menu__label", data-tag=`${tab.name}`)
+            span(class=`icon-${tab.name}`, role="img")
             | #{tab.wording}
-    div(class="m-menu__moreTab", data-width="45", role="menu")
-      +anchor(href="#", class="m-menu__moreLabel", role="menuitem")
-        +more(class="m-menu__moreIcon", role="button")
+    div(class="m-menu__moreTab", data-width="45")
+      div(class="m-menu__moreLabel", role="button", tabindex="0", aria-pressed="false", aria-label="more")
+        +more(class="m-menu__moreIcon")
     ul(class="m-menu__hiddenTabs")
