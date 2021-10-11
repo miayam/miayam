@@ -71,12 +71,12 @@ class Menu {
   }
 
   activeLink() {
-    const currentLocation = window.location.pathname;
     Array.from(this.tabs).forEach(tab => {
       const link = tab.getElementsByClassName(`${this.className}__label`)[0];
-      let href = link.getAttribute('href');
+      let ownTag = link.getAttribute('data-tag');
+      const activeTag = document.querySelector(`p[data-tag*=${ownTag}`);
 
-      if (currentLocation === href) {
+      if (activeTag) {
         link.style = 'border-bottom: 2px solid #333; font-weight: bold;';
       } else {
         link.style = '';

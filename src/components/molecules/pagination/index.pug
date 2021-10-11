@@ -8,7 +8,20 @@ mixin pagination
       li(class="m-pagination__item --prev")
         +arrow("left")
       li(class="m-pagination__navigator")
-        | 1 of 10
+        label(for="pagination")
+        select(id="pagination")
+          option(value="/") 1
+          option(value="/2", selected) 2
+          option(value="/3") 3
+          option(value="/4") 4
+          option(value="/5") 5
+          option(value="/6") 6
+          option(value="/7") 7
+          option(value="/8") 8
+          option(value="/9") 9
+          option(value="/10") 10
+        | of 10
+
       li(class="m-pagination__item --next")
         +arrow("right")
       li(class="m-pagination__item --last")

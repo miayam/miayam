@@ -17,7 +17,7 @@ mixin posts
       - const currentTag = articles.tags.find(tag => tag.name === list.tagName);
       - const description = currentTag.description;
       - const tagWording = currentTag.wording; 
-      p(class="o-posts__description", style=`${list.tagName === 'all' ? 'display: none;' : ''}`)
+      p(class="o-posts__description", data-tag=`${list.tagName}`, style=`${list.tagName === 'all' ? 'display: none;' : ''}`)
         if (list.tagName !== 'all')
           span(class=`icon-${list.tagName}`)
           strong !{tagWording + ': '} 
