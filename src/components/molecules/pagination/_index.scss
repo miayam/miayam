@@ -1,0 +1,42 @@
+.m-pagination {
+  display: block;
+  width: 100%;
+  position: relative;
+
+  @media only screen and (max-width: 425px) {
+    padding: 0 16px;
+  }
+
+  &__container {
+    list-style-type: none;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    padding-top: 60px;
+  }
+
+  &__item.--first,
+  &__item.--prev {
+    text-align: left;
+  }
+
+  &__item.--last,
+  &__item.--next {
+    text-align: right;
+  }
+
+  &__item {
+    display: inline-block;
+    width: 25%;
+    cursor: pointer;
+  }
+
+  &__navigator {
+    position: absolute;
+    right: 50%;
+    transform: translateX(50%);
+    top: 60px;
+    text-align: center;
+  }
+}
+

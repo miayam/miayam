@@ -1,0 +1,15 @@
+include /atoms/arrow/index
+
+mixin pagination
+  nav(class="m-pagination", role="navigation")&attributes(attributes)
+    ul(class="m-pagination__container")
+      li(class="m-pagination__item --first")
+        +arrow("double-left")
+      li(class="m-pagination__item --prev")
+        +arrow("left")
+      li(class="m-pagination__navigator")
+        | 1 of 10
+      li(class="m-pagination__item --next")
+        +arrow("right")
+      li(class="m-pagination__item --last")
+        +arrow("double-right")

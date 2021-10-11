@@ -1,6 +1,7 @@
 include /molecules/menu/index
 include /molecules/masthead/index
 include /molecules/card/index
+include /molecules/pagination/index
 include /molecules/skeleton/card/index
 
 mixin posts
@@ -28,7 +29,4 @@ mixin posts
       if list && list.pageData
         each item in list.pageData
           +card(item, list.tagName)
-      
-
-
-    
+    +pagination()

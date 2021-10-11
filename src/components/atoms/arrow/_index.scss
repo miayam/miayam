@@ -44,4 +44,38 @@
       transform: rotate(315deg);
     }
   }
+
+  &--double-left,
+  &--double-right {
+    &::before {
+      content: "";
+      display: block;
+      box-sizing: border-box;
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      border-bottom: 2px solid;
+      border-left: 2px solid;
+      left: 6px;
+      top: 4px;
+    }
+
+    &::after {
+      left: 14px;
+    }
+  }
+
+  &--double-left {
+    &::before,
+    &::after {
+      transform: rotate(45deg);
+    }
+  }
+
+  &--double-right {
+    &::before,
+    &::after {
+      transform: rotate(225deg);
+    }
+  }
 }
