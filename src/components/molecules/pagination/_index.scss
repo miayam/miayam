@@ -29,16 +29,14 @@
 
   &__item {
     display: inline-block;
-    width: 25%;
+    width: 15%;
     cursor: pointer;
   }
 
   &__navigator {
-    position: absolute;
-    right: 50%;
-    transform: translateX(50%);
-    top: 60px;
+    width: 40%;
     text-align: center;
+    display: inline-block;
 
     select {
       @include p();
