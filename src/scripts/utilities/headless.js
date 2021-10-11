@@ -100,12 +100,13 @@ const categorizeDataByTag = ({ data, tags, paginationSize })  => {
     const taggedItems = tag.id === 0 ? data : data.filter(item => item.tags.includes(tag.id));
     const pagedItems = chunk(taggedItems, paginationSize);
     pagedItems.forEach((pagedItem, index) => {
+      const subPath = tag.name === 'all' ? '' : `/tags/${tag.name}`;
       tagMap.push({
         tagName: tag.name,
         tagWording: tag.wording,
         pageNumber: index,
         pageData: pagedItem,
-        href: `/tags/${tag.name}${index ? `/${index + 1}/` : '/'}`,
+        href: `${subPath}${index ? `/${index + 1}/` : '/'}`,
         pagination: {
           total: taggedItems.length,
           currentIndex: index,
