@@ -54,6 +54,9 @@ class Pagination {
 
   bring(url) {
     const self = this;
+    this.postsCards.style = 'display: none;';  
+    this.postsSkeletonCards.style = 'display: block;';
+
     fetch(url)
       .then(response => response.text())
       .then(html => {
