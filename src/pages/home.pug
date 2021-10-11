@@ -9,5 +9,5 @@ permalink: |
 eleventyComputed:
   pagination: list.pagination
   title: |
-    | Miayam page #{list.pageNumber + 1} | #{"The excitement of not knowing"}
+    | Miayam #{list.pageNumber ? `page ${list.pageNumber + 1}` : ''} | #{"The excitement of not knowing"}
 ---
