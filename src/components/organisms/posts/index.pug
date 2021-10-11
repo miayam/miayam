@@ -29,4 +29,4 @@ mixin posts
       if list && list.pageData
         each item in list.pageData
           +card(item, list.tagName)
-    +pagination()
+    +pagination(list.pagination)

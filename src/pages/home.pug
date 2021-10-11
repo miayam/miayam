@@ -7,7 +7,6 @@ pagination:
 permalink: |
   | #{list.pageNumber ? `/${list.pageNumber + 1}/` : '/'}
 eleventyComputed:
-  pagination: list.pagination
   title: |
     | Miayam #{list.pageNumber ? `page ${list.pageNumber + 1}` : ''} | #{"The excitement of not knowing"}
 ---

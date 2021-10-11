@@ -7,7 +7,6 @@ pagination:
 permalink: |
   | tags/#{list.tagName}#{list.pageNumber ? `/${list.pageNumber + 1}/` : '/'}
 eleventyComputed:
-  pagination: list.pagination
   title: |
     | #{list.tagWording} | #{"The excitement of not knowing"}
 ---
