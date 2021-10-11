@@ -39,8 +39,8 @@ class Search {
         const href = `/articles/${datum.slug}`;
         const regex = new RegExp(keyword, 'gi');
         const content = stripTags(datum.content.rendered);
-        const firstOccuranceIndex = content.indexOf(keyword);
-        const normalizedContent = content.slice(firstOccuranceIndex, firstOccuranceIndex + 200).replaceAll(regex, `<mark>${keyword}</mark>`);
+        const firstOccuranceIndex = content.toLowerCase().indexOf(keyword.toLowerCase());
+        const normalizedContent = content.slice(firstOccuranceIndex, firstOccuranceIndex + 200).replaceAll(regex, (matched) => `<mark>${matched}</mark>`);
        
         if (normalizedContent.length === 0) {
           return '';
