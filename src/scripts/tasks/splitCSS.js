@@ -122,6 +122,13 @@ function getChunkName(html, root) {
   }
 }
 
+const anticiatedPaginationRoutes = Array.from(new Array(1000)).map((_, index) => {
+  return {
+    path: `${index + 1}`,
+    template: 'home',
+  };
+})
+
 const routes = [
   {
     path: 'articles',
@@ -142,7 +149,8 @@ const routes = [
   {
     path: 'about',
     template: 'about'
-  }
+  },
+  ...anticiatedPaginationRoutes
 ];
 
 glob.glob(`_site/**/*.html`, async (err, matches) => {

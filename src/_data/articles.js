@@ -2,7 +2,6 @@ const {
   getTags,
   getPosts,
   getTotalPages,
-  createHomeData,
   categorizeDataByTag,
   appendPrevAndNextItemByTag,
 } = require('../scripts/utilities/headless');
@@ -24,10 +23,11 @@ const main = async () => {
 
   const list = (await Promise.all(wpList)).flat();
   const normalizedList = appendPrevAndNextItemByTag({ data: list, tags });
-  const tagMap = categorizeDataByTag({ data: normalizedList, paginationSize: 9, tags });
+  const tagMap = categorizeDataByTag({ data: normalizedList, paginationSize: 9, tags: tags.filter(tag => tag.name !== 'all') });
+  const homeMap = categorizeDataByTag({ data: normalizedList, paginationSize: 9, tags: tags.filter(tag => tag.name === 'all') });
 
   const data = {
-    home: createHomeData(tagMap),
+    home: homeMap,
     list: normalizedList,
     tagMap: tagMap,
     tags: tags.sort((a, b) => a.id - b.id),

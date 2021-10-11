@@ -5,9 +5,9 @@ pagination:
   size: 1
   alias: list
 permalink: |
-  | #{"/"}
+  | #{list.pageNumber ? `/${list.pageNumber + 1}/` : '/'}
 eleventyComputed:
   pagination: list.pagination
   title: |
-    | #{"Miayam.io | The excitement of not knowing"}
+    | Miayam page #{list.pageNumber + 1} | #{"The excitement of not knowing"}
 ---

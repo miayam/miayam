@@ -26,6 +26,7 @@ const getTags = async () => {
       id: 0,
       name: 'all',
       wording: 'All',
+      description: 'All posts.',
       href: '/'
     };
 
@@ -96,7 +97,7 @@ const categorizeDataByTag = ({ data, tags, paginationSize })  => {
   const tagMap = [];
 
   tags.forEach(tag => {
-    const taggedItems = data.slice().filter(item => item.tags.includes(tag.id));
+    const taggedItems = tag.id === 0 ? data : data.filter(item => item.tags.includes(tag.id));
     const pagedItems = chunk(taggedItems, paginationSize);
     pagedItems.forEach((pagedItem, index) => {
       tagMap.push({
@@ -114,33 +115,7 @@ const categorizeDataByTag = ({ data, tags, paginationSize })  => {
     });
   });
 
-  const allItems = chunk(data, paginationSize);
-  allItems.forEach((pagedItem, index) => {
-    tagMap.push({
-      tagName: 'all',
-      pageNumber: index,
-      pageData: pagedItem,
-      href: `/tags/all${index ? `/${index + 1}/` : '/'}`,
-      pagination: {
-        total: allItems.length,
-        currentIndex: index,
-        articlesCount: pagedItem.length 
-      }
-    });
-  });
-
   return tagMap;
-};
-
-const createHomeData = (tagMap) => {
-  const firstPage = tagMap
-    .filter(tag => tag.tagName === 'all')
-    .map(tag => ({
-      ...tag,
-      href: '/'
-    }))[0];
-
-  return [firstPage];
 };
 
 // Strip HTML tags
@@ -177,7 +152,6 @@ const formatData = (data) => {
 module.exports = {
 	appendPrevAndNextItemByTag,
 	categorizeDataByTag,
-  createHomeData,
 	getTotalPages,
 	getPosts,
 	getTags
