@@ -22,19 +22,8 @@
     padding-left: 16px;
 
     @media only screen and (max-width: 425px) {
+      display: none;
       padding-left: 14px;
-
-      #{$self}__wording {
-        display: none;
-      }
-
-      .a-anchor::after {
-        content: 'Previous';
-        display: inline-block;
-        text-align: left;
-        position: absolute;
-        left: 48px;
-      }
     }
   }
 
@@ -44,19 +33,8 @@
     padding-right: 16px;
 
     @media only screen and (max-width: 425px) {
+      display: none;
       padding-right: 14px;
-
-      #{$self}__wording {
-        display: none;
-      }
-
-      .a-anchor::before {
-        content: 'Next';
-        display: inline-block;
-        text-align: right;
-        position: absolute;
-        right: 48px;
-      }
     }
   }
 
@@ -69,10 +47,21 @@
     height: 60px;
     vertical-align: middle;
     min-width: 100px;
+
+    @media only screen and (max-width: 425px) {
+      display: none;
+    }
   }
 
   .a-arrow {
     margin-top: -2px;
     margin-right: 4px;
+  }
+
+  &__link.--mobile {
+    display: none;
+    @media only screen and (max-width: 425px) {
+      display: inline-block;
+    }
   }
 }
