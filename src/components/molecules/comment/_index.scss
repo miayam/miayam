@@ -9,4 +9,10 @@
   @media only screen and (max-width: 768px) {
     padding: 16px;
   }
+
+  &__loading {
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+  }
 }

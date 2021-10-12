@@ -51,7 +51,10 @@ class Main {
               {
                 checkOrigin: ["https://my.remarkbox.com"],
                 inPageLinks: true,
-                initCallback: function(e) {e.iFrameResizer.moveToAnchor(window.location.hash)}
+                initCallback: function(e) {
+                  document.getElementsByClassName('m-comment__loading')[0].style = 'display: none;';
+                  e.iFrameResizer.moveToAnchor(window.location.hash)
+                }
               },
               document.getElementById("remarkbox-iframe")
             );
