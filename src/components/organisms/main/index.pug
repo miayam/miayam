@@ -1,6 +1,7 @@
 include /molecules/article/index
 include /molecules/skeleton/article/index
 include /molecules/iterator/index
+include /molecules/comment/index
 
 mixin main(data)
   main(class="o-main", role="main")
@@ -8,3 +9,5 @@ mixin main(data)
     +article()
     if data && data.prev && data.next
       +iterator(data)
+      +comment()
+
