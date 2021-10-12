@@ -22,13 +22,7 @@ module.exports = merge(commonConfig, {
                     test: /\.css$i/,
                     chunks: 'all',
                     enforce: true
-                },
-                commons: {
-                    name: 'vendor',
-                    test: /[\\/]node_modules[\\/]/,
-                    chunks: 'all',
-                    enforce: true
-                },
+                }
             }
         },
     },
