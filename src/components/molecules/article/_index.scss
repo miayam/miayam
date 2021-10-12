@@ -2,12 +2,7 @@
 @import "~@styles/utilities";
 
 .m-article {
-  padding: 0 20px;
-
-  @media only screen and (max-width: 768px) {
-    padding: 16px;
-  }
-
+  padding: 0 16px;
 
   h1 {
     @include h2(700);

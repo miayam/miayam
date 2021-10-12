@@ -1,0 +1,1 @@
+export const PLATFORMS = ['twitter', 'pinterest', 'telegram', 'tumblr', 'reddit', 'whatsapp', 'linkedin', 'gmail', 'facebook'];

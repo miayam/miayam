@@ -2,12 +2,14 @@ include /molecules/article/index
 include /molecules/skeleton/article/index
 include /molecules/iterator/index
 include /molecules/comment/index
+include /molecules/share/index
 
 mixin main(data)
   main(class="o-main", role="main")
     +skeleton-article()
     +article()
     if data && data.prev && data.next
+      +share(data)
       +iterator(data)
       +comment()
 

@@ -1,0 +1,21 @@
+@import "~@styles/variables";
+
+.m-share {
+  display: block;
+  background: $background;
+  padding: 0px;
+  margin-top: 30px;
+
+  @media only screen and (max-width: 768px) {
+    padding: 0px;
+  }
+
+  &__item {
+    display: inline-block;
+    padding: 0;
+    border: 0;
+    cursor: pointer;
+    background: transparent;
+    padding: 10px 16px;
+  }
+}

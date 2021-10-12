@@ -40,6 +40,16 @@ class Main {
           elm.srcset = elm.getAttribute('data-srcset');
         }
 
+        if (elm.getAttribute('id') === 'js-share') {
+          import(
+            /* webpackChunkName: "share" */
+            '@molecules/share'
+          ).then(({ default: Share }) => {
+            const share = new Share();
+            share.init();
+          });
+        }
+
         if (elm.getAttribute('id') === 'remarkbox-iframe') {
           import(
             /* webpackChunkName: "iFrameResizer" */

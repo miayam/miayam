@@ -73,6 +73,7 @@
     },
     "dependencies": {
         "iframe-resizer": "^4.3.2",
-        "lozad": "^1.16.0"
+        "lozad": "^1.16.0",
+        "vanilla-sharing": "^6.1.0"
     }
 }

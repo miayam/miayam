@@ -1,0 +1,8 @@
+mixin share(article)
+  div(class="m-share", data-fbAppId=site.fbAppId, data-description=article.excerpt, data-image=site.image, data-title=article.title, data-url=article.url)
+    img(src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==", alt="logo", class="m-share__logo", width="1px", height="1px" id="js-share")
+    - const platforms = site.platforms;
+    each platform in platforms
+      button(id=`js-${platform}`, class="m-share__item")
+        img(src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src=`/assets/images/${platform}.svg`, alt="logo", class="m-share__logo", width="20px", height="20px")
+    
