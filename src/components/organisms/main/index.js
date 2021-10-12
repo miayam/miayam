@@ -34,10 +34,17 @@ class Main {
       load(elm) {
         if (elm.getAttribute('data-src')) {
           elm.src = elm.getAttribute('data-src');
+          elm.removeAttribute('data-src');
         }
 
         if (elm.getAttribute('data-srcset')) {
           elm.srcset = elm.getAttribute('data-srcset');
+          elm.removeAttribute('data-srcset');
+        }
+
+        if (elm.getAttribute('data-sizes')) {
+          elm.sizes = elm.getAttribute('data-sizes');
+          elm.removeAttribute('data-sizes');
         }
 
         if (elm.getAttribute('id') === 'js-share') {
