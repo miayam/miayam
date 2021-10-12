@@ -78,8 +78,8 @@ const appendPrevAndNextItemByTag = ({ data, tags }) => {
   normalizedTags.forEach((tag) => {
     const taggedItems = tag.id === 0 ? data : data.filter(item => item.tags.includes(tag.id));
     taggedItems.forEach((taggedItem, index, thisArray) => {
-      const prev = thisArray[index - 1];
-      const next = thisArray[index + 1];
+      const next = thisArray[index - 1]; // Because it's in descending order
+      const prev = thisArray[index + 1]; // Because it's in descending order
       const labels = taggedItem.tags.map(tagId => tags.find(tag => tag.id === tagId).name);
       taggedItem["prev"] = {...taggedItem["prev"], [tag.name]: prev};
       taggedItem["next"] = {...taggedItem["next"], [tag.name]: next};
