@@ -52,12 +52,12 @@ class Share {
         url: this.meta.url,
         title: this.meta.title,
         caption: this.meta.description,
-        tags: ['miayam', 'article', this.meta.title.split(' ').join('_')]
+        tags: ['miayam', 'article', this.meta.title.split(' ').join('')]
       },
       'twitter': {
         url: this.meta.url,
         title: this.meta.title,
-        hashtags: ['miayam', 'article', this.meta.title.split(' ').join('_')]
+        hashtags: ['miayam', 'article', this.meta.title.split(' ').join('')]
       },
       'reddit': {
         url: this.meta.url,

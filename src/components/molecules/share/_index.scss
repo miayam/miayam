@@ -16,6 +16,10 @@
     border: 0;
     cursor: pointer;
     background: transparent;
-    padding: 10px 16px;
+    padding: 10px 20px;
+
+    @media only screen and (max-width: 425px) {
+      padding: 10px 16px;
+    }
   }
 }
