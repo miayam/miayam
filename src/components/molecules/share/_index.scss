@@ -1,13 +1,35 @@
 @import "~@styles/variables";
+@import "~@styles/utilities";
 
 .m-share {
   display: block;
-  background: $background;
-  padding: 0px;
-  margin-top: 30px;
+  margin-top: 60px;
 
-  @media only screen and (max-width: 768px) {
+  &__desc {
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: left;
+    margin: 0;
+    margin-bottom: calcFontSize(700) * 0.8 + px;
+    padding: 0 20px;
+
+    @include p(700);
+
+    @media only screen and (max-width: 768px) {
+      padding: 0 16px;
+
+      @include p(600);
+    }
+  }
+
+  &__wrapper {
+    display: block;
+    background: $background;
     padding: 0px;
+
+    @media only screen and (max-width: 768px) {
+      padding: 0px;
+    }
   }
 
   &__item {
