@@ -1,4 +1,5 @@
 import Pagination from '@molecules/pagination';
+import bring from '@scripts/utilities/bring';
 
 class Menu {
   constructor(className="m-menu") {
@@ -107,36 +108,35 @@ class Menu {
         postsCards.style = 'display: none;';  
         postsSkeletonCards.style = 'display: block;';
 
-        fetch(url)
-          .then(response => response.text())
-          .then(html => {
-            const posts = html.match(/<section class="o-posts__cards"[^>]*>([\s\S.]*)<\/section>/i)[1];
-            const pagination = html.match(/<nav class="m-pagination"[^>]*>([\s\S.]*)<\/nav>/i)[1];
-            const title = html.match(/<title[^>]*>([\s\S.]*)<\/title>/i)[1];
+        const htmlHandler = (html) => {
+          const posts = html.match(/<section class="o-posts__cards"[^>]*>([\s\S.]*)<\/section>/i)[1];
+          const pagination = html.match(/<nav class="m-pagination"[^>]*>([\s\S.]*)<\/nav>/i)[1];
+          const title = html.match(/<title[^>]*>([\s\S.]*)<\/title>/i)[1];
 
-            if (posts) {
-              self.resetTabs();
-              history.pushState({ tag }, url, url);
-              postsCards.innerHTML = posts;
-              paginationContainer.innerHTML = pagination;
-              document.title = title;
-              const paginationObj = new Pagination();
-              paginationObj.init();
-            }
+          if (posts) {
+            self.resetTabs();
+            history.pushState({ tag }, url, url);
+            postsCards.innerHTML = posts;
+            paginationContainer.innerHTML = pagination;
+            document.title = title;
+            const paginationObj = new Pagination();
+            paginationObj.init();
+          }
 
-            postsSkeletonCards.style = '';
-            postsCards.style = '';  
-            label.style = 'border-bottom: 2px solid #333; font-weight: bold;';
-          })
-          .catch(() =>  {
-            postsSkeletonCards.style = '';
-            postsCards.style = '';  
-          });
+          postsSkeletonCards.style = '';
+          postsCards.style = '';  
+          label.style = 'border-bottom: 2px solid #333; font-weight: bold;';
+        };
+
+        const errorHandler = (error) => {
+          console.error(error);
+          postsSkeletonCards.style = '';
+          postsCards.style = '';  
+        };
+
+        const fetch = bring(htmlHandler, errorHandler);
+        fetch(url);
       });
-
-      window.onpopstate = function () {
-        location.reload();
-      };
     });
   }
 

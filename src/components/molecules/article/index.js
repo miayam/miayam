@@ -1,4 +1,5 @@
 import lozad from 'lozad';
+import bring from '@scripts/utilities/bring';
 
 class Article {
   constructor(className="m-article") {
@@ -19,24 +20,31 @@ class Article {
         this.article.style = 'display: none;';
         this.skeletonArticle.style = 'display: block;';
 
-        fetch(url)
-          .then(response => response.text())
-          .then(html => {
-            const result = html.match(/<article class="m-article"[^>]*>([\s\S.]*)<\/article>/i)[1];
-            const title = html.match(/<title[^>]*>([\s\S.]*)<\/title>/i)[1];
+        const htmlHandler = (html) => {
+          const result = html.match(/<article class="m-article"[^>]*>([\s\S.]*)<\/article>/i)[1];
+          const title = html.match(/<title[^>]*>([\s\S.]*)<\/title>/i)[1];
 
-            if (result) {
-              history.pushState({ href: url }, url, url);
-              this.article.innerHTML = result;
-              document.title = title;
-              this.article.style = '';
-              this.skeletonArticle.style = '';
-              self.init();
-            }
+          if (result) {
+            history.pushState({ href: url }, url, url);
+            this.article.innerHTML = result;
+            document.title = title;
+            this.article.style = '';
+            this.skeletonArticle.style = '';
+            self.init();
+          }
 
-            const observer = lozad(document.querySelectorAll('img, iframe'));
-            observer.observe();
-          });
+          const observer = lozad(document.querySelectorAll('img, iframe'));
+          observer.observe();
+        };
+
+        const errorHandler = (error) => {
+          console.error(error);
+          this.article.style = '';
+          this.skeletonArticle.style = '';
+        };
+
+        const fetch = bring(htmlHandler, errorHandler);
+        fetch(url);
       });
     });
 

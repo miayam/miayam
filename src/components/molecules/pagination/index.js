@@ -1,3 +1,5 @@
+import bring from '@scripts/utilities/bring';
+
 class Pagination {
   constructor(className="m-pagination") {
     this.className = className;
@@ -14,8 +16,38 @@ class Pagination {
     this.select.value = window.location.pathname;
   }
 
-  navigation() {
+  pullIn(url) {
     const self = this;
+    this.postsCards.style = 'display: none;';  
+    this.postsSkeletonCards.style = 'display: block;';
+
+    const htmlHandler = (html) => {
+      const posts = html.match(/<section class="o-posts__cards"[^>]*>([\s\S.]*)<\/section>/i)[1];
+      const title = html.match(/<title[^>]*>([\s\S.]*)<\/title>/i)[1];
+
+      if (posts) {
+        history.pushState({ href: url }, url, url);
+        self.postsCards.innerHTML = posts;
+        self.select.value = url;
+        document.title = title;
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+
+      self.postsSkeletonCards.style = '';
+      self.postsCards.style = ''; 
+    };
+
+    const errorHandler = (error) => {
+      console.error(error);
+      self.postsSkeletonCards.style = '';
+      self.postsCards.style = '';  
+    };
+
+    const fetch = bring(htmlHandler, errorHandler);
+    fetch(url);
+  }
+
+  navigation() {
     const navigator = document.querySelector('li[data-total]');
     const total = Number(navigator.getAttribute('data-total'));
     const baseLink = navigator.getAttribute('data-baseLink');
@@ -29,7 +61,7 @@ class Pagination {
 
       const url = prevIndex + 1 === 1 ? `${baseLink}/` : `${baseLink}/${prevIndex + 1}/`;
 
-      self.bring(url);
+      this.pullIn(url);
     });
 
     this.next.addEventListener('click', e => {
@@ -40,44 +72,16 @@ class Pagination {
         return false;
       }
 
-      self.bring(`${baseLink}/${nextIndex + 1}/`);
+      this.pullIn(`${baseLink}/${nextIndex + 1}/`);
     });
 
     this.first.addEventListener('click', () => {
-      this.bring(`${baseLink}/`);
+      this.pullIn(`${baseLink}/`);
     });
 
     this.last.addEventListener('click', () => {
-      this.bring(`${baseLink}/${total}/`)
+      this.pullIn(`${baseLink}/${total}/`)
     });
-  }
-
-  bring(url) {
-    const self = this;
-    this.postsCards.style = 'display: none;';  
-    this.postsSkeletonCards.style = 'display: block;';
-
-    fetch(url)
-      .then(response => response.text())
-      .then(html => {
-        const posts = html.match(/<section class="o-posts__cards"[^>]*>([\s\S.]*)<\/section>/i)[1];
-        const title = html.match(/<title[^>]*>([\s\S.]*)<\/title>/i)[1];
-
-        if (posts) {
-          history.pushState({ href: url }, url, url);
-          self.postsCards.innerHTML = posts;
-          self.select.value = url;
-          document.title = title;
-          window.scrollTo({ top: 0, behavior: 'smooth' });
-        }
-
-        self.postsSkeletonCards.style = '';
-        self.postsCards.style = '';  
-      })
-      .catch(() => {
-        self.postsSkeletonCards.style = '';
-        self.postsCards.style = '';  
-      });
   }
 
   onSelect() {
@@ -86,12 +90,8 @@ class Pagination {
       const url = e.target[e.target.selectedIndex].value;
       self.postsCards.style = 'display: none;';  
       self.postsSkeletonCards.style = 'display: block;';
-      self.bring(url);
+      self.pullIn(url);
     });
-
-    window.onpopstate = function () {
-      location.reload();
-    };
   }
 
   init() {
