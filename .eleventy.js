@@ -8,7 +8,6 @@ module.exports = (config) => {
 
     // Pass-through files
     config.addPassthroughCopy({ 'src/assets/public': '/' });
-    config.addPassthroughCopy({ 'src/scripts/utilities/sw.js': 'sw.js' });
     config.addPassthroughCopy('src/assets/files');
     config.addPassthroughCopy('src/assets/images');
 

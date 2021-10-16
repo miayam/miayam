@@ -47,10 +47,6 @@ class Article {
         fetch(url);
       });
     });
-
-    window.onpopstate = function() {
-      location.reload();
-    };
   }
 }
 

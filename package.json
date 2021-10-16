@@ -20,6 +20,7 @@
         "build:eleventy": "eleventy",
         "build:split-css": "node src/scripts/tasks/splitCSS.js",
         "build:critical-path": "node src/scripts/tasks/criticalPath.js",
+        "build:build-sw": "node src/scripts/tasks/buildServiceWorker.js",
         "build:stats": "node src/scripts/tasks/stats.js"
     },
     "config": {
@@ -66,10 +67,12 @@
         "purgecss": "^4.0.3",
         "regenerator-runtime": "^0.13.9",
         "sass-loader": "^7.3.1",
+        "terser": "^5.9.0",
         "terser-webpack-plugin": "^4.2.3",
         "webpack": "^4.44.2",
         "webpack-cli": "^3.3.12",
-        "webpack-merge": "^5.1.4"
+        "webpack-merge": "^5.1.4",
+        "workbox-build": "^6.3.0"
     },
     "dependencies": {
         "iframe-resizer": "^4.3.2",
