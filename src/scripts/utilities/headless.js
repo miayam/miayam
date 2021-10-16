@@ -7,7 +7,7 @@ const chunk = require('lodash.chunk');
 const highlight = require('./highlight');
 
 const getTags = async () => {
-	// Get unique list of tags
+  // Get unique list of tags
   try {
     const json = await Cache(TAGS_API,{
       duration: '30m',
@@ -72,11 +72,12 @@ const getPosts = async (page = 1) => {
 };
 
 const appendPrevAndNextItemByTag = ({ data, tags }) => {
-	const normalizedData = data;
+  const normalizedData = data;
   const normalizedTags = tags;
 
   normalizedTags.forEach((tag) => {
-    const taggedItems = tag.id === 0 ? data : data.filter(item => item.tags.includes(tag.id));
+    const isUntagged = tag.id === 0 ;
+    const taggedItems = isUntagged ? data : data.filter(item => item.tags.includes(tag.id));
     taggedItems.forEach((taggedItem, index, thisArray) => {
       const next = thisArray[index - 1]; // Because it's in descending order
       const prev = thisArray[index + 1]; // Because it's in descending order
@@ -85,12 +86,12 @@ const appendPrevAndNextItemByTag = ({ data, tags }) => {
       taggedItem["next"] = {...taggedItem["next"], [tag.name]: next};
       taggedItem["labels"] = labels;
 
-			const position = normalizedData.findIndex((item) => item.id === taggedItem.id);
-			normalizedData[position] = taggedItem;
+      const position = normalizedData.findIndex((item) => item.id === taggedItem.id);
+      normalizedData[position] = taggedItem;
     });
-	});
+  });
 
-	return normalizedData;
+  return normalizedData;
 };
 
 const categorizeDataByTag = ({ data, tags, paginationSize })  => {
@@ -139,23 +140,23 @@ const formatData = (data) => {
     .filter(p => p.content.rendered && !p.content.protected)
     .map(p => {
       return {
-				id: p.id,
-				url: `/articles/${p.slug}`,
+        id: p.id,
+        url: `/articles/${p.slug}`,
         slug: p.slug,
         date: p.date,
         formattedDate: (new Date(p.date)).toLocaleString('en-US', { year: 'numeric', month: 'short', day: 'numeric'}),
         title: p.title.rendered,
         content: highlight(p.content.rendered),
         excerpt: formatExcerpt(highlight(p.excerpt.rendered)),
-				tags: p.tags,
+        tags: p.tags,
       };
     });
 };
 
 module.exports = {
-	appendPrevAndNextItemByTag,
-	categorizeDataByTag,
-	getTotalPages,
-	getPosts,
-	getTags
+  appendPrevAndNextItemByTag,
+  categorizeDataByTag,
+  getTotalPages,
+  getPosts,
+  getTags
 };
