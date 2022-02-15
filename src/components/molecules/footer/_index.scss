@@ -2,5 +2,11 @@
 @import '~@styles/variables';
 
 .m-footer {
-  background: $base;
+  background: $background;
+  position: relative;
+
+  .a-copyright {
+    position: absolute;
+    bottom: 0;
+  }
 }

@@ -5,7 +5,7 @@
 
 html {
     box-sizing: border-box;
-    background-color: $background;
+    background-color: $base;
     color: $text;
 
     @include grBaseFontSize(700);
@@ -16,7 +16,7 @@ html {
     }
 
     body {
-        background-color: $base;
+        background-color: $background;
     }
 
     h1 {
