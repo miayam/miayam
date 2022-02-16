@@ -17,7 +17,7 @@ No! This blog is not built on top of *Gatsby*, *NextJS*, or *Svelt*. It's just a
 
 Here's the deal. WordPress gives out data through its API endpoint. Eleventy generates static sites from it. Nothing less. Nothing more.
 
-Boring as it might be, I still follow the best practice. I take whatever Ady Osmani have to say to my heart. Critical path CSS, lazy loading, PWA, prefetching, caching, etc.
+Boring as it might be, I still follow the best practice. I take whatever Addy Osmani have to say to my heart. Critical path CSS, lazy loading, PWA, prefetching, caching, etc.
 
 Mom, Dad! Look, I build a website "AS IS". No bullshit. Just HTML, CSS, JavaScript, and everything in between bundled together. Boring, huh? What is SSR?
 
@@ -35,6 +35,6 @@ Most of the time, I tinker with the DOM and Web API to create pleasing experienc
 
 Dear reader, I would like to be your friend and potential friends should know each other’s shortcomings. I suck at SQL, NoSQL, any kind of web frameworks (Django, Laravel, Ruby on Rails, etc), any kind of ORM libraries, or any fancy stuffs most developers love to talk about (shiny new technologies).
 
-For more details, you can find me on LinkedIn, GitHub, CodePen, and Twitter. If you got any questions about anything, feel free to send me email.
+For more details, you can find me on [LinkedIn](https://linkedin.com/in/miayam), [GitHub](https://github.com/miayam), [CodePen](https://codepen.io/miayam), and [Twitter](https://twitter.com/___miayam___). If you got any questions about anything, feel free to [send me email](mailto:muhammaddeni90@gmail.com).
 
 I hope you will find this blog interesting.

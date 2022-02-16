@@ -17,7 +17,7 @@ Bukan! Ini bukan dibangun di atas Gatsby. Bukan pula NextJS. Apa lagi Svelt. Ini
 
 Blog saya dibangun dengan teknologi lawas nan membosankan. WordPress sebagai sistem manajemen konten, datanya diambil oleh Eleventy, kemudian dari situ terciptalah halaman statis berupa HTML, CSS, JavaScript dan berbagai makhluk melata lainnya yang bersemayam di internet.
 
-Meski terlihat kurang menjanjikan, segala macam petuah dan wejangan yang keluar dari mulut Ady Osmani saya gigit dengan gigi geraham. Berikut kata-kata langit dari beliau: *Critical path CSS*, *lazy loading*, *PWA*, *prefetching*, *caching* dan sebagainya. Apapun yang dikatakan Ady Osmani, katakanlah, "Kami mendengar dan kami akan taat."
+Meski terlihat kurang menjanjikan, segala macam petuah dan wejangan yang keluar dari mulut Addy Osmani saya gigit dengan gigi geraham. Berikut kata-kata langit dari beliau: *Critical path CSS*, *lazy loading*, *PWA*, *prefetching*, *caching* dan sebagainya. Apapun yang dikatakan Ady Osmani, katakanlah, "Kami mendengar dan kami akan taat."
 
 Dari hasil pengukuran menggunakan metrik yang disediakan Google, blog saya mendapatkan nilai cukup baik.
 
@@ -41,6 +41,6 @@ Kebanyakan waktu saya dihabiskan untuk mengejawantahkan kemauan pendesain antarm
 
 Duhai pembaca budiman, saya ingin menjadi teman kalian dan calon teman yang baik harus tahu kelemahan masing-masing. Saya sangat goblok dalam menggunakan SQL, NoSQL, dan perkakas canggih yang dipakai banyak orang-orang pintar (Django, Laravel, Ruby on Rails, dan sebagainya).
 
-Untuk mengenal saya lebih jauh, kalian bisa menemukan saya di LinkedIn, Github, Codepen, dan Twitter. Kalau ada pertanyaan, silakan ajukan lewat alamat surel ini.
+Untuk mengenal saya lebih jauh, kalian bisa menemukan saya di [LinkedIn](https://linkedin.com/in/miayam), [Github](https://github.com/miayam), [Codepen](https://codepen.io/miayam), dan [Twitter](https://twitter.com/___miayam___). Kalau ada pertanyaan, silakan ajukan lewat [alamat surel ini](mailto:muhammaddeni90@gmail.com).
 
 Saya harap blog ini bermanfaat seperti ganjalan pintu di WC umum. Demikian.
