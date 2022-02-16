@@ -1,10 +1,10 @@
 import Header from '@organisms/header';
-import Main from '@organisms/main';
+import Leaflet from '@organisms/leaflet';
 
 import './_index.scss';
 
 const header = new Header();
-const main = new Main('blog');
+const leaflet = new Leaflet('blog');
 
 header.init();
-main.init();
+leaflet.init();

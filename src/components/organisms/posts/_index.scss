@@ -4,10 +4,10 @@
 @import '~@molecules/pagination';
 @import '~@molecules/skeleton/card';
 @import '~@styles/libraries/icomoon_tags';
-@import '~@organisms/main';
+@import '~@organisms/leaflet';
 
 .o-posts {
-  @extend .o-main;
+  @extend .o-leaflet;
 
   max-width: 450px;
 

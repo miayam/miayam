@@ -1,10 +1,12 @@
 include /organisms/header/index
-include /organisms/main/index
+include /organisms/leaflet/index
 include /molecules/footer/index
+
+//- Get article from /pages/articles
 
 div(data-router-view="blog", class="t-blog")
   +header([
     { href: '#', wording: 'Articles' },
   ])
-  +main(article)
+  +leaflet(article)
   +footer()

@@ -14,10 +14,7 @@ const multipleHtmlPlugins = ENTRY_POINTS.map(name => {
         filename: `${basePath}/components/templates/${name}/index.pug`,
         chunks: [`${name}`],
         inject: false,
-        hash: true,
-        templateParameters: {
-            analytics: name !== 'docs' // For now, disable analytics for starter project landing page
-        }
+        hash: true
     });
 });
 

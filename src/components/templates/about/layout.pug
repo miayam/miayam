@@ -1,5 +1,5 @@
 include /organisms/header/index
-include /organisms/main/index
+include /organisms/leaflet/index
 include /molecules/footer/index
 
 div(data-router-view="about", class="t-about")
@@ -7,5 +7,5 @@ div(data-router-view="about", class="t-about")
     { href: '/', wording: 'Articles' },
     { href: href, wording: 'About' },
   ])
-  +main()
+  +leaflet()
   +footer()

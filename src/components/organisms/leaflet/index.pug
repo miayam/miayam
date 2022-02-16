@@ -4,8 +4,8 @@ include /molecules/iterator/index
 include /molecules/comment/index
 include /molecules/share/index
 
-mixin main(data)
-  main(class="o-main", role="main")
+mixin leaflet(data)
+  main(class="o-leaflet", role="main")
     +skeleton-article()
     +article()
     if data && data.prev && data.next

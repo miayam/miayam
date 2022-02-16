@@ -28,5 +28,5 @@ mixin posts
           span All
       if list && list.pageData
         each item in list.pageData
-          +card(item, list.tagName)
+          +card(item, list.tagName, list.pageNumber)
     +pagination(list.pagination)

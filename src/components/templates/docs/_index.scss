@@ -1,12 +1,12 @@
 @import "~@styles/utilities";
 @import "~@styles/variables";
 @import "~@atoms/github-corner";
-@import "~@organisms/main";
+@import "~@organisms/leaflet";
 @import "~@molecules/footer";
 
 .t-docs {
   background: $background;
-  .o-main {
+  .o-leaflet {
     padding-top: 0;
     padding-bottom: 0;
 
