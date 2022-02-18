@@ -1,7 +1,7 @@
 include /atoms/arrow/index
 include /atoms/anchor/index
 
-mixin iterator(data, tagName)
+mixin iterator(data)
   - const { prev, next } = data;
   ul(class="m-iterator")
     each val, key in prev
