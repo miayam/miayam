@@ -1,5 +1,4 @@
 import {
-  fbFeed,
   telegram,
   tumblr,
   tw,
@@ -25,7 +24,6 @@ class Share {
   }
   init() {
     const platformsMapper = {
-      'facebook': fbFeed,
       'telegram': telegram,
       'tumblr': tumblr,
       'twitter': tw,
@@ -39,11 +37,6 @@ class Share {
     };
 
     const optionsMapper = {
-      'facebook': {
-        url: this.meta.url,
-        redirectUri: this.meta.url,
-        fbAppId: this.meta.fbAppId,
-      },
       'telegram': {
         url: this.meta.url,
         title: this.meta.title,
