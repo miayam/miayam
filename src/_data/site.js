@@ -7,7 +7,7 @@ const main = () => {
     "type": "website",
     "url": "https://github.com/miayam/miayam",
     "image": "https://avatars2.githubusercontent.com/u/12558753",
-    "platforms": ['twitter', 'pinterest', 'telegram', 'tumblr', 'reddit', 'whatsapp', 'linkedin', 'gmail', 'facebook']
+    "platforms": ['twitter', 'pinterest', 'telegram', 'tumblr', 'reddit', 'whatsapp', 'linkedin', 'gmail']
   };
 
   return site;
