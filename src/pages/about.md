@@ -17,7 +17,7 @@ No! This blog is not built on top of *Gatsby*, *NextJS*, or *Svelt*. It's just a
 
 Here's the deal. WordPress gives out data through its API endpoint. Eleventy generates static sites from it. Nothing less. Nothing more.
 
-Boring as it might be, I still follow the best practice. I take whatever Addy Osmani have to say to my heart. Critical path CSS, lazy loading, PWA, prefetching, caching, etc.
+Boring as it might be, I still follow the best practice. I take whatever Addy Osmani has to say to my heart. Critical path CSS, lazy loading, PWA, prefetching, caching, etc.
 
 Mom, Dad! Look, I build a website "AS IS". No bullshit. Just HTML, CSS, JavaScript, and everything in between bundled together. Boring, huh? What is SSR?
 

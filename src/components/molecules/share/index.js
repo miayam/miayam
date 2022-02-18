@@ -19,7 +19,6 @@ class Share {
       title: this.container.getAttribute('data-title'),
       description: this.container.getAttribute('data-description'),
       image: this.container.getAttribute('data-image'),
-      fbAppId: this.container.getAttribute('data-fbAppId')
     };
   }
   init() {

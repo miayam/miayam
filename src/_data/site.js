@@ -7,7 +7,6 @@ const main = () => {
     "type": "website",
     "url": "https://github.com/miayam/miayam",
     "image": "https://avatars2.githubusercontent.com/u/12558753",
-    "fbAppId": "949698762611449",
     "platforms": ['twitter', 'pinterest', 'telegram', 'tumblr', 'reddit', 'whatsapp', 'linkedin', 'gmail', 'facebook']
   };
 
