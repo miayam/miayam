@@ -7,9 +7,6 @@
 .t-docs {
   background: $background;
   .o-leaflet {
-    padding-top: 0;
-    padding-bottom: 0;
-
     .m-article {
       h2 {
         @include h2(700);
