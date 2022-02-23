@@ -1,5 +1,4 @@
 import lozad from 'lozad';
-import Comment from '@molecules/comment';
 
 class Main {
   constructor(template = undefined) {
@@ -8,8 +7,13 @@ class Main {
 
   init() {
     if (this.template === 'blog') {
-      const comment = new Comment();
-      comment.init();
+      import(
+        /* webpackChunkName: "comment" */
+        '@molecules/comment'
+      ).then(({ default: Comment }) => {
+        const comment = new Comment();
+        comment.init();
+      });
 
       import(
         /* webpackChunkName: "iterator" */
