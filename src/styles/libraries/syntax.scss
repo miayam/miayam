@@ -372,3 +372,8 @@ code .highlight-line:before {
     text-align: right;
     width: 2.4em;
 }
+
+code .code-wrapper {
+    margin-left: 80px;
+    position: absolute;
+}

@@ -58,7 +58,7 @@ const highlight = (content) => {
 				});
 
                 // highlight code
-                code.innerHTML = '<div style="margin-left: 80px; position: absolute">' + Prism.highlight(
+                code.innerHTML = '<div class="code-wrapper">' + Prism.highlight(
                     code.textContent,
                     prismGrammar,
                     codeLanguage
