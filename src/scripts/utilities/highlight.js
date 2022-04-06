@@ -52,17 +52,17 @@ const highlight = (content) => {
 				Prism.hooks.add('after-tokenize', function (env) {
 					var match = env.code.match(NEW_LINE_EXP);
 					var linesNum = match ? match.length + 1 : 1;
-					var lines = new Array(linesNum + 1).join('<span></span>');
+					var lines = new Array(linesNum + 1).join('<span class="highlight-line"></span>');
 
 					lineNumbersWrapper = `<span aria-hidden="true" class="line-numbers-rows">${lines}</span>`;
 				});
 
                 // highlight code
-                code.innerHTML = Prism.highlight(
+                code.innerHTML = '<div style="margin-left: 50px; position: absolute">' + Prism.highlight(
                     code.textContent,
                     prismGrammar,
                     codeLanguage
-                ) + lineNumbersWrapper;
+                ) + '</div>' + lineNumbersWrapper;
 
                 code.classList.add(`language-${codeLanguage}`);
             }
