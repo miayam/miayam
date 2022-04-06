@@ -358,6 +358,7 @@ pre > code.diff-highlight .token.inserted:not(.prefix) {
 
 pre {
     counter-reset: lineNumber;
+    position: relative;
 }
 
 code .highlight-line:before {
@@ -374,14 +375,34 @@ code .highlight-line:before {
 }
 
 code .code-wrapper {
-    margin-left: 80px;
+    padding-left: 80px;
     max-width: 580px;
-    scrollbar-width: none;
+    scrollbar-width: thin;
     -ms-overflow-style: none;
-    overflow: auto;
-    position: absolute;
 }
 
-.code-wrapper::-webkit-scrollbar {
-    display: none;
+code .code-wrapper::-webkit-scrollbar {
+    scrollbar-width: 10px;
+}
+
+/* Track */
+code .code-wrapper::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+}
+ 
+/* Handle */
+code .code-wrapper::-webkit-scrollbar-thumb {
+    background: #888; 
+}
+
+/* Handle on hover */
+code .code-wrapper::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+}
+
+.line-numbers-rows {
+    position: absolute;
+    background:#111b27;
+    top: 50%;
+    transform: translateY(-50%);
 }
