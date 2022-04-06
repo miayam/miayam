@@ -376,14 +376,12 @@ code .highlight-line:before {
 code .code-wrapper {
     margin-left: 80px;
     max-width: 580px;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    overflow: auto;
     position: absolute;
 }
 
 .code-wrapper::-webkit-scrollbar {
     display: none;
-}
-
-.code-wrapper {
-    scrollbar-width: none;
-    -ms-overflow-style: none;
 }
