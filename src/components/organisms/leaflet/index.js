@@ -1,7 +1,7 @@
 import lozad from 'lozad';
 import Comment from '@molecules/comment';
 
-class Main {
+class Leaflet {
   constructor(template = undefined) {
     this.template = template;
   }
@@ -87,4 +87,4 @@ class Main {
   }
 }
 
-export default Main;
+export default Leaflet;
