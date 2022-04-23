@@ -13,7 +13,7 @@ The alternative version of this page written in [🇮🇩 Bahasa.](/about/id){.a
 
 The best thing I've ever done with my life. A place where I can be myself. I can't be no one else. No company in the world will allow me to do so. This is the work I can brag about. To me, this is the best design ever. Some eccentric German philosophers once said, "The best design is as little design as possible."
 
-No! This blog is not built on top of *Gatsby*, *NextJS*, or *Svelt*. It's just a boring old static site you found in the 90's. Some pages look like a SPA (Single Page Application) but it's not. More on that later.
+No! This blog is not built on top of *Gatsby*, *NextJS*, or *Svelte*. It's just a boring old static site you found in the 90's. Some pages look like a SPA (Single Page Application) but it's not. More on that later.
 
 Here's the deal. WordPress gives out data through its API endpoint. Eleventy generates static sites from it. Nothing less. Nothing more.
 
