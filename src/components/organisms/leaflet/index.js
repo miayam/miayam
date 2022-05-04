@@ -77,7 +77,7 @@ class Leaflet {
             window.setTimeout(() => {
               const loadingElm = document.getElementsByClassName('m-comment__loading')[0];
               loadingElm.style = 'display: none;';
-            }, 500);
+            }, 1500);
           });
         }
       }
