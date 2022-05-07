@@ -71,7 +71,7 @@ src
 `components` is an entry point in which `Eleventy` looks for layouts.
 
 ### As Little Assets As Possible
-`Webpack` is a bundle manager + task runner for this project.
+`Webpack` is a bundle manager  for this project.
 Any changes to `components/templates/**/*/index.js` or `components/templates/**/*/_index.scss` is
 watched and rebuilt by `Webpack`. `Webpack` bundles `JavaScript` and `SCSS` code in multiple entry points
 reside in `components/templates` which will be injected on every template by `HtmlWebpackPlugin`.
