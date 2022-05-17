@@ -118,6 +118,9 @@ class Menu {
             history.pushState({ tag }, url, url);
             postsCards.innerHTML = posts;
             paginationContainer.innerHTML = pagination;
+
+            const description = document.querySelector('span[data-description]').getAttribute('data-description');
+            document.querySelector('meta[name="description"]').setAttribute('content', description);
             document.title = title;
             const paginationObj = new Pagination();
             paginationObj.init();

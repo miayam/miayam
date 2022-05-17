@@ -21,7 +21,7 @@ mixin posts
         if (list.tagName !== 'all')
           span(class=`icon-${list.tagName}`)
           strong !{tagWording + ': '} 
-          span !{description}
+          span(data-description=`${description}`) !{description}
         else
           span(class="icon-all")
           strong All
