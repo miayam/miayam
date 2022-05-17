@@ -142,7 +142,7 @@ const formatData = (data) => {
     .map(p => {
       return {
         id: p.id,
-        url: `/articles/${p.slug}`,
+        url: `/articles/${p.slug}/`,
         slug: p.slug,
         date: p.date,
         formattedDate: (new Date(p.date)).toLocaleString('en-US', { year: 'numeric', month: 'short', day: 'numeric'}),
