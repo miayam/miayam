@@ -24,9 +24,9 @@ class Search {
     // API gives results
     const emptyState = `
       <li class="m-search__resultItem">
-        <div class="m-search__resultItemHeader">
-          <h2>${keyword || "Enter keyword"}</h2>
-        </div>
+        <p class="m-search__resultItemHeader">
+          ${keyword || "Enter keyword"}
+        </p>
         <p class="m-search__resultItemContent">
           No result...
         </p>
