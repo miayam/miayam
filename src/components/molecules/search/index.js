@@ -49,9 +49,9 @@ class Search {
         return `
           <li class="m-search__resultItem">
             <a href="${href}">
-              <div class="m-search__resultItemHeader">
-                <h2>${title}</h2>
-              </div>
+              <p class="m-search__resultItemHeader">
+                ${title}
+              </p>
               <p class="m-search__resultItemContent">
                 ${'[...] ' + normalizedContent + ' [...]'}
               </p>
