@@ -2,7 +2,7 @@
 layout: about/index.pug
 permalink: /about/id/index.html
 title: Perihal
-href: /about/id/
+url: /about/id/
 ---
 
 # Perihal

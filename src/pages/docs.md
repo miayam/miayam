@@ -1,6 +1,7 @@
 ---
 layout: docs/index.pug
 permalink: /docs/index.html
+url: /docs/
 ---
 #
 ## Miayam
