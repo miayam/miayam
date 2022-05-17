@@ -7,6 +7,7 @@ mixin head
     meta(name="description", content=`${description || site.description}`)
     link(rel="icon", href="/assets/images/cropped-miayam-32x32.png", sizes="32x32")
     link(rel="icon", href="/assets/images/cropped-miayam-192x192.png", sizes="192x192")
+    link(rel="canonical", href=`${site.url}${url || ''}`)
 
     //- PWA stuff
     link(rel="manifest", href="/manifest.webmanifest")
@@ -16,7 +17,7 @@ mixin head
     //- Open graph related
     meta(property="og:title", content=`${title || site.title}`)
     meta(property="og:type", content=`${type || site.type}`)
-    meta(property="og:url", content=`${url || site.url}`)
+    meta(property="og:url", content=`${site.url}${url || ''}`)
     meta(property="og:image", content=`${image || site.image}`)
     meta(property="og:site_name", content=`${name || site.name}`)
     meta(property="og:description", content=`${description || site.description}`)
