@@ -108,6 +108,7 @@ const categorizeDataByTag = ({ data, tags, paginationSize })  => {
         tagWording: tag.wording,
         pageNumber: index,
         pageData: pagedItem,
+        description: tag.description,
         href: href,
         pagination: {
           total: pagedItems.length,
