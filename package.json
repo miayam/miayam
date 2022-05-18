@@ -20,7 +20,6 @@
         "build:eleventy": "eleventy",
         "build:split-css": "node src/scripts/tasks/splitCSS.js",
         "build:critical-path": "node src/scripts/tasks/criticalPath.js",
-        "build:build-sw": "node src/scripts/tasks/buildServiceWorker.js",
         "build:stats": "node src/scripts/tasks/stats.js"
     },
     "config": {
