@@ -6,8 +6,8 @@ mixin card(item, tagName)
         h2 !{item.title}
         time(datetime=`${item.date}`) !{'— ' + item.formattedDate || item.date}
       p !{item.excerpt}
-      div(class="m-card__tagList")
-        if item && item.labels
-          each tag in item.labels
-            a(href=`/tags/${tag}/`)
-              span(class=`icon-${tag}`)
+    div(class="m-card__tagList")
+      if item && item.labels
+        each tag in item.labels
+          a(href=`/tags/${tag}/`)
+            span(class=`icon-${tag}`)
