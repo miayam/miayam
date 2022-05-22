@@ -61,7 +61,17 @@
       background-color: $menu;
     }
 
-    span + span {
+    a:hover {
+      background-color: $input;
+    }
+
+    a {
+      display: inline;
+      padding: unset;
+      z-index: 1;
+    }
+
+    a + a {
       margin-left: 8px;
     }
   }

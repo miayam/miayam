@@ -9,4 +9,5 @@ mixin card(item, tagName)
       div(class="m-card__tagList")
         if item && item.labels
           each tag in item.labels
-            span(class=`icon-${tag}`)
+            a(href=`/tags/${tag}/`)
+              span(class=`icon-${tag}`)
