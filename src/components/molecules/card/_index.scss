@@ -11,7 +11,7 @@
 
   a {
     color: inherit;
-    padding: 20px;
+    padding: 20px 20px 0 20px;
     display: block;
     text-decoration: none;
   }
@@ -54,6 +54,7 @@
   }
 
   &__tagList {
+    padding: 20px;
     span {
       display: inline-block;
       border-radius: 4px;
