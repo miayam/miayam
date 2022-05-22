@@ -7,13 +7,13 @@
 .m-card {
   border: 1px solid $menu;
   border-radius: 8px;
-  cursor: pointer;
 
   a {
     color: inherit;
     padding: 20px 20px 0 20px;
     display: block;
     text-decoration: none;
+    cursor: pointer;
   }
 
   &__header {
