@@ -68,7 +68,12 @@
     }
 
     .visually-hidden {
-      display: none;
+      overflow: hidden;
+      width: 1px;
+      height: 1px;
+      white-space: nowrap;
+      color: $menu;
+      background: $menu;
     }
 
     a {
