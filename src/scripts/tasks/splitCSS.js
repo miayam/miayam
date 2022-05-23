@@ -1,4 +1,4 @@
-// This code is copy-pasted from `@pustelto/css-split` package.
+// Modified `@pustelto/css-split`.
 const fsOriginal = require("fs");
 const { COPYFILE_FICLONE } = fsOriginal.constants;
 const fs = fsOriginal.promises;
@@ -14,6 +14,7 @@ const { PurgeCSS } = require("purgecss");
  * - `targetFolder` - path to the folder with a CSS and HTML files, usually a dist folder
  * - `html` - array of strings or objects with paths to HTML files. Each item in the array produce one CSS file for the HTML files cover by that path glob. Can be direct path to one HTML file or a glob to contain multiple HTML files in a folder. When using object, it has to have shape `{path: <string>, outputName: <string>}. path prop contain glob for HTML and outputName will be used to name a CSS chunk. This is mainly useful for glob pattern selecting multiple HTMl files.
  * - `cssPath` - path to a CSS file which should be code splitted
+ * - `uniquePath` - path appended to CSS chunk name
  * @param {Options} opt
  */
 function splitCSS(opt) {
@@ -43,7 +44,7 @@ function splitCSS(opt) {
 
         const { base: rootFolder } = path.parse(path.resolve(process.cwd(), opt.targetFolder));
         const [cssName] = opt.cssPath.split("/").slice(-1);
-        const cssChunkName = getChunkName(html, rootFolder);
+        const cssChunkName = getChunkName(html, rootFolder, opt.uniquePath);
 
         // 1. Create copies of original CSS file for all html files
         await fs.copyFile(pathToCss, path.join(cssDir, cssChunkName), COPYFILE_FICLONE);
@@ -97,10 +98,12 @@ function splitCSS(opt) {
   });
 }
 
-function getChunkName(html, root) {
+function getChunkName(html, root, uniquePath) {
   if (html.outputName) {
     return `${html.outputName}.css`;
   }
+
+  const appendedPath = uniquePath.replace('.html', '');
 
   try {
     const { dir } = path.parse(html.path || html);
@@ -111,7 +114,7 @@ function getChunkName(html, root) {
     }
 
     if (!closestFolder.match(/^\*\*?$/)) {
-      return `${closestFolder}.css`;
+      return `${appendedPath}-${closestFolder}.css`;
     }
 
     // fallback if we can't decide on another file name
@@ -153,10 +156,14 @@ const routes = [
   ...anticiatedPaginationRoutes
 ];
 
+// Grab all files that ends with index.html.
 glob.glob(`_site/**/*.html`, async (err, matches) => {
   const groups = {};
+
+  // Remove `_site`.
   const files = matches.map(match => match.replace('_site/', ''));
 
+  // Grap all files filtered by included paths (articles | docs | index.html | tags | about | 1 - 1000 )
   const filteredFiles = files.filter((file => {
     const subPath = file.split('/')[0];
     return routes
@@ -178,7 +185,8 @@ glob.glob(`_site/**/*.html`, async (err, matches) => {
     const CONFIG = {
       targetFolder: '_site',
       html: groups[key],
-      cssPath: `styles-${route.template}.css`
+      cssPath: `styles-${route.template}.css`,
+      uniquePath: route.path,
     };
     splitCSS(CONFIG);
   });
