@@ -67,6 +67,10 @@
       background-color: $input;
     }
 
+    .visually-hidden {
+      display: none;
+    }
+
     a {
       display: inline-block;
       padding: unset;

@@ -10,4 +10,5 @@ mixin card(item, tagName)
       if item && item.labels
         each tag in item.labels
           a(href=`/tags/${tag}/`)
-            span(class=`icon-${tag}`)
+            span(class=`icon-${tag}`, aria-hidden="true")
+            span(class="visually-hidden") !{tag}
