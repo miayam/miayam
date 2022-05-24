@@ -107,14 +107,16 @@ function getChunkName(html, root, uniquePath) {
 
   try {
     const { dir } = path.parse(html.path || html);
-    const [closestFolder] = dir.split("/").slice(-1);
+    const [subPath, closestFolder] = dir.split("/").slice(-2);
 
     if (root === closestFolder || !closestFolder) {
       return "index.css";
     }
 
+    const cssName = `?${!subPath ? `${subPath}-` : ''}${closestFolder}`;
+
     if (!closestFolder.match(/^\*\*?$/)) {
-      return `${appendedPath}-${closestFolder}.css`;
+      return `${appendedPath}-${cssName}.css`;
     }
 
     // fallback if we can't decide on another file name
