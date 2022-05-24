@@ -113,7 +113,7 @@ function getChunkName(html, root, uniquePath) {
       return "index.css";
     }
 
-    const cssName = `?${!subPath ? `${subPath}-` : ''}${closestFolder}`;
+    const cssName = `?${!subPath ? '' : `${subPath}-`}${closestFolder}`;
 
     if (!closestFolder.match(/^\*\*?$/)) {
       return `${appendedPath}-${cssName}.css`;
