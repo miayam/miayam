@@ -26,7 +26,7 @@ ground up using `Eleventy` and friends. It is a foundation on which
 new [miayam.io](https://miayam.io) will be built. Removing Jekyll
 entirely from the code base :shit:.
 
-What I need for a brutalist blog site:
+What do I need more of in a brutalist website?
 - A simple design, component based design that's easy to change and work with.
 It doesn't have to be `React`, `Angular`, `Vue` or `Svelte`.
 - Performance. A super fast jellyfish. 100% lighthouse score.
