@@ -50,7 +50,7 @@ function splitCSS(opt) {
         await fs.copyFile(pathToCss, path.join(cssDir, cssChunkName), COPYFILE_FICLONE);
 
         // 2. Update <link> in HMLT files to point to new stylesheet
-        const fileUpdates = await Promise.all(
+        await Promise.all(
           files.map(async (file) => {
             const content = await fs.readFile(file, "utf-8");
 
