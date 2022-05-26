@@ -21,12 +21,7 @@ class Navigation {
     navigationLinks.forEach((link) => {
       let href = link.getAttribute('href');
 
-      if (currentLocation === '/about/' && href !== '/about/') {
-        href = document.referrer.indexOf('/tags/') > -1 ? document.referrer : '/';
-        link.setAttribute('href', href);
-      }
-
-      if (currentLocation === '/now/' && href !== '/now/') {
+      if ((currentLocation === '/about/' && href !== '/about/') || (currentLocation === '/now/' && href !== '/now/')) {
         href = document.referrer.indexOf('/tags/') > -1 ? document.referrer : '/';
         link.setAttribute('href', href);
       }
