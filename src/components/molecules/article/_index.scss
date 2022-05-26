@@ -11,8 +11,6 @@
 
   h1 {
     @include h2(700);
-    line-height: 1.5;
-    padding: 16px 0;
   }
 
   h2 {

@@ -5,4 +5,9 @@
 
 .t-about {
   background: $background;
+
+  .m-article h1 {
+    line-height: 1.5;
+    padding: 16px 0;
+  }
 }
