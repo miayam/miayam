@@ -26,7 +26,7 @@ class Navigation {
         link.setAttribute('href', href);
       }
 
-      if (currentLocation === href || currentLocation.startsWith('/now/') || currentLocation.startsWith('/about/')) {
+      if (currentLocation === href) {
         link.style = 'border-bottom: 3px solid #333; font-weight: bold;';
       } else {
         link.style = '';
