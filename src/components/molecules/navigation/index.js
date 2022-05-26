@@ -21,7 +21,7 @@ class Navigation {
     navigationLinks.forEach((link) => {
       let href = link.getAttribute('href');
 
-      if ((currentLocation.startsWith('/about/') || currentLocation.startsWith('/now/') ) && (!href.startsWith('/about/') || !href.startsWith('/now/'))) {
+      if ((currentLocation.startsWith('/about/') || currentLocation.startsWith('/now/') ) && (!href.startsWith('/about/') && !href.startsWith('/now/'))) {
         href = document.referrer.indexOf('/tags/') > -1 ? document.referrer : '/';
         link.setAttribute('href', href);
       }
