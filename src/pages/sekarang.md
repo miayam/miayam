@@ -1,6 +1,6 @@
 ---
 layout: about/index.pug
-permalink: /now/index.html
+permalink: /now/id/index.html
 title: Sekarang Sedang Apa? Dimana? Dengan Siapa? Semalam Berbuat Apa?
 url: /now/id/
 ---

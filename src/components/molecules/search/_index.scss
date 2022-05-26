@@ -2,14 +2,15 @@
 @import '~@styles/utilities';
 
 .m-search {
-    max-width: 420px;
+    max-width: 320px;
     height: 60px;
     padding: 10px 0;
     margin: 0 auto;
     position: relative;
     margin-top: -60px;
 
-    @media only screen and (max-width: 768px) {
+    @media only screen and (max-width: 100px) {
+        max-width: 420px;
         margin-top: 0;
         padding: 16px;
     }
