@@ -26,6 +26,11 @@ class Navigation {
         link.setAttribute('href', href);
       }
 
+      if (currentLocation === '/now/' && href !== '/now/') {
+        href = document.referrer.indexOf('/tags/') > -1 ? document.referrer : '/';
+        link.setAttribute('href', href);
+      }
+
       if (currentLocation === href) {
         link.style = 'border-bottom: 3px solid #333; font-weight: bold;';
       } else {
