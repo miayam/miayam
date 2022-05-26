@@ -18,7 +18,7 @@ I am a web developer at [Stockbit](https://stockbit.com) assigned to help build/
 
 I am relearning PHP syntax on Codecademy. Enough PHP to build WordPress themes and plugins. Dear PHP experts, please [recommend me](mailto:muhammaddeni90@gmail.com) some good resources on the subject. I am in a tutorial hell right now.
 
-I am taking [Complete Intro to Computer Science](https://frontendmasters.com/workshops/intro-cs-v2/), [Making TypeScript Stick](https://frontendmasters.com/courses/typescript-practice/) and [Figma for Developers](https://frontendmasters.com/courses/figma). Stockbit pays the subscription bills.
+I am taking [Complete Intro to Computer Science](https://frontendmasters.com/courses/computer-science-v2/), [Making TypeScript Stick](https://frontendmasters.com/courses/typescript-practice/) and [Figma for Developers](https://frontendmasters.com/courses/figma). Stockbit pays the subscription bills.
 
 I am working on a side project using [WooCommerce](https://woocommerce.com/) as a GraphQL/REST API endpoint and SSG of my choice ([Eleventy](https://www.11ty.dev/) and [Astro 🌟](https://astro.build/)) in the front. It is a boilerplate to decouple backend and frontend on [WooCommerce](https://woocommerce.com/) app.
 

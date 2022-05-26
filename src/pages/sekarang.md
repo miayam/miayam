@@ -16,7 +16,7 @@ Saya pengembang web di [Stockbit](https://stockbit.com) dan ditunjuk untuk memba
 
 Sedang menyegarkan kembali sintaksis bahasa PHP di Codecademy. Secukupnya saja supaya bisa *bikin* tema dan pengaya (*plugin*) di WordPress. Para suhu PHP, [minta saran](mailto:muhammaddeni90@gmail.com) tempat belajar yang baik di mana. Sedang bingung mau dibawa ke mana hubungan ini.
 
-Saya ambil kursus [*Complete Intro to Computer Science*](https://frontendmasters.com/workshops/intro-cs-v2/), [*Making TypeScript Stick*](https://frontendmasters.com/courses/typescript-practice/) dan [*Figma for Developers*](https://frontendmasters.com/courses/figma). Stockbit yang bayar semua.
+Saya ambil kursus [*Complete Intro to Computer Science*](https://frontendmasters.com/courses/computer-science-v2/), [*Making TypeScript Stick*](https://frontendmasters.com/courses/typescript-practice/) dan [*Figma for Developers*](https://frontendmasters.com/courses/figma). Stockbit yang bayar semua.
 
 Sedang mencoba membangun usaha sampingan dengan [WooCommerce](https://woocommerce.com/). Nantinya, si [WooCommerce](https://woocommerce/com/) cuma dijadikan gudang konten. Antarmukanya *mah* akan ditangani oleh [Eleventy](https://www.11ty.dev/) dan [Astro 🌟](https://astro.build/). Keren, bukan?
 

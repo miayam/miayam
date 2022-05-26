@@ -21,12 +21,12 @@ class Navigation {
     navigationLinks.forEach((link) => {
       let href = link.getAttribute('href');
 
-      if ((currentLocation.startsWith('/about/') || currentLocation.startsWith('/now/') ) && (!href.startsWith('/about/') && !href.startsWith('/now/'))) {
+      if ((currentLocation.startsWith('/about/') || currentLocation.startsWith('/now/')) && (!href.startsWith('/about/') && !href.startsWith('/now/'))) {
         href = document.referrer.indexOf('/tags/') > -1 ? document.referrer : '/';
         link.setAttribute('href', href);
       }
 
-      if (currentLocation === href) {
+      if (currentLocation === href || currentLocation.startsWith('/now/') || currentLocation.startsWith('/about/')) {
         link.style = 'border-bottom: 3px solid #333; font-weight: bold;';
       } else {
         link.style = '';
