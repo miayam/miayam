@@ -12,8 +12,6 @@ Versi yang lebih profesional ditulis menggunakan [🇬🇧 bahasa Inggris.](/now
 
 Sekarang di Bandung, Indonesia. --Cewek-cewek-- Suasana di sini lumayan.
 
-Saya pengembang web di [Stockbit](https://stockbit.com) dan membantu merawat [Stockbit Academy](https://stockbit.com/academy) dan [fitur *stream*](https://stockbit.com/stream). Tahu tidak kalau Stockbit dibangun di atas CodeIgniter dan React versi lawas? Kami sedang berusaha pindah ke NextJS. Jadi, *punten* *pisan* *kudu* sabar!
-
 Sedang menyegarkan kembali pemahaman PHP di Codecademy. Secukupnya saja supaya tahu cara *bikin* tema dan pengaya (*plugin*) di WordPress. Para suhu PHP yang budiman, [minta saran](mailto:muhammaddeni90@gmail.com) tempat belajar yang baik di mana. Sedang bingung dengan tutorial berceceran di mana-mana.
 
 Saya sedang ambil kursus [*Complete Intro to Computer Science*](https://frontendmasters.com/courses/computer-science-v2/), [*Making TypeScript Stick*](https://frontendmasters.com/courses/typescript-practice/) dan [*Figma for Developers*](https://frontendmasters.com/courses/figma). Alhamdulillah, dibayarkan kantor.
