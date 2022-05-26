@@ -30,11 +30,13 @@
     &__searchIcon {
         position: absolute;
         left: 12px;
-        top: 22px;
+        top: 50%;
+        transform: translateY(-50%);
 
-        @media only screen and (max-width: 768px) {
+        @media only screen and (max-width: 1000px) {
             top: 45%;
             margin-left: 15px;
+            transform: unset;
         }
     }
 
@@ -48,7 +50,7 @@
         right: 8px;
         transform: translateY(-60%);
 
-        @media only screen and (max-width: 768px) {
+        @media only screen and (max-width: 1000px) {
             top: 60%;
             right: 24px;
         }
