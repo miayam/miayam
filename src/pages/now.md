@@ -14,7 +14,7 @@ People seldom ask me what I’m doing now.
 
 I am in Bandung, Indonesia.
 
-I am a web developer at [Stockbit](https://stockbit.com) assigned to help build/maintain [Stockbit Academy](https://stockbit.com/academy) and [stream feature](https://stockbit.com/stream). Do you know that Stockbit is built on top of CodeIgnitor and old version of React? Yes, we are trying to migrate it to NextJS. Be patient!
+I am a web developer at [Stockbit](https://stockbit.com) assigned to help build/maintain [Stockbit Academy](https://stockbit.com/academy) and [stream feature](https://stockbit.com/stream). Do you know that Stockbit is built on top of CodeIgniter and old version of React? Yes, we are trying to migrate it to NextJS. Be patient!
 
 I am learning PHP syntax on Codecademy. Enough PHP to build WordPress themes and plugins. Dear PHP experts, please [recommend me](mailto:muhammaddeni90@gmail.com) some good resources on the subject. I am in a tutorial hell right now.
 

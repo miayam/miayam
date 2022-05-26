@@ -12,7 +12,7 @@ Versi yang lebih profesional ditulis menggunakan [🇬🇧 bahasa Inggris.](/now
 
 Sekarang di Bandung, Indonesia. --Cewek-cewek-- Suasana di sini lumayan.
 
-Saya pengembang web di [Stockbit](https://stockbit.com) dan ditunjuk untuk membantu merawat [Stockbit Academy](https://stockbit.com/academy) and [fitur *stream*](https://stockbit.com/stream). Tahu tidak kalau Stockbit dibangun di atas CodeIgnitor dan React versi lawas? Kami sedang berusaha pindah ke NextJS. Jadi, sabar *aja* *atuh*!
+Saya pengembang web di [Stockbit](https://stockbit.com) dan ditunjuk untuk membantu merawat [Stockbit Academy](https://stockbit.com/academy) and [fitur *stream*](https://stockbit.com/stream). Tahu tidak kalau Stockbit dibangun di atas CodeIgniter dan React versi lawas? Kami sedang berusaha pindah ke NextJS. Jadi, sabar *aja* *atuh*!
 
 Sedang belajar PHP di Codecademy. Secukupnya saja supaya bisa *bikin* tema dan pengaya (*plugin*) di WordPress. Para suhu PHP, [minta saran](mailto:muhammaddeni90@gmail.com) tempat belajar yang baik di mana. Sedang bingung mau dibawa ke mana hubungan ini.
 
