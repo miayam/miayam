@@ -12,10 +12,6 @@ web. HTML, CSS, JavaScript and everything in between bundled together. It's
 ugly, brutal, a dead simple site, a sore to the eyes, but having no more than
 is really needed.
 
-This project also includes a starter pack to build a blog site with
-[`Eleventy`](https://www.11ty.dev/){.a-anchor}. Look into
-[`init`](https://github.com/miayam/miayam/tree/init){.a-anchor} branch.
-
 ### Table of Contents
 - [Introduction](#introduction){.a-anchor}
 - [Usage](#usage){.a-anchor}
@@ -28,9 +24,9 @@ ground up using `Eleventy` and friends. It is a foundation on which
 new [miayam.io](https://miayam.io){.a-anchor} will be built. Removing Jekyll
 entirely from the code base 💩.
 
-What I need for a brutalist blog site:
+What do I need more of in a brutalist website?
 - A simple design, component based design that's easy to change and work with.
-It doesn't have to be `React`, `Angular`, `Vue` or `Svelt`.
+It doesn't have to be `React`, `Angular`, `Vue` or `Svelte`.
 - Performance. A super fast jellyfish. 100% lighthouse score.
 - SEO.
 - PWA. Well, I just want to display pictures of cute girls when offline.
@@ -73,7 +69,7 @@ src
 `components` is an entry point in which `Eleventy` looks for layouts.
 
 ### As Little Assets As Possible {#as-little-assets-as-possible}
-`Webpack` is a bundle manager + task runner for this project.
+`Webpack` is a bundle manager  for this project.
 Any changes to `components/templates/**/*/index.js` or `components/templates/**/*/_index.scss` is
 watched and rebuilt by `Webpack`. `Webpack` bundles `JavaScript` and `SCSS` code in multiple entry points
 reside in `components/templates` which will be injected on every template by `HtmlWebpackPlugin`.
@@ -201,20 +197,18 @@ You can host it on `Github Pages`, `Netlify`, or else.
 
 
 ### The Reason Why I Migrate From Jekyll to Eleventy {#the-reason-why-i-migrate-from-jekyll}
-At first, [miayam.io](https://miayam.io){.a-anchor} was a personal blog site built with
-[Jekyll](https://jekyllrb.com/){.a-anchor} using a theme I pick carelessly without thinking.
-2 years later since its inception, I almost forget half of the code. Ruby seems
-foreign to me. The more I tinker with it, the more befuddled I am. So, I decided to
-burn it down and rebuild it from the ground up.
+At first, [miayam.io](https://miayam.io){.a-anchor} was a personal blog site built with [Jekyll](https://jekyllrb.com/){.a-anchor}
+using a theme I picked carelessly without thinking. Two years later, I almost forgot half of the code.
+Ruby seemed foreign to me. The more I tinkered with it, the more befuddled I was. So, I decided to burn
+it down and rebuild it from the ground up.
 
-I was looking for an alternative to [Jekyll](https://jekyllrb.com/){.a-anchor} written in
-`JavaScript` because I am a boring web developer you could find anywhere else. I have
-tried [Gatsby](https://www.gatsbyjs.com/){.a-anchor} and wound up getting bored. All those shiny
-new technologies [Gatsby](https://www.gatsbyjs.com/){.a-anchor} has to offer are not really what
-I need. I have tried [Hexo](https://hexo.io/){.a-anchor}, it had similar ambience with
-[Jekyll](https://jekyllrb.com/){.a-anchor} but it didn't spark joy.
+I was looking for an alternative to [Jekyll](https://jekyllrb.com/){.a-anchor} written in `JavaScript` because I am a boring
+web developer, the kind you can find anywhere else. I tried [Gatsby](https://www.gatsbyjs.com/){.a-anchor} and wound up
+getting bored. All those shiny new technologies [Gatsby](https://www.gatsbyjs.com/){.a-anchor} has to offer are not really
+what I need. I have tried [Hexo](https://hexo.io/){.a-anchor}. It had a similar ambiance to
+[Jekyll](https://jekyllrb.com/){.a-anchor}, but it didn't spark joy.
 
-And then, there was [Eleventy](https://www.11ty.dev/){.a-anchor}... It really is like a magical glove that
-just fit my brain perfectly. It does one thing and does it well. A simple SSG (Static Site Generator)
-that helps provide minimum barebone for the next generation of [miayam.io](https://miayam.io){.a-anchor}.
-And for good reason, the batteries are not included.
+And then, there was [Eleventy](https://www.11ty.dev/){.a-anchor}... It really is like a magical glove that just fits my
+brain perfectly. It does one thing, and does it well. A simple SSG (Static Site Generator) that helps
+provide the barebones of the next generation of miayam.io. And for good reason, the batteries are not
+included.
