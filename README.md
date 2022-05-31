@@ -197,7 +197,7 @@ Ruby seemed foreign to me. The more I tinkered with it, the more befuddled I was
 it down and rebuild it from the ground up.
 
 I was looking for an alternative to [Jekyll](https://jekyllrb.com/) written in `JavaScript` because I am a boring
-web developer, the kind you can find anywhere else. I tried [Gatsby](https://www.gatsbyjs.com/) and wound up
+web developer—the kind you can find anywhere else. I tried [Gatsby](https://www.gatsbyjs.com/) and wound up
 getting bored. All those shiny new technologies [Gatsby](https://www.gatsbyjs.com/) has to offer are not really
 what I need. I have tried [Hexo](https://hexo.io/). It had a similar ambiance to
 [Jekyll](https://jekyllrb.com/), but it didn't spark joy.
