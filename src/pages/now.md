@@ -8,7 +8,7 @@ url: /now/
 # What I'm Doing Now
 --------------------
 
-The alternative version of this page written in [🇮🇩 Bahasa.](/now/id){.a-langSwitcher}
+The alternative version of this page is written in [🇮🇩 Bahasa.](/now/id){.a-langSwitcher}
 
 People seldom ask me what I’m doing now.
 

@@ -17,6 +17,8 @@ Bukan! Ini bukan dibangun di atas Gatsby. Bukan pula NextJS. Apa lagi Svelte. In
 
 Blog saya dibangun dengan teknologi lawas nan membosankan. WordPress sebagai sistem manajemen konten, datanya diambil oleh Eleventy, kemudian dari situ terciptalah halaman statis berupa HTML, CSS, JavaScript dan berbagai makhluk melata lainnya yang bersemayam di internet.
 
+Untuk detailnya, bisa kunjungi (https://docs.miayam.io)[https://docs.miayam.io].
+
 Meski terlihat kurang menjanjikan, segala macam petuah dan wejangan yang keluar dari mulut Addy Osmani saya gigit dengan gigi geraham. Berikut kata-kata langit dari beliau: *Critical path CSS*, *lazy loading*, *PWA*, *prefetching*, *caching* dan sebagainya. Apapun yang dikatakan Addy Osmani, katakanlah, "Kami mendengar dan kami akan taat."
 
 Dari hasil pengukuran menggunakan metrik yang disediakan Google, blog saya mendapatkan nilai cukup baik.
