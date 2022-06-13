@@ -64,8 +64,14 @@ class Menu {
     const clickInside = () => {
       if (this.hiddenTabs.style.display === 'none') {
         this.hiddenTabs.style.display = 'block';
+        Array.from(this.moreTab.querySelectorAll('.a-more span')).forEach(moreItem => {
+          moreItem.style = 'background: #333; border: 1px solid #333';
+        });
       } else {
         this.hiddenTabs.style.display = 'none';
+        Array.from(this.moreTab.querySelectorAll('.a-more span')).forEach(moreItem => {
+          moreItem.style = 'border: 1px solid #aaa';
+        });
       }
     };
 
