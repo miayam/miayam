@@ -54,10 +54,16 @@ class Menu {
     const clickOutside = (e) => {
       if (e.target === this.hiddenTabs || this.hiddenTabs.contains(e.target)) {
         this.hiddenTabs.style.display = 'block';
+        Array.from(this.moreTab.querySelectorAll('.a-more span')).forEach(moreItem => {
+          moreItem.style = 'background: #333; border: 1px solid #333';
+        });
       } else if (e.target === this.moreTab) {
         return;
       } else {
         this.hiddenTabs.style.display = 'none';
+        Array.from(this.moreTab.querySelectorAll('.a-more span')).forEach(moreItem => {
+          moreItem.style = 'border: 1px solid #aaa';
+        });
       }
     };
 
