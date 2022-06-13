@@ -20,7 +20,7 @@ I am taking [Complete Intro to Computer Science](https://frontendmasters.com/cou
 
 I am working on a side project using [WooCommerce](https://woocommerce.com/) as a GraphQL/REST API endpoint and SSG of my choice ([Eleventy](https://www.11ty.dev/) and [Astro 🌟](https://astro.build/)) in the front. It is a boilerplate to decouple backend and frontend on [WooCommerce](https://woocommerce.com/) app.
 
-I am prepared for the worst by saving and investing. [Here's how it's done](https://miayam.io/articles/aldi-taher-tujuan-investasi-dan-manajemen-keuangan).
+I am preparing for the worst by saving and investing. [Here's how it's done](https://miayam.io/articles/aldi-taher-tujuan-investasi-dan-manajemen-keuangan).
 
 Last updated: May 2022.
 
