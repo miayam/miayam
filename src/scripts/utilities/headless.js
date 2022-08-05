@@ -4,6 +4,7 @@ const TAGS_API = `${BASE_URL}/tags`;
 const Cache = require('@11ty/eleventy-cache-assets');
 const fetch = require('node-fetch');
 const chunk = require('lodash.chunk');
+const htmlEntities = require('html-entities');
 const highlight = require('./highlight');
 
 const getTags = async () => {
@@ -148,7 +149,7 @@ const formatData = (data) => {
         formattedDate: (new Date(p.date)).toLocaleString('en-US', { year: 'numeric', month: 'short', day: 'numeric'}),
         title: p.title.rendered,
         content: highlight(p.content.rendered),
-        excerpt: formatExcerpt(highlight(p.excerpt.rendered)),
+        excerpt: htmlEntities.decode(formatExcerpt(highlight(p.excerpt.rendered))),
         tags: p.tags,
       };
     });

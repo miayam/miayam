@@ -74,6 +74,7 @@
         "workbox-build": "^6.3.0"
     },
     "dependencies": {
+        "html-entities": "^2.3.3",
         "iframe-resizer": "^4.3.2",
         "lozad": "^1.16.0",
         "vanilla-sharing": "^6.1.0"
