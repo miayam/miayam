@@ -10,7 +10,7 @@
 
   a {
     color: inherit;
-    padding: 20px;
+    padding: 20px 20px 0 20px;
     display: block;
     text-decoration: none;
     cursor: pointer;
@@ -54,11 +54,17 @@
   }
 
   &__tagList {
+    margin: 20px;
+
     span {
       display: inline-block;
       border-radius: 4px;
       padding: 8px;
       background-color: $menu;
+    }
+
+    a:hover {
+      background-color: $input;
     }
 
     .visually-hidden {
@@ -72,22 +78,15 @@
       background: $menu;
     }
 
-    button {
+    a {
       display: inline-block;
       padding: unset;
       z-index: 1;
-      cursor: pointer;
       height: 32px;
-      border: 1px solid $menu;
       border-radius: 4px;
     }
 
-    button:hover {
-      padding: 0;
-      background-color: $input;
-    }
-
-    button + button {
+    a + a {
       margin-left: 8px;
     }
   }
