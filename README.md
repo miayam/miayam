@@ -148,13 +148,7 @@ As little assets as possible.
 - [Production](#production)
 
 ### Requirement
-You must install [nvm](https://github.com/nvm-sh/nvm). You will be using Node version set in `.nvmrc`.
-
-After you have installed `nvm`, run this command:
-```sh
-$ nvm install
-$ nvm use
-```
+You must install [volta](https://volta.sh/). You will be using Node.js version `12.18.4`.
 
 ### Development
 Install all dependencies:
