@@ -1,12 +1,12 @@
 include /molecules/menu/index
-include /molecules/masthead/index
+include /molecules/headline/index
 include /molecules/card/index
 include /molecules/pagination/index
 include /molecules/skeleton/card/index
 
 mixin posts
   main(class="o-posts", role="main")
-    +masthead()
+    +headline()
     +menu(articles.tags)
     section(class="o-posts__skeletonCards")
       - const iteration = Array.from(new Array(9));
