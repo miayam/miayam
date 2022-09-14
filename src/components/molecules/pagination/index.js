@@ -3,6 +3,7 @@ import bring from '@scripts/utilities/bring';
 class Pagination {
   constructor(className="m-pagination") {
     this.className = className;
+    this.navigator = document.querySelector('li[data-total]');
     this.prev = document.querySelector(`.${this.className}__item.--prev`);
     this.next = document.querySelector(`.${this.className}__item.--next`);
     this.first = document.querySelector(`.${this.className}__item.--first`);
@@ -10,6 +11,26 @@ class Pagination {
     this.select = document.getElementById('pagination');
     this.postsCards = document.getElementsByClassName('o-posts__cards')[0];
     this.postsSkeletonCards = document.getElementsByClassName('o-posts__skeletonCards')[0];
+  }
+
+  setCurrentPage(page) {
+    document.querySelector('div[data-current-page]').setAttribute('data-current-page', page);
+  }
+
+  togglePrevAndNext() {
+    const page = Number(document.querySelector('div[data-current-page]').getAttribute('data-current-page'));
+    const total = Number(this.navigator.getAttribute('data-total'));
+
+    if (page === 1) {
+      this.prev.classList.add('--disable');
+      this.next.classList.remove('--disable');
+    } else if (page === total) {
+      this.next.classList.add('--disable');
+      this.prev.classList.remove('--disable');
+    } else {
+      this.prev.classList.remove('--disable');
+      this.next.classList.remove('--disable');
+    }
   }
 
   activeOption() {
@@ -48,9 +69,8 @@ class Pagination {
   }
 
   navigation() {
-    const navigator = document.querySelector('li[data-total]');
-    const total = Number(navigator.getAttribute('data-total'));
-    const baseLink = navigator.getAttribute('data-baseLink');
+    const total = Number(this.navigator.getAttribute('data-total'));
+    const baseLink = this.navigator.getAttribute('data-baseLink');
 
     this.prev.addEventListener('click', e => {
       const prevIndex = this.select.selectedIndex - 1;
@@ -62,6 +82,8 @@ class Pagination {
       const url = prevIndex + 1 === 1 ? `${baseLink}/` : `${baseLink}/${prevIndex + 1}/`;
 
       this.pullIn(url);
+      this.setCurrentPage(prevIndex + 1);
+      this.togglePrevAndNext();
     });
 
     this.next.addEventListener('click', e => {
@@ -73,14 +95,20 @@ class Pagination {
       }
 
       this.pullIn(`${baseLink}/${nextIndex + 1}/`);
+      this.setCurrentPage(nextIndex + 1);
+      this.togglePrevAndNext();
     });
 
     this.first.addEventListener('click', () => {
       this.pullIn(`${baseLink}/`);
+      this.setCurrentPage(1);
+      this.togglePrevAndNext();
     });
 
     this.last.addEventListener('click', () => {
       this.pullIn(`${baseLink}/${total}/`)
+      this.setCurrentPage(total);
+      this.togglePrevAndNext();
     });
   }
 
@@ -96,6 +124,7 @@ class Pagination {
 
   init() {
     this.activeOption();
+    this.togglePrevAndNext();
     this.onSelect();
     this.navigation();
   }

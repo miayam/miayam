@@ -1,4 +1,5 @@
 @import '~@styles/utilities';
+@import '~@styles/variables';
 
 .m-pagination {
   display: block;
@@ -25,6 +26,16 @@
   &__item.--last,
   &__item.--next {
     text-align: right;
+  }
+
+  &__item.--prev.--disable,
+  &__item.--next.--disable {
+    cursor: default;
+  }
+
+  &__item.--prev.--disable .a-arrow,
+  &__item.--next.--disable .a-arrow {
+    color: $more;
   }
 
   &__item {
