@@ -20,19 +20,20 @@ class Pagination {
   togglePrevAndNext() {
     const page = Number(document.querySelector('div[data-current-page]').getAttribute('data-current-page'));
     const total = Number(this.navigator.getAttribute('data-total'));
+    const activeStyle = 'color: rgba(0, 0, 0, 0.2); cursor: default;';
 
     if (page === 1 && total > 1) {
-      this.prev.classList.add('--disable');
-      this.next.classList.remove('--disable');
+      this.prev.style = activeStyle;
+      this.next.style = '';
     } else if (page === total && total > 1) {
-      this.next.classList.add('--disable');
-      this.prev.classList.remove('--disable');
+      this.next.style = activeStyle;
+      this.prev.style = '';
     } else if (total === 1) {
-      this.prev.classList.add('--disable');
-      this.next.classList.add('--disable');
+      this.prev.style = activeStyle;
+      this.next.style = activeStyle;
     } else {
-      this.prev.classList.remove('--disable');
-      this.next.classList.remove('--disable');
+      this.prev.style = '';
+      this.next.style = '';
     }
   }
 
