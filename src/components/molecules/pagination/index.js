@@ -115,10 +115,14 @@ class Pagination {
   onSelect() {
     const self = this;
     this.select.addEventListener('change', e => {
-      const url = e.target[e.target.selectedIndex].value;
+      const selectedItem = e.target[e.target.selectedIndex]
+      const url = selectedItem.value;
+      const page = Number(selectedItem.label);
       self.postsCards.style = 'display: none;';  
       self.postsSkeletonCards.style = 'display: block;';
       self.pullIn(url);
+      this.setCurrentPage(page);
+      this.togglePrevAndNext();
     });
   }
 
