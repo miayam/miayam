@@ -21,6 +21,9 @@ class Pagination {
     const page = Number(document.querySelector('div[data-current-page]').getAttribute('data-current-page'));
     const total = Number(this.navigator.getAttribute('data-total'));
 
+    console.log(page, 'wowow');
+    console.log(total, 'total');
+
     if (page === 1 && total > 1) {
       this.prev.classList.add('--disable');
       this.next.classList.remove('--disable');
@@ -130,6 +133,7 @@ class Pagination {
   }
 
   init() {
+    console.log('it is called');
     this.activeOption();
     this.togglePrevAndNext();
     this.onSelect();

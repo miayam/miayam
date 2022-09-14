@@ -133,6 +133,7 @@ class Menu {
 
             const description = document.querySelector('span[data-description]').getAttribute('data-description');
             document.querySelector('meta[name="description"]').setAttribute('content', description);
+            document.querySelector('div[data-current-page]').setAttribute('data-current-page', 1);
             document.title = title;
             const paginationObj = new Pagination();
             paginationObj.init();
