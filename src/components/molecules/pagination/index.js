@@ -21,12 +21,15 @@ class Pagination {
     const page = Number(document.querySelector('div[data-current-page]').getAttribute('data-current-page'));
     const total = Number(this.navigator.getAttribute('data-total'));
 
-    if (page === 1) {
+    if (page === 1 && total > 1) {
       this.prev.classList.add('--disable');
       this.next.classList.remove('--disable');
-    } else if (page === total) {
+    } else if (page === total && total > 1) {
       this.next.classList.add('--disable');
       this.prev.classList.remove('--disable');
+    } else if (total === 1) {
+      this.prev.classList.add('--disable');
+      this.next.classList.add('--disable');
     } else {
       this.prev.classList.remove('--disable');
       this.next.classList.remove('--disable');
