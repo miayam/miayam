@@ -19,11 +19,11 @@ mixin posts
       - const tagWording = currentTag.wording; 
       p(class="o-posts__description", data-tag=`${list.tagName}`, style=`${list.tagName === 'all' ? 'display: none;' : ''}`)
         if (list.tagName !== 'all')
-          span(class=`icon-${list.tagName}`)
+          span(class=`icon-${list.tagName}`, , role="img", aria-label=list.tagName)
           strong !{tagWording + ': '} 
           span(data-description=`${description}`) !{description}
         else
-          span(class="icon-all")
+          span(class="icon-all", role="img", aria-label="all")
           strong All
           span(data-description=`${site.description}`) All
       if list && list.pageData
