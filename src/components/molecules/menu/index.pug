@@ -33,7 +33,7 @@ mixin menu(tabs)
       each tab in tabs
         li(class="m-menu__tab", role="menuitem") 
           div(class="m-menu__label js-m-menu__label", data-tag=`${tab.name}`)
-            span(class=`icon-${tab.name}`, role="img")
+            span(class=`icon-${tab.name}`, role="img", aria-label=tab.name)
             | #{tab.wording}
     div(class="m-menu__moreTab", data-width="45")
       div(class="m-menu__moreLabel", role="button", tabindex="0", aria-pressed="false", aria-label="more")

@@ -11,7 +11,7 @@ mixin pagination(pagination)
         +arrow("left")
       li(class="m-pagination__navigator", data-total=pagination.total, data-baseLink=pagination.baseLink)
         label(for="pagination")
-        select(id="pagination")
+        select(id="pagination", aria-label="pagination")
           each index in iterators
             - const pageNumber = `${pagination.baseLink}/${index === 0 ? '' : `${index + 1}/`}`;
             option(value=`${pageNumber}`) #{index + 1}
