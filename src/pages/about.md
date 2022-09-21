@@ -24,7 +24,7 @@ Mom and Dad! Look, I built a website "AS IS"! No bullshit! Just HTML, CSS, JavaS
 ## The Author
 I am a man behind this blog.
 
-![Tolol](/assets/images/yozo-oba-blur.jpg){ data-src="/assets/images/yozo-oba.jpg" }
+![Tolol](/assets/images/yozo-oba-blur.jpg){ data-src="/assets/images/yozo-oba.jpg", width="660", height="935" }
 
 > The world, after all, was still a place of bottomless horror. It was by no means a place of childlike simplicity where everything could be settled by a simple then-and-there decision. — Yozo Oba
 >

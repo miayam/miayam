@@ -26,7 +26,7 @@ Mah, Pak, ini anak kalian membuat situs web sesuai dengan kodratnya. Tidak ada t
 ## Tentang Saya
 Saya adalah pria di balik blog ini. Kurang lebih beginilah penampakan wajah saya:
 
-![Tolol seperti wiro](/assets/images/wiro-blur.jpg){ data-src="/assets/images/wiro.jpg" }
+![Tolol seperti wiro](/assets/images/wiro-blur.jpg){ data-src="/assets/images/wiro.jpg", width="640", height="320" }
 
 > Kau bukan utamakan tegap gagah perkasa. Siapa dia? Wiro Sableng! Pembela kebenaran, pembasmi kejahatan. Inilah dia! Wiro Sableng! Sikapnya lucu, tingkahnya aneh, persis orang yang kurang ingatan dan tak sadar. Dia *slengean* tapi cinta damai. Wiro Sableng disukai orang. Wiro Sableng! Dasar sableng! Gurunya gendeng! Muridnya sableng! Aku melangkah menyusuri dunia mencari arti kehidupan... Walau rintangan menghalangi aku, tetap tabah menghadapinya...
 > 
