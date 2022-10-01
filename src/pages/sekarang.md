@@ -10,16 +10,29 @@ url: /now/id/
 
 Versi yang lebih profesional ditulis menggunakan [🇬🇧 bahasa Inggris.](/now/){.a-langSwitcher}
 
-Sekarang di Bandung, Indonesia. --Cewek-cewek-- Suasana di sini lumayan.
+Sekarang tinggal di Daerah Istimewa Yogyakarta, di luar wilayah
+kekuasaan Kerajaan Sunda.
 
-Sedang menyegarkan kembali pemahaman PHP di Codecademy. Secukupnya saja supaya tahu cara *bikin* tema dan pengaya (*plugin*) di WordPress. Para suhu PHP yang budiman, [minta saran](mailto:muhammaddeni90@gmail.com) tempat belajar yang baik di mana. Sedang bingung dengan tutorial berceceran di mana-mana.
+Saya sedang beradaptasi dengan cuaca dan budaya di Yogyakarta. Mereka lebih komunal dan saya sangat egosentris. Keramahtamahan ini membunuhku ☹.
 
-Saya sedang ambil kursus [*Complete Intro to Computer Science*](https://frontendmasters.com/courses/computer-science-v2/), [*Making TypeScript Stick*](https://frontendmasters.com/courses/typescript-practice/) dan [*Figma for Developers*](https://frontendmasters.com/courses/figma). Alhamdulillah, dibayarkan kantor.
+Saya menurunkan biaya hidup tanpa mengorbankan gaya hidup.
 
-Sedang mencoba membangun usaha sampingan dengan [WooCommerce](https://woocommerce.com/). Nantinya, si [WooCommerce](https://woocommerce/com/) cuma dijadikan gudang konten. Antarmukanya (*UI*-nya) *mah* akan ditangani oleh [Eleventy](https://www.11ty.dev/) dan [Astro 🌟](https://astro.build/). Keren, bukan?
+Saya sedang memperkuat fundamental. Mulai dari nol lagi.
 
-Sedang berusaha menabung dan berinvestasi dengan cara yang baik. [Begini cara saya](https://miayam.io/articles/aldi-taher-tujuan-investasi-dan-manajemen-keuangan/).
+Saya pengembang web medioker yang berusaha menjadi pengembang web medioker yang lebih berkualitas dengan menulis tes sesuai standar industri.
 
-Terakhir ditulis: Mei 2022.
+Saya sekarang lebih sering melihat ke dalam cangkang. Sudah mulai muak dengan topeng yang saya pakai ke mana-mana.
 
-Halaman ini terinspirasi [ide keren](https://sive.rs/now/) dari [Mang Derek Sivers](https://sive.rs). Mang Derek ini sekeren [Mang Otz](https://twitter.com/otongkoil).
+Saya menghindari interaksi sosial akhir-akhir ini. 
+
+Saya mengatakan tidak pada pelbagai macam hal dan mengatakan ya pada yang esensial saja.
+
+Saya mengatakan ya pada Algoritma, Struktur Data, dan Pengembangan Web (PHP, HTML, CSS, dan JavaScript). Saya bersedia mengembangkan keahlian jika diperlukan. Saya menggunakan React hampir di semua proyek meski dengan perasaan **enek* ingin muntah.
+
+Saya mengatakan tidak pada web3, AI, ML, matematika, alkohol, seks, narkoba, Python, Java, Rust Go dan Ruby on Rails.
+
+Saya berhenti mengerjakan proyek di luar pekerjaan kantor. Sedang fokus menguji psikologi saya di pasar saham.
+
+Terakhir ditulis: Oktober 2022.
+
+Halaman ini terinspirasi [ide keren](https://sive.rs/now/) dari [Mang Derek Sivers](https://sive.rs).

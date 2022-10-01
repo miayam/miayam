@@ -10,18 +10,32 @@ url: /now/
 
 The alternative version of this page is written in [🇮🇩 Bahasa.](/now/id){.a-langSwitcher}
 
-People seldom ask me what I’m doing now.
+I don't think people give a damn about what I’m doing now.
 
-I am in Bandung, Indonesia.
+I am in Special Region of Yogyakarta, beyond the reign of Sunda Empire.
 
-I am relearning PHP syntax on Codecademy. Enough PHP to build WordPress themes and plugins. Dear PHP experts, please [recommend me](mailto:muhammaddeni90@gmail.com) some good resources on the subject. I am in a tutorial hell right now.
+I am adjusting myself to its weather and culture. So far, so good.
 
-I am taking [Complete Intro to Computer Science](https://frontendmasters.com/courses/computer-science-v2/), [Making TypeScript Stick](https://frontendmasters.com/courses/typescript-practice/) and [Figma for Developers](https://frontendmasters.com/courses/figma). Stockbit pays the subscription bills.
+I am lowering my expenditure without compensating my current life style.
 
-I am working on a side project using [WooCommerce](https://woocommerce.com/) as a GraphQL/REST API endpoint and SSG of my choice ([Eleventy](https://www.11ty.dev/) and [Astro 🌟](https://astro.build/)) in the front. It is a boilerplate to decouple backend and frontend on [WooCommerce](https://woocommerce.com/) app.
+I am strenghtening fundamental, unlearning things I think I know.
 
-I am preparing for the worst by saving and investing. [Here's how it's done](https://miayam.io/articles/aldi-taher-tujuan-investasi-dan-manajemen-keuangan).
+I am a shitty web developer and moving towards becoming a more realible shitty web developer
+by writing good tests. Yet another good investment I overlook.
 
-Last updated: May 2022.
+I am an inward-looking man now.
+
+I am avoiding social interaction for better or worse.
+
+I am trying to say no to almost everything and say yes to almost nothing.
+
+I am saying yes to Algorithm, Data Structure, and Web Development (PHP, HTML, CSS, and JavaScript). I am willing to expand
+upon those 3 if needs be. I hate React and here I am. 
+
+I am saying no to web3, AI, ML, mathematics, alcohol, sex, drugs, Python, Java, Rust, Go, and Ruby on Rails.
+
+I am getting rid of freelance work for the next 6 months. Living off salary and swing trading.
+
+Last updated: October 2022.
 
 This page is inspired by [a good idea from Derek Sivers](https://sive.rs/now).
