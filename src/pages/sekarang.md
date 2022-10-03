@@ -25,9 +25,9 @@ Saya sekarang lebih sering melihat ke dalam. Sudah muak dengan topeng yang saya 
 
 Saya menghindari interaksi sosial akhir-akhir ini. 
 
-Saya katakan tidak pada hampir semua hal dan mengatakan ya pada yang esensial saja.
+Saya hanya mengurus sedikit perkara yang berarti dalam hidup. Yang lain biar orang pintar saja yang urus.
 
-Saya memilih Algoritma, Struktur Data, dan Pengembangan Web (PHP, HTML, CSS, dan JavaScript). Saya bersedia mempelajari berbagai hal yang berkaitan dengan 3 aspek yang saya tekuni ini.
+Untuk saat ini hanya fokus dengan DSA (*Data Structure* & *Algorithm*), Bandarmologi (pemerhati paus), dan Pengembangan Web (PHP, SQL, HTML, CSS, dan JavaScript). Saya bersedia mempelajari berbagai hal yang berkaitan dengan 3 aspek yang saya tekuni dan itu sudah cukup luas. Ada *loh* orang keren dan mapan yang hanya berurusan dengan WordPress seumur hidupnya sampai beliau mati bosan. Ada juga legenda sepak bola yang hanya bisa 1 atau 2 trik. Tidak semua orang harus seperti Messi atau Michael Jordan. Fokus menjadi medioker yang berkualitas dan memberikan nilai sedikit kepada masyarakat.
 
 Saya tidak akan menekuni Web3, AI, ML, matematika, alkohol, seks, narkoba, Python, Java, Rust, Go dan Ruby on Rails.
 

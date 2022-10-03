@@ -29,7 +29,7 @@ I am avoiding social interaction for better or worse.
 
 I am trying to say no to almost everything and say yes to almost nothing.
 
-I am saying yes to Algorithm, Data Structure, and Web Development (PHP, HTML, CSS, and JavaScript). I am willing to expand
+I am saying yes to DSA (Data Structure & Algorithm), Investment, and Web Development (PHP, SQL, HTML, CSS, and JavaScript). I am willing to expand
 upon those 3 if needs be. I hate React and here I am. 
 
 I am saying no to Web3, AI, ML, mathematics, alcohol, sex, drugs, Python, Java, Rust, Go, and Ruby on Rails.
