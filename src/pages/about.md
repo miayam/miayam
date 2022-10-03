@@ -29,7 +29,7 @@ I am a man behind this blog.
 > The world, after all, was still a place of bottomless horror. It was by no means a place of childlike simplicity where everything could be settled by a simple then-and-there decision. — Yozo Oba
 >
 
-I currently live in Bandung, Indonesia, and build user-facing features for [Stockbit](https://stockbit.com). This blog site is all about anything that interest me and most of my writings here are dedicated to the web in general.
+I currently build user-facing features for [Stockbit](https://stockbit.com). This blog site is all about anything that interest me and most of my writings here are dedicated to the web in general.
 
 Most of the time, I tinker with the DOM and Web API to create pleasing experience on the web. I am very grateful for picking up the right hobby.
 
