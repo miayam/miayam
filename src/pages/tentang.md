@@ -19,7 +19,7 @@ Blog saya dibangun dengan teknologi lawas nan membosankan. WordPress sebagai sis
 
 Meski terlihat kurang menjanjikan, segala macam petuah dan wejangan yang keluar dari mulut Addy Osmani saya gigit dengan gigi geraham. Berikut kata-kata langit dari beliau: *Critical path CSS*, *lazy loading*, *PWA*, *prefetching*, *caching* dan sebagainya. Apapun yang dikatakan Addy Osmani, katakanlah, "Kami mendengar dan kami akan taat."
 
-Dari hasil pengukuran menggunakan metrik yang disediakan Google, blog saya mendapatkan nilai cukup baik.
+Dari hasil pengukuran menggunakan metrik yang disediakan Google, [blog saya mendapatkan nilai cukup baik](https://pagespeed.web.dev/report?url=https%3A%2F%2Fmiayam.io).
 
 Mah, Pak, ini anak kalian membuat situs web sesuai dengan kodratnya. Tidak ada tedeng aling-aling pernak-pernik keping salju. Hah? Apa itu SSR?
 
