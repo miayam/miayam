@@ -157,6 +157,12 @@ As little assets as possible.
 ### Requirement {#requirement}
 You must install [volta](https://volta.sh/). You will be using Node.js version `12.18.4`.
 
+Run this command to make sure [volta](https://volta.sh/) can detect `package.json`:
+
+```
+$ source ~/.bashrc
+```
+
 ### Development {#development}
 Install all dependencies:
 
