@@ -32,7 +32,7 @@ tahun 2000-an adalah investasi yang bagus.
 
 Saya sedang menikmati novel grafis adaptasi karya Osamu Dazai berjudul No Longer Human yang diilustrasi
 oleh komikus favorit saya Junji Ito. Saya beli di Periplus seharga Rp. 500.000 sebagai hadiah tahun
-baru dari saya untuk saya. Asyik sekali menyelesaikan 1 novel di kereta perjalanan Jogjakarta - Pasar Senen.
+baru dari saya untuk saya. Asyik sekali menyelesaikan 1 novel di kereta perjalanan `Yogjakarta - Pasar Senen`.
 
 Menjaga ego agar tetap di atas itu benar-benar melelahkan. Mengglorifikasi hidup saya yang sebenarnya
 *begini-begini* saja. Seolah ingin nilai-nilai yang saya pegang dihargai, dianggap hebat, dianggap unik,
@@ -45,6 +45,6 @@ Sekarang lebih memilih mengacungkan jari tengah sambil tersenyum santai.
 Berikut pepatah dalam bahasa Sunda:
 > *Ah, kumaha sia we lah...*
 
-Terakhir ditulias Januari 2023.
+Terakhir ditulis Januari 2023.
 
 Halaman ini terinspirasi [ide keren](https://sive.rs/now/) dari [Mang Derek Sivers](https://sive.rs).
