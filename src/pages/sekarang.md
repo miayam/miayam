@@ -10,29 +10,41 @@ url: /now/id/
 
 Versi yang lebih profesional ditulis menggunakan [🇬🇧 bahasa Inggris.](/now/){.a-langSwitcher}
 
-Sekarang tinggal di Daerah Istimewa Yogyakarta, di luar wilayah
-kekuasaan Kerajaan Sunda.
+Sedang asyik menonton *Terrace House* di Netflix. Ini kocak karena beberapa karakter
+berperilaku seperti saya ketika berhadapan dengan lawan jenis. Kalau dalam istilah bahasa
+Sunda saya ini *icing-icing ngising* (diam-diam tidak menghanyutkan malahan hanyut seperti tahi di kali).
+Baru sadar ketika kita berusaha menyisipkan kesan/impresi kepada perempuan, mereka akan
+merasakan kejanggalan. Mereka akan mencium bau borok kita, membuka kedok kita dan pergi begitu saja.
+Mereka makhluk yang sangat peka. Ini semua tentang memperlakukan perempuan dengan *benar* (bukan *baik*).
 
-Saya sedang beradaptasi dengan cuaca dan budaya di sini. Mereka lebih komunal dan saya sangat egosentris. Keramahtamahan ini membunuhku ☹.
+Saya sudah tidak peduli dengan apa yang diinginkan perempuan dari saya. Saya lebih fokus dengan
+apa yang saya inginkan dari perempuan. Saya yakin kualitas pasangan kita berbanding lurus
+dengan kualitas kita. Saya lihat itu dari istri-istri teman-teman saya. Mereka seperti cerminan
+dari teman-teman saya. Jadi, saya lebih fokus memperbaiki sesuatu yang bisa diperbaiki sampai versi
+terbaik saya bertemu dengannya.
 
-Saya menurunkan biaya hidup tanpa sedikitpun mengurangi gaya hidup.
+Saya sedang berfantasi tinggal satu atap dengan perempuan yang lebih menyukai anjing atau kucing daripada manusia.
+Kurus kering seperti saya. Tidak jelek seperti saya. Tidak rupawan seperti saya. Tidak baik seperti saya.
+Tidak jahat seperti saya. Wangi dan bersih tidak seperti saya. Bersenggama sekali atau dua kali seminggu dengan profesionalisme. Kami tidak tertarik menambah populasi manusia di bumi. Kami benci suara tangis bayi. Kami lebih suka gongongan anjing atau meongan kucing. Kami adalah bisnis yang tujuan akhirnya tersenyum bahagia saat nafas terakhir. *Get high, get by, and die in peace*. Ini mungkin gara-gara *Terrace House*. Ah, menyenangkan sekali khayalan ini.
 
-Saya sedang memperkuat fundamental. Mulai dari nol lagi.
+Sedang memperkuat dasar-dasar HTML, CSS, JavaScript, PHP, dan SQL. Saya percaya teknologi web awal
+tahun 2000-an adalah investasi yang bagus.
 
-Saya pengembang web medioker yang berusaha menjadi pengembang web medioker yang lebih berkualitas dengan menulis tes sesuai standar industri.
+Saya sedang menikmati novel grafis adaptasi karya Osamu Dazai berjudul No Longer Human yang diilustrasi
+oleh komikus favorit saya Junji Ito. Saya beli di Periplus seharga Rp. 500.000 sebagai hadiah tahun
+baru dari saya untuk saya. Asyik sekali menyelesaikan 1 novel di kereta perjalanan Jogjakarta - Pasar Senen.
 
-Saya sekarang lebih sering melihat ke dalam. Sudah muak dengan topeng yang saya pakai ke mana-mana.
+Menjaga ego agar tetap di atas itu benar-benar melelahkan. Mengglorifikasi hidup saya yang sebenarnya
+*begini-begini* saja. Seolah ingin nilai-nilai yang saya pegang dihargai, dianggap hebat, dianggap unik,
+dan itu menjijikkan. Selalu ingin terlihat baik-baik saja padahal sedang merangkak kesukaran. Ini baru
+hidup! Sepatutnya laki-laki di usia 30-an egonya kempis karena tersadar pada akhirnya semua tidak ada artinya.
+Besok atau lusa semuanya akan lupa. Lalu? Lalu apa? Apa?
 
-Saya menghindari interaksi sosial akhir-akhir ini. 
+Sekarang lebih memilih mengacungkan jari tengah sambil tersenyum santai.
 
-Saya hanya mengurus sedikit perkara yang berarti dalam hidup. Yang lain biar orang pintar saja yang urus.
+Berikut pepatah dalam bahasa Sunda:
+> *Ah, kumaha sia we lah...*
 
-Untuk saat ini hanya fokus dengan DSA (*Data Structure* & *Algorithm*), Bandarmologi (pemerhati paus), dan Pengembangan Web (PHP, SQL, HTML, CSS, dan JavaScript). Saya bersedia mempelajari berbagai hal yang berkaitan dengan 3 aspek yang saya tekuni dan itu sudah cukup luas. Ada *loh* orang keren dan mapan yang hanya berurusan dengan WordPress seumur hidupnya sampai beliau mati bosan. Ada juga legenda sepak bola yang hanya bisa 1 atau 2 trik. Tidak semua orang harus seperti Messi atau Michael Jordan. Fokus menjadi medioker yang berkualitas dan memberikan nilai sedikit kepada masyarakat.
-
-Saya tidak akan menekuni Web3, AI, ML, matematika, alkohol, seks, narkoba, Python, Java, Rust, Go dan Ruby on Rails.
-
-Saya puasa mengerjakan proyek di luar kantor. Sedang fokus menguji psikologi saya di pasar saham.
-
-Terakhir ditulis: Oktober 2022.
+Terakhir ditulias Januari 2023.
 
 Halaman ini terinspirasi [ide keren](https://sive.rs/now/) dari [Mang Derek Sivers](https://sive.rs).

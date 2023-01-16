@@ -10,32 +10,20 @@ url: /now/
 
 The alternative version of this page is written in [🇮🇩 Bahasa.](/now/id){.a-langSwitcher}
 
-I don't think people give a damn about what I’m doing now.
+I am fascinated with Terrace House on Netflix. Men and women under the same roof hitting on each other.
+When men try to impress women, women smell it. They will unveil the mask and reveal the horrendous being that we are.
+Learning a lot!
 
-I am in Special Region of Yogyakarta, beyond the reign of Sunda Empire.
+I am no longer concerned about what women want from me. I am more concerned about what I want from them.
 
-I am adjusting myself to its weather and culture. So far, so good.
+I am fantasizing living with a girl I like with two cats and a dog. 
 
-I am lowering my expenditure without compensating my current life style.
+I am taking the deep dive into HTML, CSS, JavaScript, PHP, and SQL. I bet on early-2000s web technology.
 
-I am strenghtening the fundamentals, unlearning things I think I know.
+Reading No Longer Human illustrated by Junji Ito. Loving it!
 
-I am a shitty web developer and moving towards becoming a more realible shitty web developer
-by writing good tests. Yet another good investment I overlook.
+I am ashamed of being human. I am wearing a mask now.
 
-I am an inward-looking man now.
-
-I am avoiding social interaction for better or worse.
-
-I am trying to say no to almost everything and say yes to almost nothing.
-
-I am saying yes to DSA (Data Structure & Algorithm), Investment, and Web Development (PHP, SQL, HTML, CSS, and JavaScript). I am willing to expand
-upon those 3 if needs be. I hate React and here I am. 
-
-I am saying no to Web3, AI, ML, mathematics, alcohol, sex, drugs, Python, Java, Rust, Go, and Ruby on Rails.
-
-I am getting rid of freelance work for the next 6 months. Living off salary and swing trading.
-
-Last updated: October 2022.
+Last updated: January 2023.
 
 This page is inspired by [a good idea from Derek Sivers](https://sive.rs/now).
