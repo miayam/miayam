@@ -34,12 +34,6 @@ Saya sedang menikmati novel grafis adaptasi karya Osamu Dazai berjudul No Longer
 oleh komikus favorit saya Junji Ito. Saya beli di Periplus seharga Rp. 500.000 sebagai hadiah tahun
 baru dari saya untuk saya. Asyik sekali menyelesaikan 1 novel di kereta perjalanan `Yogjakarta - Pasar Senen`.
 
-Menjaga ego agar tetap di atas itu benar-benar melelahkan. Mengglorifikasi hidup saya yang sebenarnya
-*begini-begini* saja. Seolah ingin nilai-nilai yang saya pegang dihargai, dianggap hebat, dianggap unik,
-dan itu menjijikkan. Selalu ingin terlihat baik-baik saja padahal sedang merangkak kesukaran. Ini baru
-hidup! Sepatutnya laki-laki di usia 30-an egonya kempis karena tersadar pada akhirnya semua tidak ada artinya.
-Besok atau lusa semuanya akan lupa. Lalu? Lalu apa? Apa?
-
 Sekarang lebih memilih mengacungkan jari tengah sambil tersenyum santai.
 
 Berikut pepatah dalam bahasa Sunda:
