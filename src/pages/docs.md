@@ -34,7 +34,7 @@ It doesn't have to be `React`, `Angular`, `Vue` or `Svelte`
 Therefore, this starter project must be:
 - [Boring](#boring){.a-anchor}
 - [Atomic](#atomic){.a-anchor}
-- [As Little Assets As Possible](#as-little-assets-as-possible){.a-anchor}
+- [As Few Assets As Possible](#as-few-assets-as-possible){.a-anchor}
 
 ### Boring {#boring}
 I believe in boring technology. Shiny new technology will be obselete in no
@@ -51,7 +51,7 @@ He encourages us to combine modified [`BEM`](https://www.smashingmagazine.com/20
 methodology. He also wrote pros and cons for his approach and let us decide
 and manage the trade-off.
 
-Here is the file structure:
+Here's the file structure:
 
 ```
 src
@@ -68,14 +68,14 @@ src
 
 `components` is an entry point in which `Eleventy` looks for layouts.
 
-### As Little Assets As Possible {#as-little-assets-as-possible}
+### As Few Assets As Possible {#as-few-assets-as-possible}
 `Webpack` is a bundle manager  for this project.
 Any changes to `components/templates/**/*/index.js` or `components/templates/**/*/_index.scss` is
 watched and rebuilt by `Webpack`. `Webpack` bundles `JavaScript` and `SCSS` code in multiple entry points
 reside in `components/templates` which will be injected on every template by `HtmlWebpackPlugin`.
 `Eleventy` will do the rest.
 
-Here is the file structure:
+Here's the file structure:
 ```
 src
 └── components 
