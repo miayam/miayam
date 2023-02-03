@@ -7,8 +7,8 @@ permalink: /
 ### The Brutalist Blog Site Built & Designed By Muhammad D. R.
 
 A blog site to store thoughts and ideas. Built and designed solely by yours
-truly. It stays being true to itself. An entity that is an inhabitant of the
-web. HTML, CSS, JavaScript and everything in between bundled together. It's
+truly. It stays true to itself. An entity that is an inhabitant of the
+web. HTML, CSS, JavaScript, and everything in between bundled together. It's
 ugly, brutal, a dead simple site, a sore to the eyes, but having no more than
 is really needed.
 
@@ -26,10 +26,10 @@ entirely from the code base 💩.
 
 What do I need more of in a brutalist website?
 - A simple design, component based design that's easy to change and work with.
-It doesn't have to be `React`, `Angular`, `Vue` or `Svelte`.
-- Performance. A super fast jellyfish. 100% lighthouse score.
-- SEO.
-- PWA. Well, I just want to display pictures of cute girls when offline.
+It doesn't have to be `React`, `Angular`, `Vue` or `Svelte`
+- Performance. A super fast jellyfish. 100% lighthouse score
+- SEO
+- PWA. Well, I just want to display pictures of cute girls when offline
 
 Therefore, this starter project must be:
 - [Boring](#boring){.a-anchor}
@@ -147,7 +147,7 @@ body
 
 Therefore, every template will have unique minified, production ready assets that's only
 needed by pages that include it. *About* page will not load assets required by *Home* page.
-As little assets as possible.
+As fewer assets as possible.
 
 ### Usage {#usage}
 - [Requirement](#requirement){.a-anchor}
