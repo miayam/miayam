@@ -23,11 +23,11 @@ new [miayam.io](https://miayam.io) will be built. Removing Jekyll
 entirely from the code base :shit:.
 
 What do I need more of in a brutalist website?
-- A simple design, component based design that's easy to change and work with.
-It doesn't have to be `React`, `Angular`, `Vue` or `Svelte`.
-- Performance. A super fast jellyfish. 100% lighthouse score.
-- SEO.
-- PWA. Well, I just want to display pictures of cute girls when offline.
+- A simple design, component based design that's easy to change and work with
+It doesn't have to be `React`, `Angular`, `Vue` or `Svelte`
+- Performance. A super fast jellyfish. 100% lighthouse score
+- SEO
+- PWA. Well, I just want to display pictures of cute girls when offline
 
 Therefore, this starter project must be:
 - [Boring](#boring)
@@ -37,7 +37,7 @@ Therefore, this starter project must be:
 ### Boring
 I believe in boring technology. Shiny new technology will be obselete in no
 time, but boring tech will not. `Pug` for building presentational component.
-`SCSS` for styling. `Vanilla JS` for manipulating the DOM, scripting repetitive tasks
+`SCSS` for styling. `Vanilla JS` for manipulating the DOM, scripting repetitive tasks,
 and configuration.
 
 ### Atomic
@@ -47,7 +47,7 @@ Daniel Tonon for
 [this great article](https://css-tricks.com/abem-useful-adaptation-bem/).
 He encourages us to combine modified [`BEM`](https://www.smashingmagazine.com/2018/06/bem-for-beginners/) naming convention with atomic design
 methodology. He also wrote pros and cons for his approach and let us decide
-and manage the trade off.
+and manage the trade-off.
 
 Here is the file structure:
 
