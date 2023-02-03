@@ -168,7 +168,7 @@ Open `localhost:1992` to see the result.
 
 
 ### Production
-To build production ready bundle, run this command:
+To build production-ready bundle, run this command:
 
 ```sh
 $ npm run build
