@@ -19,7 +19,7 @@ Here's the deal: WordPress gives out data through its REST API endpoint. Elevent
 
 As dull as one might expect, I still follow the best practice. I take whatever Addy Osmani has to say to heart. Critical path CSS, lazy loading, PWA, prefetching, caching, etc.
 
-Mom and Dad! Look, I built a website "AS IS"! No bullshit! Just HTML, CSS, JavaScript, and everything in between bundled together. Boring, huh? What is SSR?
+Look Ma, I built a website "AS IS"! No bullshit! Just HTML, CSS, JavaScript, and everything in between bundled together. Boring, huh? This is legit!
 
 ## The Author
 I am a man behind this blog.
@@ -29,11 +29,11 @@ I am a man behind this blog.
 > The world, after all, was still a place of bottomless horror. It was by no means a place of childlike simplicity where everything could be settled by a simple then-and-there decision. — Yozo Oba
 >
 
-I currently build user-facing features for [Stockbit](https://stockbit.com). This blog site is all about anything that interest me and most of my writings here are dedicated to the web in general.
+I currently build user-facing features for [Stockbit](https://stockbit.com). This blog site is all about anything that interests me.
 
 Most of the time, I tinker with the DOM and Web API to create pleasing experience on the web. I am very grateful for picking up the right hobby.
 
-Dear reader, I would like to be your friend and potential friends should know each other’s shortcomings. I suck at SQL, NoSQL, any kind of web frameworks (Django, Laravel, Ruby on Rails, etc), any kind of ORM libraries, or any fancy stuffs most developers love to talk about (shiny new technologies).
+Dear reader, I would like to be your friend and potential friends should know each other’s shortcomings. I suck at SQL, NoSQL, any kind of web frameworks (Django, Laravel, Ruby on Rails, etc), any kind of ORM libraries, or any fancy stuff most developers love to talk about (shiny new technology).
 
 For more details, you can find me on [LinkedIn](https://linkedin.com/in/miayam), [GitHub](https://github.com/miayam), [CodePen](https://codepen.io/miayam), and [Twitter](https://twitter.com/___miayam___). If you got any questions about anything, feel free to [send me email](mailto:muhammaddeni90@gmail.com).
 
