@@ -4,8 +4,8 @@
 [![Netlify Status](https://api.netlify.com/api/v1/badges/a1ca195e-33ec-4a4e-862a-196b7306f16e/deploy-status)](https://app.netlify.com/sites/frosty-davinci-459755/deploys)
 
 A blog site to store thoughts and ideas. Built and designed solely by yours
-truly. It stays being true to itself. An entity that is an inhabitant of the
-web. HTML, CSS, JavaScript and everything in between bundled together. It's
+truly. It stays true to itself. An entity that is an inhabitant of the
+web. HTML, CSS, JavaScript, and everything in between bundled together. It's
 ugly, brutal, a dead simple site, a sore to the eyes, but having no more than
 is really needed.
 
@@ -23,7 +23,7 @@ new [miayam.io](https://miayam.io) will be built. Removing Jekyll
 entirely from the code base :shit:.
 
 What do I need more of in a brutalist website?
-- A simple design, component based design that's easy to change and work with
+- A simple design, component based design that's easy to change and work with.
 It doesn't have to be `React`, `Angular`, `Vue` or `Svelte`
 - Performance. A super fast jellyfish. 100% lighthouse score
 - SEO
@@ -37,7 +37,7 @@ Therefore, this starter project must be:
 ### Boring
 I believe in boring technology. Shiny new technology will be obselete in no
 time, but boring tech will not. `Pug` for building presentational component.
-`SCSS` for styling. `Vanilla JS` for manipulating the DOM, scripting repetitive tasks,
+`SCSS` for styling. `Vanilla JS` for manipulating the DOM, scripting repetitive tasks
 and configuration.
 
 ### Atomic
@@ -49,7 +49,7 @@ He encourages us to combine modified [`BEM`](https://www.smashingmagazine.com/20
 methodology. He also wrote pros and cons for his approach and let us decide
 and manage the trade-off.
 
-Here is the file structure:
+Here's the file structure:
 
 ```
 src
@@ -66,14 +66,14 @@ src
 
 `components` is an entry point in which `Eleventy` looks for layouts.
 
-### As Little Assets As Possible
+### As Few Assets As Possible
 `Webpack` is a bundle manager  for this project.
 Any changes to `components/templates/**/*/index.js` or `components/templates/**/*/_index.scss` is
 watched and rebuilt by `Webpack`. `Webpack` bundles `JavaScript` and `SCSS` code in multiple entry points
 reside in `components/templates` which will be injected on every template by `HtmlWebpackPlugin`.
 `Eleventy` will do the rest.
 
-Here is the file structure:
+Here's the file structure:
 ```
 src
 └── components 
@@ -93,7 +93,7 @@ src
             └── index.js
 ```
 
-Here is the snippet from `webpack.common.js`.
+Here's the snippet from `webpack.common.js`:
 ```js
 const ENTRY_POINTS = [
     'home',
@@ -125,7 +125,7 @@ module.exports = {
 };
 ```
 
-Here is how we inject assets on base template (`components/templates/base/index.pug`):
+Here's how we inject assets on base template (`components/templates/base/index.pug`):
 ```pug
 body
     //- Inject assets. 6 spaces is necessary, so that `HtmlWebpackPugPlugin` can
@@ -140,7 +140,7 @@ body
 
 Therefore, every template will have unique minified, production ready assets that's only
 needed by pages that include it. *About* page will not load assets required by *Home* page.
-As little assets as possible.
+As few assets as possible.
 
 ## Usage
 - [Requirement](#requirement)
@@ -149,11 +149,6 @@ As little assets as possible.
 
 ### Requirement
 You must install [volta](https://volta.sh/). You will be using Node.js version `12.18.4`.
-
-Run this command to make sure [volta](https://volta.sh/) can detect `package.json`:
-```sh
-$ source ~/.bashrc
-```
 
 ### Development
 Install all dependencies:
@@ -197,10 +192,11 @@ it down and rebuild it from the ground up.
 
 I was looking for an alternative to [Jekyll](https://jekyllrb.com/) written in `JavaScript` because I am a boring
 web developer—the kind you can find anywhere else. I tried [Gatsby](https://www.gatsbyjs.com/) and wound up
-getting bored. All those shiny new technologies [Gatsby](https://www.gatsbyjs.com/) has to offer were not really
-what I need. I tried [Hexo](https://hexo.io/). It had a similar ambiance to
+getting bored. All those shiny new technologies [Gatsby](https://www.gatsbyjs.com/) has to offer are not really
+what I need. I have tried [Hexo](https://hexo.io/). It had a similar ambiance to
 [Jekyll](https://jekyllrb.com/), but it didn't spark joy.
 
-And then, there was [Eleventy](https://www.11ty.dev/)... It really was like a magical glove that just fits my
-brain perfectly. It did one thing, and did it well. A simple SSG (Static Site Generator) that helped
-provide the barebones of the next generation of [miayam.io](https://miayam.io). And for good reason, the batteries were not included.
+And then, there was [Eleventy](https://www.11ty.dev/)... It really is like a magical glove that just fits my
+brain perfectly. It does one thing, and does it well. A simple SSG (Static Site Generator) that helps
+provide the barebones of the next generation of [miayam.io](https://miayam.io). And for good reason, the batteries are not
+included.
