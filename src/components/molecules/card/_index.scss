@@ -22,13 +22,13 @@
       @include h4(700);
 
       display: inline-block;
-      width: 75%;
+      width: 70%;
       line-height: 1.2;
     }
 
     time {
       display: inline-block;
-      width: 25%;
+      width: 29%;
       text-align: right;
       color: $caption;
       font-size: calcFontSize(700) * 0.87 + px;
