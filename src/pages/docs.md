@@ -39,7 +39,7 @@ Therefore, this starter project must be:
 ### Boring {#boring}
 I believe in boring technology. Shiny new technology will be obselete in no
 time, but boring tech will not. `Pug` for building presentational component.
-`SCSS` for styling. `Vanilla JS` for manipulating the DOM, scripting repetitive tasks
+`SCSS` for styling. `Vanilla JS` for manipulating the DOM, scripting repetitive tasks,
 and configuration.
 
 ### Atomic {#atomic}
@@ -49,7 +49,7 @@ Daniel Tonon for
 [this great article](https://css-tricks.com/abem-useful-adaptation-bem/){.a-anchor}.
 He encourages us to combine modified [`BEM`](https://www.smashingmagazine.com/2018/06/bem-for-beginners/){.a-anchor} naming convention with atomic design
 methodology. He also wrote pros and cons for his approach and let us decide
-and manage the trade off.
+and manage the trade-off.
 
 Here is the file structure:
 
@@ -95,7 +95,7 @@ src
             └── index.js
 ```
 
-Here is the snippet from `webpack.common.js`.
+Here's the snippet from `webpack.common.js`:
 ```js
 const ENTRY_POINTS = [
     'home',
@@ -132,7 +132,7 @@ module.exports = {
 };
 ```
 
-Here is how we inject assets on base template (`components/templates/base/index.pug`):
+Here's how we inject assets on base template (`components/templates/base/index.pug`):
 ```pug
 body
     //- Inject assets. 6 spaces is necessary, so that `HtmlWebpackPugPlugin` can
