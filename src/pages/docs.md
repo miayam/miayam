@@ -145,9 +145,7 @@ body
     )) %>
 ```
 
-Therefore, every template will have unique minified, production ready assets that's only
-needed by pages that include it. *About* page will not load assets required by *Home* page.
-As fewer assets as possible.
+As a result, each template will have distinct minified, production-ready assets that are only required by pages that include it. The assets required by the *Home* page will not be loaded by the *About* page. As few assets as possible.
 
 ### Usage {#usage}
 - [Requirement](#requirement){.a-anchor}
@@ -182,7 +180,7 @@ Open `localhost:1992` to see the result.
 
 
 ### Production {#production}
-To build production ready bundle, run this command:
+To build production-ready bundle, run this command:
 
 ```
 $ npm run build
