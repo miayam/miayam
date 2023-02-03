@@ -32,7 +32,7 @@ It doesn't have to be `React`, `Angular`, `Vue` or `Svelte`
 Therefore, this starter project must be:
 - [Boring](#boring)
 - [Atomic](#atomic)
-- [As Little Assets As Possible](#as-little-assets-as-possible)
+- [As Few Assets As Possible](#as-few-assets-as-possible)
 
 ### Boring
 I believe in boring technology. Shiny new technology will be obselete in no
