@@ -26,7 +26,7 @@ entirely from the code base 💩.
 
 What do I need more of in a brutalist website?
 - A simple design, component based design that's easy to change and work with.
-It doesn't have to be `React`, `Angular`, `Vue` or `Svelte`
+It doesn't have to be `React`, `Angular`, `Vue`, or `Svelte`
 - Performance. A super fast jellyfish. 100% lighthouse score
 - SEO
 - PWA. Well, I just want to display pictures of cute girls when offline
