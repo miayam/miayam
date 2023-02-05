@@ -37,7 +37,7 @@ Therefore, this starter project must be:
 ### Boring
 I believe in boring technology. Shiny new technology will be obselete in no
 time, but boring tech will not. `Pug` for building presentational component.
-`SCSS` for styling. `Vanilla JS` for manipulating the DOM, scripting repetitive tasks
+`SCSS` for styling. `Vanilla JS` for manipulating the DOM, scripting repetitive tasks,
 and configuration.
 
 ### Atomic
