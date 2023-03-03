@@ -103,7 +103,7 @@
         background: $background;
         display: none;
 
-        @media only screen and (max-width: 768px) {
+        @media only screen and (max-width: 1000px) {
             top: 132px;
         }
     }
@@ -117,7 +117,7 @@
         overflow: auto;
         border-bottom: 1px solid $menu;
 
-        @media only screen and (max-width: 768px) {
+        @media only screen and (max-width: 1000px) {
             max-height: 400px;
         }
 
