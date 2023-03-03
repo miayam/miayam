@@ -22,6 +22,8 @@ I am focusing my energy on early-2000s web technology. WordPress is a good inves
 
 I am living in Bogor with my parents. They are both healthy. I am not.
 
+I am taking Real Life English course.
+
 I am he as you are he as you are me and we are all together.
 
 Last updated: March 2023.
