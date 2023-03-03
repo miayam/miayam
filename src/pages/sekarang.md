@@ -24,7 +24,7 @@ Sekarang tinggal bersama orang tua di Bogor.
 
 Saya memperbaiki bahasa Ingris saya yang amburadul dengan mengikuti kurikulum dari Real Life English.
 
-Saya sedang bernyanyi lagu The Beatles berjudul *I am a walrus*.
+Saya sedang bernyanyi lagu The Beatles berjudul *I am the walrus*.
 
 Terakhir ditulis Maret 2023.
 
