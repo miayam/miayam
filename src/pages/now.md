@@ -10,18 +10,20 @@ url: /now/
 
 The alternative version of this page is written in [🇮🇩 Bahasa.](/now/id){.a-langSwitcher}
 
-I am watching all episodes of Terrace House on Netflix. They are probably scripted.
+I am working on HTML, CSS, JavaScript/TypeScript, SQL, and PHP.
 
-I am no longer concerned about what women want from me.
+I am studying algorithm and data structure. Enough computer science to get by. Enough to get my foot in the door.
 
-I am fantasizing living with a girl I like with two cats and a dog. 
+>**Me**: Knock! Knock!
+>
+>**Interviewer**: Who's there?
 
-I am taking the deep dive into HTML, CSS, JavaScript, PHP, and SQL. I bet on early-2000s web technology.
+I am focusing my energy on early-2000s web technology. WordPress is a good investment.
 
-I am reading No Longer Human illustrated by Junji Ito. Loving it!
+I am living in Bogor with my parents. They are both healthy. I am not.
 
-I am fighting my past self.
+I am he as you are he as you are me and we are all together.
 
-Last updated: January 2023.
+Last updated: March 2023.
 
 This page is inspired by [a good idea from Derek Sivers](https://sive.rs/now).
