@@ -1,5 +1,4 @@
 import lozad from 'lozad';
-import Comment from '@molecules/comment';
 
 class Leaflet {
   constructor(template = undefined) {
@@ -8,9 +7,6 @@ class Leaflet {
 
   init() {
     if (this.template === 'blog') {
-      const comment = new Comment();
-      comment.init();
-
       import(
         /* webpackChunkName: "iterator" */
         '@molecules/iterator'
@@ -54,30 +50,6 @@ class Leaflet {
           ).then(({ default: Share }) => {
             const share = new Share();
             share.init();
-          });
-        }
-
-        if (elm.getAttribute('id') === 'remarkbox-iframe') {
-          import(
-            /* webpackChunkName: "iFrameResizer" */
-            'iframe-resizer'
-          ).then(({ default: iFrameResizer })=> {
-            const { iframeResize } = iFrameResizer;
-
-            iframeResize(
-              {
-                checkOrigin: ["https://my.remarkbox.com"],
-                inPageLinks: true,
-                onInit: function(e) {
-                  e.iFrameResizer.moveToAnchor(window.location.hash)
-                }
-              },
-              document.getElementById("remarkbox-iframe")
-            );
-            window.setTimeout(() => {
-              const loadingElm = document.getElementsByClassName('m-comment__loading')[0];
-              loadingElm.style = 'display: none;';
-            }, 1500);
           });
         }
       }

@@ -1,7 +1,6 @@
 include /molecules/article/index
 include /molecules/skeleton/article/index
 include /molecules/iterator/index
-include /molecules/comment/index
 include /molecules/share/index
 
 mixin leaflet(data)
@@ -11,5 +10,4 @@ mixin leaflet(data)
     if data && data.prev && data.next
       +share(data)
       +iterator(data)
-      +comment()
 
