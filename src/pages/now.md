@@ -12,13 +12,13 @@ The alternative version of this page is written in [🇮🇩 Bahasa.](/now/id){.
 
 I am working on HTML, CSS, JavaScript, SQL, and PHP.
 
-I am studying algorithm and data structure. Enough computer science to get by and get my foot in the door.
+I am studying algorithm and data structure. Enough computer science to get my foot in the door.
 
 >**Me**: Knock! Knock!
 >
 >**Interviewer**: Who's there?
 
-I am focusing my energy on early-2000s web technology. WordPress is a good investment.
+I am focusing my energy on early-2000s web technology.
 
 I am in Bogor.
 

@@ -18,7 +18,7 @@ Sedang mempelajari algoritma dan struktur data. Ini tujuannya hanya untuk bisa l
 >
 >**Pewawancara**: Siapa ya?
 
-Saya lagi-lagi mendeklarasikan bahwa teknologi awal tahun 2000-an adalah investasi terbaik.
+Saya lagi-lagi mendeklarasikan bahwa teknologi awal tahun 2000-an adalah investasi yang baik.
 
 Sekarang tinggal di Bogor.
 
