@@ -6,9 +6,9 @@ url: /about/
 ---
 
 # About
+-------
 
 ## The Brutalist Blog Site Built & Designed By Muhamad D. R.
-------------------------------------------------------------
 
 A blog site to store thoughts and ideas. Built and designed solely by yours
 truly. It stays true to itself. An entity that is an inhabitant of the
@@ -16,14 +16,14 @@ web. HTML, CSS, JavaScript, and everything in between bundled together. It's
 ugly, brutal, a dead simple site, a sore to the eyes, but having no more than
 is really needed.
 
-### Table of Contents
+## Table of Contents
 - [Introduction](#introduction)
 - [Usage](#usage)
 - [Special Thanks](#special-thanks)
 - [The Reason Why I Migrate From Jekyll To Eleventy](#the-reason-why-i-migrate-from-jekyll)
 - [The Author](#the-author)
 
-### Introduction {id="introduction"}
+## Introduction {id="introduction"}
 A starter project to rebuild [miayam.github.io](https://miayam.github.io) from the
 ground up using `Eleventy` and friends. It is a foundation on which
 new [miayam.io](https://miayam.io) will be built. Removing Jekyll
@@ -41,13 +41,13 @@ Therefore, this starter project must be:
 - [Atomic](#atomic)
 - [As Few Assets As Possible](#as-few-assets-as-possible)
 
-### Boring {#boring}
+## Boring {#boring}
 I believe in boring technology. Shiny new technology will be obselete in no
 time, but boring tech will not. `Pug` for building presentational component.
 `SCSS` for styling. `Vanilla JS` for manipulating the DOM, scripting repetitive tasks,
 and configuration.
 
-### Atomic {#atomic}
+## Atomic {#atomic}
 [Atomic Design](https://bradfrost.com/blog/post/atomic-web-design/) is a way to go.
 It makes the design **modular** that can be easily **managed and updated**. Thanks to
 Daniel Tonon for
@@ -73,7 +73,7 @@ src
 
 `components` is an entry point in which `Eleventy` looks for layouts.
 
-### As Few Assets As Possible {#as-few-assets-as-possible}
+## As Few Assets As Possible {#as-few-assets-as-possible}
 `Webpack` is a bundle manager  for this project.
 Any changes to `components/templates/**/*/index.js` or `components/templates/**/*/_index.scss` is
 watched and rebuilt by `Webpack`. `Webpack` bundles `JavaScript` and `SCSS` code in multiple entry points
@@ -152,12 +152,12 @@ body
 
 As a result, each template will have distinct minified, production-ready assets that are only required by pages that include it. The assets required by the *Home* page will not be loaded by the *About* page. As few assets as possible.
 
-### Usage {#usage}
+## Usage {#usage}
 - [Requirement](#requirement)
 - [Development](#development)
 - [Production](#production)
 
-### Requirement {#requirement}
+## Requirement {#requirement}
 You must install [volta](https://volta.sh/). You will be using Node.js version `12.18.4`.
 
 Run this command to make sure [volta](https://volta.sh/) can detect `package.json`:
@@ -166,7 +166,7 @@ Run this command to make sure [volta](https://volta.sh/) can detect `package.jso
 $ source ~/.bashrc
 ```
 
-### Development {#development}
+## Development {#development}
 Install all dependencies:
 
 ```
@@ -184,7 +184,7 @@ $ npm run start
 Open `localhost:1992` to see the result.
 
 
-### Production {#production}
+## Production {#production}
 To build production-ready bundle, run this command:
 
 ```
@@ -193,13 +193,13 @@ $ npm run build
 
 You can host it on `Github Pages`, `Netlify`, or else.
 
-### Special Thanks {#special-thanks}
+## Special Thanks {#special-thanks}
 - Almighty God
 - [https://github.com/clenemt/eleventy-webpack](https://github.com/clenemt/eleventy-webpack)
 - [https://pustelto.com](https://pustelto.com)
 
 
-### The Reason Why I Migrate From Jekyll to Eleventy {#the-reason-why-i-migrate-from-jekyll}
+## The Reason Why I Migrate From Jekyll to Eleventy {#the-reason-why-i-migrate-from-jekyll}
 At first, [miayam.io](https://miayam.io) was a personal blog site built with [Jekyll](https://jekyllrb.com/)
 using a theme I picked carelessly without thinking. Two years later, I almost forgot half of the code.
 Ruby seemed foreign to me. The more I tinkered with it, the more befuddled I was. So, I decided to burn
@@ -215,5 +215,5 @@ And then, there was [Eleventy](https://www.11ty.dev/)... It really was like a ma
 brain perfectly. It did one thing, and did it well. A simple SSG (Static Site Generator) that helped
 provide the barebones of the next generation of [miayam.io](https://miayam.io). And for good reason, the batteries were not included.
 
-### The Author {#the-author}
+## The Author {#the-author}
 You can find me on [Instagram](https://www.instagram.com/miayamin/), [Twitter](https://twitter.com/___miayam___), and [LinkedIn](https://www.linkedin.com/in/miayam/). 
