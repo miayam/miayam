@@ -12,7 +12,7 @@ Versi yang lebih profesional ditulis menggunakan [🇬🇧 bahasa Inggris.](/now
 
 Sedang memperkuat fundamental. Ini ibarat kavling kosong yang ditanam beton di bawah. Harus kuat karena teknologi cepat berubah. Badai PHK juga ada di mana-mana. Cukuplah HTML, CSS, JavaScript, SQL dan PHP untuk mencari nafkah.
 
-Sedang mempelajari algoritma dan struktur data. Ini tujuannya hanya untuk bisa lolos tes sebelum wawancara dengan dengan calon atasan.
+Sedang mempelajari algoritma dan struktur data. Ini tujuannya hanya untuk lolos tes sebelum ke **tahap selanjutnya**.
 
 >**Saya**: Punten, ada orang di dalam?
 >
