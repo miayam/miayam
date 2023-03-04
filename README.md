@@ -1,5 +1,5 @@
 # Miayam
-### The Brutalist Blog Site Built & Designed By Muhammad D. R.
+## The Brutalist Blog Site Built & Designed By Muhamad D. R.
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/a1ca195e-33ec-4a4e-862a-196b7306f16e/deploy-status)](https://app.netlify.com/sites/frosty-davinci-459755/deploys)
 
