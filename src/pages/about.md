@@ -215,4 +215,4 @@ brain perfectly. It did one thing, and did it well. A simple SSG (Static Site Ge
 provide the barebones of the next generation of [miayam.io](https://miayam.io). And for good reason, the batteries were not included.
 
 ## The Author {#the-author}
-You can find me on [Instagram](https://www.instagram.com/miayamin/), [Twitter](https://twitter.com/___miayam___), and [LinkedIn](https://www.linkedin.com/in/miayam/). 
+You can find me on [GitHub](https://github.com/miayam), [Instagram](https://www.instagram.com/miayamin/), [Twitter](https://twitter.com/___miayam___), and [LinkedIn](https://www.linkedin.com/in/miayam/). 
