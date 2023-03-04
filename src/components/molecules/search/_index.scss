@@ -42,23 +42,22 @@
 
     &__close {
         position: absolute;
-        font-size: 30px;
+        font-size: 18px;
+        width: 22px;
+        height: 22px;
+        vertical-align: middle;
         cursor: pointer;
         z-index: 2;
         color: $background;
-        top: 50%;
+        top: 45%;
         right: 8px;
-        transform: translateY(-60%);
+        transform: translateY(-48%);
 
         @media only screen and (max-width: 1000px) {
-            top: 60%;
+            top: 50%;
+            transform: translateY(-40%);
             right: 24px;
         }
-    }
-
-    &__close::after {
-        display: inline-block;
-        content: "\00d7"; /* This will render the 'X' */
     }
 
     &__input:focus::placeholder {
