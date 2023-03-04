@@ -25,7 +25,6 @@ class Article {
           const title = html.match(/<title[^>]*>([\s\S.]*)<\/title>/i)[1];
 
           if (result) {
-            history.pushState({ href: url }, url, url);
             this.article.innerHTML = result;
             document.title = title;
             this.article.style = '';

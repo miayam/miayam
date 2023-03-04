@@ -127,7 +127,7 @@ class Menu {
 
           if (posts) {
             self.resetTabs();
-            history.pushState({ tag }, url, url);
+            history.replaceState({ tag }, url, url);
             postsCards.innerHTML = posts;
             paginationContainer.innerHTML = pagination;
 

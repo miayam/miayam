@@ -51,7 +51,7 @@ class Pagination {
       const title = html.match(/<title[^>]*>([\s\S.]*)<\/title>/i)[1];
 
       if (posts) {
-        history.pushState({ href: url }, url, url);
+        history.replaceState({ href: url }, url, url);
         self.postsCards.innerHTML = posts;
         self.select.value = url;
         document.title = title;
