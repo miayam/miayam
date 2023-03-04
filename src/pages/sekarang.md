@@ -20,7 +20,7 @@ Sedang mempelajari algoritma dan struktur data. Ini tujuannya hanya untuk bisa l
 
 Saya lagi-lagi mendeklarasikan bahwa teknologi awal tahun 2000-an adalah investasi terbaik.
 
-Sekarang tinggal bersama orang tua di Bogor.
+Sekarang tinggal di Bogor.
 
 Saya memperbaiki bahasa Inggris saya yang amburadul dengan mengikuti kurikulum dari Real Life English.
 
