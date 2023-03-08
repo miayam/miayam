@@ -203,4 +203,4 @@ what I need. I tried [Hexo](https://hexo.io/). It had a similar ambiance to [Je
 
 And then, there was [Eleventy](https://www.11ty.dev/).
 
-It really was like a magical glove that just fits my brain perfectly. It did one thing, and did it well. A simple SSG (Static Site Generator) that helped provide the barebones of the next generation of [miayam.io](https://miayam.io). And for good reason, the batteries were not included.
+It really was like a magical glove that just fit my brain perfectly. It did one thing, and did it well. A simple SSG (Static Site Generator) that helped provide the barebones of the next generation of [miayam.io](https://miayam.io). And for good reason, the batteries were not included.
