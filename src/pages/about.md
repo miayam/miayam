@@ -33,7 +33,6 @@ What do I need more of in a brutalist website?
 It doesn't have to be `React`, `Angular`, `Vue`, or `Svelte`
 - Performance. A super fast jellyfish. 100% lighthouse score
 - SEO
-- PWA. Well, I just want to display pictures of cute girls when offline
 
 Therefore, this starter project must be:
 - [Boring](#boring)
