@@ -17,7 +17,7 @@ Sudah cukup mendingan dan bisa beraktivitas. Mencoba memproses semua apa adanya.
 Saya tinggal di Bogor.
 
 Saya mencoba mengubah blog ini agar lebih berguna. Setelah ditelaah, rasa-rasanya saya ingin muntah. Menyadari betapa
-tidak bergunanya https://miayam.io selama ini baik bagi saya pribadi, apa lagi orang lain. 
+tidak bergunanya https://miayam.io selama ini baik bagi saya pribadi maupun orang lain. 
 
 Saya belajar sesuatu yang bagus.
 
