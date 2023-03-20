@@ -10,21 +10,15 @@ url: /now/
 
 The alternative version of this page is written in [🇮🇩 Bahasa.](/now/id){.a-langSwitcher}
 
-I am working on HTML, CSS, JavaScript, SQL, and PHP.
+I am taking 1-month unpaid leaves. 
 
-I am studying algorithm and data structure. Enough computer science to get my foot in the door.
-
->**Me**: Knock! Knock!
->
->**Interviewer**: Who's there?
-
-I am focusing my energy on early-2000s web technology.
+I am getting better. I hope I can function soon.
 
 I am in Bogor.
 
-I am taking Real Life English course online.
+I am trying to rebrand this blog site. I am deleting blog posts about love and useless stuff. 
 
-I am he as you are he as you are me and we are all together.
+I am learning stuff. It's a good stuff.
 
 Last updated: March 2023.
 

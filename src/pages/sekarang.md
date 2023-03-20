@@ -10,22 +10,17 @@ url: /now/id/
 
 Versi yang lebih profesional ditulis menggunakan [🇬🇧 bahasa Inggris.](/now/){.a-langSwitcher}
 
-Sedang memperkuat fundamental. Ini ibarat kavling kosong yang ditanam beton di bawah. Harus kuat karena teknologi cepat berubah. Badai PHK juga ada di mana-mana. Cukuplah HTML, CSS, JavaScript, SQL dan PHP untuk mencari nafkah.
+Saya cuti satu bulan penuh.
 
-Sedang mempelajari algoritma dan struktur data. Ini tujuannya hanya untuk lolos tes sebelum ke **tahap selanjutnya**.
+Sudah cukup mendingan dan bisa beraktivitas. Mencoba memproses semua apa adanya.
 
->**Saya**: Punten, ada orang di dalam?
->
->**Pewawancara**: Siapa ya?
+Saya tinggal di Bogor.
 
-Saya lagi-lagi mendeklarasikan bahwa teknologi awal tahun 2000-an adalah investasi yang baik.
+Saya mencoba mengubah blog ini agar lebih berguna. Setelah ditelaah, rasa-rasanya saya ingin muntah. Menyadari betapa
+tidak bergunanya https://miayam.io selama ini baik bagi saya pribadi, apa lagi orang lain. 
 
-Sekarang tinggal di Bogor.
-
-Saya memperbaiki bahasa Inggris saya yang amburadul dengan mengikuti kurikulum dari Real Life English.
-
-Saya sedang bernyanyi lagu The Beatles berjudul *I am the walrus*.
+Saya belajar sesuatu yang bagus.
 
 Terakhir ditulis Maret 2023.
 
-Halaman ini terinspirasi [ide keren](https://sive.rs/now/) dari [Mang Derek Sivers](https://sive.rs).
+Halaman ini terinspirasi [ide keren](https://sive.rs/now/) dari [Pak Derek Sivers](https://sive.rs).
