@@ -10,17 +10,14 @@ url: /now/id/
 
 Versi yang lebih profesional ditulis menggunakan [🇬🇧 bahasa Inggris.](/now/){.a-langSwitcher}
 
-Saya cuti satu bulan penuh.
+Saya tinggal bersama orang tua di Bogor. Sudah bisa membiasakan diri dengan suasana rumah. Saya akan menetap untuk beberapa bulan sampai akhirnya menyewa indekos di sekitar Bogor atau Depok. Jakarta bukan pilihan.
 
-Sudah cukup mendingan dan bisa beraktivitas. Mencoba memproses semua apa adanya.
+Saya sedang belajar hal-hal mendasar yang esensial. Ada banyak lubang yang perlu ditambal.
 
-Saya tinggal di Bogor.
+Saya sudah tidak tertarik dengan mata uang kripto. Saya mencukupkan diri dengan reksa dana dan emas.
 
-Saya mencoba mengubah blog ini agar lebih berguna. Setelah ditelaah, rasa-rasanya saya ingin muntah. Menyadari betapa
-tidak bergunanya https://miayam.io selama ini baik bagi saya pribadi maupun orang lain. 
+Saya berniat untuk berkeluarga meski belum ada calon. Sekarang usia sudah 31 tahun dan telah menyadari kebijaksaan dari sebuah bahtera pernikahan. Saya perlu menabung untuk membiayai perjalan luar biasa ini. Betapa ini adalah tanggung jawab besar.
 
-Saya belajar sesuatu yang bagus.
-
-Terakhir ditulis Maret 2023.
+Terakhir ditulis April 2023.
 
 Halaman ini terinspirasi [ide keren](https://sive.rs/now/) dari [Pak Derek Sivers](https://sive.rs).
