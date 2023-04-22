@@ -16,7 +16,7 @@ Saya sedang belajar hal-hal mendasar yang esensial. Ada banyak lubang yang perlu
 
 Saya sudah tidak tertarik dengan mata uang kripto. Saya mencukupkan diri dengan reksa dana dan emas.
 
-Saya berniat untuk berkeluarga meski belum ada calon. Sekarang usia sudah 31 tahun dan telah menyadari kebijaksaan dari sebuah bahtera pernikahan. Saya perlu menabung untuk membiayai perjalan luar biasa ini. Betapa ini adalah tanggung jawab besar.
+Saya berniat untuk berkeluarga meski belum ada calon. Sekarang usia sudah 31 tahun dan telah menyadari kebijaksaan dari sebuah bahtera pernikahan. Saya perlu menabung untuk membiayai perjalanan luar biasa ini. Betapa ini adalah tanggung jawab besar.
 
 Terakhir ditulis April 2023.
 

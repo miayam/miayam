@@ -17,9 +17,7 @@ I am working on the fundamentals. There are many potholes to be plugged.
 
 I am no longer into crypto. I am putting my money into mutual funds and gold.
 
-I am intending to start a family despite my other half has yet to be found.
-I am 31 and I found a wisdom in marriage. I need to save up enough to finance
-this wonderful endevour. It's a big responsibility.
+I am intending to start a family. I am already 31 and I found a wisdom in matrimony. I need to save up enough to finance this wonderful endeavour. It's a big responsibility.
 
 Last updated: April 2023.
 
