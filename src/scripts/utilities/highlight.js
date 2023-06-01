@@ -41,6 +41,10 @@ const highlight = (content) => {
                     prismGrammar = Prism.languages.javascript;
                 }
 
+                if (codeLanguage === 'typescript') {
+                    prismGrammar = Prism.languages.typescript;
+                }
+
                 if (codeLanguage === "css") {
                     prismGrammar = Prism.languages.css;
                 }
