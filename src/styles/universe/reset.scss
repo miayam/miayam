@@ -24,8 +24,9 @@ html {
     }
 
     h2 {
-        @include h2(700)
+        @include h2(700);
     }
+
     h3 {
         @include h3(700);
     }
@@ -41,10 +42,6 @@ html {
     h5,
     h6 {
         padding-top: 1.5 * calcFontSize(700) + px;
-
-        &:first-of-type {
-            padding-top: 0;
-        }
     }
 
     p,
@@ -84,10 +81,6 @@ html {
         h5,
         h6 {
             padding-top: 1.5 * calcFontSize(600) + px;
-
-            &:first-of-type {
-                padding-top: 0;
-            }
         }
 
         p,

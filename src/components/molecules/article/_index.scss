@@ -17,6 +17,10 @@
     @include h3(700);
   }
 
+  h3 {
+    @include h4(700);
+  }
+
   figure {
     margin: calcFontSize(700) + px 0;
   }
