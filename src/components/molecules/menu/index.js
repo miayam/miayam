@@ -14,7 +14,7 @@ class Menu {
   priorityPlus() {
     const calcWidth = (e) => {
       let tabsWidth = 0; // Total tabs width.
-      const adjustment = e && e.type === 'load' ? 0 : 50;
+      const adjustment = e && e.type === 'load' ? 150 : 0;
       const menuWidth = this.menu.offsetWidth;
       const moreTabWidth = this.moreTab.offsetWidth + adjustment;
       const availableSpace = menuWidth - moreTabWidth;
@@ -23,7 +23,7 @@ class Menu {
         tabsWidth += tab.offsetWidth;
       });
 
-      if (tabsWidth > availableSpace) {
+      if (tabsWidth >= availableSpace) {
         const visibleTabsCount = this.visibleTabs.childElementCount;
         const lastVisibleTab = this.visibleTabs.childNodes[visibleTabsCount - 1];
         lastVisibleTab.setAttribute('data-width', lastVisibleTab.offsetWidth);
@@ -46,6 +46,7 @@ class Menu {
 
     window.addEventListener('resize', calcWidth);
     window.addEventListener('load', calcWidth);
+    calcWidth();
   }
 
   toggle() {
