@@ -16,7 +16,7 @@ I am binge-reading One Piece. I am on Enies Lobby Arc right now (Chapter 400). I
 
 I am bound to leave the dorm next month. I am looking for accomodation near Stasiun Bogor or UI.
 
-I am 64 kilos. I gain 3 kilograms in 3 months. I'm attempting to charm attractive high school girls with my strength. Love is for women and for men **strength**.
+I am 64 kilos. I gain 3 kilograms in 3 months. I'm attempting to charm attractive high school girls with my strength. Love is for women and for men **strength**. I 
 
 Last updated: October 2023.
 
