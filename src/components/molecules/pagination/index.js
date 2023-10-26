@@ -55,7 +55,7 @@ class Pagination {
         self.postsCards.innerHTML = posts;
         self.select.value = url;
         document.title = title;
-        window.scrollTo({ top: 0, behavior: 'smooth' });
+        window.scroll({ top: 0, behavior: 'smooth' });
       }
 
       self.postsSkeletonCards.style = '';
