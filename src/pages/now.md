@@ -16,9 +16,7 @@ I am binge-reading One Piece on [Manga Plus](https://mangaplus.shueisha.co.jp/).
 
 I am looking for accomodation in Jabodetabek.
 
-I am let go due to restructurization but well-compensated. Many impacted. The package that Stockbit offers is not bad at all.
-
-I am preparing for coding interviews. I am going to blog about it.
+I am exercising for coding interviews. I am going to blog about it.
 
 Last updated: November 2023.
 

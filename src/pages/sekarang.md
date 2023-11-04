@@ -16,9 +16,7 @@ Sedang asyik membaca One Piece di [Manga Plus](https://mangaplus.shueisha.co.jp/
 
 Sedang mencari akomodasi di Jabodetabek.
 
-Saya terkena PHK tapi tetap mendapat pesangon. Banyak yang terdampak. Stockbit berusaha melakukan yang terbaik untuk teman-teman yang terdampak.
-
-Saya sedang persiapan wawancara. Saya juga akan membuat catatannya di blog ini.
+Saya sedang persiapan wawancara. Saya akan membuat catatannya di blog ini.
 
 Terakhir ditulis November 2023.
 
