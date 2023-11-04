@@ -14,11 +14,11 @@ Saya lelah belajar hal-hal mendasar yang esensial tapi masih banyak lubang yang 
 
 Sedang asyik membaca One Piece di [Manga Plus](https://mangaplus.shueisha.co.jp/). Sudah sampai di Sabaody Arc. Seru sekali. Pernah baca waktu SMA cuma serunya baru sekarang.
 
-Rencana akan meninggalkan indekos bulan depan. Sedang mencari akomodasi di Jabodetabek.
+Sedang mencari akomodasi di Jabodetabek.
 
 Saya terkena PHK tapi tetap mendapat pesangon. Banyak yang terdampak. Stockbit berusaha melakukan yang terbaik untuk teman-teman yang terdampak.
 
-Saya sedang persiapan wawancara. Saya juga akan membuat catatannya di sini.
+Saya sedang persiapan wawancara. Saya juga akan membuat catatannya di blog ini.
 
 Terakhir ditulis November 2023.
 

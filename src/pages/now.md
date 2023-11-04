@@ -12,9 +12,9 @@ The alternative version of this page is written in [🇮🇩 Bahasa.](/now/id){.
 
 I am tired of working on the fundamentals but there are many potholes to be plugged.
 
-I am binge-reading One Piece on [Manga Plus](https://mangaplus.shueisha.co.jp/). I am on The Sabaoudy Arc right now. It's a good read. I should have read it in senior high, but I didn't find it interesting.
+I am binge-reading One Piece on [Manga Plus](https://mangaplus.shueisha.co.jp/). I am on The Sabaody Arc right now. It's a good read. I should have read it in senior high, but I didn't find it interesting.
 
-I am bound to leave the dorm next month. I am looking for accomodation in Jabodetabek.
+I am looking for accomodation in Jabodetabek.
 
 I am let go due to restructurization but well-compensated. Many impacted. The package that Stockbit offers is not bad at all.
 
