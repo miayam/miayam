@@ -12,12 +12,10 @@ Versi yang lebih profesional ditulis menggunakan [🇬🇧 bahasa Inggris.](/now
 
 Saya lelah belajar hal-hal mendasar yang esensial tapi masih banyak lubang yang perlu ditambal.
 
-Sedang asyik membaca One Piece di [Manga Plus](https://mangaplus.shueisha.co.jp/). Sudah sampai di Sabaody Arc. Seru sekali. Pernah baca waktu SMA cuma serunya baru sekarang.
+Sudah 4 bulan saya bekerja di [Baskit](https://www.baskit.app/). Merasakan kembali bekerja dalam tim kecil setelah sekian lama.
 
-Sedang mencari akomodasi di Jabodetabek.
+Saya hendak membebastugaskan [https://cms.miayam.io](https://cms.miayam.io) dan membuat CMS baru menggunakan [T3 stack](https://create.t3.gg/)
 
-Saya sedang persiapan wawancara. Saya akan membuat catatannya di blog ini.
-
-Terakhir ditulis November 2023.
+Terakhir ditulis April 2024.
 
 Halaman ini terinspirasi [ide keren](https://sive.rs/now/) dari [Pak Derek Sivers](https://sive.rs).

@@ -1,5 +1,4 @@
 import Navigation from '@molecules/navigation';
-import Search from '@molecules/search';
 
 class Header {
     constructor(className="o-header") {
@@ -9,10 +8,8 @@ class Header {
 
     init() {
         const navigation = new Navigation();
-        const search = new Search();
 
         navigation.init();
-        search.init();
     }
 }
 
