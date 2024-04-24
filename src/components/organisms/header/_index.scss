@@ -1,19 +1,22 @@
 @import '~@styles/variables';
 
 @import '~@molecules/navigation';
-@import '~@molecules/search';
 
 .o-header {
     height: auto;
-    margin-bottom: 60px;
     border-bottom: 1px solid $menu;
     z-index: 2;
     position: fixed;
     top: 0;
     width: 100%;
     background-color: $background;
+    /*
+    margin-bottom: 60px;
+    */
 
+    /*
     @media only screen and (max-width: 1000px) {
         height: 132px;
     }
+    */
 }
